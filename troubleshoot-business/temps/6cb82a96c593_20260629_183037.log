@@ -1,0 +1,450 @@
+{
+  "meta": {
+    "server": "fast106",
+    "index": "index-11408-13176_2026-06-29",
+    "query_time": "2026-06-29T18:30:37.522840",
+    "hash": "6cb82a96c593"
+  },
+  "request": {
+    "params": {
+      "ignoreThrottled": true,
+      "preference": 1780483834299,
+      "index": "index-11408-13176_2026-06-29",
+      "body": {
+        "version": true,
+        "size": 10,
+        "sort": [
+          {
+            "timestamp": {
+              "order": "desc",
+              "unmapped_type": "boolean"
+            }
+          }
+        ],
+        "aggs": {
+          "2": {
+            "date_histogram": {
+              "field": "timestamp",
+              "fixed_interval": "30s",
+              "time_zone": "Asia/Shanghai",
+              "min_doc_count": 1
+            }
+          }
+        },
+        "stored_fields": [
+          "*"
+        ],
+        "script_fields": {},
+        "docvalue_fields": [
+          {
+            "field": "timestamp",
+            "format": "date_time"
+          }
+        ],
+        "_source": {
+          "excludes": []
+        },
+        "query": {
+          "bool": {
+            "must": [
+              {
+                "match_all": {}
+              }
+            ],
+            "filter": [
+              {
+                "exists": {
+                  "field": "data_info_msg"
+                }
+              },
+              {
+                "range": {
+                  "timestamp": {
+                    "gte": "2026-06-29T07:58:00.000Z",
+                    "lte": "2026-06-29T08:02:00.000Z",
+                    "format": "strict_date_optional_time"
+                  }
+                }
+              }
+            ],
+            "should": [],
+            "must_not": []
+          }
+        },
+        "highlight": {
+          "pre_tags": [
+            "@kibana-highlighted-field@"
+          ],
+          "post_tags": [
+            "@/kibana-highlighted-field@"
+          ],
+          "fields": {
+            "*": {}
+          },
+          "fragment_size": 2147483647
+        }
+      },
+      "rest_total_hits_as_int": true,
+      "ignore_unavailable": true,
+      "ignore_throttled": true,
+      "timeout": "30000ms"
+    },
+    "serverStrategy": "es"
+  },
+  "response": {
+    "is_partial": false,
+    "is_running": false,
+    "rawResponse": {
+      "took": 396,
+      "timed_out": false,
+      "_shards": {
+        "total": 3,
+        "successful": 3,
+        "skipped": 0,
+        "failed": 0
+      },
+      "hits": {
+        "total": 1359623,
+        "max_score": null,
+        "hits": [
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "k0tmEp8B9P_t1W1uXDfH",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "-1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.89.170",
+              "requestId": "e2bd6b22daa495fa122535441b28af64add803a0",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "[AigcInspectionClient#call] 请求开始 ---> http://api.cloud.keeper.huiju.ke.com/inspection/call  - [request param] {\"requestId\":null,\"accountCode\":\"31178091\",\"accountName\":\"贝壳租房服务管家-惠可\",\"appSource\":2,\"inspectionType\":13,\"needInspection\":true,\"cancelInspectionReason\":\"\",\"sessionList\":[{\"id\":410050302,\"content\":\"不是在住这儿的APP里操作吗\",\"sessionCreateTime\":1782718565000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"1809181\"},{\"id\":410050800,\"content\":\"您可通过贝壳找房APP—个人中心—租约—合同—智能门锁—密码管理，申请临时密码。\",\"sessionCreateTime\":1782718598000,\"senderType\":5,\"senderTypeDesc\":\"贝壳租房服务管家-惠可(31178091)\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wework.qpic.cn/wwpic3az/146636_44ETFcqHQQCRy-b_1779248155/0\",\"msgId\":\"2103418\"},{\"id\":410051017,\"content\":\"遇到问题，群里面找谁呢？\",\"sessionCreateTime\":1782718610000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"2103420\"},{\"id\":410051373,\"content\":\"请问您说的是什么问题\",\"sessionCreateTime\":1782718634000,\"senderType\":5,\"senderTypeDesc\":\"贝壳租房服务管家-惠可(31178091)\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wework.qpic.cn/wwpic3az/146636_44ETFcqHQQCRy-b_1779248155/0\",\"msgId\":\"2103423\"},{\"id\":410052018,\"content\":\"房间的密码如何申请临时密码给到别人\",\"sessionCreateTime\":1782718671000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"1809199\"},{\"id\":410052135,\"content\":\"我然后再更换\",\"sessionCreateTime\":1782718679000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"1809202\"},{\"id\":410052545,\"content\":\"临时密码有效期只有一小时的，过了就不能再用，根据我刚刚发您的路径申请就行\",\"sessionCreateTime\":1782718705000,\"senderType\":5,\"senderTypeDesc\":\"贝壳租房服务管家-惠可(31178091)\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wework.qpic.cn/wwpic3az/146636_44ETFcqHQQCRy-b_1779248155/0\",\"msgId\":\"2103431\"},{\"id\":410052713,\"content\":\"如果是需要修改您自己的长期密码，可以通过这个路径\",\"sessionCreateTime\":1782718715000,\"senderType\":5,\"senderTypeDesc\":\"贝壳租房服务管家-惠可(31178091)\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wework.qpic.cn/wwpic3az/146636_44ETFcqHQQCRy-b_1779248155/0\",\"msgId\":\"2103433\"},{\"id\":410052735,\"content\":\"密码修改步骤：贝壳小程序-个人中心-租约-智能门锁-密码管理，可以自行修改密码\",\"sessionCreateTime\":1782718716000,\"senderType\":5,\"senderTypeDesc\":\"贝壳租房服务管家-惠可(31178091)\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wework.qpic.cn/wwpic3az/146636_44ETFcqHQQCRy-b_1779248155/0\",\"msgId\":\"2103435\"},{\"id\":410053323,\"content\":\"没有明白\",\"sessionCreateTime\":1782718749000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"1809217\"},{\"id\":410053435,\"content\":\"没有明白\",\"sessionCreateTime\":1782718756000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"2103440\"},{\"id\":410053882,\"content\":\"群里面有人给解决下吗\",\"sessionCreateTime\":1782718786000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"2103443\"},{\"id\":410054626,\"content\":\"您是哪点没有明白\",\"sessionCreateTime\":1782718832000,\"senderType\":5,\"senderTypeDesc\":\"贝壳租房服务管家-惠可(31178091)\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wework.qpic.cn/wwpic3az/146636_44ETFcqHQQCRy-b_1779248155/0\",\"msgId\":\"2103446\"},{\"id\":410055256,\"content\":\"https://quan00-1259287960.cos.ap-guangzhou.myqcloud.com/1171/a3b211728f364f89b5b68657e92d9309.wav\",\"sessionCreateTime\":1782718862000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":5,\"title\":\"\",\"videoCoverUrl\":\"https://o.wx-api.net/uploads/2026-06-29/src_1782718867_aeb5728f03163f067d5452735461c3bf.silk\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"2103451\"},{\"id\":410055532,\"content\":\"https://quan00-1259287960.cos.ap-guangzhou.myqcloud.com/1171/1d08987f326b4508b56065d170a9f730.wav\",\"sessionCreateTime\":1782718880000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":5,\"title\":\"\",\"videoCoverUrl\":\"https://o.wx-api.net/uploads/2026-06-29/src_1782718884_5dddeabebcd1606e9188567f4557b950.silk\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"2103454\"},{\"id\":410056590,\"content\":\"https://quan-picture-1259287960.cos.ap-guangzhou.myqcloud.com/1171/6e34bf46bf0d41488c2eed8829bbba7b.png\",\"sessionCreateTime\":1782718946000,\"senderType\":8,\"senderTypeDesc\":\"租务管家：干川(20362995)\",\"mediaUrl\":null,\"msgType\":3,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://image1.ljcdn.com/usercenter/images/uc_ehr_avatar/45dbff1d-2f56-425e-860a-08b0aaa5401a.jpg.1413x2000.jpg?v=1\",\"msgId\":\"2103457\"},{\"id\":410058479,\"content\":\"https://quan-picture-1259287960.cos.ap-guangzhou.myqcloud.com/1171/4a64ada63a1e42dc86a99d358121561d.jpeg\",\"sessionCreateTime\":1782719060000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":3,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"2103460\"},{\"id\":410058485,\"content\":\"https://quan-picture-1259287960.cos.ap-guangzhou.myqcloud.com/1171/2680e2add75e4ef3bbbdbd0d81e7dd18.jpeg\",\"sessionCreateTime\":1782719060000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":3,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"1809244\"},{\"id\":410058511,\"content\":\"找不到智能门锁\",\"sessionCreateTime\":1782719067000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"2103466\"},{\"id\":410058860,\"content\":\"设置密码显示功能开发中\",\"sessionCreateTime\":1782719089000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"2103469\"},{\"id\":410059096,\"content\":\"这是贝壳APP的情况\",\"sessionCreateTime\":1782719102000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"2103472\"},{\"id\":410059508,\"content\":\"界面都不一样\",\"sessionCreateTime\":1782719131000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"2103475\"},{\"id\":410061914,\"content\":\"https://quan-picture-1259287960.cos.ap-guangzhou.myqcloud.com/1171/ba3424e8f52d4d0eae11ec6b04d43f69.jpeg\",\"sessionCreateTime\":1782719275000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":3,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"1809265\"},{\"id\":410061927,\"content\":\"https://quan-picture-1259287960.cos.ap-guangzhou.myqcloud.com/1171/b7fb8f11f6ef44f1a5d2dd3967a721af.jpeg\",\"sessionCreateTime\":1782719275000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":3,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"1809268\"},{\"id\":410061949,\"content\":\"https://quan-picture-1259287960.cos.ap-guangzhou.myqcloud.com/1171/0dfec2461b52457e921d08bd3c8aed04.jpeg\",\"sessionCreateTime\":1782719277000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":3,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"2103497\"},{\"id\":410061953,\"content\":\"https://quan-picture-1259287960.cos.ap-guangzhou.myqcloud.com/1171/8e0e3b8c8c6c4749961b482c707d201f.jpeg\",\"sessionCreateTime\":1782719276000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":3,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"2103494\"},{\"id\":410062256,\"content\":\"https://quan00-1259287960.cos.ap-guangzhou.myqcloud.com/1171/10e26553f46b44c088bdad31c6e3193f.wav\",\"sessionCreateTime\":1782719296000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":5,\"title\":\"\",\"videoCoverUrl\":\"https://o.wx-api.net/uploads/2026-06-29/src_1782719300_cae7d5c8139f246562536cf116a6de2c.silk\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"1809277\"},{\"id\":410062437,\"content\":\"https://quan00-1259287960.cos.ap-guangzhou.myqcloud.com/1171/5741c32b163f433fb8a6272f712e780a.wav\",\"sessionCreateTime\":1782719307000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":5,\"title\":\"\",\"videoCoverUrl\":\"https://o.wx-api.net/uploads/2026-06-29/src_1782719311_6db5a1d303863751bb68b0f88f997c0b.silk\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"2103506\"},{\"id\":410062498,\"content\":\"您的是华为鸿蒙系统吗\",\"sessionCreateTime\":1782719318000,\"senderType\":5,\"senderTypeDesc\":\"贝壳租房服务管家-惠可(31178091)\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wework.qpic.cn/wwpic3az/146636_44ETFcqHQQCRy-b_1779248155/0\",\"msgId\":\"2103509\"},{\"id\":410062919,\"content\":\"是的\",\"sessionCreateTime\":1782719342000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"2103511\"},{\"id\":410063687,\"content\":\"界面不一样\",\"sessionCreateTime\":1782719391000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"1809292\"},{\"id\":410064592,\"content\":\"鸿蒙系统需要通过“卓易通”里下载“贝壳租房”App，贝壳租房App包含全量门锁功能的APP\",\"sessionCreateTime\":1782719447000,\"senderType\":5,\"senderTypeDesc\":\"贝壳租房服务管家-惠可(31178091)\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wework.qpic.cn/wwpic3az/146636_44ETFcqHQQCRy-b_1779248155/0\",\"msgId\":\"2103524\"},{\"id\":410064684,\"content\":\"按照这个下载处理\",\"sessionCreateTime\":1782719452000,\"senderType\":5,\"senderTypeDesc\":\"贝壳租房服务管家-惠可(31178091)\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wework.qpic.cn/wwpic3az/146636_44ETFcqHQQCRy-b_1779248155/0\",\"msgId\":\"2103526\"},{\"id\":410066833,\"content\":\"https://quan-picture-1259287960.cos.ap-guangzhou.myqcloud.com/1171/144ecf8c4be4468d874be2e08ea9a7d4.jpeg\",\"sessionCreateTime\":1782719591000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":3,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"1809307\"},{\"id\":410067291,\"content\":\"是这个吗？一直等待，这个APP很难下载\",\"sessionCreateTime\":1782719624000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"2103531\"},{\"id\":410067456,\"content\":\"@贝壳租房服务管家-惠可 \",\"sessionCreateTime\":1782719633000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"1809313\"},{\"id\":410068096,\"content\":\"是的您这边现在是网络不好吗\",\"sessionCreateTime\":1782719675000,\"senderType\":5,\"senderTypeDesc\":\"贝壳租房服务管家-惠可(31178091)\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wework.qpic.cn/wwpic3az/146636_44ETFcqHQQCRy-b_1779248155/0\",\"msgId\":\"2103537\"},{\"id\":410070195,\"content\":\"别人一直在等着\",\"sessionCreateTime\":1782719736000,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"mediaUrl\":null,\"msgType\":1,\"title\":\"\",\"videoCoverUrl\":\"\",\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"msgId\":\"2103544\"}],\"bizCode\":\"T2071497807334854656\",\"customerUnionId\":\"oN7cVsx3FftE8zK0_3jgbdde025I\",\"customerNickName\":null,\"robotCode\":\"31178091\",\"houseDelCode\":104119045733,\"cityCode\":420100,\"cityName\":null,\"contractCode\":\"TGCF2606725456\",\"chatType\":2,\"realDealId\":null,\"groupId\":\"10788583445368845\",\"realDealName\":null,\"appealTag\":null,\"appealTagCn\":null,\"wxNickName\":null,\"closeTicketStandardContent\":null,\"inspectionPromptExtra\":null,\"extData\":\"{\\\"manualSessionId\\\":2071497807500075008,\\\"recordId\\\":410071947,\\\"content\\\":\\\"您现在有原始密码可以先给他\\\",\\\"contractCode\\\":\\\"TGCF2606725456\\\",\\\"msgTime\\\":1782719894000,\\\"groupId\\\":\\\"10788583445368845\\\",\\\"groupName\\\":\\\"万科城花璟苑9栋1单元2204贝壳服务群\\\",\\\"senderType\\\":5,\\\"msgSenderUcCode\\\":\\\"31178091\\\",\\\"msgSenderName\\\":\\\"武汉贝壳租房服务管家惠可\\\",\\\"cityCode\\\":\\\"420100\\\",\\\"houseCode\\\":\\\"104119045733\\\",\\\"houseAddress\\\":\\\"万科城花璟苑9栋1单元2204\\\",\\\"ziGuanUcCode\\\":\\\"30304823\\\",\\\"serviceAccountCode\\\":\\\"31178091\\\",\\\"chatType\\\":2,\\\"whetherSingleWord\\\":true}\",\"attitudeInspectionType\":\"ALL\"} - [request headers] {Content-Length=[15155], Content-Type=[application/json;charset=UTF-8], X-Ke-Sid=[huiju-private-domain-lease]}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-jm4x8",
+              "tid": "453460-10.226.89.170-1239-1782720119541-479",
+              "sid": "453460-10.226.89.170-1239-1782720119541-478",
+              "timestamp": "2026-06-29T16:02:00.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T08:02:00.000Z"
+              ]
+            },
+            "sort": [
+              1782720120000
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "oEpmEp8B9P_t1W1uW-vq",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "-1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.89.170",
+              "requestId": "78e7d2d81df760a115b60a245e36221d90c1fc59",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "执行的sql语句为:SELECT id,session_id,to_manual_reply,has_ai_robot,ctime,mtime FROM trusteeship_aigc_session_status_record WHERE (session_id = 'new_session_id:SERVICE_KEEPER--GROUP_CHAT--10720676615238994--0#1782717774000') ORDER BY id DESC limit 1",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-jm4x8",
+              "tid": "453460-10.226.89.170-1237-1782720119850-509",
+              "sid": "453460-10.226.89.170-1237-1782720119850-508",
+              "timestamp": "2026-06-29T16:02:00.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T08:02:00.000Z"
+              ]
+            },
+            "sort": [
+              1782720120000
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "zVxmEp8BdpG7oQCUUefy",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "4",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.239",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:atServiceManagerCount,functionData:null,replyFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"103142234813\",\"contactInfo\":\"{\\\"address\\\":\\\"天华绿谷庄园30幢1单元903室\\\",\\\"name\\\":\\\"陈慧娴\\\",\\\"phone\\\":\\\"151****5490\\\"}\",\"cityCode\":\"320100\",\"groupId\":\"10831217995092531\",\"msgId\":\"1774166\",\"nowDateStr\":\"2026-06-29 16:01:51\",\"latestMsgId\":\"1774166\",\"cityName\":\"南京\",\"inContractCode\":\"TG2506395864\",\"aiRobotUserId\":\"31376807\",\"triggerSource\":10,\"robotWeworkId\":\"31175490\",\"aiRobotUcId\":1000000031376807,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10831217995092531--6#1782718001000\",\"repairImgList\":[{\"picUrl\":\"https://quan-picture-1259287960.cos.ap-guangzhou.myqcloud.com/1171/572dd172a2af4f6991105c951396a816.jpeg\",\"isFurniturePhoto\":1,\"relatedItems\":\"橱柜，燃气灶，油烟机，洗手池，洗菜池，窗户，地面，灯具，墙面，天花板/吊顶\"}],\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"南京贝壳租房服务管家惠苓\",\"userId\":1000000026523366,\"imgConvertText\":\"【图片类型】\n屋内设施照片\n\n【图片内容】\n图片展示了一个卫生间内部，整体为浅色调。左侧有一台灰色顶置式洗衣机，旁边是白色洗手池和带镜柜的镜子。洗手池下方有白色储物柜。右侧为白色马桶，上方有纸巾架。中间区域为淋浴区，地面略高，墙面安装有金属淋浴花洒和置物架。地面铺设浅色瓷砖，墙面为浅色瓷砖。天花板为白色方格吊顶，装有嵌入式灯具。窗户位于淋浴区后方，带有百叶窗。门口处可见部分门框和门锁。\n\n【图片目的】\n展示当前房间状态\n\n【是否屋内设施照片】\n是\n\n【匹配商品】\n洗衣机，洗手池，马桶，淋浴器，淋浴房，地面，墙面，灯具，门，天花板/吊顶\n\n【是否对账图片】\n否\",\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 15:57:18\",\"senderType\":4,\"inContractId\":4271049,\"resblockId\":\"2511052849917\",\"contractCode\":\"TGCF2506909886\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"结束对话\",\"messageContent\":\"https://quan-picture-1259287960.cos.ap-guangzhou.myqcloud.com/1171/3b51609eb2af4dd2a50ac700c872163a.jpeg\",\"requestId\":\"1774166\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10831217995092531--6#1782718001000\",\"sessionInitiator\":5,\"traceId\":\"1774166\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7vbf6",
+              "tid": "512292-10.226.78.82-432-1782720118725-77",
+              "sid": "453460-10.22.115.239-27431-1782720119999-738",
+              "timestamp": "2026-06-29T16:02:00.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T08:02:00.000Z"
+              ]
+            },
+            "sort": [
+              1782720120000
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "AodmEp8Bwva2ZhliWs4O",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "7",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.110.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "执行是否@人条件处理器, atList is empty",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7ss4r",
+              "tid": "512292-10.22.41.16-168-1782720118141-901",
+              "sid": "453460-10.22.110.80-2141671-1782720119998-3522",
+              "timestamp": "2026-06-29T16:02:00.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T08:02:00.000Z"
+              ]
+            },
+            "sort": [
+              1782720120000
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "hV1mEp8BdpG7oQCUWcp4",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "-1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.113.74",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "===> Execute By Easy-Es: \nrouting: null\nindex-name: private_domain_chat_record_2026-06\nDSL：{\"size\":10000,\"query\":{\"bool\":{\"must\":[{\"term\":{\"_id\":{\"value\":410071918,\"boost\":1.0}}},{\"term\":{\"msgTime\":{\"value\":1782719939000,\"boost\":1.0}}}],\"adjust_pure_negative\":true,\"boost\":1.0}},\"track_total_hits\":2147483647}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9nh6s",
+              "tid": "453460-10.22.113.74-1135-1782720119999-367",
+              "sid": "453460-10.22.113.74-1135-1782720119999-366",
+              "timestamp": "2026-06-29T16:02:00.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T08:02:00.000Z"
+              ]
+            },
+            "sort": [
+              1782720120000
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "WF1mEp8BdpG7oQCUWc-R",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "7",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.110.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "执行是否@人条件处理器, atConditionSet:[0,1,2,3,4]",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7ss4r",
+              "tid": "512292-10.22.41.16-168-1782720118141-901",
+              "sid": "453460-10.22.110.80-2141671-1782720119998-3522",
+              "timestamp": "2026-06-29T16:02:00.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T08:02:00.000Z"
+              ]
+            },
+            "sort": [
+              1782720120000
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "W0pmEp8B9P_t1W1uWVaU",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "-1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.110.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "执行的sql语句为:SELECT id,city_code,district_id,resblock_id,resblock_name,house_id,address,manager_id,ql_robot_id,manager_type,manager_name,ziguan_id,broker_uc_id,broker_name,broker_phone,wait_verify,contract_id,parent_contract_id,contract_code,bizType,subBizType,contract_status,renter_name,renter_phone,renter_phone_md5,renter_union_id,renter_open_id,ql_renter_account,is_renter_friend,renter_friend_time,owner_name,owner_phone,owner_phone_md5,owner_union_id,owner_open_id,ql_owner_account,is_owner_friend,owner_friend_time,is_takeover_friends,takeover_robot_id,takeover_manager_id,pay_cycle,back_date,effect_end_date,effect_start_date,sign_date,delivery_date,wechat_phone,add_wechat_status,nick_name,ctime,mtime FROM trusteeship_private_domain WHERE (contract_code = 'TGCF2606711211') ORDER BY id DESC limit 1",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7ss4r",
+              "tid": "453460-10.22.110.80-2141654-1782720119806-3529",
+              "sid": "453460-10.22.110.80-2141654-1782720119806-3528",
+              "timestamp": "2026-06-29T16:01:59.999+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T08:01:59.999Z"
+              ]
+            },
+            "sort": [
+              1782720119999
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "MV5mEp8BdpG7oQCUXC0K",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "-1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.89.170",
+              "requestId": "e2bd6b22daa495fa122535441b28af64add803a0",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "群聊消息质检管控 发送质检消息 ={\"accountCode\":\"31178091\",\"accountName\":\"贝壳租房服务管家-惠可\",\"appSource\":2,\"attitudeInspectionType\":\"ALL\",\"bizCode\":\"T2071497807334854656\",\"cancelInspectionReason\":\"\",\"chatType\":2,\"cityCode\":420100,\"contractCode\":\"TGCF2606725456\",\"customerUnionId\":\"oN7cVsx3FftE8zK0_3jgbdde025I\",\"extData\":\"{\\\"manualSessionId\\\":2071497807500075008,\\\"recordId\\\":410071947,\\\"content\\\":\\\"您现在有原始密码可以先给他\\\",\\\"contractCode\\\":\\\"TGCF2606725456\\\",\\\"msgTime\\\":1782719894000,\\\"groupId\\\":\\\"10788583445368845\\\",\\\"groupName\\\":\\\"万科城花璟苑9栋1单元2204贝壳服务群\\\",\\\"senderType\\\":5,\\\"msgSenderUcCode\\\":\\\"31178091\\\",\\\"msgSenderName\\\":\\\"武汉贝壳租房服务管家惠可\\\",\\\"cityCode\\\":\\\"420100\\\",\\\"houseCode\\\":\\\"104119045733\\\",\\\"houseAddress\\\":\\\"万科城花璟苑9栋1单元2204\\\",\\\"ziGuanUcCode\\\":\\\"30304823\\\",\\\"serviceAccountCode\\\":\\\"31178091\\\",\\\"chatType\\\":2,\\\"whetherSingleWord\\\":true}\",\"groupId\":\"10788583445368845\",\"houseDelCode\":104119045733,\"inspectionType\":13,\"needInspection\":true,\"robotCode\":\"31178091\",\"sessionList\":[{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"不是在住这儿的APP里操作吗\",\"id\":410050302,\"msgId\":\"1809181\",\"msgType\":1,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782718565000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wework.qpic.cn/wwpic3az/146636_44ETFcqHQQCRy-b_1779248155/0\",\"content\":\"您可通过贝壳找房APP—个人中心—租约—合同—智能门锁—密码管理，申请临时密码。\",\"id\":410050800,\"msgId\":\"2103418\",\"msgType\":1,\"senderType\":5,\"senderTypeDesc\":\"贝壳租房服务管家-惠可(31178091)\",\"sessionCreateTime\":1782718598000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"遇到问题，群里面找谁呢？\",\"id\":410051017,\"msgId\":\"2103420\",\"msgType\":1,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782718610000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wework.qpic.cn/wwpic3az/146636_44ETFcqHQQCRy-b_1779248155/0\",\"content\":\"请问您说的是什么问题\",\"id\":410051373,\"msgId\":\"2103423\",\"msgType\":1,\"senderType\":5,\"senderTypeDesc\":\"贝壳租房服务管家-惠可(31178091)\",\"sessionCreateTime\":1782718634000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"房间的密码如何申请临时密码给到别人\",\"id\":410052018,\"msgId\":\"1809199\",\"msgType\":1,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782718671000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"我然后再更换\",\"id\":410052135,\"msgId\":\"1809202\",\"msgType\":1,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782718679000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wework.qpic.cn/wwpic3az/146636_44ETFcqHQQCRy-b_1779248155/0\",\"content\":\"临时密码有效期只有一小时的，过了就不能再用，根据我刚刚发您的路径申请就行\",\"id\":410052545,\"msgId\":\"2103431\",\"msgType\":1,\"senderType\":5,\"senderTypeDesc\":\"贝壳租房服务管家-惠可(31178091)\",\"sessionCreateTime\":1782718705000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wework.qpic.cn/wwpic3az/146636_44ETFcqHQQCRy-b_1779248155/0\",\"content\":\"如果是需要修改您自己的长期密码，可以通过这个路径\",\"id\":410052713,\"msgId\":\"2103433\",\"msgType\":1,\"senderType\":5,\"senderTypeDesc\":\"贝壳租房服务管家-惠可(31178091)\",\"sessionCreateTime\":1782718715000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wework.qpic.cn/wwpic3az/146636_44ETFcqHQQCRy-b_1779248155/0\",\"content\":\"密码修改步骤：贝壳小程序-个人中心-租约-智能门锁-密码管理，可以自行修改密码\",\"id\":410052735,\"msgId\":\"2103435\",\"msgType\":1,\"senderType\":5,\"senderTypeDesc\":\"贝壳租房服务管家-惠可(31178091)\",\"sessionCreateTime\":1782718716000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"没有明白\",\"id\":410053323,\"msgId\":\"1809217\",\"msgType\":1,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782718749000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"没有明白\",\"id\":410053435,\"msgId\":\"2103440\",\"msgType\":1,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782718756000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"群里面有人给解决下吗\",\"id\":410053882,\"msgId\":\"2103443\",\"msgType\":1,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782718786000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wework.qpic.cn/wwpic3az/146636_44ETFcqHQQCRy-b_1779248155/0\",\"content\":\"您是哪点没有明白\",\"id\":410054626,\"msgId\":\"2103446\",\"msgType\":1,\"senderType\":5,\"senderTypeDesc\":\"贝壳租房服务管家-惠可(31178091)\",\"sessionCreateTime\":1782718832000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"https://quan00-1259287960.cos.ap-guangzhou.myqcloud.com/1171/a3b211728f364f89b5b68657e92d9309.wav\",\"id\":410055256,\"msgId\":\"2103451\",\"msgType\":5,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782718862000,\"title\":\"\",\"videoCoverUrl\":\"https://o.wx-api.net/uploads/2026-06-29/src_1782718867_aeb5728f03163f067d5452735461c3bf.silk\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"https://quan00-1259287960.cos.ap-guangzhou.myqcloud.com/1171/1d08987f326b4508b56065d170a9f730.wav\",\"id\":410055532,\"msgId\":\"2103454\",\"msgType\":5,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782718880000,\"title\":\"\",\"videoCoverUrl\":\"https://o.wx-api.net/uploads/2026-06-29/src_1782718884_5dddeabebcd1606e9188567f4557b950.silk\"},{\"avatarUrl\":\"http://image1.ljcdn.com/usercenter/images/uc_ehr_avatar/45dbff1d-2f56-425e-860a-08b0aaa5401a.jpg.1413x2000.jpg?v=1\",\"content\":\"https://quan-picture-1259287960.cos.ap-guangzhou.myqcloud.com/1171/6e34bf46bf0d41488c2eed8829bbba7b.png\",\"id\":410056590,\"msgId\":\"2103457\",\"msgType\":3,\"senderType\":8,\"senderTypeDesc\":\"租务管家：干川(20362995)\",\"sessionCreateTime\":1782718946000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"https://quan-picture-1259287960.cos.ap-guangzhou.myqcloud.com/1171/4a64ada63a1e42dc86a99d358121561d.jpeg\",\"id\":410058479,\"msgId\":\"2103460\",\"msgType\":3,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782719060000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"https://quan-picture-1259287960.cos.ap-guangzhou.myqcloud.com/1171/2680e2add75e4ef3bbbdbd0d81e7dd18.jpeg\",\"id\":410058485,\"msgId\":\"1809244\",\"msgType\":3,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782719060000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"找不到智能门锁\",\"id\":410058511,\"msgId\":\"2103466\",\"msgType\":1,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782719067000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"设置密码显示功能开发中\",\"id\":410058860,\"msgId\":\"2103469\",\"msgType\":1,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782719089000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"这是贝壳APP的情况\",\"id\":410059096,\"msgId\":\"2103472\",\"msgType\":1,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782719102000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"界面都不一样\",\"id\":410059508,\"msgId\":\"2103475\",\"msgType\":1,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782719131000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"https://quan-picture-1259287960.cos.ap-guangzhou.myqcloud.com/1171/ba3424e8f52d4d0eae11ec6b04d43f69.jpeg\",\"id\":410061914,\"msgId\":\"1809265\",\"msgType\":3,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782719275000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"https://quan-picture-1259287960.cos.ap-guangzhou.myqcloud.com/1171/b7fb8f11f6ef44f1a5d2dd3967a721af.jpeg\",\"id\":410061927,\"msgId\":\"1809268\",\"msgType\":3,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782719275000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"https://quan-picture-1259287960.cos.ap-guangzhou.myqcloud.com/1171/0dfec2461b52457e921d08bd3c8aed04.jpeg\",\"id\":410061949,\"msgId\":\"2103497\",\"msgType\":3,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782719277000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"https://quan-picture-1259287960.cos.ap-guangzhou.myqcloud.com/1171/8e0e3b8c8c6c4749961b482c707d201f.jpeg\",\"id\":410061953,\"msgId\":\"2103494\",\"msgType\":3,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782719276000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"https://quan00-1259287960.cos.ap-guangzhou.myqcloud.com/1171/10e26553f46b44c088bdad31c6e3193f.wav\",\"id\":410062256,\"msgId\":\"1809277\",\"msgType\":5,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782719296000,\"title\":\"\",\"videoCoverUrl\":\"https://o.wx-api.net/uploads/2026-06-29/src_1782719300_cae7d5c8139f246562536cf116a6de2c.silk\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"https://quan00-1259287960.cos.ap-guangzhou.myqcloud.com/1171/5741c32b163f433fb8a6272f712e780a.wav\",\"id\":410062437,\"msgId\":\"2103506\",\"msgType\":5,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782719307000,\"title\":\"\",\"videoCoverUrl\":\"https://o.wx-api.net/uploads/2026-06-29/src_1782719311_6db5a1d303863751bb68b0f88f997c0b.silk\"},{\"avatarUrl\":\"http://wework.qpic.cn/wwpic3az/146636_44ETFcqHQQCRy-b_1779248155/0\",\"content\":\"您的是华为鸿蒙系统吗\",\"id\":410062498,\"msgId\":\"2103509\",\"msgType\":1,\"senderType\":5,\"senderTypeDesc\":\"贝壳租房服务管家-惠可(31178091)\",\"sessionCreateTime\":1782719318000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"是的\",\"id\":410062919,\"msgId\":\"2103511\",\"msgType\":1,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782719342000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"界面不一样\",\"id\":410063687,\"msgId\":\"1809292\",\"msgType\":1,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782719391000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wework.qpic.cn/wwpic3az/146636_44ETFcqHQQCRy-b_1779248155/0\",\"content\":\"鸿蒙系统需要通过“卓易通”里下载“贝壳租房”App，贝壳租房App包含全量门锁功能的APP\",\"id\":410064592,\"msgId\":\"2103524\",\"msgType\":1,\"senderType\":5,\"senderTypeDesc\":\"贝壳租房服务管家-惠可(31178091)\",\"sessionCreateTime\":1782719447000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wework.qpic.cn/wwpic3az/146636_44ETFcqHQQCRy-b_1779248155/0\",\"content\":\"按照这个下载处理\",\"id\":410064684,\"msgId\":\"2103526\",\"msgType\":1,\"senderType\":5,\"senderTypeDesc\":\"贝壳租房服务管家-惠可(31178091)\",\"sessionCreateTime\":1782719452000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"https://quan-picture-1259287960.cos.ap-guangzhou.myqcloud.com/1171/144ecf8c4be4468d874be2e08ea9a7d4.jpeg\",\"id\":410066833,\"msgId\":\"1809307\",\"msgType\":3,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782719591000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"是这个吗？一直等待，这个APP很难下载\",\"id\":410067291,\"msgId\":\"2103531\",\"msgType\":1,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782719624000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"@贝壳租房服务管家-惠可 \",\"id\":410067456,\"msgId\":\"1809313\",\"msgType\":1,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782719633000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wework.qpic.cn/wwpic3az/146636_44ETFcqHQQCRy-b_1779248155/0\",\"content\":\"是的您这边现在是网络不好吗\",\"id\":410068096,\"msgId\":\"2103537\",\"msgType\":1,\"senderType\":5,\"senderTypeDesc\":\"贝壳租房服务管家-惠可(31178091)\",\"sessionCreateTime\":1782719675000,\"title\":\"\",\"videoCoverUrl\":\"\"},{\"avatarUrl\":\"http://wx.qlogo.cn/mmhead/PiajxSqBRaEJhice7MQREwb0ibhkB6SePbWsVaO4U55ILXndx8DfeNhZw/0\",\"content\":\"别人一直在等着\",\"id\":410070195,\"msgId\":\"2103544\",\"msgType\":1,\"senderType\":4,\"senderTypeDesc\":\"签约租客：路\",\"sessionCreateTime\":1782719736000,\"title\":\"\",\"videoCoverUrl\":\"\"}]}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-jm4x8",
+              "tid": "453460-10.226.89.170-1239-1782720119541-479",
+              "sid": "453460-10.226.89.170-1239-1782720119541-478",
+              "timestamp": "2026-06-29T16:01:59.999+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T08:01:59.999Z"
+              ]
+            },
+            "sort": [
+              1782720119999
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "dl1mEp8BdpG7oQCUWc6R",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "0",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.110.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "执行的sql语句为:SELECT id,session_id,request_id,ticket_id,ask_question,answer_status,aigc_native_answer,appeal_tag,appeal_tag_desc,deal_desc,question_desc,cont_tag,intention,cancel_type,ask_time,answer_time,ctime,create_name,mtime,contract_code,summary,help_tag,gen_source FROM ticket_assistant_session WHERE (session_id = 'shengxinzu_zuwu_2071504436714512384_1782720119061') ORDER BY id DESC limit 1",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7ss4r",
+              "tid": "m-p.lease.ke.com-10.226.75.94-20-1782720119979-5hgnwPVlv0",
+              "sid": "453460-10.22.110.80-2141591-1782720119996-3526",
+              "timestamp": "2026-06-29T16:01:59.999+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T08:01:59.999Z"
+              ]
+            },
+            "sort": [
+              1782720119999
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "KIdmEp8Bwva2ZhliWciZ",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "7",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.110.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:isAtPerson,functionData:0,1,2,3,4,replyFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"105123488422\",\"contactInfo\":\"{\\\"address\\\":\\\"南山区蛇口荔园路东水湾壹玖柒玖广场(一期)3座1809\\\",\\\"name\\\":\\\"ARMIN  PETER  LISSFELD\\\",\\\"phone\\\":\\\"197****0270\\\"}\",\"cityCode\":\"440300\",\"groupId\":\"10932668838403976\",\"msgId\":\"2199759\",\"nowDateStr\":\"2026-06-29 16:01:52\",\"latestMsgId\":\"2199759\",\"cityName\":\"深圳\",\"inContractCode\":\"TG2603636895\",\"aiRobotUserId\":\"31377015\",\"triggerSource\":10,\"robotWeworkId\":\"31178147\",\"aiRobotUcId\":1000000031377015,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10932668838403976--7#1782719925000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"深圳贝壳租房服务管家惠斓\",\"userId\":1000000020122223,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 15:58:45\",\"senderType\":4,\"inContractId\":7341489,\"resblockId\":\"248098604921410\",\"contractCode\":\"TGCF2603580163\",\"bizType\":\"test\",\"isHasHistory\":0,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":1,\"intention\":\"结束对话\",\"messageContent\":\"Rent is paid!\",\"requestId\":\"2199759\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10932668838403976--7#1782719925000\",\"sessionInitiator\":4,\"traceId\":\"2199759\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7ss4r",
+              "tid": "512292-10.22.41.16-168-1782720118141-901",
+              "sid": "453460-10.22.110.80-2141671-1782720119998-3522",
+              "timestamp": "2026-06-29T16:01:59.999+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T08:01:59.999Z"
+              ]
+            },
+            "sort": [
+              1782720119999
+            ]
+          }
+        ]
+      },
+      "aggregations": {
+        "2": {
+          "buckets": [
+            {
+              "key_as_string": "2026-06-29T15:58:00.000+08:00",
+              "key": 1782719880000,
+              "doc_count": 99713
+            },
+            {
+              "key_as_string": "2026-06-29T15:58:30.000+08:00",
+              "key": 1782719910000,
+              "doc_count": 73802
+            },
+            {
+              "key_as_string": "2026-06-29T15:59:00.000+08:00",
+              "key": 1782719940000,
+              "doc_count": 82175
+            },
+            {
+              "key_as_string": "2026-06-29T15:59:30.000+08:00",
+              "key": 1782719970000,
+              "doc_count": 160312
+            },
+            {
+              "key_as_string": "2026-06-29T16:00:00.000+08:00",
+              "key": 1782720000000,
+              "doc_count": 255943
+            },
+            {
+              "key_as_string": "2026-06-29T16:00:30.000+08:00",
+              "key": 1782720030000,
+              "doc_count": 175733
+            },
+            {
+              "key_as_string": "2026-06-29T16:01:00.000+08:00",
+              "key": 1782720060000,
+              "doc_count": 262177
+            },
+            {
+              "key_as_string": "2026-06-29T16:01:30.000+08:00",
+              "key": 1782720090000,
+              "doc_count": 249762
+            },
+            {
+              "key_as_string": "2026-06-29T16:02:00.000+08:00",
+              "key": 1782720120000,
+              "doc_count": 6
+            }
+          ]
+        }
+      }
+    },
+    "total": 3,
+    "loaded": 3
+  }
+}

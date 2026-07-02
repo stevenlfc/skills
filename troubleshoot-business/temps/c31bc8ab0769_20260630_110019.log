@@ -1,0 +1,282 @@
+{
+  "meta": {
+    "server": "fast102",
+    "index": "index-13094-13282*",
+    "query_time": "2026-06-30T11:00:19.956419",
+    "hash": "c31bc8ab0769"
+  },
+  "request": {
+    "params": {
+      "ignoreThrottled": true,
+      "preference": 1780483834299,
+      "index": "index-13094-13282*",
+      "body": {
+        "version": true,
+        "size": 5,
+        "sort": [
+          {
+            "timestamp": {
+              "order": "desc",
+              "unmapped_type": "boolean"
+            }
+          }
+        ],
+        "aggs": {
+          "2": {
+            "date_histogram": {
+              "field": "timestamp",
+              "fixed_interval": "30s",
+              "time_zone": "Asia/Shanghai",
+              "min_doc_count": 1
+            }
+          }
+        },
+        "stored_fields": [
+          "*"
+        ],
+        "script_fields": {},
+        "docvalue_fields": [
+          {
+            "field": "timestamp",
+            "format": "date_time"
+          }
+        ],
+        "_source": {
+          "excludes": []
+        },
+        "query": {
+          "bool": {
+            "must": [
+              {
+                "match_all": {}
+              }
+            ],
+            "filter": [
+              {
+                "range": {
+                  "timestamp": {
+                    "gte": "2026-06-30T02:44:00.000Z",
+                    "lte": "2026-06-30T02:44:30.000Z",
+                    "format": "strict_date_optional_time"
+                  }
+                }
+              }
+            ],
+            "should": [],
+            "must_not": []
+          }
+        },
+        "highlight": {
+          "pre_tags": [
+            "@kibana-highlighted-field@"
+          ],
+          "post_tags": [
+            "@/kibana-highlighted-field@"
+          ],
+          "fields": {
+            "*": {}
+          },
+          "fragment_size": 2147483647
+        }
+      },
+      "rest_total_hits_as_int": true,
+      "ignore_unavailable": true,
+      "ignore_throttled": true,
+      "timeout": "30000ms"
+    },
+    "serverStrategy": "es"
+  },
+  "response": {
+    "is_partial": false,
+    "is_running": false,
+    "rawResponse": {
+      "took": 21,
+      "timed_out": false,
+      "_shards": {
+        "total": 7,
+        "successful": 7,
+        "skipped": 6,
+        "failed": 0
+      },
+      "hits": {
+        "total": 17894,
+        "max_score": null,
+        "hits": [
+          {
+            "_index": "index-13094-13282_2026-06-30",
+            "_type": "_doc",
+            "_id": "HnRpFp8B-637LPgJ-1O1",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_ext_headers": "{}",
+              "data_remote_port": "14206",
+              "data_req_type": "HTTP/1.1",
+              "data_remote_ip": "10.19.5.15",
+              "data_bltag": "request_in",
+              "machineName": "envType_prod__env-huiju-aigc-platform-prod-u40-64f5d9959b-pwmxk",
+              "tid": "453460-10.22.113.74-1295-1782787469658-1597",
+              "sid": "511763-10.22.72.148-102829536-1782787470000-6586",
+              "data_segmentid": "511763-10.22.72.148-102829536-1782787470000-6586",
+              "spanId": "49",
+              "data_uri": "/api/conversation",
+              "data_local_ip": "10.22.72.148",
+              "thread_name": "com.ke.iprd.log.filter.HttpRequestFilter-",
+              "loglevel": "INFO",
+              "data_body": "{\"requestId\":\"2071786927010521088\",\"bizScene\":\"suggestCreateTicket\",\"content\":\"可以\",\"extInfo\":{\"groupMsgList\":\"[{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"YUKI\\\",\\\"message\\\":\\\"@雷泽鹏\\\\u2005好了\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782631540000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"雷泽鹏\\\",\\\"message\\\":\\\"好的👌\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782631551000\\\"},{\\\"role\\\":\\\"线上服务管家\\\",\\\"memberName\\\":\\\"上海贝壳租房服务管家惠耀\\\",\\\"message\\\":\\\"好的，辛苦您了\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":5,\\\"time\\\":\\\"1782631611000\\\"},{\\\"role\\\":\\\"线上服务管家\\\",\\\"memberName\\\":\\\"上海贝壳租房服务管家惠耀\\\",\\\"message\\\":\\\"请问目前还有其他问题需要协助您处理吗?如果没问题，您回复一下“没问题”，我这边就不再打扰您了\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":5,\\\"time\\\":\\\"1782631613000\\\"},{\\\"role\\\":\\\"线上服务管家\\\",\\\"memberName\\\":\\\"上海贝壳租房服务管家惠耀\\\",\\\"message\\\":\\\"亲爱的租客小伙伴🥳 【解约协议】签好啦～押金将在完成物业交割后，预计5-7个工作日到账哦～记得留意银行卡消息呀～搬家时记得慢慢清点行李呀，那些陪你住过的小物件，都要一起带上哇～同时请您注意退费重要事项！！！请您务必检查避免经济损失1、请您在贝壳APP/小程序，点击“租约-退款账户”检查银行卡是否已经正确绑定，未绑卡是无法顺利退款给您的2、如果您绑定了本房源的水电燃费用的自动支付，提醒您解约后记得解绑，避免搬走后持续扣费～感谢您的理解与配合，祝您一切顺利！真庆幸能陪你走过这段租住时光！往后不管奔向哪座城市，都祝愿你的前路像晴空一样敞亮，每个选择都闪着星光✨～悄悄说：老房间会记得你的好，我也会❤\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":5,\\\"time\\\":\\\"1782631663000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"YUKI\\\",\\\"message\\\":\\\"好的\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782631698000\\\"},{\\\"role\\\":\\\"线上服务管家\\\",\\\"memberName\\\":\\\"上海贝壳租房服务管家惠耀\\\",\\\"message\\\":\\\"好的\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":5,\\\"time\\\":\\\"1782631713000\\\"},{\\\"role\\\":\\\"线上服务管家\\\",\\\"memberName\\\":\\\"上海贝壳租房服务管家惠耀\\\",\\\"message\\\":\\\"发来一条[小程序]消息\\\",\\\"type\\\":\\\"小程序\\\",\\\"roleType\\\":5,\\\"time\\\":\\\"1782631790000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"YUKI\\\",\\\"message\\\":\\\"亲，我们还需要见对面交接吗？我们明天到期了，还是全程线上完成就可以[抱拳]\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782733513000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"YUKI\\\",\\\"message\\\":\\\"@雷泽鹏\\\\u2005\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782733517000\\\"},{\\\"role\\\":\\\"AI智能助手\\\",\\\"memberName\\\":\\\"AI小惠842\\\",\\\"message\\\":\\\"您好，签署解约协议后需在还房日前搬离，请确保贵重物品已经带走，钥匙或密码交给管家，并保持房屋整洁即可。剩下的事情就交给我们吧，若有需要我们会再联系您的~\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":6,\\\"time\\\":\\\"1782733531000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"雷泽鹏\\\",\\\"message\\\":\\\"线上就可以哈\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782734566000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"雷泽鹏\\\",\\\"message\\\":\\\"你们搬完密码发群里就可以\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782734584000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"YUKI\\\",\\\"message\\\":\\\"好的\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782743255000\\\"},{\\\"role\\\":\\\"租务管家\\\",\\\"memberName\\\":\\\"年永田\\\",\\\"message\\\":\\\"哈喽，咱们今天搬完了吗，我过去给您结清一下水电燃@Mrs S  \\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":2,\\\"time\\\":\\\"1782787457000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"YUKI\\\",\\\"message\\\":\\\"我们搬好了 密码：202630#\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782787464000\\\"}]\",\"groupId\":\"10795652238047639\",\"msgId\":\"1625480\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10795652238047639--1#1782787457000\"}}",
+              "data_args": "{\"requestId\":\"2071786927010521088\",\"bizScene\":\"suggestCreateTicket\",\"content\":\"可以\",\"extInfo\":{\"groupMsgList\":\"[{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"YUKI\\\",\\\"message\\\":\\\"@雷泽鹏\\\\u2005好了\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782631540000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"雷泽鹏\\\",\\\"message\\\":\\\"好的👌\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782631551000\\\"},{\\\"role\\\":\\\"线上服务管家\\\",\\\"memberName\\\":\\\"上海贝壳租房服务管家惠耀\\\",\\\"message\\\":\\\"好的，辛苦您了\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":5,\\\"time\\\":\\\"1782631611000\\\"},{\\\"role\\\":\\\"线上服务管家\\\",\\\"memberName\\\":\\\"上海贝壳租房服务管家惠耀\\\",\\\"message\\\":\\\"请问目前还有其他问题需要协助您处理吗?如果没问题，您回复一下“没问题”，我这边就不再打扰您了\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":5,\\\"time\\\":\\\"1782631613000\\\"},{\\\"role\\\":\\\"线上服务管家\\\",\\\"memberName\\\":\\\"上海贝壳租房服务管家惠耀\\\",\\\"message\\\":\\\"亲爱的租客小伙伴🥳 【解约协议】签好啦～押金将在完成物业交割后，预计5-7个工作日到账哦～记得留意银行卡消息呀～搬家时记得慢慢清点行李呀，那些陪你住过的小物件，都要一起带上哇～同时请您注意退费重要事项！！！请您务必检查避免经济损失1、请您在贝壳APP/小程序，点击“租约-退款账户”检查银行卡是否已经正确绑定，未绑卡是无法顺利退款给您的2、如果您绑定了本房源的水电燃费用的自动支付，提醒您解约后记得解绑，避免搬走后持续扣费～感谢您的理解与配合，祝您一切顺利！真庆幸能陪你走过这段租住时光！往后不管奔向哪座城市，都祝愿你的前路像晴空一样敞亮，每个选择都闪着星光✨～悄悄说：老房间会记得你的好，我也会❤\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":5,\\\"time\\\":\\\"1782631663000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"YUKI\\\",\\\"message\\\":\\\"好的\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782631698000\\\"},{\\\"role\\\":\\\"线上服务管家\\\",\\\"memberName\\\":\\\"上海贝壳租房服务管家惠耀\\\",\\\"message\\\":\\\"好的\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":5,\\\"time\\\":\\\"1782631713000\\\"},{\\\"role\\\":\\\"线上服务管家\\\",\\\"memberName\\\":\\\"上海贝壳租房服务管家惠耀\\\",\\\"message\\\":\\\"发来一条[小程序]消息\\\",\\\"type\\\":\\\"小程序\\\",\\\"roleType\\\":5,\\\"time\\\":\\\"1782631790000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"YUKI\\\",\\\"message\\\":\\\"亲，我们还需要见对面交接吗？我们明天到期了，还是全程线上完成就可以[抱拳]\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782733513000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"YUKI\\\",\\\"message\\\":\\\"@雷泽鹏\\\\u2005\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782733517000\\\"},{\\\"role\\\":\\\"AI智能助手\\\",\\\"memberName\\\":\\\"AI小惠842\\\",\\\"message\\\":\\\"您好，签署解约协议后需在还房日前搬离，请确保贵重物品已经带走，钥匙或密码交给管家，并保持房屋整洁即可。剩下的事情就交给我们吧，若有需要我们会再联系您的~\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":6,\\\"time\\\":\\\"1782733531000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"雷泽鹏\\\",\\\"message\\\":\\\"线上就可以哈\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782734566000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"雷泽鹏\\\",\\\"message\\\":\\\"你们搬完密码发群里就可以\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782734584000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"YUKI\\\",\\\"message\\\":\\\"好的\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782743255000\\\"},{\\\"role\\\":\\\"租务管家\\\",\\\"memberName\\\":\\\"年永田\\\",\\\"message\\\":\\\"哈喽，咱们今天搬完了吗，我过去给您结清一下水电燃@Mrs S  \\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":2,\\\"time\\\":\\\"1782787457000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"YUKI\\\",\\\"message\\\":\\\"我们搬好了 密码：202630#\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782787464000\\\"}]\",\"groupId\":\"10795652238047639\",\"msgId\":\"1625480\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10795652238047639--1#1782787457000\"}}",
+              "timestamp": "2026-06-30T10:44:30.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-30T02:44:30.000Z"
+              ]
+            },
+            "sort": [
+              1782787470000
+            ]
+          },
+          {
+            "_index": "index-13094-13282_2026-06-30",
+            "_type": "_doc",
+            "_id": "FcdqFp8B540cDHgABZ9J",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "6",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.45.217",
+              "thread_name": "com.ke.huiju.aigc.service.logic.conversation.impl.ConversationLogicImpl-",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "内容content---脱敏前:服务管家:(2026-06-30 10:44:29)嗯嗯，麻烦您了---脱敏后:服务管家:(2026-06-30 10:44:29)嗯嗯，麻烦您了",
+              "machineName": "envType_prod__env-huiju-aigc-platform-prod-u40-64f5d9959b-62jwr",
+              "tid": "453460-10.226.89.170-1237-1782787469567-2427",
+              "sid": "511763-10.22.45.217-57061043-1782787469999-9480",
+              "timestamp": "2026-06-30T10:44:30.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-30T02:44:30.000Z"
+              ]
+            },
+            "sort": [
+              1782787470000
+            ]
+          },
+          {
+            "_index": "index-13094-13282_2026-06-30",
+            "_type": "_doc",
+            "_id": "FsdqFp8B540cDHgABZ9J",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "6",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.45.217",
+              "thread_name": "com.ke.huiju.aigc.rpc.config.FeignLogConfiguration-",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "[BellaFeign#executeWorkflow] Feign请求开始 ---> https://openapi-ait.ke.com/v1/workflow/run  - Feign headers ---> {\"Authorization\":[\"Bearer 27115def-dce7-4435-9862-95cac8d6cd20\"],\"Content-Length\":[\"793\"],\"Content-Type\":[\"application/json\",\"application/json;charset=UTF-8\"],\"X-Ke-Sid\":[\"huiju-aigc-platform\"]}  - [request param] {\"tenantId\":\"04633c4f-8638-43a3-a02e-af23c29f821f\",\"workflowId\":\"WKFL-0964f9b3-52b7-45bb-837e-25dca2f16967\",\"inputs\":{\"requestId\":\"communicationControlInspection|2071786926886797312\",\"content\":\" 服务管家:(2026-06-30 10:44:29)嗯嗯，麻烦您了\",\"extInfo\":{\"dialogueContext\":\"贝壳租房服务管家-惠瑭(31163189)(2026-06-30 10:42:02):这边已收到您的消息，马上为您查询并处理问题。\n贝壳租房服务管家-惠瑭(31163189)(2026-06-30 10:43:48):是的，水费600，电费764\n签约租客：llcc(2026-06-30 10:43:57):好\n服务管家:(2026-06-30 10:44:29)嗯嗯，麻烦您了\",\"whetherSingleWord\":true,\"bizType\":\"test\"}},\"responseMode\":\"callback\",\"callbackUrl\":\"http://huiju-aigc-platform.ke.com/api/bellaCallback\",\"userId\":null,\"userName\":null,\"flashMode\":2}",
+              "machineName": "envType_prod__env-huiju-aigc-platform-prod-u40-64f5d9959b-62jwr",
+              "tid": "453460-10.226.89.170-1237-1782787469567-2427",
+              "sid": "511763-10.22.45.217-57061043-1782787469999-9480",
+              "timestamp": "2026-06-30T10:44:30.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-30T02:44:30.000Z"
+              ]
+            },
+            "sort": [
+              1782787470000
+            ]
+          },
+          {
+            "_index": "index-13094-13282_2026-06-30",
+            "_type": "_doc",
+            "_id": "ocdqFp8B540cDHgABaBK",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "6",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.45.217",
+              "thread_name": "com.ke.huiju.aigc.service.logic.conversation.impl.ConversationLogicImpl-",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "扩展信息extInfo---脱敏前:{\"dialogueContext\":\"贝壳租房服务管家-惠瑭(31163189)(2026-06-30 10:42:02):这边已收到您的消息，马上为您查询并处理问题。\n贝壳租房服务管家-惠瑭(31163189)(2026-06-30 10:43:48):是的，水费600，电费764\n签约租客：llcc(2026-06-30 10:43:57):好\n服务管家:(2026-06-30 10:44:29)嗯嗯，麻烦您了\",\"whetherSingleWord\":true,\"bizType\":\"test\"}---脱敏后:{\"dialogueContext\":\"{dialogueContext}\",\"bizType\":\"test\",\"whetherSingleWord\":\"{whetherSingleWord}\"}",
+              "machineName": "envType_prod__env-huiju-aigc-platform-prod-u40-64f5d9959b-62jwr",
+              "tid": "453460-10.226.89.170-1237-1782787469567-2427",
+              "sid": "511763-10.22.45.217-57061043-1782787469999-9480",
+              "timestamp": "2026-06-30T10:44:30.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-30T02:44:30.000Z"
+              ]
+            },
+            "sort": [
+              1782787470000
+            ]
+          },
+          {
+            "_index": "index-13094-13282_2026-06-30",
+            "_type": "_doc",
+            "_id": "oMdqFp8B540cDHgABaBK",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_ext_headers": "{}",
+              "data_remote_port": "6052",
+              "data_req_type": "HTTP/1.1",
+              "data_remote_ip": "10.19.5.104",
+              "data_bltag": "request_in",
+              "machineName": "envType_prod__env-huiju-aigc-platform-prod-u40-64f5d9959b-62jwr",
+              "tid": "453460-10.226.89.170-1237-1782787469567-2427",
+              "sid": "511763-10.22.45.217-57061043-1782787469999-9480",
+              "data_segmentid": "511763-10.22.45.217-57061043-1782787469999-9480",
+              "spanId": "6",
+              "data_uri": "/api/conversation",
+              "data_local_ip": "10.22.45.217",
+              "thread_name": "com.ke.iprd.log.filter.HttpRequestFilter-",
+              "loglevel": "INFO",
+              "data_body": "{\"requestId\":2071786926886797312,\"bizScene\":\"communicationControlInspection\",\"content\":\"服务管家:(2026-06-30 10:44:29)嗯嗯，麻烦您了\",\"extInfo\":{\"dialogueContext\":\"贝壳租房服务管家-惠瑭(31163189)(2026-06-30 10:42:02):这边已收到您的消息，马上为您查询并处理问题。\n贝壳租房服务管家-惠瑭(31163189)(2026-06-30 10:43:48):是的，水费600，电费764\n签约租客：llcc(2026-06-30 10:43:57):好\n服务管家:(2026-06-30 10:44:29)嗯嗯，麻烦您了\",\"whetherSingleWord\":true}}",
+              "data_args": "{\"requestId\":2071786926886797312,\"bizScene\":\"communicationControlInspection\",\"content\":\"服务管家:(2026-06-30 10:44:29)嗯嗯，麻烦您了\",\"extInfo\":{\"dialogueContext\":\"贝壳租房服务管家-惠瑭(31163189)(2026-06-30 10:42:02):这边已收到您的消息，马上为您查询并处理问题。\n贝壳租房服务管家-惠瑭(31163189)(2026-06-30 10:43:48):是的，水费600，电费764\n签约租客：llcc(2026-06-30 10:43:57):好\n服务管家:(2026-06-30 10:44:29)嗯嗯，麻烦您了\",\"whetherSingleWord\":true}}",
+              "timestamp": "2026-06-30T10:44:29.999+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-30T02:44:29.999Z"
+              ]
+            },
+            "sort": [
+              1782787469999
+            ]
+          }
+        ]
+      },
+      "aggregations": {
+        "2": {
+          "buckets": [
+            {
+              "key_as_string": "2026-06-30T10:44:00.000+08:00",
+              "key": 1782787440000,
+              "doc_count": 17890
+            },
+            {
+              "key_as_string": "2026-06-30T10:44:30.000+08:00",
+              "key": 1782787470000,
+              "doc_count": 4
+            }
+          ]
+        }
+      }
+    },
+    "total": 7,
+    "loaded": 7
+  }
+}

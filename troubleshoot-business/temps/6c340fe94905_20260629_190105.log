@@ -1,0 +1,662 @@
+{
+  "meta": {
+    "server": "fast106",
+    "index": "index-11408-13176_2026-06-29",
+    "query_time": "2026-06-29T19:01:05.252319",
+    "hash": "6c340fe94905"
+  },
+  "request": {
+    "params": {
+      "ignoreThrottled": true,
+      "preference": 1780483834299,
+      "index": "index-11408-13176_2026-06-29",
+      "body": {
+        "version": true,
+        "size": 10,
+        "sort": [
+          {
+            "timestamp": {
+              "order": "desc",
+              "unmapped_type": "boolean"
+            }
+          }
+        ],
+        "aggs": {
+          "2": {
+            "date_histogram": {
+              "field": "timestamp",
+              "fixed_interval": "30s",
+              "time_zone": "Asia/Shanghai",
+              "min_doc_count": 1
+            }
+          }
+        },
+        "stored_fields": [
+          "*"
+        ],
+        "script_fields": {},
+        "docvalue_fields": [
+          {
+            "field": "timestamp",
+            "format": "date_time"
+          }
+        ],
+        "_source": {
+          "excludes": []
+        },
+        "query": {
+          "bool": {
+            "must": [
+              {
+                "match_all": {}
+              }
+            ],
+            "filter": [
+              {
+                "match_phrase": {
+                  "data_info_msg": "收到工作台群会话消息"
+                }
+              },
+              {
+                "range": {
+                  "timestamp": {
+                    "gte": "2026-06-29T04:00:00.000Z",
+                    "lte": "2026-06-29T04:20:00.000Z",
+                    "format": "strict_date_optional_time"
+                  }
+                }
+              }
+            ],
+            "should": [],
+            "must_not": []
+          }
+        },
+        "highlight": {
+          "pre_tags": [
+            "@kibana-highlighted-field@"
+          ],
+          "post_tags": [
+            "@/kibana-highlighted-field@"
+          ],
+          "fields": {
+            "*": {}
+          },
+          "fragment_size": 2147483647
+        }
+      },
+      "rest_total_hits_as_int": true,
+      "ignore_unavailable": true,
+      "ignore_throttled": true,
+      "timeout": "30000ms"
+    },
+    "serverStrategy": "es"
+  },
+  "response": {
+    "is_partial": false,
+    "is_running": false,
+    "rawResponse": {
+      "took": 566,
+      "timed_out": false,
+      "_shards": {
+        "total": 3,
+        "successful": 3,
+        "skipped": 0,
+        "failed": 0
+      },
+      "hits": {
+        "total": 22480,
+        "max_score": null,
+        "hits": [
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "HH2bEZ8BdpG7oQCUF77R",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "-1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.82.200",
+              "requestId": "a248e93a85464b0f6123e60a8a1e60b05927972f",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "收到工作台群会话消息:{\"data\":{\"globalMsgId\":\"4468346563942347521\",\"msgType\":3,\"memberChannelAccountId\":\"accrab5mCPIH4HYaLM4qBLR\",\"groupId\":\"10939005411837043\",\"msgId\":\"2466967\",\"memberWeComId\":\"wmk9U4DAAASFD2dyvryoukIDKfmuL1vA\",\"senderId\":\"7881301181074089\",\"robotUcCode\":\"31172636\",\"memberUnionId\":\"oN7cVs9w8VU6Zd6bSE1en4Ho3igY\",\"channelCode\":\"QUAN_LIANG\",\"chatType\":2,\"groupWeComId\":\"wrk9U4DAAAlv8MkKmpP9szAU2Gu32Y6g\",\"groupChannelId\":\"groupeVvDLQOzodqoetQrOAhA\",\"robotSrcType\":1,\"robotChannelAccountCode\":\"accxipuUfK2ozzp624YXUYP\",\"quoteGlobalMsgId\":\"\",\"msgContent\":{\"imgMsg\":{\"imgUrl\":\"https://quan-picture-1259287960.cos.ap-guangzhou.myqcloud.com/1171/8b4e91163a474521b92b1c6aea56205a.jpeg\",\"downStatus\":2},\"msgType\":3},\"roomieMsgId\":\"DT20260629121952-GROUP-K2071448572254658562\",\"robotType\":100,\"msgTime\":\"2026-06-29 12:19:52.000\",\"senderType\":2,\"businessType\":1,\"originalData\":\"{\\\"appInfo\\\":\\\"4468346563942347521\\\",\\\"businessCode\\\":\\\"shengxinzu_zuwu\\\",\\\"channelMsgSn\\\":\\\"\\\",\\\"corpName\\\":\\\"bei_ke\\\",\\\"desc\\\":\\\"\\\",\\\"eventType\\\":71003,\\\"groupId\\\":\\\"10939005411837043\\\",\\\"hint\\\":\\\"o4z5Gapx9hi9cmJcnMUA.qvCrhh.1782706798\\\",\\\"href\\\":\\\"\\\",\\\"md5\\\":\\\"aff13a721061b852b46d0b14e7f26020\\\",\\\"msgContent\\\":\\\"https://quan-picture-1259287960.cos.ap-guangzhou.myqcloud.com/1171/8b4e91163a474521b92b1c6aea56205a.jpeg\\\",\\\"msgId\\\":\\\"2466967\\\",\\\"msgTime\\\":\\\"2026-06-29 12:19:52.000\\\",\\\"msgType\\\":3,\\\"qlAtList\\\":\\\"\\\",\\\"quoteAppInfo\\\":\\\"\\\",\\\"requestId\\\":\\\"934c8321-b567-400e-b2bb-7910499cdc30\\\",\\\"robotWeworkId\\\":\\\"31172636\\\",\\\"senderType\\\":2,\\\"senderUserId\\\":\\\"7881301181074089\\\",\\\"senderUserQlId\\\":\\\"accrab5mCPIH4HYaLM4qBLR\\\",\\\"title\\\":\\\"\\\",\\\"voiceTime\\\":\\\"0\\\"}\",\"transferToNextKafka\":true,\"robotWeComCode\":\"31172636\"},\"eventTime\":1782706799534,\"eventType\":\"group_chat\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-f6htb",
+              "tid": "453460-10.226.82.200-1217-1782706799954-3271",
+              "sid": "453460-10.226.82.200-1217-1782706799954-3270",
+              "timestamp": "2026-06-29T12:19:59.954+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.954Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@收@/kibana-highlighted-field@@kibana-highlighted-field@到@/kibana-highlighted-field@@kibana-highlighted-field@工@/kibana-highlighted-field@@kibana-highlighted-field@作@/kibana-highlighted-field@@kibana-highlighted-field@台@/kibana-highlighted-field@@kibana-highlighted-field@群@/kibana-highlighted-field@@kibana-highlighted-field@会@/kibana-highlighted-field@@kibana-highlighted-field@话@/kibana-highlighted-field@@kibana-highlighted-field@消@/kibana-highlighted-field@@kibana-highlighted-field@息@/kibana-highlighted-field@:{\"data\":{\"globalMsgId\":\"4468346563942347521\",\"msgType\":3,\"memberChannelAccountId\":\"accrab5mCPIH4HYaLM4qBLR\",\"groupId\":\"10939005411837043\",\"msgId\":\"2466967\",\"memberWeComId\":\"wmk9U4DAAASFD2dyvryoukIDKfmuL1vA\",\"senderId\":\"7881301181074089\",\"robotUcCode\":\"31172636\",\"memberUnionId\":\"oN7cVs9w8VU6Zd6bSE1en4Ho3igY\",\"channelCode\":\"QUAN_LIANG\",\"chatType\":2,\"groupWeComId\":\"wrk9U4DAAAlv8MkKmpP9szAU2Gu32Y6g\",\"groupChannelId\":\"groupeVvDLQOzodqoetQrOAhA\",\"robotSrcType\":1,\"robotChannelAccountCode\":\"accxipuUfK2ozzp624YXUYP\",\"quoteGlobalMsgId\":\"\",\"msgContent\":{\"imgMsg\":{\"imgUrl\":\"https://quan-picture-1259287960.cos.ap-guangzhou.myqcloud.com/1171/8b4e91163a474521b92b1c6aea56205a.jpeg\",\"downStatus\":2},\"msgType\":3},\"roomieMsgId\":\"DT20260629121952-GROUP-K2071448572254658562\",\"robotType\":100,\"msgTime\":\"2026-06-29 12:19:52.000\",\"senderType\":2,\"businessType\":1,\"originalData\":\"{\\\"appInfo\\\":\\\"4468346563942347521\\\",\\\"businessCode\\\":\\\"shengxinzu_zuwu\\\",\\\"channelMsgSn\\\":\\\"\\\",\\\"corpName\\\":\\\"bei_ke\\\",\\\"desc\\\":\\\"\\\",\\\"eventType\\\":71003,\\\"groupId\\\":\\\"10939005411837043\\\",\\\"hint\\\":\\\"o4z5Gapx9hi9cmJcnMUA.qvCrhh.1782706798\\\",\\\"href\\\":\\\"\\\",\\\"md5\\\":\\\"aff13a721061b852b46d0b14e7f26020\\\",\\\"msgContent\\\":\\\"https://quan-picture-1259287960.cos.ap-guangzhou.myqcloud.com/1171/8b4e91163a474521b92b1c6aea56205a.jpeg\\\",\\\"msgId\\\":\\\"2466967\\\",\\\"msgTime\\\":\\\"2026-06-29 12:19:52.000\\\",\\\"msgType\\\":3,\\\"qlAtList\\\":\\\"\\\",\\\"quoteAppInfo\\\":\\\"\\\",\\\"requestId\\\":\\\"934c8321-b567-400e-b2bb-7910499cdc30\\\",\\\"robotWeworkId\\\":\\\"31172636\\\",\\\"senderType\\\":2,\\\"senderUserId\\\":\\\"7881301181074089\\\",\\\"senderUserQlId\\\":\\\"accrab5mCPIH4HYaLM4qBLR\\\",\\\"title\\\":\\\"\\\",\\\"voiceTime\\\":\\\"0\\\"}\",\"transferToNextKafka\":true,\"robotWeComCode\":\"31172636\"},\"eventTime\":1782706799534,\"eventType\":\"group_chat\"}"
+              ]
+            },
+            "sort": [
+              1782706799954
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "2PCbEZ8Bwva2ZhliEAjQ",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "-1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.80",
+              "requestId": "e79254cd4a3272ab72841e8fd5100e14d2ca9cfa",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "收到工作台群会话消息:{\"data\":{\"globalMsgId\":\"CAQQ7+SH0gYY2dDC9pKAgAMg96W2lA8=\",\"msgType\":1,\"memberChannelAccountId\":\"accA3RzhFks6mVvTMVu8akF\",\"groupId\":\"10917652988649191\",\"receptionUcCode\":\"30265705\",\"msgId\":\"1536136\",\"memberWeComId\":\"\",\"recallMsgId\":\"1536136\",\"senderId\":\"31175466\",\"robotUcCode\":\"31175466\",\"memberUnionId\":\"\",\"sn\":\"shengxinzu_zuwua662fb9d4f2a401cbf561c69fb662b54\",\"channelCode\":\"QUAN_LIANG\",\"chatType\":2,\"groupWeComId\":\"wrk9U4DAAAzWtxNoooY1PNZdRcYqYGcA\",\"groupChannelId\":\"groupD9i0wOkQ53EOeTKjTAHu\",\"robotSrcType\":1,\"sessionId\":\"637478284d09408a9d6ae571fca14b26-yunguanjia-core\",\"robotChannelAccountCode\":\"accA3RzhFks6mVvTMVu8akF\",\"msgContent\":{\"msgType\":1,\"textMsg\":{\"content\":\"管家看到消息会对接的呢\"}},\"roomieMsgId\":\"DT20260629121959-GROUP-K2071448568390688769\",\"robotType\":100,\"msgTime\":\"2026-06-29 12:19:59.562\",\"senderType\":100,\"businessType\":1,\"originalData\":\"{\\\"appInfo\\\":\\\"CAQQ7+SH0gYY2dDC9pKAgAMg96W2lA8=\\\",\\\"businessCode\\\":\\\"shengxinzu_zuwu\\\",\\\"channelMsgSn\\\":\\\"\\\",\\\"corpName\\\":\\\"bei_ke\\\",\\\"customMsgId\\\":\\\"shengxinzu_zuwua662fb9d4f2a401cbf561c69fb662b54\\\",\\\"desc\\\":\\\"\\\",\\\"eventType\\\":71003,\\\"groupId\\\":\\\"10917652988649191\\\",\\\"hint\\\":\\\"KS3nbxMpLBi9cmN7n2AA.LmBcvM.1782706799\\\",\\\"href\\\":\\\"\\\",\\\"md5\\\":\\\"\\\",\\\"msgContent\\\":\\\"管家看到消息会对接的呢\\\",\\\"msgId\\\":\\\"1536136\\\",\\\"msgTime\\\":\\\"2026-06-29 12:19:59.562\\\",\\\"msgType\\\":1,\\\"qlAtList\\\":\\\"\\\",\\\"recallMsgId\\\":\\\"1536136\\\",\\\"requestId\\\":\\\"dc7b63d9-d53e-4d1c-b99c-c80d1e85758c\\\",\\\"robotWeworkId\\\":\\\"31175466\\\",\\\"senderType\\\":0,\\\"title\\\":\\\"\\\",\\\"voiceTime\\\":\\\"0\\\"}\",\"transferToNextKafka\":true,\"robotWeComCode\":\"31175466\"},\"eventTime\":1782706799742,\"eventType\":\"group_chat\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-rpdnz",
+              "tid": "453460-10.22.115.80-1188-1782706799815-1375",
+              "sid": "453460-10.22.115.80-1188-1782706799815-1374",
+              "timestamp": "2026-06-29T12:19:59.815+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.815Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@收@/kibana-highlighted-field@@kibana-highlighted-field@到@/kibana-highlighted-field@@kibana-highlighted-field@工@/kibana-highlighted-field@@kibana-highlighted-field@作@/kibana-highlighted-field@@kibana-highlighted-field@台@/kibana-highlighted-field@@kibana-highlighted-field@群@/kibana-highlighted-field@@kibana-highlighted-field@会@/kibana-highlighted-field@@kibana-highlighted-field@话@/kibana-highlighted-field@@kibana-highlighted-field@消@/kibana-highlighted-field@@kibana-highlighted-field@息@/kibana-highlighted-field@:{\"data\":{\"globalMsgId\":\"CAQQ7+SH0gYY2dDC9pKAgAMg96W2lA8=\",\"msgType\":1,\"memberChannelAccountId\":\"accA3RzhFks6mVvTMVu8akF\",\"groupId\":\"10917652988649191\",\"receptionUcCode\":\"30265705\",\"msgId\":\"1536136\",\"memberWeComId\":\"\",\"recallMsgId\":\"1536136\",\"senderId\":\"31175466\",\"robotUcCode\":\"31175466\",\"memberUnionId\":\"\",\"sn\":\"shengxinzu_zuwua662fb9d4f2a401cbf561c69fb662b54\",\"channelCode\":\"QUAN_LIANG\",\"chatType\":2,\"groupWeComId\":\"wrk9U4DAAAzWtxNoooY1PNZdRcYqYGcA\",\"groupChannelId\":\"groupD9i0wOkQ53EOeTKjTAHu\",\"robotSrcType\":1,\"sessionId\":\"637478284d09408a9d6ae571fca14b26-yunguanjia-core\",\"robotChannelAccountCode\":\"accA3RzhFks6mVvTMVu8akF\",\"msgContent\":{\"msgType\":1,\"textMsg\":{\"content\":\"管家看到消息会对接的呢\"}},\"roomieMsgId\":\"DT20260629121959-GROUP-K2071448568390688769\",\"robotType\":100,\"msgTime\":\"2026-06-29 12:19:59.562\",\"senderType\":100,\"businessType\":1,\"originalData\":\"{\\\"appInfo\\\":\\\"CAQQ7+SH0gYY2dDC9pKAgAMg96W2lA8=\\\",\\\"businessCode\\\":\\\"shengxinzu_zuwu\\\",\\\"channelMsgSn\\\":\\\"\\\",\\\"corpName\\\":\\\"bei_ke\\\",\\\"customMsgId\\\":\\\"shengxinzu_zuwua662fb9d4f2a401cbf561c69fb662b54\\\",\\\"desc\\\":\\\"\\\",\\\"eventType\\\":71003,\\\"groupId\\\":\\\"10917652988649191\\\",\\\"hint\\\":\\\"KS3nbxMpLBi9cmN7n2AA.LmBcvM.1782706799\\\",\\\"href\\\":\\\"\\\",\\\"md5\\\":\\\"\\\",\\\"msgContent\\\":\\\"管家看到消息会对接的呢\\\",\\\"msgId\\\":\\\"1536136\\\",\\\"msgTime\\\":\\\"2026-06-29 12:19:59.562\\\",\\\"msgType\\\":1,\\\"qlAtList\\\":\\\"\\\",\\\"recallMsgId\\\":\\\"1536136\\\",\\\"requestId\\\":\\\"dc7b63d9-d53e-4d1c-b99c-c80d1e85758c\\\",\\\"robotWeworkId\\\":\\\"31175466\\\",\\\"senderType\\\":0,\\\"title\\\":\\\"\\\",\\\"voiceTime\\\":\\\"0\\\"}\",\"transferToNextKafka\":true,\"robotWeComCode\":\"31175466\"},\"eventTime\":1782706799742,\"eventType\":\"group_chat\"}"
+              ]
+            },
+            "sort": [
+              1782706799815
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "WECbEZ8B9P_t1W1uFYCY",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "-1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.119.112",
+              "requestId": "3077a8a792f6900b1791e63ddec44add55427a85",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "收到工作台群会话消息:{\"data\":{\"globalMsgId\":\"5073155208483207723\",\"msgType\":1,\"memberChannelAccountId\":\"acc5sCDwcalHGKS60wPopnM\",\"groupId\":\"10718692081208178\",\"receptionUcCode\":\"30893123\",\"msgId\":\"1666294\",\"memberWeComId\":\"wmk9U4DAAAOG6RxyUBgBnEF1BNb-O_4w\",\"senderId\":\"7881302900981886\",\"robotUcCode\":\"31261509\",\"memberUnionId\":\"oN7cVswPIaI-6PFllMrEnXCM8fjs\",\"channelCode\":\"QUAN_LIANG\",\"chatType\":2,\"groupWeComId\":\"wrk9U4DAAAD_3JBd0mrBd7ww9cp7R9NA\",\"groupChannelId\":\"groupmH759XNxaxX4BSeE3x3K\",\"robotSrcType\":1,\"sessionId\":\"16250cd6cbec42ff83f9eb70dae9e83b-yunguanjia-core\",\"robotChannelAccountCode\":\"accovZ0Z5Josp0ZPQoxav43\",\"quoteGlobalMsgId\":\"\",\"msgContent\":{\"msgType\":1,\"textMsg\":{\"content\":\"嗯\"}},\"roomieMsgId\":\"DT20260629121957-GROUP-K2071448571213455361\",\"robotType\":101,\"msgTime\":\"2026-06-29 12:19:57.000\",\"senderType\":2,\"businessType\":1,\"originalData\":\"{\\\"appInfo\\\":\\\"5073155208483207723\\\",\\\"businessCode\\\":\\\"shengxinzu_zuwu\\\",\\\"channelMsgSn\\\":\\\"1666294\\\",\\\"corpName\\\":\\\"bei_ke\\\",\\\"desc\\\":\\\"\\\",\\\"eventType\\\":71003,\\\"groupId\\\":\\\"10718692081208178\\\",\\\"hint\\\":\\\"ugo1Oj8Bthi9cmOK3bgA.0lDxPL.1782706798\\\",\\\"href\\\":\\\"\\\",\\\"md5\\\":\\\"\\\",\\\"msgContent\\\":\\\"嗯\\\",\\\"msgId\\\":\\\"1666294\\\",\\\"msgTime\\\":\\\"2026-06-29 12:19:57.000\\\",\\\"msgType\\\":1,\\\"qlAtList\\\":\\\"\\\",\\\"quoteAppInfo\\\":\\\"\\\",\\\"requestId\\\":\\\"677f64f4-6d72-41f9-8887-7a9d56e65e12\\\",\\\"robotWeworkId\\\":\\\"31261509\\\",\\\"senderType\\\":2,\\\"senderUserId\\\":\\\"7881302900981886\\\",\\\"senderUserQlId\\\":\\\"acc5sCDwcalHGKS60wPopnM\\\",\\\"title\\\":\\\"\\\",\\\"voiceTime\\\":\\\"0\\\"}\",\"transferToNextKafka\":true,\"robotWeComCode\":\"31261509\"},\"eventTime\":1782706799584,\"eventType\":\"group_chat\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-l9wgm",
+              "tid": "453460-10.22.119.112-1233-1782706799801-9889",
+              "sid": "453460-10.22.119.112-1233-1782706799801-9888",
+              "timestamp": "2026-06-29T12:19:59.801+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.801Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@收@/kibana-highlighted-field@@kibana-highlighted-field@到@/kibana-highlighted-field@@kibana-highlighted-field@工@/kibana-highlighted-field@@kibana-highlighted-field@作@/kibana-highlighted-field@@kibana-highlighted-field@台@/kibana-highlighted-field@@kibana-highlighted-field@群@/kibana-highlighted-field@@kibana-highlighted-field@会@/kibana-highlighted-field@@kibana-highlighted-field@话@/kibana-highlighted-field@@kibana-highlighted-field@消@/kibana-highlighted-field@@kibana-highlighted-field@息@/kibana-highlighted-field@:{\"data\":{\"globalMsgId\":\"5073155208483207723\",\"msgType\":1,\"memberChannelAccountId\":\"acc5sCDwcalHGKS60wPopnM\",\"groupId\":\"10718692081208178\",\"receptionUcCode\":\"30893123\",\"msgId\":\"1666294\",\"memberWeComId\":\"wmk9U4DAAAOG6RxyUBgBnEF1BNb-O_4w\",\"senderId\":\"7881302900981886\",\"robotUcCode\":\"31261509\",\"memberUnionId\":\"oN7cVswPIaI-6PFllMrEnXCM8fjs\",\"channelCode\":\"QUAN_LIANG\",\"chatType\":2,\"groupWeComId\":\"wrk9U4DAAAD_3JBd0mrBd7ww9cp7R9NA\",\"groupChannelId\":\"groupmH759XNxaxX4BSeE3x3K\",\"robotSrcType\":1,\"sessionId\":\"16250cd6cbec42ff83f9eb70dae9e83b-yunguanjia-core\",\"robotChannelAccountCode\":\"accovZ0Z5Josp0ZPQoxav43\",\"quoteGlobalMsgId\":\"\",\"msgContent\":{\"msgType\":1,\"textMsg\":{\"content\":\"嗯\"}},\"roomieMsgId\":\"DT20260629121957-GROUP-K2071448571213455361\",\"robotType\":101,\"msgTime\":\"2026-06-29 12:19:57.000\",\"senderType\":2,\"businessType\":1,\"originalData\":\"{\\\"appInfo\\\":\\\"5073155208483207723\\\",\\\"businessCode\\\":\\\"shengxinzu_zuwu\\\",\\\"channelMsgSn\\\":\\\"1666294\\\",\\\"corpName\\\":\\\"bei_ke\\\",\\\"desc\\\":\\\"\\\",\\\"eventType\\\":71003,\\\"groupId\\\":\\\"10718692081208178\\\",\\\"hint\\\":\\\"ugo1Oj8Bthi9cmOK3bgA.0lDxPL.1782706798\\\",\\\"href\\\":\\\"\\\",\\\"md5\\\":\\\"\\\",\\\"msgContent\\\":\\\"嗯\\\",\\\"msgId\\\":\\\"1666294\\\",\\\"msgTime\\\":\\\"2026-06-29 12:19:57.000\\\",\\\"msgType\\\":1,\\\"qlAtList\\\":\\\"\\\",\\\"quoteAppInfo\\\":\\\"\\\",\\\"requestId\\\":\\\"677f64f4-6d72-41f9-8887-7a9d56e65e12\\\",\\\"robotWeworkId\\\":\\\"31261509\\\",\\\"senderType\\\":2,\\\"senderUserId\\\":\\\"7881302900981886\\\",\\\"senderUserQlId\\\":\\\"acc5sCDwcalHGKS60wPopnM\\\",\\\"title\\\":\\\"\\\",\\\"voiceTime\\\":\\\"0\\\"}\",\"transferToNextKafka\":true,\"robotWeComCode\":\"31261509\"},\"eventTime\":1782706799584,\"eventType\":\"group_chat\"}"
+              ]
+            },
+            "sort": [
+              1782706799801
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "l_CbEZ8Bwva2ZhliGpPV",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "-1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.89.170",
+              "requestId": "ab7070a0984d1c9ae8c3505838eda41fe6a3960c",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "收到工作台群会话消息:{\"data\":{\"globalMsgId\":\"CAQQ7+SH0gYY6tnVi5mAgAMgqfXezQs=\",\"msgType\":2,\"memberChannelAccountId\":\"accsgBUP322hCDcdyXkPX0q\",\"groupId\":\"10732405133470175\",\"msgId\":\"1544429\",\"memberWeComId\":\"\",\"recallMsgId\":\"1544429\",\"senderId\":\"31376796\",\"robotUcCode\":\"31376796\",\"memberUnionId\":\"\",\"sn\":\"shengxinzu_zuwub818b837e38737ea3b1aad5b2208b40e\",\"channelCode\":\"QUAN_LIANG\",\"chatType\":2,\"groupWeComId\":\"wrk9U4DAAAyW7Bous7uYmvIZALSBDeMg\",\"groupChannelId\":\"group7rT4W47jgR6QuMmGTmkA\",\"robotSrcType\":1,\"robotChannelAccountCode\":\"accsgBUP322hCDcdyXkPX0q\",\"msgContent\":{\"msgType\":2,\"imgTextLinkMsg\":{\"imgUrl\":\"https://image1.ljcdn.com/rent-front-image/82650f74883fd9725e2a3a61cea834f2.png\",\"href\":\"https://m.ke.com/chuzu/page/cashierGuideV2?billId=30048964\",\"title\":\"省心租租金服务费账单支付卡片\",\"desc\":\"点击该卡片，打开App或小程序支付账单\"}},\"roomieMsgId\":\"DT20260629121948-GROUP-K2071448521448546305\",\"robotType\":101,\"msgTime\":\"2026-06-29 12:19:59.469\",\"senderType\":100,\"businessType\":1,\"originalData\":\"{\\\"appInfo\\\":\\\"CAQQ7+SH0gYY6tnVi5mAgAMgqfXezQs=\\\",\\\"businessCode\\\":\\\"shengxinzu_zuwu\\\",\\\"channelMsgSn\\\":\\\"\\\",\\\"corpName\\\":\\\"bei_ke\\\",\\\"customMsgId\\\":\\\"shengxinzu_zuwub818b837e38737ea3b1aad5b2208b40e\\\",\\\"desc\\\":\\\"点击该卡片，打开App或小程序支付账单\\\",\\\"eventType\\\":71003,\\\"groupId\\\":\\\"10732405133470175\\\",\\\"hint\\\":\\\"yqbnrmAuxRi9cmDeb28A.5zzCJN.1782706799\\\",\\\"href\\\":\\\"https://m.ke.com/chuzu/page/cashierGuideV2?billId=30048964\\\",\\\"md5\\\":\\\"\\\",\\\"msgContent\\\":\\\"https://image1.ljcdn.com/rent-front-image/82650f74883fd9725e2a3a61cea834f2.png\\\",\\\"msgId\\\":\\\"1544429\\\",\\\"msgTime\\\":\\\"2026-06-29 12:19:59.469\\\",\\\"msgType\\\":2,\\\"qlAtList\\\":\\\"\\\",\\\"recallMsgId\\\":\\\"1544429\\\",\\\"requestId\\\":\\\"22bcac56-2bf0-4970-8df2-78be5bf43571\\\",\\\"robotWeworkId\\\":\\\"31376796\\\",\\\"senderType\\\":0,\\\"title\\\":\\\"省心租租金服务费账单支付卡片\\\",\\\"voiceTime\\\":\\\"0\\\"}\",\"transferToNextKafka\":true,\"robotWeComCode\":\"31376796\"},\"eventTime\":1782706799676,\"eventType\":\"group_chat\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-jm4x8",
+              "tid": "453460-10.226.89.170-1213-1782706799747-4349",
+              "sid": "453460-10.226.89.170-1213-1782706799747-4348",
+              "timestamp": "2026-06-29T12:19:59.747+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.747Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@收@/kibana-highlighted-field@@kibana-highlighted-field@到@/kibana-highlighted-field@@kibana-highlighted-field@工@/kibana-highlighted-field@@kibana-highlighted-field@作@/kibana-highlighted-field@@kibana-highlighted-field@台@/kibana-highlighted-field@@kibana-highlighted-field@群@/kibana-highlighted-field@@kibana-highlighted-field@会@/kibana-highlighted-field@@kibana-highlighted-field@话@/kibana-highlighted-field@@kibana-highlighted-field@消@/kibana-highlighted-field@@kibana-highlighted-field@息@/kibana-highlighted-field@:{\"data\":{\"globalMsgId\":\"CAQQ7+SH0gYY6tnVi5mAgAMgqfXezQs=\",\"msgType\":2,\"memberChannelAccountId\":\"accsgBUP322hCDcdyXkPX0q\",\"groupId\":\"10732405133470175\",\"msgId\":\"1544429\",\"memberWeComId\":\"\",\"recallMsgId\":\"1544429\",\"senderId\":\"31376796\",\"robotUcCode\":\"31376796\",\"memberUnionId\":\"\",\"sn\":\"shengxinzu_zuwub818b837e38737ea3b1aad5b2208b40e\",\"channelCode\":\"QUAN_LIANG\",\"chatType\":2,\"groupWeComId\":\"wrk9U4DAAAyW7Bous7uYmvIZALSBDeMg\",\"groupChannelId\":\"group7rT4W47jgR6QuMmGTmkA\",\"robotSrcType\":1,\"robotChannelAccountCode\":\"accsgBUP322hCDcdyXkPX0q\",\"msgContent\":{\"msgType\":2,\"imgTextLinkMsg\":{\"imgUrl\":\"https://image1.ljcdn.com/rent-front-image/82650f74883fd9725e2a3a61cea834f2.png\",\"href\":\"https://m.ke.com/chuzu/page/cashierGuideV2?billId=30048964\",\"title\":\"省心租租金服务费账单支付卡片\",\"desc\":\"点击该卡片，打开App或小程序支付账单\"}},\"roomieMsgId\":\"DT20260629121948-GROUP-K2071448521448546305\",\"robotType\":101,\"msgTime\":\"2026-06-29 12:19:59.469\",\"senderType\":100,\"businessType\":1,\"originalData\":\"{\\\"appInfo\\\":\\\"CAQQ7+SH0gYY6tnVi5mAgAMgqfXezQs=\\\",\\\"businessCode\\\":\\\"shengxinzu_zuwu\\\",\\\"channelMsgSn\\\":\\\"\\\",\\\"corpName\\\":\\\"bei_ke\\\",\\\"customMsgId\\\":\\\"shengxinzu_zuwub818b837e38737ea3b1aad5b2208b40e\\\",\\\"desc\\\":\\\"点击该卡片，打开App或小程序支付账单\\\",\\\"eventType\\\":71003,\\\"groupId\\\":\\\"10732405133470175\\\",\\\"hint\\\":\\\"yqbnrmAuxRi9cmDeb28A.5zzCJN.1782706799\\\",\\\"href\\\":\\\"https://m.ke.com/chuzu/page/cashierGuideV2?billId=30048964\\\",\\\"md5\\\":\\\"\\\",\\\"msgContent\\\":\\\"https://image1.ljcdn.com/rent-front-image/82650f74883fd9725e2a3a61cea834f2.png\\\",\\\"msgId\\\":\\\"1544429\\\",\\\"msgTime\\\":\\\"2026-06-29 12:19:59.469\\\",\\\"msgType\\\":2,\\\"qlAtList\\\":\\\"\\\",\\\"recallMsgId\\\":\\\"1544429\\\",\\\"requestId\\\":\\\"22bcac56-2bf0-4970-8df2-78be5bf43571\\\",\\\"robotWeworkId\\\":\\\"31376796\\\",\\\"senderType\\\":0,\\\"title\\\":\\\"省心租租金服务费账单支付卡片\\\",\\\"voiceTime\\\":\\\"0\\\"}\",\"transferToNextKafka\":true,\"robotWeComCode\":\"31376796\"},\"eventTime\":1782706799676,\"eventType\":\"group_chat\"}"
+              ]
+            },
+            "sort": [
+              1782706799747
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "ckGbEZ8B9P_t1W1uFxfV",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "-1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.82.200",
+              "requestId": "1da91e152aab5a61f914129cb144a27d582bab84",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "收到工作台群会话消息:{\"data\":{\"businessType\":1,\"channelCode\":\"QUAN_LIANG\",\"chatType\":2,\"globalMsgId\":\"CAQQ7eSH0gYYyrTutJ2AgAMg3ozCnA8=\",\"groupChannelId\":\"group5OE0GtuWYZTKMTJdEJuG\",\"groupId\":\"10780573287514522\",\"groupWeComId\":\"wrk9U4DAAAwYQnbKx68zjrIKxDkhBHzA\",\"memberChannelAccountId\":\"accdHYLbbSzbl2arEhP2bSX\",\"memberUnionId\":\"\",\"memberWeComId\":\"\",\"msgContent\":{\"msgType\":8,\"xcxCardMsg\":{\"appId\":\"wxcfd8224218167d98\",\"appName\":\"贝壳租房\",\"href\":\"https://quan-applet-picture-1259287960.cos.ap-guangzhou.myqcloud.com/0/044e9de536e143239f42fd0c7b4dfd62.png\",\"hrefHeight\":336,\"hrefSize\":91398,\"hrefWidth\":420,\"pagePath\":\"subpackages/rent/pages/webview/index.html?source=xcx_zulin_yunguanjia&url=https%3A%2F%2Flife-h5.ke.com%2Fplat%23%2Finterests%3FhouseCode%3D101124910293%26contractCode%3D4779536%26channelCode%3Dtrusteeship_tenant%26cityCode%3D110000\",\"title\":\"自助维修下单\",\"userName\":\"gh_2dbd87cb164c@app\",\"weAppIconUrl\":\"http://wx.qlogo.cn/mmhead/Q3auHgzwzM7ibU1Dcw0SkQd3CyQ7VcKPZKsOheDdw2UKaw22EKLjmZg/96\"}},\"msgId\":\"2327496\",\"msgTime\":\"2026-06-29 12:19:58.000\",\"msgType\":8,\"originalData\":\"{\\\"appInfo\\\":\\\"CAQQ7eSH0gYYyrTutJ2AgAMg3ozCnA8=\\\",\\\"businessCode\\\":\\\"shengxinzu_zuwu\\\",\\\"channelMsgSn\\\":\\\"\\\",\\\"corpName\\\":\\\"bei_ke\\\",\\\"desc\\\":\\\"\\\",\\\"eventType\\\":71003,\\\"groupId\\\":\\\"10780573287514522\\\",\\\"hint\\\":\\\"Uv4duSr6eBi9cmOPxNwA.leNmog.1782706798\\\",\\\"href\\\":\\\"https://quan-applet-picture-1259287960.cos.ap-guangzhou.myqcloud.com/0/044e9de536e143239f42fd0c7b4dfd62.png\\\",\\\"md5\\\":\\\"d20e0f380cfc82c098f6b65695930122\\\",\\\"msgContent\\\":\\\"eyJ1c2VybmFtZSI6ImdoXzJkYmQ4N2NiMTY0Y0BhcHAiLCJhcHBpZCI6Ind4Y2ZkODIyNDIxODE2N2Q5OCIsInBhZ2VwYXRoIjoic3VicGFja2FnZXMvcmVudC9wYWdlcy93ZWJ2aWV3L2luZGV4Lmh0bWw/c291cmNlPXhjeF96dWxpbl95dW5ndWFuamlhJnVybD1odHRwcyUzQSUyRiUyRmxpZmUtaDUua2UuY29tJTJGcGxhdCUyMyUyRmludGVyZXN0cyUzRmhvdXNlQ29kZSUzRDEwMTEyNDkxMDI5MyUyNmNvbnRyYWN0Q29kZSUzRDQ3Nzk1MzYlMjZjaGFubmVsQ29kZSUzRHRydXN0ZWVzaGlwX3RlbmFudCUyNmNpdHlDb2RlJTNEMTEwMDAwIiwidHlwZSI6MiwidmVyc2lvbiI6MTEsIndlYXBwSWNvblVybCI6Imh0dHA6Ly93eC5xbG9nby5jbi9tbWhlYWQvUTNhdUhnend6TTdpYlUxRGN3MFNrUWQzQ3lRN1ZjS1BaS3NPaGVEZHcyVUthdzIyRUtMam1aZy85NiIsInRpdGxlIjoi6Ieq5Yqp57u05L+u5LiL5Y2VIiwiZGVzYyI6IiIsImFwcE1lZGlhVXJsIjoiIiwiYXBwTmFtZSI6Iui0neWjs+enn+aIvyIsInRodW1iVXJsIjoiIiwidGh1bWJGaWxlSWQiOiIzMDY5MDIwMTAyMDQ2MjMwNjAwMjAxMDAwMjA0Njk4NTMxNDEwMjAzMGY0MjQ0MDIwNGNhZGQzODkyMDIwNDZhNDBjM2MyMDQyNDM3NjYzNDYyMzgzMzY1MzkyZDM1MzIzNTMyMmQzNDM0NjI2NTJkMzgzNTY2NjYyZDYyNjIzNzMxMzM2NDM4MzkzNjY2MzY2MjAyMDEwMDAyMDMwMTY1MTAwNDEwZDIwZTBmMzgwY2ZjODJjMDk4ZjZiNjU2OTU5MzAxMjIwMjAxMDEwMjAxMDAwNDAwIiwidGh1bWJBRVNLZXkiOiI5ZTk4ZTUyNjE3OGM0NDMwN2I1ODVhZDhlMDQzNWQ4ZSIsInRodW1iTUQ1IjoiZDIwZTBmMzgwY2ZjODJjMDk4ZjZiNjU2OTU5MzAxMjIiLCJ0aHVtYlNpemUiOjkxMzk4LCJzaGFyZUlkIjoiIiwic2hhcmVLZXkiOiIiLCJzaGFyZU5hbWUiOiIiLCJhcHBzZXJ2aWNldHlwZSI6MCwicGtnaW5mb190eXBlIjowLCJ0aHVtYndpZHRoIjo0MjAsInRodW1iaGVpZ2h0IjozMzYsImltZyI6bnVsbCwid3dTaGFyZUtleSI6IiIsImRpc2FsbG93Rm9yd2FyZCI6ZmFsc2V9\\\",\\\"msgId\\\":\\\"2327496\\\",\\\"msgTime\\\":\\\"2026-06-29 12:19:58.000\\\",\\\"msgType\\\":8,\\\"qlAtList\\\":\\\"\\\",\\\"quoteAppInfo\\\":\\\"\\\",\\\"requestId\\\":\\\"f145e06a-c90c-4b63-95ee-2275dcccdd93\\\",\\\"robotWeworkId\\\":\\\"30927292\\\",\\\"senderType\\\":1,\\\"senderUserId\\\":\\\"31279285\\\",\\\"senderUserQlId\\\":\\\"accdHYLbbSzbl2arEhP2bSX\\\",\\\"title\\\":\\\"自助维修下单\\\",\\\"voiceTime\\\":\\\"0\\\"}\",\"quoteGlobalMsgId\":\"\",\"robotChannelAccountCode\":\"accQvBWYyViJMiJKr60hfFu\",\"robotSrcType\":1,\"robotType\":100,\"robotUcCode\":\"30927292\",\"robotWeComCode\":\"30927292\",\"senderId\":\"31279285\",\"senderType\":101,\"transferToNextKafka\":true},\"eventTime\":1782706799666,\"eventType\":\"group_chat\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-f6htb",
+              "tid": "453460-10.226.82.200-1217-1782706799734-3269",
+              "sid": "453460-10.226.82.200-1217-1782706799734-3268",
+              "timestamp": "2026-06-29T12:19:59.734+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.734Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@收@/kibana-highlighted-field@@kibana-highlighted-field@到@/kibana-highlighted-field@@kibana-highlighted-field@工@/kibana-highlighted-field@@kibana-highlighted-field@作@/kibana-highlighted-field@@kibana-highlighted-field@台@/kibana-highlighted-field@@kibana-highlighted-field@群@/kibana-highlighted-field@@kibana-highlighted-field@会@/kibana-highlighted-field@@kibana-highlighted-field@话@/kibana-highlighted-field@@kibana-highlighted-field@消@/kibana-highlighted-field@@kibana-highlighted-field@息@/kibana-highlighted-field@:{\"data\":{\"businessType\":1,\"channelCode\":\"QUAN_LIANG\",\"chatType\":2,\"globalMsgId\":\"CAQQ7eSH0gYYyrTutJ2AgAMg3ozCnA8=\",\"groupChannelId\":\"group5OE0GtuWYZTKMTJdEJuG\",\"groupId\":\"10780573287514522\",\"groupWeComId\":\"wrk9U4DAAAwYQnbKx68zjrIKxDkhBHzA\",\"memberChannelAccountId\":\"accdHYLbbSzbl2arEhP2bSX\",\"memberUnionId\":\"\",\"memberWeComId\":\"\",\"msgContent\":{\"msgType\":8,\"xcxCardMsg\":{\"appId\":\"wxcfd8224218167d98\",\"appName\":\"贝壳租房\",\"href\":\"https://quan-applet-picture-1259287960.cos.ap-guangzhou.myqcloud.com/0/044e9de536e143239f42fd0c7b4dfd62.png\",\"hrefHeight\":336,\"hrefSize\":91398,\"hrefWidth\":420,\"pagePath\":\"subpackages/rent/pages/webview/index.html?source=xcx_zulin_yunguanjia&url=https%3A%2F%2Flife-h5.ke.com%2Fplat%23%2Finterests%3FhouseCode%3D101124910293%26contractCode%3D4779536%26channelCode%3Dtrusteeship_tenant%26cityCode%3D110000\",\"title\":\"自助维修下单\",\"userName\":\"gh_2dbd87cb164c@app\",\"weAppIconUrl\":\"http://wx.qlogo.cn/mmhead/Q3auHgzwzM7ibU1Dcw0SkQd3CyQ7VcKPZKsOheDdw2UKaw22EKLjmZg/96\"}},\"msgId\":\"2327496\",\"msgTime\":\"2026-06-29 12:19:58.000\",\"msgType\":8,\"originalData\":\"{\\\"appInfo\\\":\\\"CAQQ7eSH0gYYyrTutJ2AgAMg3ozCnA8=\\\",\\\"businessCode\\\":\\\"shengxinzu_zuwu\\\",\\\"channelMsgSn\\\":\\\"\\\",\\\"corpName\\\":\\\"bei_ke\\\",\\\"desc\\\":\\\"\\\",\\\"eventType\\\":71003,\\\"groupId\\\":\\\"10780573287514522\\\",\\\"hint\\\":\\\"Uv4duSr6eBi9cmOPxNwA.leNmog.1782706798\\\",\\\"href\\\":\\\"https://quan-applet-picture-1259287960.cos.ap-guangzhou.myqcloud.com/0/044e9de536e143239f42fd0c7b4dfd62.png\\\",\\\"md5\\\":\\\"d20e0f380cfc82c098f6b65695930122\\\",\\\"msgContent\\\":\\\"eyJ1c2VybmFtZSI6ImdoXzJkYmQ4N2NiMTY0Y0BhcHAiLCJhcHBpZCI6Ind4Y2ZkODIyNDIxODE2N2Q5OCIsInBhZ2VwYXRoIjoic3VicGFja2FnZXMvcmVudC9wYWdlcy93ZWJ2aWV3L2luZGV4Lmh0bWw/c291cmNlPXhjeF96dWxpbl95dW5ndWFuamlhJnVybD1odHRwcyUzQSUyRiUyRmxpZmUtaDUua2UuY29tJTJGcGxhdCUyMyUyRmludGVyZXN0cyUzRmhvdXNlQ29kZSUzRDEwMTEyNDkxMDI5MyUyNmNvbnRyYWN0Q29kZSUzRDQ3Nzk1MzYlMjZjaGFubmVsQ29kZSUzRHRydXN0ZWVzaGlwX3RlbmFudCUyNmNpdHlDb2RlJTNEMTEwMDAwIiwidHlwZSI6MiwidmVyc2lvbiI6MTEsIndlYXBwSWNvblVybCI6Imh0dHA6Ly93eC5xbG9nby5jbi9tbWhlYWQvUTNhdUhnend6TTdpYlUxRGN3MFNrUWQzQ3lRN1ZjS1BaS3NPaGVEZHcyVUthdzIyRUtMam1aZy85NiIsInRpdGxlIjoi6Ieq5Yqp57u05L+u5LiL5Y2VIiwiZGVzYyI6IiIsImFwcE1lZGlhVXJsIjoiIiwiYXBwTmFtZSI6Iui0neWjs+enn+aIvyIsInRodW1iVXJsIjoiIiwidGh1bWJGaWxlSWQiOiIzMDY5MDIwMTAyMDQ2MjMwNjAwMjAxMDAwMjA0Njk4NTMxNDEwMjAzMGY0MjQ0MDIwNGNhZGQzODkyMDIwNDZhNDBjM2MyMDQyNDM3NjYzNDYyMzgzMzY1MzkyZDM1MzIzNTMyMmQzNDM0NjI2NTJkMzgzNTY2NjYyZDYyNjIzNzMxMzM2NDM4MzkzNjY2MzY2MjAyMDEwMDAyMDMwMTY1MTAwNDEwZDIwZTBmMzgwY2ZjODJjMDk4ZjZiNjU2OTU5MzAxMjIwMjAxMDEwMjAxMDAwNDAwIiwidGh1bWJBRVNLZXkiOiI5ZTk4ZTUyNjE3OGM0NDMwN2I1ODVhZDhlMDQzNWQ4ZSIsInRodW1iTUQ1IjoiZDIwZTBmMzgwY2ZjODJjMDk4ZjZiNjU2OTU5MzAxMjIiLCJ0aHVtYlNpemUiOjkxMzk4LCJzaGFyZUlkIjoiIiwic2hhcmVLZXkiOiIiLCJzaGFyZU5hbWUiOiIiLCJhcHBzZXJ2aWNldHlwZSI6MCwicGtnaW5mb190eXBlIjowLCJ0aHVtYndpZHRoIjo0MjAsInRodW1iaGVpZ2h0IjozMzYsImltZyI6bnVsbCwid3dTaGFyZUtleSI6IiIsImRpc2FsbG93Rm9yd2FyZCI6ZmFsc2V9\\\",\\\"msgId\\\":\\\"2327496\\\",\\\"msgTime\\\":\\\"2026-06-29 12:19:58.000\\\",\\\"msgType\\\":8,\\\"qlAtList\\\":\\\"\\\",\\\"quoteAppInfo\\\":\\\"\\\",\\\"requestId\\\":\\\"f145e06a-c90c-4b63-95ee-2275dcccdd93\\\",\\\"robotWeworkId\\\":\\\"30927292\\\",\\\"senderType\\\":1,\\\"senderUserId\\\":\\\"31279285\\\",\\\"senderUserQlId\\\":\\\"accdHYLbbSzbl2arEhP2bSX\\\",\\\"title\\\":\\\"自助维修下单\\\",\\\"voiceTime\\\":\\\"0\\\"}\",\"quoteGlobalMsgId\":\"\",\"robotChannelAccountCode\":\"accQvBWYyViJMiJKr60hfFu\",\"robotSrcType\":1,\"robotType\":100,\"robotUcCode\":\"30927292\",\"robotWeComCode\":\"30927292\",\"senderId\":\"31279285\",\"senderType\":101,\"transferToNextKafka\":true},\"eventTime\":1782706799666,\"eventType\":\"group_chat\"}"
+              ]
+            },
+            "sort": [
+              1782706799734
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "jz-bEZ8B9P_t1W1uEuFU",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "-1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.119.112",
+              "requestId": "4cfff44e4e0fcb7d0911bb686d9999ec8a56e51f",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "收到工作台群会话消息:{\"data\":{\"globalMsgId\":\"8053164662516349743\",\"msgType\":1,\"memberChannelAccountId\":\"accmvzSCyWHOmOlJ6Kko7Dl\",\"groupId\":\"10937300277451284\",\"msgId\":\"1366975\",\"memberWeComId\":\"\",\"senderId\":\"7881301679914026\",\"robotUcCode\":\"31563975\",\"memberUnionId\":\"\",\"channelCode\":\"QUAN_LIANG\",\"chatType\":2,\"groupWeComId\":\"wrk9U4DAAAMdgtXF7zHgcDP33btxRQAg\",\"groupChannelId\":\"groupV66DfcB06G0lnVABUs0r\",\"robotSrcType\":1,\"robotChannelAccountCode\":\"accpdYEZ8BveTQgfuNl7TE8\",\"quoteGlobalMsgId\":\"\",\"msgContent\":{\"msgType\":1,\"textMsg\":{\"content\":\"漏水后来维修了吗\"}},\"roomieMsgId\":\"DT20260629121957-GROUP-K2071448571006619649\",\"robotType\":101,\"msgTime\":\"2026-06-29 12:19:57.000\",\"senderType\":2,\"businessType\":1,\"originalData\":\"{\\\"appInfo\\\":\\\"8053164662516349743\\\",\\\"businessCode\\\":\\\"shengxinzu_zuwu\\\",\\\"channelMsgSn\\\":\\\"1366975\\\",\\\"corpName\\\":\\\"bei_ke\\\",\\\"desc\\\":\\\"\\\",\\\"eventType\\\":71003,\\\"groupId\\\":\\\"10937300277451284\\\",\\\"hint\\\":\\\"xNhrEaYdqRi9cmOIaxEA.9KTdGV.1782706798\\\",\\\"href\\\":\\\"\\\",\\\"md5\\\":\\\"\\\",\\\"msgContent\\\":\\\"漏水后来维修了吗\\\",\\\"msgId\\\":\\\"1366975\\\",\\\"msgTime\\\":\\\"2026-06-29 12:19:57.000\\\",\\\"msgType\\\":1,\\\"qlAtList\\\":\\\"\\\",\\\"quoteAppInfo\\\":\\\"\\\",\\\"requestId\\\":\\\"4e4e812a-3c9f-4189-af56-c597a19597d9\\\",\\\"robotWeworkId\\\":\\\"31563975\\\",\\\"senderType\\\":2,\\\"senderUserId\\\":\\\"7881301679914026\\\",\\\"senderUserQlId\\\":\\\"accmvzSCyWHOmOlJ6Kko7Dl\\\",\\\"title\\\":\\\"\\\",\\\"voiceTime\\\":\\\"0\\\"}\",\"transferToNextKafka\":true,\"robotWeComCode\":\"31563975\"},\"eventTime\":1782706799536,\"eventType\":\"group_chat\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-l9wgm",
+              "tid": "453460-10.22.119.112-1231-1782706799652-9209",
+              "sid": "453460-10.22.119.112-1231-1782706799652-9208",
+              "timestamp": "2026-06-29T12:19:59.652+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.652Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@收@/kibana-highlighted-field@@kibana-highlighted-field@到@/kibana-highlighted-field@@kibana-highlighted-field@工@/kibana-highlighted-field@@kibana-highlighted-field@作@/kibana-highlighted-field@@kibana-highlighted-field@台@/kibana-highlighted-field@@kibana-highlighted-field@群@/kibana-highlighted-field@@kibana-highlighted-field@会@/kibana-highlighted-field@@kibana-highlighted-field@话@/kibana-highlighted-field@@kibana-highlighted-field@消@/kibana-highlighted-field@@kibana-highlighted-field@息@/kibana-highlighted-field@:{\"data\":{\"globalMsgId\":\"8053164662516349743\",\"msgType\":1,\"memberChannelAccountId\":\"accmvzSCyWHOmOlJ6Kko7Dl\",\"groupId\":\"10937300277451284\",\"msgId\":\"1366975\",\"memberWeComId\":\"\",\"senderId\":\"7881301679914026\",\"robotUcCode\":\"31563975\",\"memberUnionId\":\"\",\"channelCode\":\"QUAN_LIANG\",\"chatType\":2,\"groupWeComId\":\"wrk9U4DAAAMdgtXF7zHgcDP33btxRQAg\",\"groupChannelId\":\"groupV66DfcB06G0lnVABUs0r\",\"robotSrcType\":1,\"robotChannelAccountCode\":\"accpdYEZ8BveTQgfuNl7TE8\",\"quoteGlobalMsgId\":\"\",\"msgContent\":{\"msgType\":1,\"textMsg\":{\"content\":\"漏水后来维修了吗\"}},\"roomieMsgId\":\"DT20260629121957-GROUP-K2071448571006619649\",\"robotType\":101,\"msgTime\":\"2026-06-29 12:19:57.000\",\"senderType\":2,\"businessType\":1,\"originalData\":\"{\\\"appInfo\\\":\\\"8053164662516349743\\\",\\\"businessCode\\\":\\\"shengxinzu_zuwu\\\",\\\"channelMsgSn\\\":\\\"1366975\\\",\\\"corpName\\\":\\\"bei_ke\\\",\\\"desc\\\":\\\"\\\",\\\"eventType\\\":71003,\\\"groupId\\\":\\\"10937300277451284\\\",\\\"hint\\\":\\\"xNhrEaYdqRi9cmOIaxEA.9KTdGV.1782706798\\\",\\\"href\\\":\\\"\\\",\\\"md5\\\":\\\"\\\",\\\"msgContent\\\":\\\"漏水后来维修了吗\\\",\\\"msgId\\\":\\\"1366975\\\",\\\"msgTime\\\":\\\"2026-06-29 12:19:57.000\\\",\\\"msgType\\\":1,\\\"qlAtList\\\":\\\"\\\",\\\"quoteAppInfo\\\":\\\"\\\",\\\"requestId\\\":\\\"4e4e812a-3c9f-4189-af56-c597a19597d9\\\",\\\"robotWeworkId\\\":\\\"31563975\\\",\\\"senderType\\\":2,\\\"senderUserId\\\":\\\"7881301679914026\\\",\\\"senderUserQlId\\\":\\\"accmvzSCyWHOmOlJ6Kko7Dl\\\",\\\"title\\\":\\\"\\\",\\\"voiceTime\\\":\\\"0\\\"}\",\"transferToNextKafka\":true,\"robotWeComCode\":\"31563975\"},\"eventTime\":1782706799536,\"eventType\":\"group_chat\"}"
+              ]
+            },
+            "sort": [
+              1782706799652
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "PECbEZ8B9P_t1W1uEyYs",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "-1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.119.112",
+              "requestId": "09f978d3fed023a7b453283d8a7723a218ec5df6",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "收到工作台群会话消息:{\"data\":{\"businessType\":1,\"channelCode\":\"QUAN_LIANG\",\"chatType\":2,\"globalMsgId\":\"CAQQ7eSH0gYYnZue+ZWAgAMg3+qt/g0=\",\"groupChannelId\":\"groupZ30kWBJ2EQX0leAzS4Ig\",\"groupId\":\"10769741789556153\",\"groupWeComId\":\"wrk9U4DAAAjCMlaD5sIYgso0-aje7IDw\",\"memberChannelAccountId\":\"accD1x0dfnJbqo4rLGDxmyj\",\"memberUnionId\":\"\",\"memberWeComId\":\"\",\"msgContent\":{\"msgType\":1,\"textMsg\":{\"content\":\"您好，关于停水情况，建议您可以先查看小区公告栏或电梯内的通知板。如需了解具体停水原因或恢复时间，您也可以直接联系小区物业中心，物业电话是020-82880012。\"}},\"msgId\":\"1716418\",\"msgTime\":\"2026-06-29 12:19:57.000\",\"msgType\":1,\"originalData\":\"{\\\"appInfo\\\":\\\"CAQQ7eSH0gYYnZue+ZWAgAMg3+qt/g0=\\\",\\\"businessCode\\\":\\\"shengxinzu_zuwu\\\",\\\"channelMsgSn\\\":\\\"1716418\\\",\\\"corpName\\\":\\\"bei_ke\\\",\\\"desc\\\":\\\"\\\",\\\"eventType\\\":71003,\\\"groupId\\\":\\\"10769741789556153\\\",\\\"hint\\\":\\\"LAF95qxx9hi9cmOFVIwA.zHBTaA.1782706798\\\",\\\"href\\\":\\\"\\\",\\\"md5\\\":\\\"\\\",\\\"msgContent\\\":\\\"您好，关于停水情况，建议您可以先查看小区公告栏或电梯内的通知板。如需了解具体停水原因或恢复时间，您也可以直接联系小区物业中心，物业电话是020-82880012。\\\",\\\"msgId\\\":\\\"1716418\\\",\\\"msgTime\\\":\\\"2026-06-29 12:19:57.000\\\",\\\"msgType\\\":1,\\\"qlAtList\\\":\\\"\\\",\\\"quoteAppInfo\\\":\\\"\\\",\\\"requestId\\\":\\\"b87f64ae-26bc-4fc0-973e-455e065a6e15\\\",\\\"robotWeworkId\\\":\\\"31175806\\\",\\\"senderType\\\":1,\\\"senderUserId\\\":\\\"31281376\\\",\\\"senderUserQlId\\\":\\\"accD1x0dfnJbqo4rLGDxmyj\\\",\\\"title\\\":\\\"\\\",\\\"voiceTime\\\":\\\"0\\\"}\",\"quoteGlobalMsgId\":\"\",\"robotChannelAccountCode\":\"accoTXmtN0UpSyYpEuoDP9i\",\"robotSrcType\":1,\"robotType\":100,\"robotUcCode\":\"31175806\",\"robotWeComCode\":\"31175806\",\"senderId\":\"31281376\",\"senderType\":101,\"transferToNextKafka\":true},\"eventTime\":1782706799542,\"eventType\":\"group_chat\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-l9wgm",
+              "tid": "453460-10.22.119.112-1231-1782706799583-9207",
+              "sid": "453460-10.22.119.112-1231-1782706799583-9206",
+              "timestamp": "2026-06-29T12:19:59.583+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.583Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@收@/kibana-highlighted-field@@kibana-highlighted-field@到@/kibana-highlighted-field@@kibana-highlighted-field@工@/kibana-highlighted-field@@kibana-highlighted-field@作@/kibana-highlighted-field@@kibana-highlighted-field@台@/kibana-highlighted-field@@kibana-highlighted-field@群@/kibana-highlighted-field@@kibana-highlighted-field@会@/kibana-highlighted-field@@kibana-highlighted-field@话@/kibana-highlighted-field@@kibana-highlighted-field@消@/kibana-highlighted-field@@kibana-highlighted-field@息@/kibana-highlighted-field@:{\"data\":{\"businessType\":1,\"channelCode\":\"QUAN_LIANG\",\"chatType\":2,\"globalMsgId\":\"CAQQ7eSH0gYYnZue+ZWAgAMg3+qt/g0=\",\"groupChannelId\":\"groupZ30kWBJ2EQX0leAzS4Ig\",\"groupId\":\"10769741789556153\",\"groupWeComId\":\"wrk9U4DAAAjCMlaD5sIYgso0-aje7IDw\",\"memberChannelAccountId\":\"accD1x0dfnJbqo4rLGDxmyj\",\"memberUnionId\":\"\",\"memberWeComId\":\"\",\"msgContent\":{\"msgType\":1,\"textMsg\":{\"content\":\"您好，关于停水情况，建议您可以先查看小区公告栏或电梯内的通知板。如需了解具体停水原因或恢复时间，您也可以直接联系小区物业中心，物业电话是020-82880012。\"}},\"msgId\":\"1716418\",\"msgTime\":\"2026-06-29 12:19:57.000\",\"msgType\":1,\"originalData\":\"{\\\"appInfo\\\":\\\"CAQQ7eSH0gYYnZue+ZWAgAMg3+qt/g0=\\\",\\\"businessCode\\\":\\\"shengxinzu_zuwu\\\",\\\"channelMsgSn\\\":\\\"1716418\\\",\\\"corpName\\\":\\\"bei_ke\\\",\\\"desc\\\":\\\"\\\",\\\"eventType\\\":71003,\\\"groupId\\\":\\\"10769741789556153\\\",\\\"hint\\\":\\\"LAF95qxx9hi9cmOFVIwA.zHBTaA.1782706798\\\",\\\"href\\\":\\\"\\\",\\\"md5\\\":\\\"\\\",\\\"msgContent\\\":\\\"您好，关于停水情况，建议您可以先查看小区公告栏或电梯内的通知板。如需了解具体停水原因或恢复时间，您也可以直接联系小区物业中心，物业电话是020-82880012。\\\",\\\"msgId\\\":\\\"1716418\\\",\\\"msgTime\\\":\\\"2026-06-29 12:19:57.000\\\",\\\"msgType\\\":1,\\\"qlAtList\\\":\\\"\\\",\\\"quoteAppInfo\\\":\\\"\\\",\\\"requestId\\\":\\\"b87f64ae-26bc-4fc0-973e-455e065a6e15\\\",\\\"robotWeworkId\\\":\\\"31175806\\\",\\\"senderType\\\":1,\\\"senderUserId\\\":\\\"31281376\\\",\\\"senderUserQlId\\\":\\\"accD1x0dfnJbqo4rLGDxmyj\\\",\\\"title\\\":\\\"\\\",\\\"voiceTime\\\":\\\"0\\\"}\",\"quoteGlobalMsgId\":\"\",\"robotChannelAccountCode\":\"accoTXmtN0UpSyYpEuoDP9i\",\"robotSrcType\":1,\"robotType\":100,\"robotUcCode\":\"31175806\",\"robotWeComCode\":\"31175806\",\"senderId\":\"31281376\",\"senderType\":101,\"transferToNextKafka\":true},\"eventTime\":1782706799542,\"eventType\":\"group_chat\"}"
+              ]
+            },
+            "sort": [
+              1782706799583
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "A_CbEZ8Bwva2ZhliF1ZP",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "-1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.113.74",
+              "requestId": "d4b1452458effe27830decad313460ddbb24dd75",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "收到工作台群会话消息:{\"data\":{\"businessType\":1,\"channelCode\":\"QUAN_LIANG\",\"chatType\":2,\"globalMsgId\":\"CAQQ7eSH0gYY9bPd7ZGAgAMg4s7Mkww=\",\"groupChannelId\":\"group6KAxMk268qvxV0pKdPuj\",\"groupId\":\"10755925518134714\",\"groupWeComId\":\"wrk9U4DAAAowZUT2nXj-QcmHsS8DUvww\",\"memberChannelAccountId\":\"acc2RB137G29I1hSeyFoLoK\",\"memberUnionId\":\"\",\"memberWeComId\":\"\",\"msgContent\":{\"msgType\":1,\"textMsg\":{\"content\":\"已提交打款申请，专员会在1-5个自然日内处理，打款完成会给您留言，请您耐心等待哦~\"}},\"msgId\":\"1669858\",\"msgTime\":\"2026-06-29 12:19:57.000\",\"msgType\":1,\"originalData\":\"{\\\"appInfo\\\":\\\"CAQQ7eSH0gYY9bPd7ZGAgAMg4s7Mkww=\\\",\\\"businessCode\\\":\\\"shengxinzu_zuwu\\\",\\\"channelMsgSn\\\":\\\"1669858\\\",\\\"corpName\\\":\\\"bei_ke\\\",\\\"desc\\\":\\\"\\\",\\\"eventType\\\":71003,\\\"groupId\\\":\\\"10755925518134714\\\",\\\"hint\\\":\\\"mSR17YMpLBi9cmOFx38A.ssrKrW.1782706799\\\",\\\"href\\\":\\\"\\\",\\\"md5\\\":\\\"\\\",\\\"msgContent\\\":\\\"已提交打款申请，专员会在1-5个自然日内处理，打款完成会给您留言，请您耐心等待哦~\\\",\\\"msgId\\\":\\\"1669858\\\",\\\"msgTime\\\":\\\"2026-06-29 12:19:57.000\\\",\\\"msgType\\\":1,\\\"qlAtList\\\":\\\"\\\",\\\"quoteAppInfo\\\":\\\"\\\",\\\"requestId\\\":\\\"aaea1acb-5b98-4001-884d-d1d502170f6a\\\",\\\"robotWeworkId\\\":\\\"31281365\\\",\\\"senderType\\\":1,\\\"senderUserId\\\":\\\"31647605\\\",\\\"senderUserQlId\\\":\\\"acc2RB137G29I1hSeyFoLoK\\\",\\\"title\\\":\\\"\\\",\\\"voiceTime\\\":\\\"0\\\"}\",\"quoteGlobalMsgId\":\"\",\"robotChannelAccountCode\":\"accH9ihBFlC7UwpCuOQq4ud\",\"robotSrcType\":1,\"robotType\":101,\"robotUcCode\":\"31281365\",\"robotWeComCode\":\"31281365\",\"senderId\":\"31647605\",\"senderType\":100,\"transferToNextKafka\":true},\"eventTime\":1782706799510,\"eventType\":\"group_chat\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9nh6s",
+              "tid": "453460-10.22.113.74-1271-1782706799569-1177",
+              "sid": "453460-10.22.113.74-1271-1782706799569-1176",
+              "timestamp": "2026-06-29T12:19:59.569+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.569Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@收@/kibana-highlighted-field@@kibana-highlighted-field@到@/kibana-highlighted-field@@kibana-highlighted-field@工@/kibana-highlighted-field@@kibana-highlighted-field@作@/kibana-highlighted-field@@kibana-highlighted-field@台@/kibana-highlighted-field@@kibana-highlighted-field@群@/kibana-highlighted-field@@kibana-highlighted-field@会@/kibana-highlighted-field@@kibana-highlighted-field@话@/kibana-highlighted-field@@kibana-highlighted-field@消@/kibana-highlighted-field@@kibana-highlighted-field@息@/kibana-highlighted-field@:{\"data\":{\"businessType\":1,\"channelCode\":\"QUAN_LIANG\",\"chatType\":2,\"globalMsgId\":\"CAQQ7eSH0gYY9bPd7ZGAgAMg4s7Mkww=\",\"groupChannelId\":\"group6KAxMk268qvxV0pKdPuj\",\"groupId\":\"10755925518134714\",\"groupWeComId\":\"wrk9U4DAAAowZUT2nXj-QcmHsS8DUvww\",\"memberChannelAccountId\":\"acc2RB137G29I1hSeyFoLoK\",\"memberUnionId\":\"\",\"memberWeComId\":\"\",\"msgContent\":{\"msgType\":1,\"textMsg\":{\"content\":\"已提交打款申请，专员会在1-5个自然日内处理，打款完成会给您留言，请您耐心等待哦~\"}},\"msgId\":\"1669858\",\"msgTime\":\"2026-06-29 12:19:57.000\",\"msgType\":1,\"originalData\":\"{\\\"appInfo\\\":\\\"CAQQ7eSH0gYY9bPd7ZGAgAMg4s7Mkww=\\\",\\\"businessCode\\\":\\\"shengxinzu_zuwu\\\",\\\"channelMsgSn\\\":\\\"1669858\\\",\\\"corpName\\\":\\\"bei_ke\\\",\\\"desc\\\":\\\"\\\",\\\"eventType\\\":71003,\\\"groupId\\\":\\\"10755925518134714\\\",\\\"hint\\\":\\\"mSR17YMpLBi9cmOFx38A.ssrKrW.1782706799\\\",\\\"href\\\":\\\"\\\",\\\"md5\\\":\\\"\\\",\\\"msgContent\\\":\\\"已提交打款申请，专员会在1-5个自然日内处理，打款完成会给您留言，请您耐心等待哦~\\\",\\\"msgId\\\":\\\"1669858\\\",\\\"msgTime\\\":\\\"2026-06-29 12:19:57.000\\\",\\\"msgType\\\":1,\\\"qlAtList\\\":\\\"\\\",\\\"quoteAppInfo\\\":\\\"\\\",\\\"requestId\\\":\\\"aaea1acb-5b98-4001-884d-d1d502170f6a\\\",\\\"robotWeworkId\\\":\\\"31281365\\\",\\\"senderType\\\":1,\\\"senderUserId\\\":\\\"31647605\\\",\\\"senderUserQlId\\\":\\\"acc2RB137G29I1hSeyFoLoK\\\",\\\"title\\\":\\\"\\\",\\\"voiceTime\\\":\\\"0\\\"}\",\"quoteGlobalMsgId\":\"\",\"robotChannelAccountCode\":\"accH9ihBFlC7UwpCuOQq4ud\",\"robotSrcType\":1,\"robotType\":101,\"robotUcCode\":\"31281365\",\"robotWeComCode\":\"31281365\",\"senderId\":\"31647605\",\"senderType\":100,\"transferToNextKafka\":true},\"eventTime\":1782706799510,\"eventType\":\"group_chat\"}"
+              ]
+            },
+            "sort": [
+              1782706799569
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "MX2bEZ8BdpG7oQCUF7vR",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "-1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.113.74",
+              "requestId": "77e32140b73f4fee5dbfe38a3e1b12314bed2800",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "收到工作台群会话消息:{\"data\":{\"globalMsgId\":\"CAQQ7uSH0gYYx+OUzJaAgAMgvu3IlgE=\",\"msgType\":1,\"memberChannelAccountId\":\"accS3lEInIe6N638qMtkW6k\",\"groupId\":\"10975614134871250\",\"msgId\":\"1658884\",\"memberWeComId\":\"\",\"recallMsgId\":\"1658884\",\"senderId\":\"31108106\",\"robotUcCode\":\"31108106\",\"memberUnionId\":\"\",\"sn\":\"yunguanjia7ecf95c03fdc00131b5ad48493c56d54\",\"channelCode\":\"QUAN_LIANG\",\"chatType\":2,\"groupWeComId\":\"wrk9U4DAAA6qi-S6rU8ikUvrPnLDYKHw\",\"groupChannelId\":\"groupaOX3PJ2ubopudAjz2Rv5\",\"robotSrcType\":1,\"robotChannelAccountCode\":\"accS3lEInIe6N638qMtkW6k\",\"sendRoleInfo\":{\"memberRemarkName\":\"上海贝壳租房云管家梓晨\",\"roleTypeDesc\":\"机器人\",\"groupId\":\"10975614134871250\",\"memberAdminType\":0,\"memberStatus\":1,\"memberWeComId\":\"\",\"mtime\":1767410720000,\"roleType\":1,\"memberNickName\":\"上海贝壳云管家梓晨\",\"inTime\":1741053719000,\"memberUnionId\":\"\",\"positionStatus\":1,\"memberRealName\":\"\",\"ctime\":1765280169000,\"memberAvatar\":\"http://wework.qpic.cn/wwpic3az/527096_mk-iUmMcQQePqnF_1727333908/0\",\"inviterMemberId\":\"\",\"memberType\":100,\"memberAvatarInner\":\"/huiju-chat-workbench-public/avatar-group-member-3110810694002.jpg\",\"outTime\":57600000,\"memberId\":\"31108106\"},\"msgContent\":{\"msgType\":1,\"textMsg\":{\"content\":\"尊敬的业主，您的2026-06-28期省心租收益4050.00元已成功打款，您可点击小程序卡片查看本期收益和房屋维护详情~\"}},\"roomieMsgId\":\"DT20260629121958-GROUP-K2071448568843546625\",\"robotType\":100,\"msgTime\":\"2026-06-29 12:19:58.839\",\"senderType\":100,\"businessType\":0,\"originalData\":\"{\\\"appInfo\\\":\\\"CAQQ7uSH0gYYx+OUzJaAgAMgvu3IlgE=\\\",\\\"businessCode\\\":\\\"yunguanjia\\\",\\\"channelMsgSn\\\":\\\"\\\",\\\"corpName\\\":\\\"bei_ke\\\",\\\"customMsgId\\\":\\\"yunguanjia7ecf95c03fdc00131b5ad48493c56d54\\\",\\\"desc\\\":\\\"\\\",\\\"eventType\\\":71003,\\\"groupId\\\":\\\"10975614134871250\\\",\\\"hint\\\":\\\"Ed36kIsuxRi9cmNJkDsA.8yFV42.1782706798\\\",\\\"href\\\":\\\"\\\",\\\"md5\\\":\\\"\\\",\\\"msgContent\\\":\\\"尊敬的业主，您的2026-06-28期省心租收益4050.00元已成功打款，您可点击小程序卡片查看本期收益和房屋维护详情~\\\",\\\"msgId\\\":\\\"1658884\\\",\\\"msgTime\\\":\\\"2026-06-29 12:19:58.839\\\",\\\"msgType\\\":1,\\\"qlAtList\\\":\\\"\\\",\\\"recallMsgId\\\":\\\"1658884\\\",\\\"requestId\\\":\\\"02e52104-4100-4b24-aa99-406198cbe240\\\",\\\"robotWeworkId\\\":\\\"31108106\\\",\\\"senderType\\\":0,\\\"title\\\":\\\"\\\",\\\"voiceTime\\\":\\\"0\\\"}\",\"transferToNextKafka\":true,\"robotWeComCode\":\"31108106\"},\"eventTime\":1782706799037,\"eventType\":\"group_chat\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9nh6s",
+              "tid": "453460-10.22.113.74-1271-1782706799558-1175",
+              "sid": "453460-10.22.113.74-1271-1782706799558-1174",
+              "timestamp": "2026-06-29T12:19:59.558+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.558Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@收@/kibana-highlighted-field@@kibana-highlighted-field@到@/kibana-highlighted-field@@kibana-highlighted-field@工@/kibana-highlighted-field@@kibana-highlighted-field@作@/kibana-highlighted-field@@kibana-highlighted-field@台@/kibana-highlighted-field@@kibana-highlighted-field@群@/kibana-highlighted-field@@kibana-highlighted-field@会@/kibana-highlighted-field@@kibana-highlighted-field@话@/kibana-highlighted-field@@kibana-highlighted-field@消@/kibana-highlighted-field@@kibana-highlighted-field@息@/kibana-highlighted-field@:{\"data\":{\"globalMsgId\":\"CAQQ7uSH0gYYx+OUzJaAgAMgvu3IlgE=\",\"msgType\":1,\"memberChannelAccountId\":\"accS3lEInIe6N638qMtkW6k\",\"groupId\":\"10975614134871250\",\"msgId\":\"1658884\",\"memberWeComId\":\"\",\"recallMsgId\":\"1658884\",\"senderId\":\"31108106\",\"robotUcCode\":\"31108106\",\"memberUnionId\":\"\",\"sn\":\"yunguanjia7ecf95c03fdc00131b5ad48493c56d54\",\"channelCode\":\"QUAN_LIANG\",\"chatType\":2,\"groupWeComId\":\"wrk9U4DAAA6qi-S6rU8ikUvrPnLDYKHw\",\"groupChannelId\":\"groupaOX3PJ2ubopudAjz2Rv5\",\"robotSrcType\":1,\"robotChannelAccountCode\":\"accS3lEInIe6N638qMtkW6k\",\"sendRoleInfo\":{\"memberRemarkName\":\"上海贝壳租房云管家梓晨\",\"roleTypeDesc\":\"机器人\",\"groupId\":\"10975614134871250\",\"memberAdminType\":0,\"memberStatus\":1,\"memberWeComId\":\"\",\"mtime\":1767410720000,\"roleType\":1,\"memberNickName\":\"上海贝壳云管家梓晨\",\"inTime\":1741053719000,\"memberUnionId\":\"\",\"positionStatus\":1,\"memberRealName\":\"\",\"ctime\":1765280169000,\"memberAvatar\":\"http://wework.qpic.cn/wwpic3az/527096_mk-iUmMcQQePqnF_1727333908/0\",\"inviterMemberId\":\"\",\"memberType\":100,\"memberAvatarInner\":\"/huiju-chat-workbench-public/avatar-group-member-3110810694002.jpg\",\"outTime\":57600000,\"memberId\":\"31108106\"},\"msgContent\":{\"msgType\":1,\"textMsg\":{\"content\":\"尊敬的业主，您的2026-06-28期省心租收益4050.00元已成功打款，您可点击小程序卡片查看本期收益和房屋维护详情~\"}},\"roomieMsgId\":\"DT20260629121958-GROUP-K2071448568843546625\",\"robotType\":100,\"msgTime\":\"2026-06-29 12:19:58.839\",\"senderType\":100,\"businessType\":0,\"originalData\":\"{\\\"appInfo\\\":\\\"CAQQ7uSH0gYYx+OUzJaAgAMgvu3IlgE=\\\",\\\"businessCode\\\":\\\"yunguanjia\\\",\\\"channelMsgSn\\\":\\\"\\\",\\\"corpName\\\":\\\"bei_ke\\\",\\\"customMsgId\\\":\\\"yunguanjia7ecf95c03fdc00131b5ad48493c56d54\\\",\\\"desc\\\":\\\"\\\",\\\"eventType\\\":71003,\\\"groupId\\\":\\\"10975614134871250\\\",\\\"hint\\\":\\\"Ed36kIsuxRi9cmNJkDsA.8yFV42.1782706798\\\",\\\"href\\\":\\\"\\\",\\\"md5\\\":\\\"\\\",\\\"msgContent\\\":\\\"尊敬的业主，您的2026-06-28期省心租收益4050.00元已成功打款，您可点击小程序卡片查看本期收益和房屋维护详情~\\\",\\\"msgId\\\":\\\"1658884\\\",\\\"msgTime\\\":\\\"2026-06-29 12:19:58.839\\\",\\\"msgType\\\":1,\\\"qlAtList\\\":\\\"\\\",\\\"recallMsgId\\\":\\\"1658884\\\",\\\"requestId\\\":\\\"02e52104-4100-4b24-aa99-406198cbe240\\\",\\\"robotWeworkId\\\":\\\"31108106\\\",\\\"senderType\\\":0,\\\"title\\\":\\\"\\\",\\\"voiceTime\\\":\\\"0\\\"}\",\"transferToNextKafka\":true,\"robotWeComCode\":\"31108106\"},\"eventTime\":1782706799037,\"eventType\":\"group_chat\"}"
+              ]
+            },
+            "sort": [
+              1782706799558
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "UX2bEZ8BdpG7oQCUE0ob",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "-1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.89.170",
+              "requestId": "26b100388ba19c440178c901357eca2dfb4a04b7",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "收到工作台群会话消息:{\"data\":{\"globalMsgId\":\"CAQQ7uSH0gYYlbbutJ2AgAMgx4Gu/AM=\",\"msgType\":1,\"memberChannelAccountId\":\"acckJxEN7Rn6UbvSAGud1yE\",\"groupId\":\"10759464251522744\",\"msgId\":\"1574859\",\"memberWeComId\":\"\",\"recallMsgId\":\"1574859\",\"senderId\":\"31279305\",\"robotUcCode\":\"31279305\",\"memberUnionId\":\"\",\"sn\":\"shengxinzu_zuwu5e8310a11348e01f8d03c8900fa329ea\",\"channelCode\":\"QUAN_LIANG\",\"chatType\":2,\"groupWeComId\":\"wrk9U4DAAAA3DiTgUFpZcoA790Y2lU5g\",\"groupChannelId\":\"groupUTCeSCLH4OrvXR3G3xpL\",\"robotSrcType\":1,\"robotChannelAccountCode\":\"acckJxEN7Rn6UbvSAGud1yE\",\"msgContent\":{\"msgType\":1,\"textMsg\":{\"content\":\"您好，我是AI小惠。如果您有具体问题需要咨询，可以先查看上文服务管家已提供的方案。如果问题仍未解决，您可以在群里输入【人工】，服务管家会尽快协助您。\"}},\"roomieMsgId\":\"DT20260629121959-GROUP-K2071448567187558402\",\"robotType\":101,\"msgTime\":\"2026-06-29 12:19:59.240\",\"senderType\":100,\"businessType\":1,\"originalData\":\"{\\\"appInfo\\\":\\\"CAQQ7uSH0gYYlbbutJ2AgAMgx4Gu/AM=\\\",\\\"businessCode\\\":\\\"shengxinzu_zuwu\\\",\\\"channelMsgSn\\\":\\\"\\\",\\\"corpName\\\":\\\"bei_ke\\\",\\\"customMsgId\\\":\\\"shengxinzu_zuwu5e8310a11348e01f8d03c8900fa329ea\\\",\\\"desc\\\":\\\"\\\",\\\"eventType\\\":71003,\\\"groupId\\\":\\\"10759464251522744\\\",\\\"hint\\\":\\\"EbRBnn0uxRi9cmNousAA.mMezZf.1782706798\\\",\\\"href\\\":\\\"\\\",\\\"md5\\\":\\\"\\\",\\\"msgContent\\\":\\\"您好，我是AI小惠。如果您有具体问题需要咨询，可以先查看上文服务管家已提供的方案。如果问题仍未解决，您可以在群里输入【人工】，服务管家会尽快协助您。\\\",\\\"msgId\\\":\\\"1574859\\\",\\\"msgTime\\\":\\\"2026-06-29 12:19:59.240\\\",\\\"msgType\\\":1,\\\"qlAtList\\\":\\\"\\\",\\\"recallMsgId\\\":\\\"1574859\\\",\\\"requestId\\\":\\\"df4e4793-f8c2-40b9-8c81-59645a13b792\\\",\\\"robotWeworkId\\\":\\\"31279305\\\",\\\"senderType\\\":0,\\\"title\\\":\\\"\\\",\\\"voiceTime\\\":\\\"0\\\"}\",\"transferToNextKafka\":true,\"robotWeComCode\":\"31279305\"},\"eventTime\":1782706799455,\"eventType\":\"group_chat\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-jm4x8",
+              "tid": "453460-10.226.89.170-1213-1782706799541-4347",
+              "sid": "453460-10.226.89.170-1213-1782706799541-4346",
+              "timestamp": "2026-06-29T12:19:59.541+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.541Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@收@/kibana-highlighted-field@@kibana-highlighted-field@到@/kibana-highlighted-field@@kibana-highlighted-field@工@/kibana-highlighted-field@@kibana-highlighted-field@作@/kibana-highlighted-field@@kibana-highlighted-field@台@/kibana-highlighted-field@@kibana-highlighted-field@群@/kibana-highlighted-field@@kibana-highlighted-field@会@/kibana-highlighted-field@@kibana-highlighted-field@话@/kibana-highlighted-field@@kibana-highlighted-field@消@/kibana-highlighted-field@@kibana-highlighted-field@息@/kibana-highlighted-field@:{\"data\":{\"globalMsgId\":\"CAQQ7uSH0gYYlbbutJ2AgAMgx4Gu/AM=\",\"msgType\":1,\"memberChannelAccountId\":\"acckJxEN7Rn6UbvSAGud1yE\",\"groupId\":\"10759464251522744\",\"msgId\":\"1574859\",\"memberWeComId\":\"\",\"recallMsgId\":\"1574859\",\"senderId\":\"31279305\",\"robotUcCode\":\"31279305\",\"memberUnionId\":\"\",\"sn\":\"shengxinzu_zuwu5e8310a11348e01f8d03c8900fa329ea\",\"channelCode\":\"QUAN_LIANG\",\"chatType\":2,\"groupWeComId\":\"wrk9U4DAAAA3DiTgUFpZcoA790Y2lU5g\",\"groupChannelId\":\"groupUTCeSCLH4OrvXR3G3xpL\",\"robotSrcType\":1,\"robotChannelAccountCode\":\"acckJxEN7Rn6UbvSAGud1yE\",\"msgContent\":{\"msgType\":1,\"textMsg\":{\"content\":\"您好，我是AI小惠。如果您有具体问题需要咨询，可以先查看上文服务管家已提供的方案。如果问题仍未解决，您可以在群里输入【人工】，服务管家会尽快协助您。\"}},\"roomieMsgId\":\"DT20260629121959-GROUP-K2071448567187558402\",\"robotType\":101,\"msgTime\":\"2026-06-29 12:19:59.240\",\"senderType\":100,\"businessType\":1,\"originalData\":\"{\\\"appInfo\\\":\\\"CAQQ7uSH0gYYlbbutJ2AgAMgx4Gu/AM=\\\",\\\"businessCode\\\":\\\"shengxinzu_zuwu\\\",\\\"channelMsgSn\\\":\\\"\\\",\\\"corpName\\\":\\\"bei_ke\\\",\\\"customMsgId\\\":\\\"shengxinzu_zuwu5e8310a11348e01f8d03c8900fa329ea\\\",\\\"desc\\\":\\\"\\\",\\\"eventType\\\":71003,\\\"groupId\\\":\\\"10759464251522744\\\",\\\"hint\\\":\\\"EbRBnn0uxRi9cmNousAA.mMezZf.1782706798\\\",\\\"href\\\":\\\"\\\",\\\"md5\\\":\\\"\\\",\\\"msgContent\\\":\\\"您好，我是AI小惠。如果您有具体问题需要咨询，可以先查看上文服务管家已提供的方案。如果问题仍未解决，您可以在群里输入【人工】，服务管家会尽快协助您。\\\",\\\"msgId\\\":\\\"1574859\\\",\\\"msgTime\\\":\\\"2026-06-29 12:19:59.240\\\",\\\"msgType\\\":1,\\\"qlAtList\\\":\\\"\\\",\\\"recallMsgId\\\":\\\"1574859\\\",\\\"requestId\\\":\\\"df4e4793-f8c2-40b9-8c81-59645a13b792\\\",\\\"robotWeworkId\\\":\\\"31279305\\\",\\\"senderType\\\":0,\\\"title\\\":\\\"\\\",\\\"voiceTime\\\":\\\"0\\\"}\",\"transferToNextKafka\":true,\"robotWeComCode\":\"31279305\"},\"eventTime\":1782706799455,\"eventType\":\"group_chat\"}"
+              ]
+            },
+            "sort": [
+              1782706799541
+            ]
+          }
+        ]
+      },
+      "aggregations": {
+        "2": {
+          "buckets": [
+            {
+              "key_as_string": "2026-06-29T12:00:00.000+08:00",
+              "key": 1782705600000,
+              "doc_count": 722
+            },
+            {
+              "key_as_string": "2026-06-29T12:00:30.000+08:00",
+              "key": 1782705630000,
+              "doc_count": 545
+            },
+            {
+              "key_as_string": "2026-06-29T12:01:00.000+08:00",
+              "key": 1782705660000,
+              "doc_count": 508
+            },
+            {
+              "key_as_string": "2026-06-29T12:01:30.000+08:00",
+              "key": 1782705690000,
+              "doc_count": 437
+            },
+            {
+              "key_as_string": "2026-06-29T12:02:00.000+08:00",
+              "key": 1782705720000,
+              "doc_count": 532
+            },
+            {
+              "key_as_string": "2026-06-29T12:02:30.000+08:00",
+              "key": 1782705750000,
+              "doc_count": 544
+            },
+            {
+              "key_as_string": "2026-06-29T12:03:00.000+08:00",
+              "key": 1782705780000,
+              "doc_count": 465
+            },
+            {
+              "key_as_string": "2026-06-29T12:03:30.000+08:00",
+              "key": 1782705810000,
+              "doc_count": 521
+            },
+            {
+              "key_as_string": "2026-06-29T12:04:00.000+08:00",
+              "key": 1782705840000,
+              "doc_count": 426
+            },
+            {
+              "key_as_string": "2026-06-29T12:04:30.000+08:00",
+              "key": 1782705870000,
+              "doc_count": 355
+            },
+            {
+              "key_as_string": "2026-06-29T12:05:00.000+08:00",
+              "key": 1782705900000,
+              "doc_count": 681
+            },
+            {
+              "key_as_string": "2026-06-29T12:05:30.000+08:00",
+              "key": 1782705930000,
+              "doc_count": 561
+            },
+            {
+              "key_as_string": "2026-06-29T12:06:00.000+08:00",
+              "key": 1782705960000,
+              "doc_count": 542
+            },
+            {
+              "key_as_string": "2026-06-29T12:06:30.000+08:00",
+              "key": 1782705990000,
+              "doc_count": 602
+            },
+            {
+              "key_as_string": "2026-06-29T12:07:00.000+08:00",
+              "key": 1782706020000,
+              "doc_count": 668
+            },
+            {
+              "key_as_string": "2026-06-29T12:07:30.000+08:00",
+              "key": 1782706050000,
+              "doc_count": 447
+            },
+            {
+              "key_as_string": "2026-06-29T12:08:00.000+08:00",
+              "key": 1782706080000,
+              "doc_count": 410
+            },
+            {
+              "key_as_string": "2026-06-29T12:08:30.000+08:00",
+              "key": 1782706110000,
+              "doc_count": 467
+            },
+            {
+              "key_as_string": "2026-06-29T12:09:00.000+08:00",
+              "key": 1782706140000,
+              "doc_count": 36
+            },
+            {
+              "key_as_string": "2026-06-29T12:09:30.000+08:00",
+              "key": 1782706170000,
+              "doc_count": 918
+            },
+            {
+              "key_as_string": "2026-06-29T12:10:00.000+08:00",
+              "key": 1782706200000,
+              "doc_count": 526
+            },
+            {
+              "key_as_string": "2026-06-29T12:10:30.000+08:00",
+              "key": 1782706230000,
+              "doc_count": 721
+            },
+            {
+              "key_as_string": "2026-06-29T12:11:00.000+08:00",
+              "key": 1782706260000,
+              "doc_count": 569
+            },
+            {
+              "key_as_string": "2026-06-29T12:11:30.000+08:00",
+              "key": 1782706290000,
+              "doc_count": 633
+            },
+            {
+              "key_as_string": "2026-06-29T12:12:00.000+08:00",
+              "key": 1782706320000,
+              "doc_count": 697
+            },
+            {
+              "key_as_string": "2026-06-29T12:12:30.000+08:00",
+              "key": 1782706350000,
+              "doc_count": 597
+            },
+            {
+              "key_as_string": "2026-06-29T12:13:00.000+08:00",
+              "key": 1782706380000,
+              "doc_count": 593
+            },
+            {
+              "key_as_string": "2026-06-29T12:13:30.000+08:00",
+              "key": 1782706410000,
+              "doc_count": 649
+            },
+            {
+              "key_as_string": "2026-06-29T12:14:00.000+08:00",
+              "key": 1782706440000,
+              "doc_count": 745
+            },
+            {
+              "key_as_string": "2026-06-29T12:14:30.000+08:00",
+              "key": 1782706470000,
+              "doc_count": 174
+            },
+            {
+              "key_as_string": "2026-06-29T12:15:00.000+08:00",
+              "key": 1782706500000,
+              "doc_count": 910
+            },
+            {
+              "key_as_string": "2026-06-29T12:15:30.000+08:00",
+              "key": 1782706530000,
+              "doc_count": 594
+            },
+            {
+              "key_as_string": "2026-06-29T12:16:00.000+08:00",
+              "key": 1782706560000,
+              "doc_count": 422
+            },
+            {
+              "key_as_string": "2026-06-29T12:16:30.000+08:00",
+              "key": 1782706590000,
+              "doc_count": 480
+            },
+            {
+              "key_as_string": "2026-06-29T12:17:00.000+08:00",
+              "key": 1782706620000,
+              "doc_count": 472
+            },
+            {
+              "key_as_string": "2026-06-29T12:17:30.000+08:00",
+              "key": 1782706650000,
+              "doc_count": 554
+            },
+            {
+              "key_as_string": "2026-06-29T12:18:00.000+08:00",
+              "key": 1782706680000,
+              "doc_count": 744
+            },
+            {
+              "key_as_string": "2026-06-29T12:18:30.000+08:00",
+              "key": 1782706710000,
+              "doc_count": 610
+            },
+            {
+              "key_as_string": "2026-06-29T12:19:00.000+08:00",
+              "key": 1782706740000,
+              "doc_count": 739
+            },
+            {
+              "key_as_string": "2026-06-29T12:19:30.000+08:00",
+              "key": 1782706770000,
+              "doc_count": 664
+            }
+          ]
+        }
+      }
+    },
+    "total": 3,
+    "loaded": 3
+  }
+}

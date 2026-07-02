@@ -1,0 +1,1168 @@
+{
+  "meta": {
+    "server": "fast106",
+    "index": "index-11408-13176_2026-06-29",
+    "query_time": "2026-06-29T19:02:54.144730",
+    "hash": "19e22de71ac3"
+  },
+  "request": {
+    "params": {
+      "ignoreThrottled": true,
+      "preference": 1780483834299,
+      "index": "index-11408-13176_2026-06-29",
+      "body": {
+        "version": true,
+        "size": 30,
+        "sort": [
+          {
+            "timestamp": {
+              "order": "desc",
+              "unmapped_type": "boolean"
+            }
+          }
+        ],
+        "aggs": {
+          "2": {
+            "date_histogram": {
+              "field": "timestamp",
+              "fixed_interval": "30s",
+              "time_zone": "Asia/Shanghai",
+              "min_doc_count": 1
+            }
+          }
+        },
+        "stored_fields": [
+          "*"
+        ],
+        "script_fields": {},
+        "docvalue_fields": [
+          {
+            "field": "timestamp",
+            "format": "date_time"
+          }
+        ],
+        "_source": {
+          "excludes": []
+        },
+        "query": {
+          "bool": {
+            "must": [
+              {
+                "query_string": {
+                  "query": "timeout OR 502",
+                  "analyze_wildcard": true,
+                  "time_zone": "Asia/Shanghai"
+                }
+              }
+            ],
+            "filter": [
+              {
+                "range": {
+                  "timestamp": {
+                    "gte": "2026-06-29T03:04:00.000Z",
+                    "lte": "2026-06-29T03:07:00.000Z",
+                    "format": "strict_date_optional_time"
+                  }
+                }
+              }
+            ],
+            "should": [],
+            "must_not": []
+          }
+        },
+        "highlight": {
+          "pre_tags": [
+            "@kibana-highlighted-field@"
+          ],
+          "post_tags": [
+            "@/kibana-highlighted-field@"
+          ],
+          "fields": {
+            "*": {}
+          },
+          "fragment_size": 2147483647
+        }
+      },
+      "rest_total_hits_as_int": true,
+      "ignore_unavailable": true,
+      "ignore_throttled": true,
+      "timeout": "30000ms"
+    },
+    "serverStrategy": "es"
+  },
+  "response": {
+    "is_partial": false,
+    "is_running": false,
+    "rawResponse": {
+      "took": 188,
+      "timed_out": false,
+      "_shards": {
+        "total": 3,
+        "successful": 3,
+        "skipped": 0,
+        "failed": 0
+      },
+      "hits": {
+        "total": 7482,
+        "max_score": null,
+        "hits": [
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "Cp9YEZ8Bwva2ZhliQiRb",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "-1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.82.200",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "执行进入潜水模式{\"actionCodes\":[{\"actionCode\":\"ENTER_LURK_MODE\",\"actionData\":\"ENTER_LURK_MODE\"}],\"execPass\":true,\"repeat\":0,\"requestId\":\"1687356\",\"ruleId\":463,\"serviceId\":\"private-domain-lease\",\"sourceData\":{\"question\":\"其他\",\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"bizType\":\"test\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"imgConvertResult\":0,\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"fixOrderInfo\":{\"房屋地址\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\",\"联系人电话\":\"\",\"联系人姓名\":\"\"},\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"isHasHistory\":1,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"atList\":\"\"},\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"answerGenerated\":false,\"require\":\"其他\",\"isConfident\":\"1\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"aiInvolve\":\"0\",\"picture\":\"\",\"caseType\":\"其他\",\"intention\":\"其他\",\"businessScene\":2,\"firstTrigger\":0,\"answer\":\" \",\"senderType\":4,\"triggerSource\":10,\"contractCode\":\"TGCF2507117112\",\"sessionInitiator\":4,\"isInfoComplete\":\"0\",\"fixOrderInfo\":{\"房屋地址\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\",\"联系人电话\":\"\",\"联系人姓名\":\"\"},\"messageContent\":\"2950套不了吗\"},\"traceId\":\"1687356\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-f6htb",
+              "tid": "453460-10.226.82.200-1087-1782702419971-3989",
+              "sid": "453460-10.226.82.200-1087-1782702419971-3988",
+              "timestamp": "2026-06-29T11:06:59.997+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.997Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "执行进入潜水模式{\"actionCodes\":[{\"actionCode\":\"ENTER_LURK_MODE\",\"actionData\":\"ENTER_LURK_MODE\"}],\"execPass\":true,\"repeat\":0,\"requestId\":\"1687356\",\"ruleId\":463,\"serviceId\":\"private-domain-lease\",\"sourceData\":{\"question\":\"其他\",\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"bizType\":\"test\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"imgConvertResult\":0,\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"fixOrderInfo\":{\"房屋地址\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\",\"联系人电话\":\"\",\"联系人姓名\":\"\"},\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"isHasHistory\":1,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"atList\":\"\"},\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"answerGenerated\":false,\"require\":\"其他\",\"isConfident\":\"1\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"aiInvolve\":\"0\",\"picture\":\"\",\"caseType\":\"其他\",\"intention\":\"其他\",\"businessScene\":2,\"firstTrigger\":0,\"answer\":\" \",\"senderType\":4,\"triggerSource\":10,\"contractCode\":\"TGCF2507117112\",\"sessionInitiator\":4,\"isInfoComplete\":\"0\",\"fixOrderInfo\":{\"房屋地址\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\",\"联系人电话\":\"\",\"联系人姓名\":\"\"},\"messageContent\":\"2950套不了吗\"},\"traceId\":\"1687356\"}"
+              ]
+            },
+            "sort": [
+              1782702419997
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "zZ9YEZ8Bwva2ZhliQz_K",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "-1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.82.200",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "调用云管家,getSession,input=new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000,res={\"code\":0,\"data\":{\"baseInfoRes\":{\"aiAskDelayTime\":600,\"aiInfoCollectMode\":0,\"aiType\":2,\"answerMode\":0,\"chatOutput\":\"{\\\"question\\\":\\\"结束对话\\\",\\\"intention\\\":\\\"结束对话\\\",\\\"status\\\":1,\\\"fix_order_info\\\":{\\\"房屋地址\\\":\\\"\\\",\\\"故障物品\\\":\\\"\\\",\\\"故障区域\\\":\\\"\\\",\\\"故障现象\\\":\\\"\\\",\\\"服务项目\\\":\\\"\\\",\\\"故障图片\\\":\\\"\\\",\\\"联系人电话\\\":\\\"\\\",\\\"联系人姓名\\\":\\\"\\\"},\\\"recalled_docs\\\":\\\"0\\\"}\",\"delayedAiAsk\":true,\"extInfo\":{\"robotWeworkId\":\"31151602\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"aiRobotUcId\":1000000031261511,\"msgId\":\"1687356\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1687356\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782702126000,\"senderType\":4,\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"contractCode\":\"TGCF2507117112\"},\"intentionMap\":{\"结束对话\":{\"1687341\":1782701977000,\"1687350\":1782702081000,\"1687353\":1782702102000},\"意图引导\":{\"1687320\":1782701593000,\"1687359\":1782702130000,\"1687330\":1782701947000},\"其他\":{\"2357665\":1782701960000,\"1687347\":1782702076000}},\"lurkStatus\":1,\"manualRemind\":0,\"onlyCreateSession\":false,\"paymentBillMap\":{},\"repairDialogMode\":2,\"repairDialogResult\":0,\"robotAnswerTimes\":1,\"robotResult\":1,\"sessionCreateAt\":1782701596178,\"sessionInitiatorCode\":4,\"solutionSendFlag\":0},\"chatType\":\"GROUP_CHAT\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\"},\"msg\":\"success\",\"success\":true}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-f6htb",
+              "tid": "453460-10.226.82.200-1087-1782702419971-3989",
+              "sid": "453460-10.226.82.200-1087-1782702419971-3988",
+              "timestamp": "2026-06-29T11:06:59.996+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.996Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "调用云管家,getSession,input=new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000,res={\"code\":0,\"data\":{\"baseInfoRes\":{\"aiAskDelayTime\":600,\"aiInfoCollectMode\":0,\"aiType\":2,\"answerMode\":0,\"chatOutput\":\"{\\\"question\\\":\\\"结束对话\\\",\\\"intention\\\":\\\"结束对话\\\",\\\"status\\\":1,\\\"fix_order_info\\\":{\\\"房屋地址\\\":\\\"\\\",\\\"故障物品\\\":\\\"\\\",\\\"故障区域\\\":\\\"\\\",\\\"故障现象\\\":\\\"\\\",\\\"服务项目\\\":\\\"\\\",\\\"故障图片\\\":\\\"\\\",\\\"联系人电话\\\":\\\"\\\",\\\"联系人姓名\\\":\\\"\\\"},\\\"recalled_docs\\\":\\\"0\\\"}\",\"delayedAiAsk\":true,\"extInfo\":{\"robotWeworkId\":\"31151602\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"aiRobotUcId\":1000000031261511,\"msgId\":\"1687356\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1687356\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782702126000,\"senderType\":4,\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"contractCode\":\"TGCF2507117112\"},\"intentionMap\":{\"结束对话\":{\"1687341\":1782701977000,\"1687350\":1782702081000,\"1687353\":1782702102000},\"意图引导\":{\"1687320\":1782701593000,\"1687359\":1782702130000,\"1687330\":1782701947000},\"其他\":{\"2357665\":1782701960000,\"1687347\":1782702076000}},\"lurkStatus\":1,\"manualRemind\":0,\"onlyCreateSession\":false,\"paymentBillMap\":{},\"repairDialogMode\":2,\"repairDialogResult\":0,\"robotAnswerTimes\":1,\"robotResult\":1,\"sessionCreateAt\":1782701596178,\"sessionInitiatorCode\":4,\"solutionSendFlag\":0},\"chatType\":\"GROUP_CHAT\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\"},\"msg\":\"success\",\"success\":true}"
+              ]
+            },
+            "sort": [
+              1782702419996
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "D-dYEZ8BdpG7oQCUQ9Ij",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "-1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.82.200",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "收到云管家规则引擎动作执行消息:{\"actionCodes\":[{\"actionCode\":\"ENTER_LURK_MODE\",\"actionData\":\"ENTER_LURK_MODE\"}],\"execPass\":true,\"repeat\":0,\"requestId\":\"1687356\",\"ruleId\":463,\"serviceId\":\"private-domain-lease\",\"sourceData\":{\"question\":\"其他\",\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"answerGenerated\":false,\"require\":\"其他\",\"isConfident\":\"1\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"aiInvolve\":\"0\",\"picture\":\"\",\"caseType\":\"其他\",\"intention\":\"其他\",\"businessScene\":2,\"firstTrigger\":0,\"answer\":\" \",\"senderType\":4,\"triggerSource\":10,\"contractCode\":\"TGCF2507117112\",\"sessionInitiator\":4,\"isInfoComplete\":\"0\",\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"messageContent\":\"2950套不了吗\"},\"traceId\":\"1687356\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-f6htb",
+              "tid": "453460-10.226.82.200-1087-1782702419971-3989",
+              "sid": "453460-10.226.82.200-1087-1782702419971-3988",
+              "timestamp": "2026-06-29T11:06:59.971+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.971Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "收到云管家规则引擎动作执行消息:{\"actionCodes\":[{\"actionCode\":\"ENTER_LURK_MODE\",\"actionData\":\"ENTER_LURK_MODE\"}],\"execPass\":true,\"repeat\":0,\"requestId\":\"1687356\",\"ruleId\":463,\"serviceId\":\"private-domain-lease\",\"sourceData\":{\"question\":\"其他\",\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"answerGenerated\":false,\"require\":\"其他\",\"isConfident\":\"1\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"aiInvolve\":\"0\",\"picture\":\"\",\"caseType\":\"其他\",\"intention\":\"其他\",\"businessScene\":2,\"firstTrigger\":0,\"answer\":\" \",\"senderType\":4,\"triggerSource\":10,\"contractCode\":\"TGCF2507117112\",\"sessionInitiator\":4,\"isInfoComplete\":\"0\",\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"messageContent\":\"2950套不了吗\"},\"traceId\":\"1687356\"}"
+              ]
+            },
+            "sort": [
+              1782702419971
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "MTlYEZ8B9P_t1W1uQdo7",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "-1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.239",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "bellaResultConsumer 开始执行,msg:{\"bizScene\":\"groupAiV2Service\",\"errorMsg\":\"{\\\"error\\\":\\\"节点`租客信息`执行异常：<!DOCTYPE html>\\\n<html lang=\\\\\\\"en\\\\\\\">\\\n<head>\\\n    <meta charset=\\\\\\\"UTF-8\\\\\\\">\\\n    <meta name=\\\\\\\"apple-mobile-web-app-title\\\\\\\" content=\\\\\\\"P2PBUY\\\\\\\">\\\n    <meta name=\\\\\\\"apple-mobile-web-app-capable\\\\\\\" content=\\\\\\\"yes\\\\\\\">\\\n    <meta name=\\\\\\\"apple-mobile-web-app-status-bar-style\\\\\\\" content=\\\\\\\"black\\\\\\\" /> \\\n    <meta name=\\\\\\\"format-detection\\\\\\\" content=\\\\\\\"telephone=no\\\\\\\">\\\n    <meta http-equiv=\\\\\\\"cleartype\\\\\\\" content=\\\\\\\"on\\\\\\\">\\\n    <title>502</title>\\\n    <script type=\\\\\\\"text/javascript\\\\\\\">\\\n    ;(function(f,i){var b=i.documentElement;var e=f.navigator.appVersion;var g=e.match(/android/gi);var c=e.match(/iphone/gi);var k=f.devicePixelRatio;var j=1,d=1;if(c){if(k>=3){j=3}else{if(k>=2){j=2}else{j=1}}}else{j=1}d=1/j;var h=i.querySelector('meta[name=\\\\\\\"viewport\\\\\\\"]');if(!h){h=i.createElement(\\\\\\\"meta\\\\\\\");h.setAttribute(\\\\\\\"name\\\\\\\",\\\\\\\"viewport\\\\\\\");if(b.firstElementChild){b.firstElementChild.appendChild(h)}else{var a=i.createElement(\\\\\\\"div\\\\\\\");a.appendChild(h);i.write(a.innerHTML)}}if(j){h.setAttribute(\\\\\\\"content\\\\\\\",\\\\\\\"initial-scale=\\\\\\\"+d+\\\\\\\", maximum-scale=\\\\\\\"+d+\\\\\\\", minimum-scale=\\\\\\\"+d+\\\\\\\", user-scalable=no\\\\\\\");b.style.fontSize=16*j+\\\\\\\"px\\\\\\\"}window.DPR=j})(window,document);\\\n    </script>\\\n    <link href=\\\\\\\"http://m.lianjia.com/favicon.ico\\\\\\\" type=\\\\\\\"image/x-icon\\\\\\\" rel=\\\\\\\"icon\\\\\\\">\\\n    <style type=\\\\\\\"text/css\\\\\\\">\\\n        body{margin:0;}\\\n        header{height:2.8125rem; background-color: #394043;border-top:1px solid #394043;}\\\n        header .logo_wrap{background-image: url(\\\\\\\"http://s1.ljcdn.com/hulk-web/static/m/images/error/logo_error.png\\\\\\\");display:block;width:6.6875rem;height:1.25rem;margin:0.75rem 0 0 0.75rem;\\\n        background-size:100% 100%;}\\\n\\\n        .content_area{position:absolute;top:2.8125rem;bottom:0;width:100%;text-align:center;color:#849aae;}\\\n        .content_area img{margin-top:2.25rem;width:12rem;}\\\n        .content_area p{margin-bottom:0;}\\\n        .content_area .margin_div{height:11%;}\\\n        .content_area .big{margin-top:0;font-size:1.25rem;font-weight:bold;}\\\n        .content_area .middle{margin-top:0.5rem;font-size:0.75rem;}\\\n        .content_area .return{line-height:2.5rem;width:11.5rem;margin:0 auto;height:2.5rem;position:absolute;left:0;right:0;border:1px solid #849aae;border-radius:0.125rem;\\\n            font-size:0.875rem;bottom:4.75rem;text-decoration:none;color:#849aae;}\\\n        .content_area .contact{position:absolute;bottom:3rem;color:#eceded;font-size:0.75rem;width:100%;}\\\n    </style>\\\n</head>\\\n<body>\\\n<div class=\\\\\\\"wrapper\\\\\\\">\\\n    <section class=\\\\\\\"page\\\\\\\">\\\n        <!--头部-->\\\n        <header class=\\\\\\\"header\\\\\\\">\\\n            <a href=\\\\\\\"\\\\\\\" class=\\\\\\\"logo_wrap\\\\\\\"></a>\\\n        </header>\\\n        <!--/头部-->\\\n\\\n        <div class=\\\\\\\"content_area\\\\\\\">\\\n\\\\t        <img src=\\\\\\\"http://s1.ljcdn.com/hulk-web/static/m/images/error/lianlian_502.png\\\\\\\"/>\\\n            <div class=\\\\\\\"margin_div\\\\\\\"></div>\\\n            <p class=\\\\\\\"big\\\\\\\">呣，服务器偷懒了..</p>\\\n            <p class=\\\\\\\"middle\\\\\\\">工程师正在紧张处理中</p>\\\n            <a class=\\\\\\\"return\\\\\\\" href=\\\\\\\"\\\\\\\">刷新页面</a>\\\n            <p class=\\\\\\\"contact\\\\\\\">联系客服：4007-001-001</p>\\\n        </div>\\\n    </section>\\\n</div>\\\n\\\n\\\n</body>\\\n<script>\\\n\\\n</script>\\\n</html>\\\n\\\",\\\"status\\\":\\\"failed\\\",\\\"success\\\":false,\\\"tenantId\\\":\\\"04633c4f-8638-43a3-a02e-af23c29f821f\\\",\\\"workflowId\\\":\\\"WKFL-95544c23-f77e-474e-a709-2f0aa118bfdb\\\",\\\"workflowRunId\\\":\\\"RUN-2606291102410089743969\\\"}\",\"extInfo\":{\"groupMsgList\":\"[{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"嗯嗯\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782544590000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"【图片类型】商品页面截图【图片内容】京东自营旗舰店页面，展示米家小米186L两门冰箱，颜色为浅灰色，尺寸标注为宽505mm、深560mm、高1425mm。页面左侧有“京东重磅新品”标签，显示产品特点：一级能效、五档电子调温、整机一年保修等。售价信息显示限时到手价为¥849，国补后价为¥721.65。页面下方有“加入购物车”和“领取补贴购买”按钮，以及“以旧换新”、“国家补贴”等促销信息。【图片目的】展示当前截图内容【是否屋内设施照片】否【匹配商品】无【是否对账图片】否\\\",\\\"type\\\":\\\"图片\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782544600000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"这个链接可以给一下吗\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782544607000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"发来一条[视频]消息\\\",\\\"type\\\":\\\"视频\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544615000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"【图片类型】手机截图【图片内容】一个电商购物平台的订单交易成功页面截图，显示“交易成功”字样。订单商品为海尔官方旗舰店的185L双开门冰箱（型号LC2-186S901），实付价格为¥725.9，原价¥1699，包含店铺优惠、平台优惠和国家补贴。订单信息部分显示订单号3308846847254010598，下单时间为6月21日。页面底部有“评价”按钮及客服选项。【图片目的】展示当前截图内容【是否屋内设施照片】否【匹配商品】无【是否对账图片】否\\\",\\\"type\\\":\\\"图片\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544640000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"【撤回了一条消息】\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544653000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"好的\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782544663000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"【淘宝】https://e.tb.cn/h.Rs6deU1ho4wyV6l?tk=0R8Jg8hZ7IS CZ001 「换新补贴海尔出品统帅186双开两门超薄宿舍出租房一级家用小冰箱」点击链接直接打开 或者 淘宝搜索直接打开\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544675000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"\\\\\\\"刘巧玉[图片]\\\\\\\"------这个链接有不？\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782544679000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"我看看\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544699000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"发来一条[视频]消息\\\",\\\"type\\\":\\\"视频\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544711000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"发来一条[小程序]消息\\\",\\\"type\\\":\\\"小程序\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544772000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"好滴，谢谢了\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782545087000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"您给一个收款二维码\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782545096000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"直接转我支付宝吧13022001916刘艺心\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782545170000\\\"},{\\\"role\\\":\\\"AI智能助手\\\",\\\"memberName\\\":\\\"AI小惠1426\\\",\\\"message\\\":\\\"租客您好～我是服务助手AI小惠，请您耐心等待线下管家回复，若等待时间较长，可以输入【人工】，将由 服务管家-惠曌 为您服务\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":6,\\\"time\\\":\\\"1782545772000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"好的\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782545802000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"晚点哈\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782545814000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"【图片类型】手机截图【图片内容】支付宝转账成功页面，显示转账金额为¥726.00，收款方为“沐黎（**心）”，付款方式为账户余额。页面顶部有“转账成功”字样及勾选图标。下方显示“立即通知收款人”模块，包含收款人头像、昵称及备注信息“信息准确，对账无忧”。页面底部有“完成”按钮。其他区域包含广告推荐内容，如蚂蚁保、优惠券等。【图片目的】展示当前截图内容【是否屋内设施照片】否【匹配商品】无【是否对账图片】否\\\",\\\"type\\\":\\\"图片\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782555399000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"已收到[好的]\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782555435000\\\"}]\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"108408757860\",\"bizType\":\"test\",\"contactInfo\":\"{\\\"address\\\":\\\"天河智荟2号楼1单元1120\\\",\\\"name\\\":\\\"刘艺心\\\",\\\"phone\\\":\\\"130****1916\\\"}\",\"cityCode\":\"440100\",\"groupId\":\"10737302009733740\",\"msgId\":\"2585264\",\"nowDateStr\":\"2026-06-29 11:02:41\",\"latestMsgId\":\"2585264\",\"cityName\":\"广州\",\"sessionTodo\":\"租客的待办事项：\n1. 留意查收房屋门锁的初始密码（将在交付日0点后发送到签约手机号）\n2. 在网上购买阳台蚊帘（待经纪人测量尺寸后）\n3. 联系小区物业咨询地下停车场事宜（电话：020-38997997）\n\n服务管家的待办事项：\n1. 提供房屋资管联系方式（若租客需要提前进入房屋）\n2. 后续跟进租客入住后的各类需求（维修、缴费、续约、退租等）\n\nAI小惠的待办事项：\n无\n\n资管经理的待办事项：\n无\n\n经纪人的待办事项：\n1. 明早帮租客打开衣柜门通风\n2. 测量阳台门的宽度和高度（用于租客购买蚊帘）\",\"inContractCode\":\"TG2605818501\",\"aiRobotUserId\":\"31653878\",\"triggerSource\":10,\"workflowRunId\":\"RUN-2606291102410089743969\",\"robotWeworkId\":\"31175797\",\"aiRobotUcId\":1000000031653878,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10737302009733740--4#1782702125000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"广州贝壳租房服务管家惠曌\",\"userId\":1000000030792695,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:05\",\"senderType\":4,\"inContractId\":8502211,\"resblockId\":\"21000000144162\",\"contractCode\":\"TGCF2606611695\"},\"requestId\":\"2585264\",\"result\":false,\"sessionId\":\"SYSa1ae520d-891b-4d67-a306-f455e0ffcc7f\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7vbf6",
+              "tid": "453460-10.22.115.239-939-1782702419906-7723",
+              "sid": "453460-10.22.115.239-939-1782702419906-7722",
+              "timestamp": "2026-06-29T11:06:59.907+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.907Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "DOCTYPE html>\\\n<html lang=\\\\\\\"en\\\\\\\">\\\n<head>\\\n    <meta charset=\\\\\\\"UTF-8\\\\\\\">\\\n    <meta name=\\\\\\\"apple-mobile-web-app-title\\\\\\\" content=\\\\\\\"P2PBUY\\\\\\\">\\\n    <meta name=\\\\\\\"apple-mobile-web-app-capable\\\\\\\" content=\\\\\\\"yes\\\\\\\">\\\n    <meta name=\\\\\\\"apple-mobile-web-app-status-bar-style\\\\\\\" content=\\\\\\\"black\\\\\\\" /> \\\n    <meta name=\\\\\\\"format-detection\\\\\\\" content=\\\\\\\"telephone=no\\\\\\\">\\\n    <meta http-equiv=\\\\\\\"cleartype\\\\\\\" content=\\\\\\\"on\\\\\\\">\\\n    <title>@kibana-highlighted-field@502@/kibana-highlighted-field@</title>\\\n    <script type=\\\\\\\"text/javascript\\\\\\\">\\\n    ;(function(f,i){var b=i.documentElement;var e=f.navigator.appVersion;var g=e.match(/android/gi);var c=e.match(/iphone/gi);var k=f.devicePixelRatio;var j=1,d=1;if(c){if(k>=3){j=3}else{if(k>=2){j=2}else{j=1}}}else{j=1}d=1/j;var h=i.querySelector('meta[name=\\\\\\\"viewport\\\\\\\"]');if(!h){h=i.createElement(\\\\\\\"meta\\\\\\\");h.setAttribute(\\\\\\\"name\\\\\\\",\\\\\\\"viewport\\\\\\\");if(b.firstElementChild){b.firstElementChild.appendChild(h)}else{var a=i.createElement(\\\\\\\"div\\\\\\\");a.appendChild(h);i.write(a.innerHTML)}}if(j){h.setAttribute(\\\\\\\"content\\\\\\\",\\\\\\\"initial-scale=\\\\\\\"+d+\\\\\\\", maximum-scale=\\\\\\\"+d+\\\\\\\", minimum-scale=\\\\\\\"+d+\\\\\\\", user-scalable=no\\\\\\\");b.style.fontSize=16*j+\\\\\\\"px\\\\\\\"}window.DPR=j})(window,document);\\\n    </script>\\\n    <link href=\\\\\\\"http://m.lianjia.com/favicon.ico\\\\\\\" type=\\\\\\\"image/x-icon\\\\\\\" rel=\\\\\\\"icon\\\\\\\">\\\n    <style type=\\\\\\\"text/css\\\\\\\">\\\n        body{margin:0;}\\\n        header{height:2.8125rem; background-color: #394043;border-top:1px solid #394043;}\\\n        header .logo_wrap{background-image: url(\\\\\\\"http://s1.ljcdn.com/hulk-web/static/m/images/error/logo_error.png\\\\\\\");display:block;width:6.6875rem;height:1.25rem;margin:0.75rem 0 0 0.75rem;\\\n        background-size:100% 100%;}\\\n\\\n        .content_area{position:absolute;top:2.8125rem;bottom:0;width:100%;text-align:center;color:#849aae;}\\\n        .content_area img{margin-top:2.25rem;width:12rem;}\\\n        .content_area p{margin-bottom:0;}\\\n        .content_area .margin_div{height:11%;}\\\n        .content_area .big{margin-top:0;font-size:1.25rem;font-weight:bold;}\\\n        .content_area .middle{margin-top:0.5rem;font-size:0.75rem;}\\\n        .content_area .return{line-height:2.5rem;width:11.5rem;margin:0 auto;height:2.5rem;position:absolute;left:0;right:0;border:1px solid #849aae;border-radius:0.125rem;\\\n            font-size:0.875rem;bottom:4.75rem;text-decoration:none;color:#849aae;}\\\n        .content_area .contact{position:absolute;bottom:3rem;color:#eceded;font-size:0.75rem;width:100%;}\\\n    </style>\\\n</head>\\\n<body>\\\n<div class=\\\\\\\"wrapper\\\\\\\">\\\n    <section class=\\\\\\\"page\\\\\\\">\\\n        <!--头部-->\\\n        <header class=\\\\\\\"header\\\\\\\">\\\n            <a href=\\\\\\\"\\\\\\\" class=\\\\\\\"logo_wrap\\\\\\\"></a>\\\n        </header>\\\n        <!--/头部-->\\\n\\\n        <div class=\\\\\\\"content_area\\\\\\\">\\\n\\\\t        <img src=\\\\\\\"http://s1.ljcdn.com/hulk-web/static/m/images/error/lianlian_502.png\\\\\\\"/>\\\n            <div class=\\\\\\\"margin_div\\\\\\\"></div>\\\n            <p class=\\\\\\\"big\\\\\\\">呣，服务器偷懒了..</p>\\\n            <p class=\\\\\\\"middle\\\\\\\">工程师正在紧张处理中</p>\\\n            <a class=\\\\\\\"return\\\\\\\" href=\\\\\\\"\\\\\\\">刷新页面</a>\\\n            <p class=\\\\\\\"contact\\\\\\\">联系客服：4007-001-001</p>\\\n        </div>\\\n    </section>\\\n</div>\\\n\\\n\\\n</body>\\\n<script>\\\n\\\n</script>\\\n</html>\\\n\\\",\\\"status\\\":\\\"failed\\\",\\\"success\\\":false,\\\"tenantId\\\":\\\"04633c4f-8638-43a3-a02e-af23c29f821f\\\",\\\"workflowId\\\":\\\"WKFL-95544c23-f77e-474e-a709-2f0aa118bfdb\\\",\\\"workflowRunId\\\":\\\"RUN-2606291102410089743969\\\"}\",\"extInfo\":{\"groupMsgList\":\"[{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"嗯嗯\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782544590000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"【图片类型】商品页面截图【图片内容】京东自营旗舰店页面，展示米家小米186L两门冰箱，颜色为浅灰色，尺寸标注为宽505mm、深560mm、高1425mm。页面左侧有“京东重磅新品”标签，显示产品特点：一级能效、五档电子调温、整机一年保修等。售价信息显示限时到手价为¥849，国补后价为¥721.65。页面下方有“加入购物车”和“领取补贴购买”按钮，以及“以旧换新”、“国家补贴”等促销信息。【图片目的】展示当前截图内容【是否屋内设施照片】否【匹配商品】无【是否对账图片】否\\\",\\\"type\\\":\\\"图片\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782544600000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"这个链接可以给一下吗\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782544607000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"发来一条[视频]消息\\\",\\\"type\\\":\\\"视频\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544615000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"【图片类型】手机截图【图片内容】一个电商购物平台的订单交易成功页面截图，显示“交易成功”字样。订单商品为海尔官方旗舰店的185L双开门冰箱（型号LC2-186S901），实付价格为¥725.9，原价¥1699，包含店铺优惠、平台优惠和国家补贴。订单信息部分显示订单号3308846847254010598，下单时间为6月21日。页面底部有“评价”按钮及客服选项。【图片目的】展示当前截图内容【是否屋内设施照片】否【匹配商品】无【是否对账图片】否\\\",\\\"type\\\":\\\"图片\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544640000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"【撤回了一条消息】\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544653000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"好的\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782544663000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"【淘宝】https://e.tb.cn/h.Rs6deU1ho4wyV6l?tk=0R8Jg8hZ7IS CZ001 「换新补贴海尔出品统帅186双开两门超薄宿舍出租房一级家用小冰箱」点击链接直接打开 或者 淘宝搜索直接打开\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544675000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"\\\\\\\"刘巧玉[图片]\\\\\\\"------这个链接有不？\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782544679000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"我看看\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544699000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"发来一条[视频]消息\\\",\\\"type\\\":\\\"视频\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544711000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"发来一条[小程序]消息\\\",\\\"type\\\":\\\"小程序\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544772000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"好滴，谢谢了\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782545087000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"您给一个收款二维码\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782545096000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"直接转我支付宝吧13022001916刘艺心\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782545170000\\\"},{\\\"role\\\":\\\"AI智能助手\\\",\\\"memberName\\\":\\\"AI小惠1426\\\",\\\"message\\\":\\\"租客您好～我是服务助手AI小惠，请您耐心等待线下管家回复，若等待时间较长，可以输入【人工】，将由 服务管家-惠曌 为您服务\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":6,\\\"time\\\":\\\"1782545772000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"好的\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782545802000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"晚点哈\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782545814000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"【图片类型】手机截图【图片内容】支付宝转账成功页面，显示转账金额为¥726.00，收款方为“沐黎（**心）”，付款方式为账户余额。页面顶部有“转账成功”字样及勾选图标。下方显示“立即通知收款人”模块，包含收款人头像、昵称及备注信息“信息准确，对账无忧”。页面底部有“完成”按钮。其他区域包含广告推荐内容，如蚂蚁保、优惠券等。【图片目的】展示当前截图内容【是否屋内设施照片】否【匹配商品】无【是否对账图片】否\\\",\\\"type\\\":\\\"图片\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782555399000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"已收到[好的]\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782555435000\\\"}]\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"108408757860\",\"bizType\":\"test\",\"contactInfo\":\"{\\\"address\\\":\\\"天河智荟2号楼1单元1120\\\",\\\"name\\\":\\\"刘艺心\\\",\\\"phone\\\":\\\"130****1916\\\"}\",\"cityCode\":\"440100\",\"groupId\":\"10737302009733740\",\"msgId\":\"2585264\",\"nowDateStr\":\"2026-06-29 11:02:41\",\"latestMsgId\":\"2585264\",\"cityName\":\"广州\",\"sessionTodo\":\"租客的待办事项：\n1. 留意查收房屋门锁的初始密码（将在交付日0点后发送到签约手机号）\n2. 在网上购买阳台蚊帘（待经纪人测量尺寸后）\n3. 联系小区物业咨询地下停车场事宜（电话：020-38997997）\n\n服务管家的待办事项：\n1. 提供房屋资管联系方式（若租客需要提前进入房屋）\n2. 后续跟进租客入住后的各类需求（维修、缴费、续约、退租等）\n\nAI小惠的待办事项：\n无\n\n资管经理的待办事项：\n无\n\n经纪人的待办事项：\n1. 明早帮租客打开衣柜门通风\n2. 测量阳台门的宽度和高度（用于租客购买蚊帘）\",\"inContractCode\":\"TG2605818501\",\"aiRobotUserId\":\"31653878\",\"triggerSource\":10,\"workflowRunId\":\"RUN-2606291102410089743969\",\"robotWeworkId\":\"31175797\",\"aiRobotUcId\":1000000031653878,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10737302009733740--4#1782702125000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"广州贝壳租房服务管家惠曌\",\"userId\":1000000030792695,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:05\",\"senderType\":4,\"inContractId\":8502211,\"resblockId\":\"21000000144162\",\"contractCode\":\"TGCF2606611695\"},\"requestId\":\"2585264\",\"result\":false,\"sessionId\":\"SYSa1ae520d-891b-4d67-a306-f455e0ffcc7f\"}"
+              ]
+            },
+            "sort": [
+              1782702419907
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "8-dYEZ8BdpG7oQCUQXZh",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "-1",
+              "data_errmsg": "bellaResultConsumer 参数异常,msg:{\"bizScene\":\"groupAiV2Service\",\"errorMsg\":\"{\\\"error\\\":\\\"节点`租客信息`执行异常：<!DOCTYPE html>\\\n<html lang=\\\\\\\"en\\\\\\\">\\\n<head>\\\n    <meta charset=\\\\\\\"UTF-8\\\\\\\">\\\n    <meta name=\\\\\\\"apple-mobile-web-app-title\\\\\\\" content=\\\\\\\"P2PBUY\\\\\\\">\\\n    <meta name=\\\\\\\"apple-mobile-web-app-capable\\\\\\\" content=\\\\\\\"yes\\\\\\\">\\\n    <meta name=\\\\\\\"apple-mobile-web-app-status-bar-style\\\\\\\" content=\\\\\\\"black\\\\\\\" /> \\\n    <meta name=\\\\\\\"format-detection\\\\\\\" content=\\\\\\\"telephone=no\\\\\\\">\\\n    <meta http-equiv=\\\\\\\"cleartype\\\\\\\" content=\\\\\\\"on\\\\\\\">\\\n    <title>502</title>\\\n    <script type=\\\\\\\"text/javascript\\\\\\\">\\\n    ;(function(f,i){var b=i.documentElement;var e=f.navigator.appVersion;var g=e.match(/android/gi);var c=e.match(/iphone/gi);var k=f.devicePixelRatio;var j=1,d=1;if(c){if(k>=3){j=3}else{if(k>=2){j=2}else{j=1}}}else{j=1}d=1/j;var h=i.querySelector('meta[name=\\\\\\\"viewport\\\\\\\"]');if(!h){h=i.createElement(\\\\\\\"meta\\\\\\\");h.setAttribute(\\\\\\\"name\\\\\\\",\\\\\\\"viewport\\\\\\\");if(b.firstElementChild){b.firstElementChild.appendChild(h)}else{var a=i.createElement(\\\\\\\"div\\\\\\\");a.appendChild(h);i.write(a.innerHTML)}}if(j){h.setAttribute(\\\\\\\"content\\\\\\\",\\\\\\\"initial-scale=\\\\\\\"+d+\\\\\\\", maximum-scale=\\\\\\\"+d+\\\\\\\", minimum-scale=\\\\\\\"+d+\\\\\\\", user-scalable=no\\\\\\\");b.style.fontSize=16*j+\\\\\\\"px\\\\\\\"}window.DPR=j})(window,document);\\\n    </script>\\\n    <link href=\\\\\\\"http://m.lianjia.com/favicon.ico\\\\\\\" type=\\\\\\\"image/x-icon\\\\\\\" rel=\\\\\\\"icon\\\\\\\">\\\n    <style type=\\\\\\\"text/css\\\\\\\">\\\n        body{margin:0;}\\\n        header{height:2.8125rem; background-color: #394043;border-top:1px solid #394043;}\\\n        header .logo_wrap{background-image: url(\\\\\\\"http://s1.ljcdn.com/hulk-web/static/m/images/error/logo_error.png\\\\\\\");display:block;width:6.6875rem;height:1.25rem;margin:0.75rem 0 0 0.75rem;\\\n        background-size:100% 100%;}\\\n\\\n        .content_area{position:absolute;top:2.8125rem;bottom:0;width:100%;text-align:center;color:#849aae;}\\\n        .content_area img{margin-top:2.25rem;width:12rem;}\\\n        .content_area p{margin-bottom:0;}\\\n        .content_area .margin_div{height:11%;}\\\n        .content_area .big{margin-top:0;font-size:1.25rem;font-weight:bold;}\\\n        .content_area .middle{margin-top:0.5rem;font-size:0.75rem;}\\\n        .content_area .return{line-height:2.5rem;width:11.5rem;margin:0 auto;height:2.5rem;position:absolute;left:0;right:0;border:1px solid #849aae;border-radius:0.125rem;\\\n            font-size:0.875rem;bottom:4.75rem;text-decoration:none;color:#849aae;}\\\n        .content_area .contact{position:absolute;bottom:3rem;color:#eceded;font-size:0.75rem;width:100%;}\\\n    </style>\\\n</head>\\\n<body>\\\n<div class=\\\\\\\"wrapper\\\\\\\">\\\n    <section class=\\\\\\\"page\\\\\\\">\\\n        <!--头部-->\\\n        <header class=\\\\\\\"header\\\\\\\">\\\n            <a href=\\\\\\\"\\\\\\\" class=\\\\\\\"logo_wrap\\\\\\\"></a>\\\n        </header>\\\n        <!--/头部-->\\\n\\\n        <div class=\\\\\\\"content_area\\\\\\\">\\\n\\\\t        <img src=\\\\\\\"http://s1.ljcdn.com/hulk-web/static/m/images/error/lianlian_502.png\\\\\\\"/>\\\n            <div class=\\\\\\\"margin_div\\\\\\\"></div>\\\n            <p class=\\\\\\\"big\\\\\\\">呣，服务器偷懒了..</p>\\\n            <p class=\\\\\\\"middle\\\\\\\">工程师正在紧张处理中</p>\\\n            <a class=\\\\\\\"return\\\\\\\" href=\\\\\\\"\\\\\\\">刷新页面</a>\\\n            <p class=\\\\\\\"contact\\\\\\\">联系客服：4007-001-001</p>\\\n        </div>\\\n    </section>\\\n</div>\\\n\\\n\\\n</body>\\\n<script>\\\n\\\n</script>\\\n</html>\\\n\\\",\\\"status\\\":\\\"failed\\\",\\\"success\\\":false,\\\"tenantId\\\":\\\"04633c4f-8638-43a3-a02e-af23c29f821f\\\",\\\"workflowId\\\":\\\"WKFL-95544c23-f77e-474e-a709-2f0aa118bfdb\\\",\\\"workflowRunId\\\":\\\"RUN-2606291102410089743969\\\"}\",\"extInfo\":{\"groupMsgList\":\"[{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"嗯嗯\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782544590000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"【图片类型】商品页面截图【图片内容】京东自营旗舰店页面，展示米家小米186L两门冰箱，颜色为浅灰色，尺寸标注为宽505mm、深560mm、高1425mm。页面左侧有“京东重磅新品”标签，显示产品特点：一级能效、五档电子调温、整机一年保修等。售价信息显示限时到手价为¥849，国补后价为¥721.65。页面下方有“加入购物车”和“领取补贴购买”按钮，以及“以旧换新”、“国家补贴”等促销信息。【图片目的】展示当前截图内容【是否屋内设施照片】否【匹配商品】无【是否对账图片】否\\\",\\\"type\\\":\\\"图片\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782544600000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"这个链接可以给一下吗\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782544607000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"发来一条[视频]消息\\\",\\\"type\\\":\\\"视频\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544615000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"【图片类型】手机截图【图片内容】一个电商购物平台的订单交易成功页面截图，显示“交易成功”字样。订单商品为海尔官方旗舰店的185L双开门冰箱（型号LC2-186S901），实付价格为¥725.9，原价¥1699，包含店铺优惠、平台优惠和国家补贴。订单信息部分显示订单号3308846847254010598，下单时间为6月21日。页面底部有“评价”按钮及客服选项。【图片目的】展示当前截图内容【是否屋内设施照片】否【匹配商品】无【是否对账图片】否\\\",\\\"type\\\":\\\"图片\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544640000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"【撤回了一条消息】\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544653000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"好的\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782544663000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"【淘宝】https://e.tb.cn/h.Rs6deU1ho4wyV6l?tk=0R8Jg8hZ7IS CZ001 「换新补贴海尔出品统帅186双开两门超薄宿舍出租房一级家用小冰箱」点击链接直接打开 或者 淘宝搜索直接打开\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544675000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"\\\\\\\"刘巧玉[图片]\\\\\\\"------这个链接有不？\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782544679000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"我看看\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544699000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"发来一条[视频]消息\\\",\\\"type\\\":\\\"视频\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544711000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"发来一条[小程序]消息\\\",\\\"type\\\":\\\"小程序\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544772000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"好滴，谢谢了\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782545087000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"您给一个收款二维码\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782545096000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"直接转我支付宝吧13022001916刘艺心\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782545170000\\\"},{\\\"role\\\":\\\"AI智能助手\\\",\\\"memberName\\\":\\\"AI小惠1426\\\",\\\"message\\\":\\\"租客您好～我是服务助手AI小惠，请您耐心等待线下管家回复，若等待时间较长，可以输入【人工】，将由 服务管家-惠曌 为您服务\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":6,\\\"time\\\":\\\"1782545772000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"好的\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782545802000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"晚点哈\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782545814000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"【图片类型】手机截图【图片内容】支付宝转账成功页面，显示转账金额为¥726.00，收款方为“沐黎（**心）”，付款方式为账户余额。页面顶部有“转账成功”字样及勾选图标。下方显示“立即通知收款人”模块，包含收款人头像、昵称及备注信息“信息准确，对账无忧”。页面底部有“完成”按钮。其他区域包含广告推荐内容，如蚂蚁保、优惠券等。【图片目的】展示当前截图内容【是否屋内设施照片】否【匹配商品】无【是否对账图片】否\\\",\\\"type\\\":\\\"图片\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782555399000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"已收到[好的]\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782555435000\\\"}]\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"108408757860\",\"bizType\":\"test\",\"contactInfo\":\"{\\\"address\\\":\\\"天河智荟2号楼1单元1120\\\",\\\"name\\\":\\\"刘艺心\\\",\\\"phone\\\":\\\"130****1916\\\"}\",\"cityCode\":\"440100\",\"groupId\":\"10737302009733740\",\"msgId\":\"2585264\",\"nowDateStr\":\"2026-06-29 11:02:41\",\"latestMsgId\":\"2585264\",\"cityName\":\"广州\",\"sessionTodo\":\"租客的待办事项：\n1. 留意查收房屋门锁的初始密码（将在交付日0点后发送到签约手机号）\n2. 在网上购买阳台蚊帘（待经纪人测量尺寸后）\n3. 联系小区物业咨询地下停车场事宜（电话：020-38997997）\n\n服务管家的待办事项：\n1. 提供房屋资管联系方式（若租客需要提前进入房屋）\n2. 后续跟进租客入住后的各类需求（维修、缴费、续约、退租等）\n\nAI小惠的待办事项：\n无\n\n资管经理的待办事项：\n无\n\n经纪人的待办事项：\n1. 明早帮租客打开衣柜门通风\n2. 测量阳台门的宽度和高度（用于租客购买蚊帘）\",\"inContractCode\":\"TG2605818501\",\"aiRobotUserId\":\"31653878\",\"triggerSource\":10,\"workflowRunId\":\"RUN-2606291102410089743969\",\"robotWeworkId\":\"31175797\",\"aiRobotUcId\":1000000031653878,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10737302009733740--4#1782702125000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"广州贝壳租房服务管家惠曌\",\"userId\":1000000030792695,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:05\",\"senderType\":4,\"inContractId\":8502211,\"resblockId\":\"21000000144162\",\"contractCode\":\"TGCF2606611695\"},\"requestId\":\"2585264\",\"result\":false,\"sessionId\":\"SYSa1ae520d-891b-4d67-a306-f455e0ffcc7f\"}",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.239",
+              "thread_name": "com.huiju.privatedomain.lease.mq.consumer.BellaResultConsumer-",
+              "loglevel": "ERROR",
+              "data_bltag": "undefined",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7vbf6",
+              "tid": "453460-10.22.115.239-939-1782702419906-7723",
+              "sid": "453460-10.22.115.239-939-1782702419906-7722",
+              "timestamp": "2026-06-29T11:06:59.907+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.907Z"
+              ]
+            },
+            "highlight": {
+              "data_errmsg": [
+                "DOCTYPE html>\\\n<html lang=\\\\\\\"en\\\\\\\">\\\n<head>\\\n    <meta charset=\\\\\\\"UTF-8\\\\\\\">\\\n    <meta name=\\\\\\\"apple-mobile-web-app-title\\\\\\\" content=\\\\\\\"P2PBUY\\\\\\\">\\\n    <meta name=\\\\\\\"apple-mobile-web-app-capable\\\\\\\" content=\\\\\\\"yes\\\\\\\">\\\n    <meta name=\\\\\\\"apple-mobile-web-app-status-bar-style\\\\\\\" content=\\\\\\\"black\\\\\\\" /> \\\n    <meta name=\\\\\\\"format-detection\\\\\\\" content=\\\\\\\"telephone=no\\\\\\\">\\\n    <meta http-equiv=\\\\\\\"cleartype\\\\\\\" content=\\\\\\\"on\\\\\\\">\\\n    <title>@kibana-highlighted-field@502@/kibana-highlighted-field@</title>\\\n    <script type=\\\\\\\"text/javascript\\\\\\\">\\\n    ;(function(f,i){var b=i.documentElement;var e=f.navigator.appVersion;var g=e.match(/android/gi);var c=e.match(/iphone/gi);var k=f.devicePixelRatio;var j=1,d=1;if(c){if(k>=3){j=3}else{if(k>=2){j=2}else{j=1}}}else{j=1}d=1/j;var h=i.querySelector('meta[name=\\\\\\\"viewport\\\\\\\"]');if(!h){h=i.createElement(\\\\\\\"meta\\\\\\\");h.setAttribute(\\\\\\\"name\\\\\\\",\\\\\\\"viewport\\\\\\\");if(b.firstElementChild){b.firstElementChild.appendChild(h)}else{var a=i.createElement(\\\\\\\"div\\\\\\\");a.appendChild(h);i.write(a.innerHTML)}}if(j){h.setAttribute(\\\\\\\"content\\\\\\\",\\\\\\\"initial-scale=\\\\\\\"+d+\\\\\\\", maximum-scale=\\\\\\\"+d+\\\\\\\", minimum-scale=\\\\\\\"+d+\\\\\\\", user-scalable=no\\\\\\\");b.style.fontSize=16*j+\\\\\\\"px\\\\\\\"}window.DPR=j})(window,document);\\\n    </script>\\\n    <link href=\\\\\\\"http://m.lianjia.com/favicon.ico\\\\\\\" type=\\\\\\\"image/x-icon\\\\\\\" rel=\\\\\\\"icon\\\\\\\">\\\n    <style type=\\\\\\\"text/css\\\\\\\">\\\n        body{margin:0;}\\\n        header{height:2.8125rem; background-color: #394043;border-top:1px solid #394043;}\\\n        header .logo_wrap{background-image: url(\\\\\\\"http://s1.ljcdn.com/hulk-web/static/m/images/error/logo_error.png\\\\\\\");display:block;width:6.6875rem;height:1.25rem;margin:0.75rem 0 0 0.75rem;\\\n        background-size:100% 100%;}\\\n\\\n        .content_area{position:absolute;top:2.8125rem;bottom:0;width:100%;text-align:center;color:#849aae;}\\\n        .content_area img{margin-top:2.25rem;width:12rem;}\\\n        .content_area p{margin-bottom:0;}\\\n        .content_area .margin_div{height:11%;}\\\n        .content_area .big{margin-top:0;font-size:1.25rem;font-weight:bold;}\\\n        .content_area .middle{margin-top:0.5rem;font-size:0.75rem;}\\\n        .content_area .return{line-height:2.5rem;width:11.5rem;margin:0 auto;height:2.5rem;position:absolute;left:0;right:0;border:1px solid #849aae;border-radius:0.125rem;\\\n            font-size:0.875rem;bottom:4.75rem;text-decoration:none;color:#849aae;}\\\n        .content_area .contact{position:absolute;bottom:3rem;color:#eceded;font-size:0.75rem;width:100%;}\\\n    </style>\\\n</head>\\\n<body>\\\n<div class=\\\\\\\"wrapper\\\\\\\">\\\n    <section class=\\\\\\\"page\\\\\\\">\\\n        <!--头部-->\\\n        <header class=\\\\\\\"header\\\\\\\">\\\n            <a href=\\\\\\\"\\\\\\\" class=\\\\\\\"logo_wrap\\\\\\\"></a>\\\n        </header>\\\n        <!--/头部-->\\\n\\\n        <div class=\\\\\\\"content_area\\\\\\\">\\\n\\\\t        <img src=\\\\\\\"http://s1.ljcdn.com/hulk-web/static/m/images/error/lianlian_502.png\\\\\\\"/>\\\n            <div class=\\\\\\\"margin_div\\\\\\\"></div>\\\n            <p class=\\\\\\\"big\\\\\\\">呣，服务器偷懒了..</p>\\\n            <p class=\\\\\\\"middle\\\\\\\">工程师正在紧张处理中</p>\\\n            <a class=\\\\\\\"return\\\\\\\" href=\\\\\\\"\\\\\\\">刷新页面</a>\\\n            <p class=\\\\\\\"contact\\\\\\\">联系客服：4007-001-001</p>\\\n        </div>\\\n    </section>\\\n</div>\\\n\\\n\\\n</body>\\\n<script>\\\n\\\n</script>\\\n</html>\\\n\\\",\\\"status\\\":\\\"failed\\\",\\\"success\\\":false,\\\"tenantId\\\":\\\"04633c4f-8638-43a3-a02e-af23c29f821f\\\",\\\"workflowId\\\":\\\"WKFL-95544c23-f77e-474e-a709-2f0aa118bfdb\\\",\\\"workflowRunId\\\":\\\"RUN-2606291102410089743969\\\"}\",\"extInfo\":{\"groupMsgList\":\"[{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"嗯嗯\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782544590000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"【图片类型】商品页面截图【图片内容】京东自营旗舰店页面，展示米家小米186L两门冰箱，颜色为浅灰色，尺寸标注为宽505mm、深560mm、高1425mm。页面左侧有“京东重磅新品”标签，显示产品特点：一级能效、五档电子调温、整机一年保修等。售价信息显示限时到手价为¥849，国补后价为¥721.65。页面下方有“加入购物车”和“领取补贴购买”按钮，以及“以旧换新”、“国家补贴”等促销信息。【图片目的】展示当前截图内容【是否屋内设施照片】否【匹配商品】无【是否对账图片】否\\\",\\\"type\\\":\\\"图片\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782544600000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"这个链接可以给一下吗\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782544607000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"发来一条[视频]消息\\\",\\\"type\\\":\\\"视频\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544615000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"【图片类型】手机截图【图片内容】一个电商购物平台的订单交易成功页面截图，显示“交易成功”字样。订单商品为海尔官方旗舰店的185L双开门冰箱（型号LC2-186S901），实付价格为¥725.9，原价¥1699，包含店铺优惠、平台优惠和国家补贴。订单信息部分显示订单号3308846847254010598，下单时间为6月21日。页面底部有“评价”按钮及客服选项。【图片目的】展示当前截图内容【是否屋内设施照片】否【匹配商品】无【是否对账图片】否\\\",\\\"type\\\":\\\"图片\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544640000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"【撤回了一条消息】\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544653000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"好的\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782544663000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"【淘宝】https://e.tb.cn/h.Rs6deU1ho4wyV6l?tk=0R8Jg8hZ7IS CZ001 「换新补贴海尔出品统帅186双开两门超薄宿舍出租房一级家用小冰箱」点击链接直接打开 或者 淘宝搜索直接打开\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544675000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"\\\\\\\"刘巧玉[图片]\\\\\\\"------这个链接有不？\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782544679000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"我看看\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544699000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"发来一条[视频]消息\\\",\\\"type\\\":\\\"视频\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544711000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"发来一条[小程序]消息\\\",\\\"type\\\":\\\"小程序\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782544772000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"好滴，谢谢了\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782545087000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"您给一个收款二维码\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782545096000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"直接转我支付宝吧13022001916刘艺心\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782545170000\\\"},{\\\"role\\\":\\\"AI智能助手\\\",\\\"memberName\\\":\\\"AI小惠1426\\\",\\\"message\\\":\\\"租客您好～我是服务助手AI小惠，请您耐心等待线下管家回复，若等待时间较长，可以输入【人工】，将由 服务管家-惠曌 为您服务\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":6,\\\"time\\\":\\\"1782545772000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"好的\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782545802000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"晚点哈\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782545814000\\\"},{\\\"role\\\":\\\"资管经理\\\",\\\"memberName\\\":\\\"刘巧玉\\\",\\\"message\\\":\\\"【图片类型】手机截图【图片内容】支付宝转账成功页面，显示转账金额为¥726.00，收款方为“沐黎（**心）”，付款方式为账户余额。页面顶部有“转账成功”字样及勾选图标。下方显示“立即通知收款人”模块，包含收款人头像、昵称及备注信息“信息准确，对账无忧”。页面底部有“完成”按钮。其他区域包含广告推荐内容，如蚂蚁保、优惠券等。【图片目的】展示当前截图内容【是否屋内设施照片】否【匹配商品】无【是否对账图片】否\\\",\\\"type\\\":\\\"图片\\\",\\\"roleType\\\":1,\\\"time\\\":\\\"1782555399000\\\"},{\\\"role\\\":\\\"租客\\\",\\\"memberName\\\":\\\"刘艺心\\\",\\\"message\\\":\\\"已收到[好的]\\\",\\\"type\\\":\\\"文字\\\",\\\"roleType\\\":4,\\\"time\\\":\\\"1782555435000\\\"}]\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"108408757860\",\"bizType\":\"test\",\"contactInfo\":\"{\\\"address\\\":\\\"天河智荟2号楼1单元1120\\\",\\\"name\\\":\\\"刘艺心\\\",\\\"phone\\\":\\\"130****1916\\\"}\",\"cityCode\":\"440100\",\"groupId\":\"10737302009733740\",\"msgId\":\"2585264\",\"nowDateStr\":\"2026-06-29 11:02:41\",\"latestMsgId\":\"2585264\",\"cityName\":\"广州\",\"sessionTodo\":\"租客的待办事项：\n1. 留意查收房屋门锁的初始密码（将在交付日0点后发送到签约手机号）\n2. 在网上购买阳台蚊帘（待经纪人测量尺寸后）\n3. 联系小区物业咨询地下停车场事宜（电话：020-38997997）\n\n服务管家的待办事项：\n1. 提供房屋资管联系方式（若租客需要提前进入房屋）\n2. 后续跟进租客入住后的各类需求（维修、缴费、续约、退租等）\n\nAI小惠的待办事项：\n无\n\n资管经理的待办事项：\n无\n\n经纪人的待办事项：\n1. 明早帮租客打开衣柜门通风\n2. 测量阳台门的宽度和高度（用于租客购买蚊帘）\",\"inContractCode\":\"TG2605818501\",\"aiRobotUserId\":\"31653878\",\"triggerSource\":10,\"workflowRunId\":\"RUN-2606291102410089743969\",\"robotWeworkId\":\"31175797\",\"aiRobotUcId\":1000000031653878,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10737302009733740--4#1782702125000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"广州贝壳租房服务管家惠曌\",\"userId\":1000000030792695,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:05\",\"senderType\":4,\"inContractId\":8502211,\"resblockId\":\"21000000144162\",\"contractCode\":\"TGCF2606611695\"},\"requestId\":\"2585264\",\"result\":false,\"sessionId\":\"SYSa1ae520d-891b-4d67-a306-f455e0ffcc7f\"}"
+              ]
+            },
+            "sort": [
+              1782702419907
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "8OdYEZ8BdpG7oQCURO1L",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "12",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.82.200",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "[AigcInspectionClient#serviceKeeperExecute] 请求开始 ---> http://api.cloud.keeper.huiju.ke.com/ruleCondition/servicekeeper/execute?conditionCode=judgeSessionContentMatching&funData=%E4%BA%BA%E5%B7%A5,%E4%BA%BA%E5%B7%A5%E6%9C%8D%E5%8A%A1,%E8%BD%AC%E4%BA%BA%E5%B7%A5,%E4%BA%BA%E5%B7%A5%E5%AE%A2%E6%9C%8D,%E7%9C%9F%E4%BA%BA,%E7%9C%9F%E4%BA%BA%E6%9C%8D%E5%8A%A1,%E8%BD%AC%E7%9C%9F%E4%BA%BA,%E4%B8%8D%E8%A6%81%E6%9C%BA%E5%99%A8,%E4%B8%8D%E8%A6%81%E6%9C%BA%E5%99%A8%E4%BA%BA,%E6%88%91%E8%A6%81%E8%BD%AC%E4%BA%BA%E5%B7%A5,%E4%BA%BA%E5%91%A2,%E8%A6%81%E7%9C%9F%E4%BA%BA,%E4%B8%8D%E8%A6%81ai,%E4%B8%8D%E8%A6%81AI,%E6%9C%89%E5%AE%A2%E6%9C%8D%E5%90%97,%E5%AF%B9%E8%B4%A6,%E6%9C%89%E4%BA%BA%E5%90%97,%E4%B8%8D%E5%AE%89%E5%85%A8,%E5%AE%89%E5%85%A8%E9%9A%90%E6%82%A3,%E9%A3%8E%E9%99%A9,%E5%8D%B1%E9%99%A9,%E6%8A%95%E8%AF%89,%E8%AF%89%E8%AE%BC,manual,Manual  - [request param] {\"requestId\":\"1687356\",\"traceId\":\"1687356\",\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"firstTrigger\":0,\"messageContent\":\"2950套不了吗\",\"triggerSource\":10,\"senderType\":4,\"intention\":\"其他\",\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"}} - [request headers] {Content-Length=[1472], Content-Type=[application/json;charset=UTF-8], X-Ke-Sid=[huiju-private-domain-lease]}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-f6htb",
+              "tid": "512292-10.226.90.127-169-1782702419690-595",
+              "sid": "453460-10.226.82.200-1922-1782702419874-182",
+              "timestamp": "2026-06-29T11:06:59.878+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.878Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "conditionCode=judgeSessionContentMatching&funData=%E4%BA%BA%E5%B7%A5,%E4%BA%BA%E5%B7%A5%E6%9C%8D%E5%8A%A1,%E8%BD%AC%E4%BA%BA%E5%B7%A5,%E4%BA%BA%E5%B7%A5%E5%AE%A2%E6%9C%8D,%E7%9C%9F%E4%BA%BA,%E7%9C%9F%E4%BA%BA%E6%9C%8D%E5%8A%A1,%E8%BD%AC%E7%9C%9F%E4%BA%BA,%E4%B8%8D%E8%A6%81%E6%9C%BA%E5%99%A8,%E4%B8%8D%E8%A6%81%E6%9C%BA%E5%99%A8%E4%BA%BA,%E6%88%91%E8%A6%81%E8%BD%AC%E4%BA%BA%E5%B7%A5,%E4%BA%BA%E5%91%A2,%E8%A6%81%E7%9C%9F%E4%BA%BA,%E4%B8%8D%E8%A6%81ai,%E4%B8%8D%E8%A6%81AI,%E6%9C%89%E5%AE%A2%E6%9C%8D%E5%90%97,%E5%AF%B9%E8%B4%A6,%E6%9C%89%E4%BA%BA%E5%90%97,%E4%B8%8D%E5%AE%89%E5%85%A8,%E5%AE%89%E5%85%A8%E9%9A%90%E6%82%A3,%E9%A3%8E%E9%99%A9,%E5%8D%B1%E9%99%A9,%E6%8A%95%E8%AF%89,%E8%AF%89%E8%AE%BC,manual,Manual  - [request param] {\"requestId\":\"1687356\",\"traceId\":\"1687356\",\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"firstTrigger\":0,\"messageContent\":\"2950套不了吗\",\"triggerSource\":10,\"senderType\":4,\"intention\":\"其他\",\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"}} - [request headers] {Content-Length=[1472], Content-Type=[application/json;charset=UTF-8], X-Ke-Sid=[huiju-private-domain-lease]}"
+              ]
+            },
+            "sort": [
+              1782702419878
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "V59YEZ8Bwva2ZhliQiJb",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "12",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.82.200",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "转发云管家提供的核心原子条件conditionCode:judgeSessionContentMatching,functionData:人工,人工服务,转人工,人工客服,真人,真人服务,转真人,不要机器,不要机器人,我要转人工,人呢,要真人,不要ai,不要AI,有客服吗,对账,有人吗,不安全,安全隐患,风险,危险,投诉,诉讼,manual,Manual,replyFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"其他\",\"messageContent\":\"2950套不了吗\",\"requestId\":\"1687356\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"traceId\":\"1687356\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-f6htb",
+              "tid": "512292-10.226.90.127-169-1782702419690-595",
+              "sid": "453460-10.226.82.200-1922-1782702419874-182",
+              "timestamp": "2026-06-29T11:06:59.877+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.877Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "转发云管家提供的核心原子条件conditionCode:judgeSessionContentMatching,functionData:人工,人工服务,转人工,人工客服,真人,真人服务,转真人,不要机器,不要机器人,我要转人工,人呢,要真人,不要ai,不要AI,有客服吗,对账,有人吗,不安全,安全隐患,风险,危险,投诉,诉讼,manual,Manual,replyFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"其他\",\"messageContent\":\"2950套不了吗\",\"requestId\":\"1687356\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"traceId\":\"1687356\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782702419877
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "hjpYEZ8B9P_t1W1uRLNr",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "12",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.82.200",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:judgeSessionContentMatching,functionData:人工,人工服务,转人工,人工客服,真人,真人服务,转真人,不要机器,不要机器人,我要转人工,人呢,要真人,不要ai,不要AI,有客服吗,对账,有人吗,不安全,安全隐患,风险,危险,投诉,诉讼,manual,Manual,replyFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"其他\",\"messageContent\":\"2950套不了吗\",\"requestId\":\"1687356\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"traceId\":\"1687356\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-f6htb",
+              "tid": "512292-10.226.90.127-169-1782702419690-595",
+              "sid": "453460-10.226.82.200-1922-1782702419874-182",
+              "timestamp": "2026-06-29T11:06:59.876+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.876Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "ai助手自动回复规则引擎原子条件参数:conditionCode:judgeSessionContentMatching,functionData:人工,人工服务,转人工,人工客服,真人,真人服务,转真人,不要机器,不要机器人,我要转人工,人呢,要真人,不要ai,不要AI,有客服吗,对账,有人吗,不安全,安全隐患,风险,危险,投诉,诉讼,manual,Manual,replyFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"其他\",\"messageContent\":\"2950套不了吗\",\"requestId\":\"1687356\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"traceId\":\"1687356\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782702419876
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "TJ9YEZ8Bwva2ZhliQhxU",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_ext_headers": "{}",
+              "data_remote_port": "10806",
+              "data_remote_ip": "10.19.2.38",
+              "data_req_type": "HTTP/1.1",
+              "data_bltag": "request_in",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-f6htb",
+              "tid": "512292-10.226.90.127-169-1782702419690-595",
+              "sid": "453460-10.226.82.200-1922-1782702419874-182",
+              "data_segmentid": "453460-10.226.82.200-1922-1782702419874-182",
+              "spanId": "12",
+              "data_uri": "/ruleCondition/aiAutoReply/execute",
+              "data_local_ip": "10.226.82.200",
+              "loglevel": "INFO",
+              "data_body": "{\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"className\":\"com.ke.huiju.cloudkeeper.support.vo.fact.ServiceKeeperFact\",\"isConfident\":\"1\",\"caseType\":\"其他\",\"requestId\":\"1687356\",\"serviceId\":\"private-domain-lease\",\"triggerSource\":10,\"isInfoComplete\":\"0\",\"fixOrderInfo\":{\"房屋地址\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\",\"联系人电话\":\"\",\"联系人姓名\":\"\"},\"traceId\":\"1687356\",\"question\":\"其他\",\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"bizType\":\"test\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"imgConvertResult\":0,\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"fixOrderInfo\":{\"房屋地址\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\",\"联系人电话\":\"\",\"联系人姓名\":\"\"},\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"isHasHistory\":1,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"atList\":\"\"},\"answerGenerated\":false,\"require\":\"其他\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"aiInvolve\":\"0\",\"picture\":\"\",\"intention\":\"其他\",\"businessScene\":2,\"firstTrigger\":0,\"answer\":\" \",\"senderType\":4,\"contractCode\":\"TGCF2507117112\",\"sessionInitiator\":4,\"matchingPlan\":\"GENERAL\",\"messageContent\":\"2950套不了吗\"}",
+              "data_args": "{\"funData\":[\"人工,人工服务,转人工,人工客服,真人,真人服务,转真人,不要机器,不要机器人,我要转人工,人呢,要真人,不要ai,不要AI,有客服吗,对账,有人吗,不安全,安全隐患,风险,危险,投诉,诉讼,manual,Manual\"],\"conditionCode\":[\"judgeSessionContentMatching\"]}",
+              "timestamp": "2026-06-29T11:06:59.874+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.874Z"
+              ]
+            },
+            "highlight": {
+              "data_body": [
+                "{\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"className\":\"com.ke.huiju.cloudkeeper.support.vo.fact.ServiceKeeperFact\",\"isConfident\":\"1\",\"caseType\":\"其他\",\"requestId\":\"1687356\",\"serviceId\":\"private-domain-lease\",\"triggerSource\":10,\"isInfoComplete\":\"0\",\"fixOrderInfo\":{\"房屋地址\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\",\"联系人电话\":\"\",\"联系人姓名\":\"\"},\"traceId\":\"1687356\",\"question\":\"其他\",\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"bizType\":\"test\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"imgConvertResult\":0,\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"fixOrderInfo\":{\"房屋地址\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\",\"联系人电话\":\"\",\"联系人姓名\":\"\"},\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"isHasHistory\":1,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"atList\":\"\"},\"answerGenerated\":false,\"require\":\"其他\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"aiInvolve\":\"0\",\"picture\":\"\",\"intention\":\"其他\",\"businessScene\":2,\"firstTrigger\":0,\"answer\":\" \",\"senderType\":4,\"contractCode\":\"TGCF2507117112\",\"sessionInitiator\":4,\"matchingPlan\":\"GENERAL\",\"messageContent\":\"2950套不了吗\"}"
+              ]
+            },
+            "sort": [
+              1782702419874
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "-J9YEZ8Bwva2ZhliRFLU",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "11",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.110.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "[AigcInspectionClient#serviceKeeperExecute] 请求开始 ---> http://api.cloud.keeper.huiju.ke.com/ruleCondition/servicekeeper/execute?conditionCode=judgeSessionContentMatching&funData=%E4%BA%BA%E5%B7%A5,%E4%BA%BA%E5%B7%A5%E6%9C%8D%E5%8A%A1,%E8%BD%AC%E4%BA%BA%E5%B7%A5,%E4%BA%BA%E5%B7%A5%E5%AE%A2%E6%9C%8D,%E6%88%91%E8%A6%81%E8%BD%AC%E4%BA%BA%E5%B7%A5,%E5%AF%B9%E8%B4%A6,%E6%8A%95%E8%AF%89,%E8%AF%89%E8%AE%BC,%E7%9C%9F%E4%BA%BA,manual,Manual  - [request param] {\"requestId\":\"1687356\",\"traceId\":\"1687356\",\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"firstTrigger\":0,\"messageContent\":\"2950套不了吗\",\"triggerSource\":10,\"senderType\":4,\"intention\":\"其他\",\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"}} - [request headers] {Content-Length=[1472], Content-Type=[application/json;charset=UTF-8], X-Ke-Sid=[huiju-private-domain-lease]}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7ss4r",
+              "tid": "512292-10.226.90.127-169-1782702419690-595",
+              "sid": "453460-10.22.110.80-2141730-1782702419859-400",
+              "timestamp": "2026-06-29T11:06:59.863+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.863Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "conditionCode=judgeSessionContentMatching&funData=%E4%BA%BA%E5%B7%A5,%E4%BA%BA%E5%B7%A5%E6%9C%8D%E5%8A%A1,%E8%BD%AC%E4%BA%BA%E5%B7%A5,%E4%BA%BA%E5%B7%A5%E5%AE%A2%E6%9C%8D,%E6%88%91%E8%A6%81%E8%BD%AC%E4%BA%BA%E5%B7%A5,%E5%AF%B9%E8%B4%A6,%E6%8A%95%E8%AF%89,%E8%AF%89%E8%AE%BC,%E7%9C%9F%E4%BA%BA,manual,Manual  - [request param] {\"requestId\":\"1687356\",\"traceId\":\"1687356\",\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"firstTrigger\":0,\"messageContent\":\"2950套不了吗\",\"triggerSource\":10,\"senderType\":4,\"intention\":\"其他\",\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"}} - [request headers] {Content-Length=[1472], Content-Type=[application/json;charset=UTF-8], X-Ke-Sid=[huiju-private-domain-lease]}"
+              ]
+            },
+            "sort": [
+              1782702419863
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "659YEZ8Bwva2ZhliRWiN",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "11",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.110.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:judgeSessionContentMatching,functionData:人工,人工服务,转人工,人工客服,我要转人工,对账,投诉,诉讼,真人,manual,Manual,replyFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"其他\",\"messageContent\":\"2950套不了吗\",\"requestId\":\"1687356\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"traceId\":\"1687356\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7ss4r",
+              "tid": "512292-10.226.90.127-169-1782702419690-595",
+              "sid": "453460-10.22.110.80-2141730-1782702419859-400",
+              "timestamp": "2026-06-29T11:06:59.861+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.861Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "ai助手自动回复规则引擎原子条件参数:conditionCode:judgeSessionContentMatching,functionData:人工,人工服务,转人工,人工客服,我要转人工,对账,投诉,诉讼,真人,manual,Manual,replyFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"其他\",\"messageContent\":\"2950套不了吗\",\"requestId\":\"1687356\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"traceId\":\"1687356\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782702419861
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "l-hYEZ8BdpG7oQCURkEo",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "11",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.110.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "转发云管家提供的核心原子条件conditionCode:judgeSessionContentMatching,functionData:人工,人工服务,转人工,人工客服,我要转人工,对账,投诉,诉讼,真人,manual,Manual,replyFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"其他\",\"messageContent\":\"2950套不了吗\",\"requestId\":\"1687356\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"traceId\":\"1687356\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7ss4r",
+              "tid": "512292-10.226.90.127-169-1782702419690-595",
+              "sid": "453460-10.22.110.80-2141730-1782702419859-400",
+              "timestamp": "2026-06-29T11:06:59.861+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.861Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "转发云管家提供的核心原子条件conditionCode:judgeSessionContentMatching,functionData:人工,人工服务,转人工,人工客服,我要转人工,对账,投诉,诉讼,真人,manual,Manual,replyFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"其他\",\"messageContent\":\"2950套不了吗\",\"requestId\":\"1687356\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"traceId\":\"1687356\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782702419861
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "BDpYEZ8B9P_t1W1uReEK",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_ext_headers": "{}",
+              "data_remote_port": "40748",
+              "data_remote_ip": "10.19.2.17",
+              "data_req_type": "HTTP/1.1",
+              "data_bltag": "request_in",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7ss4r",
+              "tid": "512292-10.226.90.127-169-1782702419690-595",
+              "sid": "453460-10.22.110.80-2141730-1782702419859-400",
+              "data_segmentid": "453460-10.22.110.80-2141730-1782702419859-400",
+              "spanId": "11",
+              "data_uri": "/ruleCondition/aiAutoReply/execute",
+              "data_local_ip": "10.22.110.80",
+              "loglevel": "INFO",
+              "data_body": "{\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"className\":\"com.ke.huiju.cloudkeeper.support.vo.fact.ServiceKeeperFact\",\"isConfident\":\"1\",\"caseType\":\"其他\",\"requestId\":\"1687356\",\"serviceId\":\"private-domain-lease\",\"triggerSource\":10,\"isInfoComplete\":\"0\",\"fixOrderInfo\":{\"房屋地址\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\",\"联系人电话\":\"\",\"联系人姓名\":\"\"},\"traceId\":\"1687356\",\"question\":\"其他\",\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"bizType\":\"test\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"imgConvertResult\":0,\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"fixOrderInfo\":{\"房屋地址\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\",\"联系人电话\":\"\",\"联系人姓名\":\"\"},\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"isHasHistory\":1,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"atList\":\"\"},\"answerGenerated\":false,\"require\":\"其他\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"aiInvolve\":\"0\",\"picture\":\"\",\"intention\":\"其他\",\"businessScene\":2,\"firstTrigger\":0,\"answer\":\" \",\"senderType\":4,\"contractCode\":\"TGCF2507117112\",\"sessionInitiator\":4,\"matchingPlan\":\"GENERAL\",\"messageContent\":\"2950套不了吗\"}",
+              "data_args": "{\"funData\":[\"人工,人工服务,转人工,人工客服,我要转人工,对账,投诉,诉讼,真人,manual,Manual\"],\"conditionCode\":[\"judgeSessionContentMatching\"]}",
+              "timestamp": "2026-06-29T11:06:59.860+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.860Z"
+              ]
+            },
+            "highlight": {
+              "data_body": [
+                "{\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"className\":\"com.ke.huiju.cloudkeeper.support.vo.fact.ServiceKeeperFact\",\"isConfident\":\"1\",\"caseType\":\"其他\",\"requestId\":\"1687356\",\"serviceId\":\"private-domain-lease\",\"triggerSource\":10,\"isInfoComplete\":\"0\",\"fixOrderInfo\":{\"房屋地址\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\",\"联系人电话\":\"\",\"联系人姓名\":\"\"},\"traceId\":\"1687356\",\"question\":\"其他\",\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"bizType\":\"test\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"imgConvertResult\":0,\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"fixOrderInfo\":{\"房屋地址\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\",\"联系人电话\":\"\",\"联系人姓名\":\"\"},\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"isHasHistory\":1,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"atList\":\"\"},\"answerGenerated\":false,\"require\":\"其他\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"aiInvolve\":\"0\",\"picture\":\"\",\"intention\":\"其他\",\"businessScene\":2,\"firstTrigger\":0,\"answer\":\" \",\"senderType\":4,\"contractCode\":\"TGCF2507117112\",\"sessionInitiator\":4,\"matchingPlan\":\"GENERAL\",\"messageContent\":\"2950套不了吗\"}"
+              ]
+            },
+            "sort": [
+              1782702419860
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "qedYEZ8BdpG7oQCURO5L",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "10",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.82.200",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "[AigcInspectionClient#serviceKeeperExecute] 请求开始 ---> http://api.cloud.keeper.huiju.ke.com/ruleCondition/servicekeeper/execute?conditionCode=judgeSessionContentMatching&funData=%E5%8D%A1%E5%8F%B7,%E8%BA%AB%E4%BB%BD%E8%AF%81,%E6%8A%A5%E9%94%80,%E5%8F%91%E7%A5%A8  - [request param] {\"requestId\":\"1687356\",\"traceId\":\"1687356\",\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"firstTrigger\":0,\"messageContent\":\"2950套不了吗\",\"triggerSource\":10,\"senderType\":4,\"intention\":\"其他\",\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"}} - [request headers] {Content-Length=[1472], Content-Type=[application/json;charset=UTF-8], X-Ke-Sid=[huiju-private-domain-lease]}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-f6htb",
+              "tid": "512292-10.226.90.127-169-1782702419690-595",
+              "sid": "453460-10.226.82.200-1290-1782702419842-2362",
+              "timestamp": "2026-06-29T11:06:59.845+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.845Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "conditionCode=judgeSessionContentMatching&funData=%E5%8D%A1%E5%8F%B7,%E8%BA%AB%E4%BB%BD%E8%AF%81,%E6%8A%A5%E9%94%80,%E5%8F%91%E7%A5%A8  - [request param] {\"requestId\":\"1687356\",\"traceId\":\"1687356\",\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"firstTrigger\":0,\"messageContent\":\"2950套不了吗\",\"triggerSource\":10,\"senderType\":4,\"intention\":\"其他\",\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"}} - [request headers] {Content-Length=[1472], Content-Type=[application/json;charset=UTF-8], X-Ke-Sid=[huiju-private-domain-lease]}"
+              ]
+            },
+            "sort": [
+              1782702419845
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "n59YEZ8Bwva2ZhliQz3K",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "10",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.82.200",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:judgeSessionContentMatching,functionData:卡号,身份证,报销,发票,replyFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"其他\",\"messageContent\":\"2950套不了吗\",\"requestId\":\"1687356\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"traceId\":\"1687356\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-f6htb",
+              "tid": "512292-10.226.90.127-169-1782702419690-595",
+              "sid": "453460-10.226.82.200-1290-1782702419842-2362",
+              "timestamp": "2026-06-29T11:06:59.844+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.844Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "ai助手自动回复规则引擎原子条件参数:conditionCode:judgeSessionContentMatching,functionData:卡号,身份证,报销,发票,replyFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"其他\",\"messageContent\":\"2950套不了吗\",\"requestId\":\"1687356\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"traceId\":\"1687356\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782702419844
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "Hp9YEZ8Bwva2ZhliQz_K",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "10",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.82.200",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "转发云管家提供的核心原子条件conditionCode:judgeSessionContentMatching,functionData:卡号,身份证,报销,发票,replyFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"其他\",\"messageContent\":\"2950套不了吗\",\"requestId\":\"1687356\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"traceId\":\"1687356\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-f6htb",
+              "tid": "512292-10.226.90.127-169-1782702419690-595",
+              "sid": "453460-10.226.82.200-1290-1782702419842-2362",
+              "timestamp": "2026-06-29T11:06:59.844+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.844Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "转发云管家提供的核心原子条件conditionCode:judgeSessionContentMatching,functionData:卡号,身份证,报销,发票,replyFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"其他\",\"messageContent\":\"2950套不了吗\",\"requestId\":\"1687356\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"traceId\":\"1687356\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782702419844
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "lTpYEZ8B9P_t1W1uQ1Y_",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_ext_headers": "{}",
+              "data_remote_port": "54740",
+              "data_remote_ip": "10.19.2.45",
+              "data_req_type": "HTTP/1.1",
+              "data_bltag": "request_in",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-f6htb",
+              "tid": "512292-10.226.90.127-169-1782702419690-595",
+              "sid": "453460-10.226.82.200-1290-1782702419842-2362",
+              "data_segmentid": "453460-10.226.82.200-1290-1782702419842-2362",
+              "spanId": "10",
+              "data_uri": "/ruleCondition/aiAutoReply/execute",
+              "data_local_ip": "10.226.82.200",
+              "loglevel": "INFO",
+              "data_body": "{\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"className\":\"com.ke.huiju.cloudkeeper.support.vo.fact.ServiceKeeperFact\",\"isConfident\":\"1\",\"caseType\":\"其他\",\"requestId\":\"1687356\",\"serviceId\":\"private-domain-lease\",\"triggerSource\":10,\"isInfoComplete\":\"0\",\"fixOrderInfo\":{\"房屋地址\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\",\"联系人电话\":\"\",\"联系人姓名\":\"\"},\"traceId\":\"1687356\",\"question\":\"其他\",\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"bizType\":\"test\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"imgConvertResult\":0,\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"fixOrderInfo\":{\"房屋地址\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\",\"联系人电话\":\"\",\"联系人姓名\":\"\"},\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"isHasHistory\":1,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"atList\":\"\"},\"answerGenerated\":false,\"require\":\"其他\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"aiInvolve\":\"0\",\"picture\":\"\",\"intention\":\"其他\",\"businessScene\":2,\"firstTrigger\":0,\"answer\":\" \",\"senderType\":4,\"contractCode\":\"TGCF2507117112\",\"sessionInitiator\":4,\"matchingPlan\":\"GENERAL\",\"messageContent\":\"2950套不了吗\"}",
+              "data_args": "{\"funData\":[\"卡号,身份证,报销,发票\"],\"conditionCode\":[\"judgeSessionContentMatching\"]}",
+              "timestamp": "2026-06-29T11:06:59.843+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.843Z"
+              ]
+            },
+            "highlight": {
+              "data_body": [
+                "{\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"className\":\"com.ke.huiju.cloudkeeper.support.vo.fact.ServiceKeeperFact\",\"isConfident\":\"1\",\"caseType\":\"其他\",\"requestId\":\"1687356\",\"serviceId\":\"private-domain-lease\",\"triggerSource\":10,\"isInfoComplete\":\"0\",\"fixOrderInfo\":{\"房屋地址\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\",\"联系人电话\":\"\",\"联系人姓名\":\"\"},\"traceId\":\"1687356\",\"question\":\"其他\",\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"bizType\":\"test\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"imgConvertResult\":0,\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"fixOrderInfo\":{\"房屋地址\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\",\"联系人电话\":\"\",\"联系人姓名\":\"\"},\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"isHasHistory\":1,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"atList\":\"\"},\"answerGenerated\":false,\"require\":\"其他\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"aiInvolve\":\"0\",\"picture\":\"\",\"intention\":\"其他\",\"businessScene\":2,\"firstTrigger\":0,\"answer\":\" \",\"senderType\":4,\"contractCode\":\"TGCF2507117112\",\"sessionInitiator\":4,\"matchingPlan\":\"GENERAL\",\"messageContent\":\"2950套不了吗\"}"
+              ]
+            },
+            "sort": [
+              1782702419843
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "dZ5YEZ8Bwva2ZhliPawo",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "9",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.119.112",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "[AigcInspectionClient#serviceKeeperExecute] 请求开始 ---> http://api.cloud.keeper.huiju.ke.com/ruleCondition/servicekeeper/execute?conditionCode=judgeSessionContentMatching&funData=%E8%BA%AB%E4%BB%BD%E8%AF%81,%E6%8A%A5%E9%94%80,%E7%BB%AD%E7%A7%9F,%E5%8F%91%E7%A5%A8  - [request param] {\"requestId\":\"1687356\",\"traceId\":\"1687356\",\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"firstTrigger\":0,\"messageContent\":\"2950套不了吗\",\"triggerSource\":10,\"senderType\":4,\"intention\":\"其他\",\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"}} - [request headers] {Content-Length=[1472], Content-Type=[application/json;charset=UTF-8], X-Ke-Sid=[huiju-private-domain-lease]}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-l9wgm",
+              "tid": "512292-10.226.90.127-169-1782702419690-595",
+              "sid": "453460-10.22.119.112-1306-1782702419831-6436",
+              "timestamp": "2026-06-29T11:06:59.834+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.834Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "conditionCode=judgeSessionContentMatching&funData=%E8%BA%AB%E4%BB%BD%E8%AF%81,%E6%8A%A5%E9%94%80,%E7%BB%AD%E7%A7%9F,%E5%8F%91%E7%A5%A8  - [request param] {\"requestId\":\"1687356\",\"traceId\":\"1687356\",\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"firstTrigger\":0,\"messageContent\":\"2950套不了吗\",\"triggerSource\":10,\"senderType\":4,\"intention\":\"其他\",\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"}} - [request headers] {Content-Length=[1472], Content-Type=[application/json;charset=UTF-8], X-Ke-Sid=[huiju-private-domain-lease]}"
+              ]
+            },
+            "sort": [
+              1782702419834
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "rjhYEZ8B9P_t1W1uPd8E",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "9",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.119.112",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "转发云管家提供的核心原子条件conditionCode:judgeSessionContentMatching,functionData:身份证,报销,续租,发票,replyFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"其他\",\"messageContent\":\"2950套不了吗\",\"requestId\":\"1687356\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"traceId\":\"1687356\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-l9wgm",
+              "tid": "512292-10.226.90.127-169-1782702419690-595",
+              "sid": "453460-10.22.119.112-1306-1782702419831-6436",
+              "timestamp": "2026-06-29T11:06:59.833+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.833Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "转发云管家提供的核心原子条件conditionCode:judgeSessionContentMatching,functionData:身份证,报销,续租,发票,replyFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"其他\",\"messageContent\":\"2950套不了吗\",\"requestId\":\"1687356\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"traceId\":\"1687356\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782702419833
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "PzhYEZ8B9P_t1W1uPfYi",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "9",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.119.112",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:judgeSessionContentMatching,functionData:身份证,报销,续租,发票,replyFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"其他\",\"messageContent\":\"2950套不了吗\",\"requestId\":\"1687356\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"traceId\":\"1687356\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-l9wgm",
+              "tid": "512292-10.226.90.127-169-1782702419690-595",
+              "sid": "453460-10.22.119.112-1306-1782702419831-6436",
+              "timestamp": "2026-06-29T11:06:59.833+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.833Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "ai助手自动回复规则引擎原子条件参数:conditionCode:judgeSessionContentMatching,functionData:身份证,报销,续租,发票,replyFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"其他\",\"messageContent\":\"2950套不了吗\",\"requestId\":\"1687356\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"traceId\":\"1687356\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782702419833
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "755YEZ8Bwva2ZhliPtP1",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_ext_headers": "{}",
+              "data_remote_port": "46734",
+              "data_remote_ip": "10.19.2.24",
+              "data_req_type": "HTTP/1.1",
+              "data_bltag": "request_in",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-l9wgm",
+              "tid": "512292-10.226.90.127-169-1782702419690-595",
+              "sid": "453460-10.22.119.112-1306-1782702419831-6436",
+              "data_segmentid": "453460-10.22.119.112-1306-1782702419831-6436",
+              "spanId": "9",
+              "data_uri": "/ruleCondition/aiAutoReply/execute",
+              "data_local_ip": "10.22.119.112",
+              "loglevel": "INFO",
+              "data_body": "{\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"className\":\"com.ke.huiju.cloudkeeper.support.vo.fact.ServiceKeeperFact\",\"isConfident\":\"1\",\"caseType\":\"其他\",\"requestId\":\"1687356\",\"serviceId\":\"private-domain-lease\",\"triggerSource\":10,\"isInfoComplete\":\"0\",\"fixOrderInfo\":{\"房屋地址\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\",\"联系人电话\":\"\",\"联系人姓名\":\"\"},\"traceId\":\"1687356\",\"question\":\"其他\",\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"bizType\":\"test\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"imgConvertResult\":0,\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"fixOrderInfo\":{\"房屋地址\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\",\"联系人电话\":\"\",\"联系人姓名\":\"\"},\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"isHasHistory\":1,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"atList\":\"\"},\"answerGenerated\":false,\"require\":\"其他\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"aiInvolve\":\"0\",\"picture\":\"\",\"intention\":\"其他\",\"businessScene\":2,\"firstTrigger\":0,\"answer\":\" \",\"senderType\":4,\"contractCode\":\"TGCF2507117112\",\"sessionInitiator\":4,\"matchingPlan\":\"GENERAL\",\"messageContent\":\"2950套不了吗\"}",
+              "data_args": "{\"funData\":[\"身份证,报销,续租,发票\"],\"conditionCode\":[\"judgeSessionContentMatching\"]}",
+              "timestamp": "2026-06-29T11:06:59.832+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.832Z"
+              ]
+            },
+            "highlight": {
+              "data_body": [
+                "{\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"className\":\"com.ke.huiju.cloudkeeper.support.vo.fact.ServiceKeeperFact\",\"isConfident\":\"1\",\"caseType\":\"其他\",\"requestId\":\"1687356\",\"serviceId\":\"private-domain-lease\",\"triggerSource\":10,\"isInfoComplete\":\"0\",\"fixOrderInfo\":{\"房屋地址\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\",\"联系人电话\":\"\",\"联系人姓名\":\"\"},\"traceId\":\"1687356\",\"question\":\"其他\",\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"bizType\":\"test\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"imgConvertResult\":0,\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"fixOrderInfo\":{\"房屋地址\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\",\"联系人电话\":\"\",\"联系人姓名\":\"\"},\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"isHasHistory\":1,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"atList\":\"\"},\"answerGenerated\":false,\"require\":\"其他\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"aiInvolve\":\"0\",\"picture\":\"\",\"intention\":\"其他\",\"businessScene\":2,\"firstTrigger\":0,\"answer\":\" \",\"senderType\":4,\"contractCode\":\"TGCF2507117112\",\"sessionInitiator\":4,\"matchingPlan\":\"GENERAL\",\"messageContent\":\"2950套不了吗\"}"
+              ]
+            },
+            "sort": [
+              1782702419832
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "HudYEZ8BdpG7oQCUQGiN",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "-1",
+              "data_errmsg": "bellaResultConsumer 参数异常,msg:{\"bizScene\":\"aiReceptionSearch\",\"errorMsg\":\"{\\\"error\\\":\\\"节点`获取租客信息`执行异常：timeout\\\",\\\"status\\\":\\\"failed\\\",\\\"success\\\":false,\\\"tenantId\\\":\\\"04633c4f-8638-43a3-a02e-af23c29f821f\\\",\\\"workflowId\\\":\\\"WKFL-5e898ad6-6497-4515-9e3d-6e5767252a07\\\",\\\"workflowRunId\\\":\\\"RUN-2606291103270084827570\\\"}\",\"extInfo\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"bizType\":\"test\",\"cityCode\":\"310000\",\"historyMsg\":\"客：Hi Do we have any information on the Fapiao?\n客：When can I get the Fapiao\n席：在的在的～这边已经是人工客服啦，我来帮您看一下这个问题～\n\",\"msgId\":\"1654998\",\"intentClass\":\"通用\",\"clientParam\":{\"generateType\":2,\"sessionId\":\"2ebb3c7cf35046c3a5bf8d1b8005dea6-yunguanjia-core\"},\"operator\":1000000031163143,\"robotUcCode\":\"31163143\",\"cityName\":\"上海\",\"requestId\":\"2071429311927353344\",\"bellaSceneEnum\":\"AI_RECEPTION_SEARCH\",\"workflowRunId\":\"RUN-2606291103270084827570\",\"channelId\":\"groupqLmKz9MGIuwmaMvi1mwF\",\"chatType\":2,\"currentMsg\":\"When can I get the Fapiao\",\"searchType\":1,\"entityId\":\"10909564403419640\",\"robotId\":\"accAZX9fVbYyCLLeLhOMgbF\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"specificIntent\":\"开发票/收据\",\"houseCode\":\"107111716480\",\"msgTime\":1782702083000,\"contractCode\":\"TGCF2412859497\",\"recognitionIntentReqId\":\"2071429262812094464\"},\"requestId\":\"2071429311927353344\",\"result\":false,\"sessionId\":\"SYSbbc1feac-dce7-49f6-b2bb-9ad76148877f\"}",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.239",
+              "thread_name": "com.huiju.privatedomain.lease.mq.consumer.BellaResultConsumer-",
+              "loglevel": "ERROR",
+              "data_bltag": "undefined",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7vbf6",
+              "tid": "453460-10.22.115.239-939-1782702419831-7707",
+              "sid": "453460-10.22.115.239-939-1782702419831-7706",
+              "timestamp": "2026-06-29T11:06:59.832+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.832Z"
+              ]
+            },
+            "highlight": {
+              "data_errmsg": [
+                "bellaResultConsumer 参数异常,msg:{\"bizScene\":\"aiReceptionSearch\",\"errorMsg\":\"{\\\"error\\\":\\\"节点`获取租客信息`执行异常：@kibana-highlighted-field@timeout@/kibana-highlighted-field@\\\",\\\"status\\\":\\\"failed\\\",\\\"success\\\":false,\\\"tenantId\\\":\\\"04633c4f-8638-43a3-a02e-af23c29f821f\\\",\\\"workflowId\\\":\\\"WKFL-5e898ad6-6497-4515-9e3d-6e5767252a07\\\",\\\"workflowRunId\\\":\\\"RUN-2606291103270084827570\\\"}\",\"extInfo\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"bizType\":\"test\",\"cityCode\":\"310000\",\"historyMsg\":\"客：Hi Do we have any information on the Fapiao?\n客：When can I get the Fapiao\n席：在的在的～这边已经是人工客服啦，我来帮您看一下这个问题～\n\",\"msgId\":\"1654998\",\"intentClass\":\"通用\",\"clientParam\":{\"generateType\":2,\"sessionId\":\"2ebb3c7cf35046c3a5bf8d1b8005dea6-yunguanjia-core\"},\"operator\":1000000031163143,\"robotUcCode\":\"31163143\",\"cityName\":\"上海\",\"requestId\":\"2071429311927353344\",\"bellaSceneEnum\":\"AI_RECEPTION_SEARCH\",\"workflowRunId\":\"RUN-2606291103270084827570\",\"channelId\":\"groupqLmKz9MGIuwmaMvi1mwF\",\"chatType\":2,\"currentMsg\":\"When can I get the Fapiao\",\"searchType\":1,\"entityId\":\"10909564403419640\",\"robotId\":\"accAZX9fVbYyCLLeLhOMgbF\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"specificIntent\":\"开发票/收据\",\"houseCode\":\"107111716480\",\"msgTime\":1782702083000,\"contractCode\":\"TGCF2412859497\",\"recognitionIntentReqId\":\"2071429262812094464\"},\"requestId\":\"2071429311927353344\",\"result\":false,\"sessionId\":\"SYSbbc1feac-dce7-49f6-b2bb-9ad76148877f\"}"
+              ]
+            },
+            "sort": [
+              1782702419832
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "KudYEZ8BdpG7oQCUQXZh",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "-1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.239",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "bellaResultConsumer 开始执行,msg:{\"bizScene\":\"aiReceptionSearch\",\"errorMsg\":\"{\\\"error\\\":\\\"节点`获取租客信息`执行异常：timeout\\\",\\\"status\\\":\\\"failed\\\",\\\"success\\\":false,\\\"tenantId\\\":\\\"04633c4f-8638-43a3-a02e-af23c29f821f\\\",\\\"workflowId\\\":\\\"WKFL-5e898ad6-6497-4515-9e3d-6e5767252a07\\\",\\\"workflowRunId\\\":\\\"RUN-2606291103270084827570\\\"}\",\"extInfo\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"bizType\":\"test\",\"cityCode\":\"310000\",\"historyMsg\":\"客：Hi Do we have any information on the Fapiao?\n客：When can I get the Fapiao\n席：在的在的～这边已经是人工客服啦，我来帮您看一下这个问题～\n\",\"msgId\":\"1654998\",\"intentClass\":\"通用\",\"clientParam\":{\"generateType\":2,\"sessionId\":\"2ebb3c7cf35046c3a5bf8d1b8005dea6-yunguanjia-core\"},\"operator\":1000000031163143,\"robotUcCode\":\"31163143\",\"cityName\":\"上海\",\"requestId\":\"2071429311927353344\",\"bellaSceneEnum\":\"AI_RECEPTION_SEARCH\",\"workflowRunId\":\"RUN-2606291103270084827570\",\"channelId\":\"groupqLmKz9MGIuwmaMvi1mwF\",\"chatType\":2,\"currentMsg\":\"When can I get the Fapiao\",\"searchType\":1,\"entityId\":\"10909564403419640\",\"robotId\":\"accAZX9fVbYyCLLeLhOMgbF\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"specificIntent\":\"开发票/收据\",\"houseCode\":\"107111716480\",\"msgTime\":1782702083000,\"contractCode\":\"TGCF2412859497\",\"recognitionIntentReqId\":\"2071429262812094464\"},\"requestId\":\"2071429311927353344\",\"result\":false,\"sessionId\":\"SYSbbc1feac-dce7-49f6-b2bb-9ad76148877f\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7vbf6",
+              "tid": "453460-10.22.115.239-939-1782702419831-7707",
+              "sid": "453460-10.22.115.239-939-1782702419831-7706",
+              "timestamp": "2026-06-29T11:06:59.832+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.832Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "bellaResultConsumer 开始执行,msg:{\"bizScene\":\"aiReceptionSearch\",\"errorMsg\":\"{\\\"error\\\":\\\"节点`获取租客信息`执行异常：@kibana-highlighted-field@timeout@/kibana-highlighted-field@\\\",\\\"status\\\":\\\"failed\\\",\\\"success\\\":false,\\\"tenantId\\\":\\\"04633c4f-8638-43a3-a02e-af23c29f821f\\\",\\\"workflowId\\\":\\\"WKFL-5e898ad6-6497-4515-9e3d-6e5767252a07\\\",\\\"workflowRunId\\\":\\\"RUN-2606291103270084827570\\\"}\",\"extInfo\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"bizType\":\"test\",\"cityCode\":\"310000\",\"historyMsg\":\"客：Hi Do we have any information on the Fapiao?\n客：When can I get the Fapiao\n席：在的在的～这边已经是人工客服啦，我来帮您看一下这个问题～\n\",\"msgId\":\"1654998\",\"intentClass\":\"通用\",\"clientParam\":{\"generateType\":2,\"sessionId\":\"2ebb3c7cf35046c3a5bf8d1b8005dea6-yunguanjia-core\"},\"operator\":1000000031163143,\"robotUcCode\":\"31163143\",\"cityName\":\"上海\",\"requestId\":\"2071429311927353344\",\"bellaSceneEnum\":\"AI_RECEPTION_SEARCH\",\"workflowRunId\":\"RUN-2606291103270084827570\",\"channelId\":\"groupqLmKz9MGIuwmaMvi1mwF\",\"chatType\":2,\"currentMsg\":\"When can I get the Fapiao\",\"searchType\":1,\"entityId\":\"10909564403419640\",\"robotId\":\"accAZX9fVbYyCLLeLhOMgbF\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"specificIntent\":\"开发票/收据\",\"houseCode\":\"107111716480\",\"msgTime\":1782702083000,\"contractCode\":\"TGCF2412859497\",\"recognitionIntentReqId\":\"2071429262812094464\"},\"requestId\":\"2071429311927353344\",\"result\":false,\"sessionId\":\"SYSbbc1feac-dce7-49f6-b2bb-9ad76148877f\"}"
+              ]
+            },
+            "sort": [
+              1782702419832
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "bedYEZ8BdpG7oQCURO5L",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "-1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.82.200",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "调用云管家,getSession,input=new_session_id:SERVICE_KEEPER--GROUP_CHAT--10971443028432080--4#1782696940000,res={\"code\":0,\"data\":{\"baseInfoRes\":{\"aiAskDelayTime\":600,\"aiInfoCollectMode\":0,\"aiType\":2,\"answerMode\":2,\"atServiceManagerCountMap\":{\"2\":0,\"groupAtServiceManagerSum\":0,\"groupB_AtXiaoHuiCount\":1,\"groupB_AtServiceManagerCount\":0},\"chatOutput\":\"{\\\"question\\\":\\\"结束对话\\\",\\\"intention\\\":\\\"结束对话\\\",\\\"status\\\":1,\\\"fix_order_info\\\":{\\\"房屋地址\\\":\\\"\\\",\\\"故障物品\\\":\\\"\\\",\\\"故障区域\\\":\\\"\\\",\\\"故障现象\\\":\\\"\\\",\\\"服务项目\\\":\\\"\\\",\\\"故障图片\\\":\\\"\\\",\\\"联系人电话\\\":\\\"\\\",\\\"联系人姓名\\\":\\\"\\\"},\\\"recalled_docs\\\":\\\"0\\\"}\",\"delayedAiAsk\":true,\"extInfo\":{\"robotWeworkId\":\"31647612\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107112139080\",\"contactInfo\":\"{\\\"address\\\":\\\"浦三路2801弄58号502室\\\",\\\"name\\\":\\\"曾晶\\\",\\\"phone\\\":\\\"166****3266\\\"}\",\"cityCode\":\"310000\",\"groupId\":\"10971443028432080\",\"aiRobotUcId\":1000000031653928,\"msgId\":\"1201747\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1201747\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782702410000,\"senderType\":4,\"aiRobotUserId\":\"31653928\",\"triggerSource\":10,\"contractCode\":\"TGCF2606276241\"},\"intentionMap\":{\"房源地址\":{\"1201588\":1782697094000},\"结束对话\":{\"1219674\":1782701407000},\"维修权益咨询\":{\"1201619\":1782697810000},\"更换物品设施\":{\"1201567\":1782696940000,\"1201570\":1782696947000,\"1219154\":1782696954000,\"1219157\":1782696960000},\"维修下单\":{\"1201585\":1782697065000,\"1201591\":1782697098000,\"1201622\":1782697830000}},\"lurkStatus\":0,\"manualRemind\":0,\"onlyCreateSession\":false,\"paymentBillMap\":{},\"repairDialogMode\":0,\"repairDialogResult\":0,\"robotAnswerTimes\":3,\"robotResult\":2,\"sendRepairMiniProgram\":1,\"sessionCreateAt\":1782696942920,\"sessionInitiatorCode\":4,\"solutionSendFlag\":0},\"chatType\":\"GROUP_CHAT\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10971443028432080--4#1782696940000\"},\"msg\":\"success\",\"success\":true}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-f6htb",
+              "tid": "453460-10.226.82.200-1285-1782702419819-1157",
+              "sid": "453460-10.226.82.200-1285-1782702419819-1156",
+              "timestamp": "2026-06-29T11:06:59.828+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.828Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "调用云管家,getSession,input=new_session_id:SERVICE_KEEPER--GROUP_CHAT--10971443028432080--4#1782696940000,res={\"code\":0,\"data\":{\"baseInfoRes\":{\"aiAskDelayTime\":600,\"aiInfoCollectMode\":0,\"aiType\":2,\"answerMode\":2,\"atServiceManagerCountMap\":{\"2\":0,\"groupAtServiceManagerSum\":0,\"groupB_AtXiaoHuiCount\":1,\"groupB_AtServiceManagerCount\":0},\"chatOutput\":\"{\\\"question\\\":\\\"结束对话\\\",\\\"intention\\\":\\\"结束对话\\\",\\\"status\\\":1,\\\"fix_order_info\\\":{\\\"房屋地址\\\":\\\"\\\",\\\"故障物品\\\":\\\"\\\",\\\"故障区域\\\":\\\"\\\",\\\"故障现象\\\":\\\"\\\",\\\"服务项目\\\":\\\"\\\",\\\"故障图片\\\":\\\"\\\",\\\"联系人电话\\\":\\\"\\\",\\\"联系人姓名\\\":\\\"\\\"},\\\"recalled_docs\\\":\\\"0\\\"}\",\"delayedAiAsk\":true,\"extInfo\":{\"robotWeworkId\":\"31647612\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107112139080\",\"contactInfo\":\"{\\\"address\\\":\\\"浦三路2801弄58号@kibana-highlighted-field@502@/kibana-highlighted-field@室\\\",\\\"name\\\":\\\"曾晶\\\",\\\"phone\\\":\\\"166****3266\\\"}\",\"cityCode\":\"310000\",\"groupId\":\"10971443028432080\",\"aiRobotUcId\":1000000031653928,\"msgId\":\"1201747\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1201747\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782702410000,\"senderType\":4,\"aiRobotUserId\":\"31653928\",\"triggerSource\":10,\"contractCode\":\"TGCF2606276241\"},\"intentionMap\":{\"房源地址\":{\"1201588\":1782697094000},\"结束对话\":{\"1219674\":1782701407000},\"维修权益咨询\":{\"1201619\":1782697810000},\"更换物品设施\":{\"1201567\":1782696940000,\"1201570\":1782696947000,\"1219154\":1782696954000,\"1219157\":1782696960000},\"维修下单\":{\"1201585\":1782697065000,\"1201591\":1782697098000,\"1201622\":1782697830000}},\"lurkStatus\":0,\"manualRemind\":0,\"onlyCreateSession\":false,\"paymentBillMap\":{},\"repairDialogMode\":0,\"repairDialogResult\":0,\"robotAnswerTimes\":3,\"robotResult\":2,\"sendRepairMiniProgram\":1,\"sessionCreateAt\":1782696942920,\"sessionInitiatorCode\":4,\"solutionSendFlag\":0},\"chatType\":\"GROUP_CHAT\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10971443028432080--4#1782696940000\"},\"msg\":\"success\",\"success\":true}"
+              ]
+            },
+            "sort": [
+              1782702419828
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "oDlYEZ8B9P_t1W1uQf_v",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "11",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.113.74",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:isAtPerson,functionData:0,1,3,2,4,replyFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"其他\",\"messageContent\":\"2950套不了吗\",\"requestId\":\"1687356\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"traceId\":\"1687356\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9nh6s",
+              "tid": "512292-10.226.90.127-169-1782702419690-595",
+              "sid": "453460-10.22.113.74-2089724-1782702419820-692",
+              "timestamp": "2026-06-29T11:06:59.821+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.821Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "ai助手自动回复规则引擎原子条件参数:conditionCode:isAtPerson,functionData:0,1,3,2,4,replyFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"其他\",\"messageContent\":\"2950套不了吗\",\"requestId\":\"1687356\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"traceId\":\"1687356\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782702419821
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "6J9YEZ8Bwva2ZhliQzrK",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "11",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.113.74",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "执行是否@人条件处理器, ruleFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"其他\",\"messageContent\":\"2950套不了吗\",\"requestId\":\"1687356\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"traceId\":\"1687356\",\"triggerSource\":10}, functionData:0,1,3,2,4",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9nh6s",
+              "tid": "512292-10.226.90.127-169-1782702419690-595",
+              "sid": "453460-10.22.113.74-2089724-1782702419820-692",
+              "timestamp": "2026-06-29T11:06:59.821+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.821Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "执行是否@人条件处理器, ruleFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"其他\",\"messageContent\":\"2950套不了吗\",\"requestId\":\"1687356\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"traceId\":\"1687356\",\"triggerSource\":10}, functionData:0,1,3,2,4"
+              ]
+            },
+            "sort": [
+              1782702419821
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "CZ9YEZ8Bwva2ZhliQhtT",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_ext_headers": "{}",
+              "data_remote_port": "13252",
+              "data_remote_ip": "10.19.2.32",
+              "data_req_type": "HTTP/1.1",
+              "data_bltag": "request_in",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9nh6s",
+              "tid": "512292-10.226.90.127-169-1782702419690-595",
+              "sid": "453460-10.22.113.74-2089724-1782702419820-692",
+              "data_segmentid": "453460-10.22.113.74-2089724-1782702419820-692",
+              "spanId": "11",
+              "data_uri": "/ruleCondition/aiAutoReply/execute",
+              "data_local_ip": "10.22.113.74",
+              "loglevel": "INFO",
+              "data_body": "{\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"className\":\"com.ke.huiju.cloudkeeper.support.vo.fact.ServiceKeeperFact\",\"isConfident\":\"1\",\"caseType\":\"其他\",\"requestId\":\"1687356\",\"serviceId\":\"private-domain-lease\",\"triggerSource\":10,\"isInfoComplete\":\"0\",\"fixOrderInfo\":{\"房屋地址\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\",\"联系人电话\":\"\",\"联系人姓名\":\"\"},\"traceId\":\"1687356\",\"question\":\"其他\",\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"bizType\":\"test\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"imgConvertResult\":0,\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"fixOrderInfo\":{\"房屋地址\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\",\"联系人电话\":\"\",\"联系人姓名\":\"\"},\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"isHasHistory\":1,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"atList\":\"\"},\"answerGenerated\":false,\"require\":\"其他\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"aiInvolve\":\"0\",\"picture\":\"\",\"intention\":\"其他\",\"businessScene\":2,\"firstTrigger\":0,\"answer\":\" \",\"senderType\":4,\"contractCode\":\"TGCF2507117112\",\"sessionInitiator\":4,\"matchingPlan\":\"GENERAL\",\"messageContent\":\"2950套不了吗\"}",
+              "data_args": "{\"funData\":[\"0,1,3,2,4\"],\"conditionCode\":[\"isAtPerson\"]}",
+              "timestamp": "2026-06-29T11:06:59.820+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.820Z"
+              ]
+            },
+            "highlight": {
+              "data_body": [
+                "{\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"className\":\"com.ke.huiju.cloudkeeper.support.vo.fact.ServiceKeeperFact\",\"isConfident\":\"1\",\"caseType\":\"其他\",\"requestId\":\"1687356\",\"serviceId\":\"private-domain-lease\",\"triggerSource\":10,\"isInfoComplete\":\"0\",\"fixOrderInfo\":{\"房屋地址\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\",\"联系人电话\":\"\",\"联系人姓名\":\"\"},\"traceId\":\"1687356\",\"question\":\"其他\",\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"bizType\":\"test\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"imgConvertResult\":0,\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"fixOrderInfo\":{\"房屋地址\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\",\"联系人电话\":\"\",\"联系人姓名\":\"\"},\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"isHasHistory\":1,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"atList\":\"\"},\"answerGenerated\":false,\"require\":\"其他\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"aiInvolve\":\"0\",\"picture\":\"\",\"intention\":\"其他\",\"businessScene\":2,\"firstTrigger\":0,\"answer\":\" \",\"senderType\":4,\"contractCode\":\"TGCF2507117112\",\"sessionInitiator\":4,\"matchingPlan\":\"GENERAL\",\"messageContent\":\"2950套不了吗\"}"
+              ]
+            },
+            "sort": [
+              1782702419820
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "dZ9YEZ8Bwva2ZhliQhtU",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "8",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.113.74",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "[AigcInspectionClient#serviceKeeperExecute] 请求开始 ---> http://api.cloud.keeper.huiju.ke.com/ruleCondition/servicekeeper/execute?conditionCode=judgeSessionContentMatching&funData=%E9%93%B6%E8%A1%8C%E5%8D%A1,%E9%93%B6%E8%A1%8C,%E5%8D%A1%E5%8F%B7,%E8%BA%AB%E4%BB%BD%E8%AF%81,%E6%8A%A5%E9%94%80,%E5%8F%91%E7%A5%A8  - [request param] {\"requestId\":\"1687356\",\"traceId\":\"1687356\",\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"firstTrigger\":0,\"messageContent\":\"2950套不了吗\",\"triggerSource\":10,\"senderType\":4,\"intention\":\"其他\",\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"}} - [request headers] {Content-Length=[1472], Content-Type=[application/json;charset=UTF-8], X-Ke-Sid=[huiju-private-domain-lease]}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9nh6s",
+              "tid": "512292-10.226.90.127-169-1782702419690-595",
+              "sid": "453460-10.22.113.74-2089745-1782702419815-708",
+              "timestamp": "2026-06-29T11:06:59.817+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.817Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "conditionCode=judgeSessionContentMatching&funData=%E9%93%B6%E8%A1%8C%E5%8D%A1,%E9%93%B6%E8%A1%8C,%E5%8D%A1%E5%8F%B7,%E8%BA%AB%E4%BB%BD%E8%AF%81,%E6%8A%A5%E9%94%80,%E5%8F%91%E7%A5%A8  - [request param] {\"requestId\":\"1687356\",\"traceId\":\"1687356\",\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"firstTrigger\":0,\"messageContent\":\"2950套不了吗\",\"triggerSource\":10,\"senderType\":4,\"intention\":\"其他\",\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"}} - [request headers] {Content-Length=[1472], Content-Type=[application/json;charset=UTF-8], X-Ke-Sid=[huiju-private-domain-lease]}"
+              ]
+            },
+            "sort": [
+              1782702419817
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "fJ9YEZ8Bwva2ZhliQzzK",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "8",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.113.74",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:judgeSessionContentMatching,functionData:银行卡,银行,卡号,身份证,报销,发票,replyFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"其他\",\"messageContent\":\"2950套不了吗\",\"requestId\":\"1687356\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"traceId\":\"1687356\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9nh6s",
+              "tid": "512292-10.226.90.127-169-1782702419690-595",
+              "sid": "453460-10.22.113.74-2089745-1782702419815-708",
+              "timestamp": "2026-06-29T11:06:59.816+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.816Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "ai助手自动回复规则引擎原子条件参数:conditionCode:judgeSessionContentMatching,functionData:银行卡,银行,卡号,身份证,报销,发票,replyFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"其他\",\"messageContent\":\"2950套不了吗\",\"requestId\":\"1687356\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"traceId\":\"1687356\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782702419816
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "hZ9YEZ8Bwva2ZhliQhpT",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "8",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.113.74",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "转发云管家提供的核心原子条件conditionCode:judgeSessionContentMatching,functionData:银行卡,银行,卡号,身份证,报销,发票,replyFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元502\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"其他\",\"messageContent\":\"2950套不了吗\",\"requestId\":\"1687356\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"traceId\":\"1687356\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9nh6s",
+              "tid": "512292-10.226.90.127-169-1782702419690-595",
+              "sid": "453460-10.22.113.74-2089745-1782702419815-708",
+              "timestamp": "2026-06-29T11:06:59.816+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:06:59.816Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "转发云管家提供的核心原子条件conditionCode:judgeSessionContentMatching,functionData:银行卡,银行,卡号,身份证,报销,发票,replyFact:{\"extParam\":{\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107113438079\",\"contactInfo\":\"{\\\"address\\\":\\\"首开玖珑花园1幢1单元@kibana-highlighted-field@502@/kibana-highlighted-field@\\\",\\\"name\\\":\\\"胡文洁\\\",\\\"phone\\\":\\\"152****3123\\\"}\",\"cityCode\":\"320500\",\"groupId\":\"10765450326949930\",\"msgId\":\"1687356\",\"nowDateStr\":\"2026-06-29 11:06:56\",\"latestMsgId\":\"1687356\",\"cityName\":\"苏州\",\"inContractCode\":\"TG2507806477\",\"aiRobotUserId\":\"31261511\",\"triggerSource\":10,\"robotWeworkId\":\"31151602\",\"aiRobotUcId\":1000000031261511,\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"userName\":\"苏州贝壳租房服务管家惠凝\",\"userId\":1000000020039582,\"aiType\":2,\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":\"2026-06-29 11:02:06\",\"senderType\":4,\"inContractId\":4753584,\"resblockId\":\"2311316787425886\",\"contractCode\":\"TGCF2507117112\",\"bizType\":\"test\",\"isHasHistory\":1,\"fixOrderInfo\":{\"房屋地址\":\"\",\"联系人姓名\":\"\",\"联系人电话\":\"\",\"故障物品\":\"\",\"故障区域\":\"\",\"故障现象\":\"\",\"服务项目\":\"\",\"故障图片\":\"\"},\"imgConvertResult\":0,\"atList\":\"\"},\"firstTrigger\":0,\"intention\":\"其他\",\"messageContent\":\"2950套不了吗\",\"requestId\":\"1687356\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10765450326949930--7#1782701593000\",\"sessionInitiator\":4,\"traceId\":\"1687356\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782702419816
+            ]
+          }
+        ]
+      },
+      "aggregations": {
+        "2": {
+          "buckets": [
+            {
+              "key_as_string": "2026-06-29T11:04:00.000+08:00",
+              "key": 1782702240000,
+              "doc_count": 2212
+            },
+            {
+              "key_as_string": "2026-06-29T11:04:30.000+08:00",
+              "key": 1782702270000,
+              "doc_count": 882
+            },
+            {
+              "key_as_string": "2026-06-29T11:05:00.000+08:00",
+              "key": 1782702300000,
+              "doc_count": 966
+            },
+            {
+              "key_as_string": "2026-06-29T11:05:30.000+08:00",
+              "key": 1782702330000,
+              "doc_count": 1034
+            },
+            {
+              "key_as_string": "2026-06-29T11:06:00.000+08:00",
+              "key": 1782702360000,
+              "doc_count": 1002
+            },
+            {
+              "key_as_string": "2026-06-29T11:06:30.000+08:00",
+              "key": 1782702390000,
+              "doc_count": 1386
+            }
+          ]
+        }
+      }
+    },
+    "total": 3,
+    "loaded": 3
+  }
+}

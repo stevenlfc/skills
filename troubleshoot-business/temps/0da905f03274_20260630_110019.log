@@ -1,0 +1,250 @@
+{
+  "meta": {
+    "server": "fast107",
+    "index": "index-12961-13160*",
+    "query_time": "2026-06-30T11:00:19.923832",
+    "hash": "0da905f03274"
+  },
+  "request": {
+    "params": {
+      "ignoreThrottled": true,
+      "preference": 1780483834299,
+      "index": "index-12961-13160*",
+      "body": {
+        "version": true,
+        "size": 5,
+        "sort": [
+          {
+            "timestamp": {
+              "order": "desc",
+              "unmapped_type": "boolean"
+            }
+          }
+        ],
+        "aggs": {
+          "2": {
+            "date_histogram": {
+              "field": "timestamp",
+              "fixed_interval": "30s",
+              "time_zone": "Asia/Shanghai",
+              "min_doc_count": 1
+            }
+          }
+        },
+        "stored_fields": [
+          "*"
+        ],
+        "script_fields": {},
+        "docvalue_fields": [
+          {
+            "field": "timestamp",
+            "format": "date_time"
+          }
+        ],
+        "_source": {
+          "excludes": []
+        },
+        "query": {
+          "bool": {
+            "must": [
+              {
+                "match_all": {}
+              }
+            ],
+            "filter": [
+              {
+                "range": {
+                  "timestamp": {
+                    "gte": "2026-06-30T02:44:00.000Z",
+                    "lte": "2026-06-30T02:44:30.000Z",
+                    "format": "strict_date_optional_time"
+                  }
+                }
+              }
+            ],
+            "should": [],
+            "must_not": []
+          }
+        },
+        "highlight": {
+          "pre_tags": [
+            "@kibana-highlighted-field@"
+          ],
+          "post_tags": [
+            "@/kibana-highlighted-field@"
+          ],
+          "fields": {
+            "*": {}
+          },
+          "fragment_size": 2147483647
+        }
+      },
+      "rest_total_hits_as_int": true,
+      "ignore_unavailable": true,
+      "ignore_throttled": true,
+      "timeout": "30000ms"
+    },
+    "serverStrategy": "es"
+  },
+  "response": {
+    "is_partial": false,
+    "is_running": false,
+    "rawResponse": {
+      "took": 69,
+      "timed_out": false,
+      "num_reduce_phases": 2,
+      "_shards": {
+        "total": 56,
+        "successful": 56,
+        "skipped": 49,
+        "failed": 0
+      },
+      "hits": {
+        "total": 349298,
+        "max_score": null,
+        "hits": [
+          {
+            "_index": "index-12961-13160_2026-06-30",
+            "_type": "_doc",
+            "_id": "EY1qFp8BqdQIAxmeAd0E",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "traceId": "/ruleCondition/execute",
+              "logLevel": "INFO",
+              "logDetail": "2026/06/30-10:44:30:000 [TID:512292-10.22.41.16-152-1782787469169-7973] [SID:511686-10.226.79.72-80260-1782787470000-120][SpanID:40] [hjTraceId:81cc86487e4167930f83ad6fa7a479f5]  [http-nio-8080-exec-23] INFO  com.ke.iprd.log.filter.HttpRequestFilter- {\"bltag\":\"request_in\",\"req_type\":\"HTTP/1.1\",\"data_format\":\"application/json;charset=UTF-8\",\"request_id\":\"38fb8051-d132-4110-ae1d-f9ed8a0c1304\",\"domain\":\"api.cloud.keeper.huiju.ke.com\",\"method\":\"POST\",\"ua\":\"okhttp/3.8.1\",\"uri\":\"/ruleCondition/execute\",\"local_ip\":\"10.226.79.72\",\"remote_ip\":\"10.19.5.8\",\"remote_port\":\"53906\",\"segmentid\":\"511686-10.226.79.72-80260-1782787470000-120\",\"args\":{\"conditionCode\":[\"getOwnerMessageType\"]},\"body\":{\"traceId\":\"512258-10.22.99.157-1231-1782787469022-5057\",\"accountCode\":\"31551762\",\"cityCode\":\"120000\",\"className\":\"com.ke.huiju.cloudkeeper.support.vo.fact.ReplyFact\",\"robotId\":\"acc4K5DOmIQmQFT2LFeF1GA\",\"intention\":\"房源委托状态变更\",\"firstTrigger\":0,\"houseDelStatusChange\":true,\"houseDelCode\":\"101138403879\",\"houseInvalid\":false,\"requestId\":\"2071786923091939328\",\"houseDeal\":true,\"ownerUnionId\":\"oN7cVsy0P-CUOG_HSdQOunba0X98\",\"serviceId\":\"huiju-cloudkeeper-core\",\"triggerSource\":2,\"matchingPlan\":\"GENERAL\"},\"ext_headers\":{}}",
+              "logClass": "com.ke.iprd.log.filter.HttpRequestFilter",
+              "host_name": "envType_prod__env-huiju-cloudkeeper-core-prod-0xe-589768dd89-rcq64",
+              "TID": "512292-10.22.41.16-152-1782787469169-7973",
+              "SID": "511686-10.226.79.72-80260-1782787470000-120",
+              "timestamp": "2026-06-30T10:44:30.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-30T02:44:30.000Z"
+              ]
+            },
+            "sort": [
+              1782787470000
+            ]
+          },
+          {
+            "_index": "index-12961-13160_2026-06-30",
+            "_type": "_doc",
+            "_id": "3WppFp8B6Pmj3h_O_pRi",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "traceId": "/ruleCondition/execute",
+              "logLevel": "INFO",
+              "logDetail": "2026/06/30-10:44:30:000 [TID:512292-10.22.40.74-158-1782787468924-7309] [SID:511686-10.226.100.211-598-1782787469996-7568][SpanID:59] [hjTraceId:0a446803471d8551f6275cfa367af515]  [http-nio-8080-exec-5] INFO  com.ke.iprd.log.filter.HttpRequestFilter- {\"bltag\":\"request_out\",\"req_type\":\"HTTP/1.1\",\"latency\":4,\"uri\":\"/ruleCondition/execute\",\"local_ip\":\"10.226.100.211\",\"remote_ip\":\"10.19.5.21\",\"remote_port\":\"58688\",\"client_ip\":\"10.19.4.118\",\"resp_size\":115,\"segmentid\":\"511686-10.226.100.211-598-1782787469996-7568\",\"resp_result\":{\"traceId\":\"512292-10.22.40.74-158-1782787468924-7309\",\"errno\":\"1018\",\"data\":null,\"errmsg\":\"会话内容不存在\"},\"ext_headers\":{}}",
+              "logClass": "com.ke.iprd.log.filter.HttpRequestFilter",
+              "host_name": "envType_prod__env-huiju-cloudkeeper-core-prod-0xe-589768dd89-6z52x",
+              "TID": "512292-10.22.40.74-158-1782787468924-7309",
+              "SID": "511686-10.226.100.211-598-1782787469996-7568",
+              "timestamp": "2026-06-30T10:44:30.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-30T02:44:30.000Z"
+              ]
+            },
+            "sort": [
+              1782787470000
+            ]
+          },
+          {
+            "_index": "index-12961-13160_2026-06-30",
+            "_type": "_doc",
+            "_id": "L2tqFp8B6Pmj3h_OCE8H",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "logLevel": "INFO",
+              "logDetail": "2026/06/30-10:44:30:000 [TID:512292-10.226.101.19-159-1782787469796-5809] [SID:511686-10.22.89.13-684-1782787469998-1796][SpanID:23] [hjTraceId:7dcebf3a37f6d6e26212ceb121067036]  [http-nio-8080-exec-37] INFO  com.ke.huiju.cloudkeeper.support.logic.rule.RuleBusinessLogic- 获取用户session:aigc_new_session_id:oN7cVsyo1MeaPw14a-X2KKqChL6k:accx1kJtUe6rrF1lotOY9Ih",
+              "logClass": "com.ke.huiju.cloudkeeper.support.logic.rule.RuleBusinessLogic",
+              "host_name": "envType_prod__env-huiju-cloudkeeper-core-prod-0xe-589768dd89-lsmn2",
+              "TID": "512292-10.226.101.19-159-1782787469796-5809",
+              "SID": "511686-10.22.89.13-684-1782787469998-1796",
+              "timestamp": "2026-06-30T10:44:30.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-30T02:44:30.000Z"
+              ]
+            },
+            "sort": [
+              1782787470000
+            ]
+          },
+          {
+            "_index": "index-12961-13160_2026-06-30",
+            "_type": "_doc",
+            "_id": "R1NzFp8B6Pmj3h_Oz1U4",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "logLevel": "INFO",
+              "logDetail": "2026/06/30-10:44:30:000 [TID:512630-10.22.52.157-54965-1782787465394-5289] [SID:511686-10.226.73.227-775-1782787469082-5734][SpanID:8] [453460-10.226.84.58-1226-1782779470560-1813]  [DubboServerHandler-10.226.73.227:8084-thread-185] INFO  com.ke.dubbo.log- [dubbo-consumer] remote:10.22.56.178:8084, interface:c.h.c.w.a.s.UserStatusFacade, method:getUserStatus, param:[{\"userCode\":\"23103051\"}], cost:8ms",
+              "logClass": "com.ke.dubbo.log",
+              "host_name": "envType_prod__env-huiju-cloudkeeper-core-prod-0xe-589768dd89-bxnhs",
+              "TID": "512630-10.22.52.157-54965-1782787465394-5289",
+              "SID": "511686-10.226.73.227-775-1782787469082-5734",
+              "timestamp": "2026-06-30T10:44:30.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-30T02:44:30.000Z"
+              ]
+            },
+            "sort": [
+              1782787470000
+            ]
+          },
+          {
+            "_index": "index-12961-13160_2026-06-30",
+            "_type": "_doc",
+            "_id": "-ctqFp8BBaB1E5DqBtNp",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "logLevel": "INFO",
+              "logDetail": "2026/06/30-10:44:30:000 [TID:453460-10.226.84.58-1281-1782787469989-1333] [SID:511686-10.22.89.13-988-1782787469996-1958][SpanID:6] [453460-10.226.89.170-1237-1782785428712-2415]  [DubboServerHandler-10.22.89.13:8084-thread-179] INFO  com.ke.dubbo.log- [dubbo-provider] remote:10.226.84.58:45494, interface:c.k.h.c.a.s.s.CKSessionFacade, method:getSessionByGroupId, param:[\"10732567905020471\"], cost:4ms",
+              "logClass": "com.ke.dubbo.log",
+              "host_name": "envType_prod__env-huiju-cloudkeeper-core-prod-0xe-589768dd89-lsmn2",
+              "TID": "453460-10.226.84.58-1281-1782787469989-1333",
+              "SID": "511686-10.22.89.13-988-1782787469996-1958",
+              "timestamp": "2026-06-30T10:44:30.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-30T02:44:30.000Z"
+              ]
+            },
+            "sort": [
+              1782787470000
+            ]
+          }
+        ]
+      },
+      "aggregations": {
+        "2": {
+          "buckets": [
+            {
+              "key_as_string": "2026-06-30T10:44:00.000+08:00",
+              "key": 1782787440000,
+              "doc_count": 349293
+            },
+            {
+              "key_as_string": "2026-06-30T10:44:30.000+08:00",
+              "key": 1782787470000,
+              "doc_count": 5
+            }
+          ]
+        }
+      }
+    },
+    "total": 56,
+    "loaded": 56
+  }
+}

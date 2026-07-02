@@ -1,0 +1,982 @@
+{
+  "meta": {
+    "server": "fast106",
+    "index": "index-11408-13176_2026-06-29",
+    "query_time": "2026-06-29T19:00:06.755851",
+    "hash": "fb6e1debfa28"
+  },
+  "request": {
+    "params": {
+      "ignoreThrottled": true,
+      "preference": 1780483834299,
+      "index": "index-11408-13176_2026-06-29",
+      "body": {
+        "version": true,
+        "size": 20,
+        "sort": [
+          {
+            "timestamp": {
+              "order": "desc",
+              "unmapped_type": "boolean"
+            }
+          }
+        ],
+        "aggs": {
+          "2": {
+            "date_histogram": {
+              "field": "timestamp",
+              "fixed_interval": "30s",
+              "time_zone": "Asia/Shanghai",
+              "min_doc_count": 1
+            }
+          }
+        },
+        "stored_fields": [
+          "*"
+        ],
+        "script_fields": {},
+        "docvalue_fields": [
+          {
+            "field": "timestamp",
+            "format": "date_time"
+          }
+        ],
+        "_source": {
+          "excludes": []
+        },
+        "query": {
+          "bool": {
+            "must": [
+              {
+                "match_all": {}
+              }
+            ],
+            "filter": [
+              {
+                "match_phrase": {
+                  "data_info_msg": "ai助手自动回复规则引擎原子条件参数"
+                }
+              },
+              {
+                "range": {
+                  "timestamp": {
+                    "gte": "2026-06-29T04:00:00.000Z",
+                    "lte": "2026-06-29T04:20:00.000Z",
+                    "format": "strict_date_optional_time"
+                  }
+                }
+              }
+            ],
+            "should": [],
+            "must_not": []
+          }
+        },
+        "highlight": {
+          "pre_tags": [
+            "@kibana-highlighted-field@"
+          ],
+          "post_tags": [
+            "@/kibana-highlighted-field@"
+          ],
+          "fields": {
+            "*": {}
+          },
+          "fragment_size": 2147483647
+        }
+      },
+      "rest_total_hits_as_int": true,
+      "ignore_unavailable": true,
+      "ignore_throttled": true,
+      "timeout": "30000ms"
+    },
+    "serverStrategy": "es"
+  },
+  "response": {
+    "is_partial": false,
+    "is_running": false,
+    "rawResponse": {
+      "took": 415,
+      "timed_out": false,
+      "_shards": {
+        "total": 3,
+        "successful": 3,
+        "skipped": 0,
+        "failed": 0
+      },
+      "hits": {
+        "total": 239817,
+        "max_score": null,
+        "hits": [
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "5PCbEZ8Bwva2ZhliEAjQ",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "3",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:groupAiRobotStatus,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31175466\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107114978415\",\"contactInfo\":\"{\\\"address\\\":\\\"浦东大道290弄3号406室\\\",\\\"name\\\":\\\"张峰铭\\\",\\\"phone\\\":\\\"159****2499\\\"}\",\"cityCode\":\"310000\",\"groupId\":\"10917652988649191\",\"aiRobotUcId\":1000000031261520,\"msgId\":\"1536136\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1536136\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":5,\"aiRobotUserId\":\"31261520\",\"triggerSource\":10,\"contractCode\":\"TGCF2603234696\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"管家看到消息会对接的呢\",\"requestId\":\"1536136\",\"senderType\":5,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10917652988649191--4#1782697510000\",\"sessionInitiator\":4,\"traceId\":\"453460-10.22.115.80-1188-1782706799815-1375\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-rpdnz",
+              "tid": "512292-10.226.81.212-150-1782706799937-5921",
+              "sid": "453460-10.22.115.80-1259-1782706799993-468",
+              "timestamp": "2026-06-29T12:19:59.995+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.995Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@ai@/kibana-highlighted-field@@kibana-highlighted-field@助@/kibana-highlighted-field@@kibana-highlighted-field@手@/kibana-highlighted-field@@kibana-highlighted-field@自@/kibana-highlighted-field@@kibana-highlighted-field@动@/kibana-highlighted-field@@kibana-highlighted-field@回@/kibana-highlighted-field@@kibana-highlighted-field@复@/kibana-highlighted-field@@kibana-highlighted-field@规@/kibana-highlighted-field@@kibana-highlighted-field@则@/kibana-highlighted-field@@kibana-highlighted-field@引@/kibana-highlighted-field@@kibana-highlighted-field@擎@/kibana-highlighted-field@@kibana-highlighted-field@原@/kibana-highlighted-field@@kibana-highlighted-field@子@/kibana-highlighted-field@@kibana-highlighted-field@条@/kibana-highlighted-field@@kibana-highlighted-field@件@/kibana-highlighted-field@@kibana-highlighted-field@参@/kibana-highlighted-field@@kibana-highlighted-field@数@/kibana-highlighted-field@:conditionCode:groupAiRobotStatus,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31175466\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107114978415\",\"contactInfo\":\"{\\\"address\\\":\\\"浦东大道290弄3号406室\\\",\\\"name\\\":\\\"张峰铭\\\",\\\"phone\\\":\\\"159****2499\\\"}\",\"cityCode\":\"310000\",\"groupId\":\"10917652988649191\",\"aiRobotUcId\":1000000031261520,\"msgId\":\"1536136\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1536136\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":5,\"aiRobotUserId\":\"31261520\",\"triggerSource\":10,\"contractCode\":\"TGCF2603234696\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"管家看到消息会对接的呢\",\"requestId\":\"1536136\",\"senderType\":5,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10917652988649191--4#1782697510000\",\"sessionInitiator\":4,\"traceId\":\"453460-10.22.115.80-1188-1782706799815-1375\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782706799995
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "zHybEZ8BdpG7oQCUD9o3",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "3",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.84.58",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:getMessageSource,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31175466\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107114978415\",\"contactInfo\":\"{\\\"address\\\":\\\"浦东大道290弄3号406室\\\",\\\"name\\\":\\\"张峰铭\\\",\\\"phone\\\":\\\"159****2499\\\"}\",\"cityCode\":\"310000\",\"groupId\":\"10917652988649191\",\"aiRobotUcId\":1000000031261520,\"msgId\":\"1536136\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1536136\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":5,\"aiRobotUserId\":\"31261520\",\"triggerSource\":10,\"contractCode\":\"TGCF2603234696\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"管家看到消息会对接的呢\",\"requestId\":\"1536136\",\"senderType\":5,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10917652988649191--4#1782697510000\",\"sessionInitiator\":4,\"traceId\":\"453460-10.22.115.80-1188-1782706799815-1375\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9cm8b",
+              "tid": "512292-10.226.81.212-150-1782706799937-5921",
+              "sid": "453460-10.226.84.58-1518677-1782706799991-2772",
+              "timestamp": "2026-06-29T12:19:59.993+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.993Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@ai@/kibana-highlighted-field@@kibana-highlighted-field@助@/kibana-highlighted-field@@kibana-highlighted-field@手@/kibana-highlighted-field@@kibana-highlighted-field@自@/kibana-highlighted-field@@kibana-highlighted-field@动@/kibana-highlighted-field@@kibana-highlighted-field@回@/kibana-highlighted-field@@kibana-highlighted-field@复@/kibana-highlighted-field@@kibana-highlighted-field@规@/kibana-highlighted-field@@kibana-highlighted-field@则@/kibana-highlighted-field@@kibana-highlighted-field@引@/kibana-highlighted-field@@kibana-highlighted-field@擎@/kibana-highlighted-field@@kibana-highlighted-field@原@/kibana-highlighted-field@@kibana-highlighted-field@子@/kibana-highlighted-field@@kibana-highlighted-field@条@/kibana-highlighted-field@@kibana-highlighted-field@件@/kibana-highlighted-field@@kibana-highlighted-field@参@/kibana-highlighted-field@@kibana-highlighted-field@数@/kibana-highlighted-field@:conditionCode:getMessageSource,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31175466\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107114978415\",\"contactInfo\":\"{\\\"address\\\":\\\"浦东大道290弄3号406室\\\",\\\"name\\\":\\\"张峰铭\\\",\\\"phone\\\":\\\"159****2499\\\"}\",\"cityCode\":\"310000\",\"groupId\":\"10917652988649191\",\"aiRobotUcId\":1000000031261520,\"msgId\":\"1536136\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1536136\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":5,\"aiRobotUserId\":\"31261520\",\"triggerSource\":10,\"contractCode\":\"TGCF2603234696\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"管家看到消息会对接的呢\",\"requestId\":\"1536136\",\"senderType\":5,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10917652988649191--4#1782697510000\",\"sessionInitiator\":4,\"traceId\":\"453460-10.22.115.80-1188-1782706799815-1375\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782706799993
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "qkGbEZ8B9P_t1W1uFxfV",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "2",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.82.200",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:getAnswerMode,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31175466\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107114978415\",\"contactInfo\":\"{\\\"address\\\":\\\"浦东大道290弄3号406室\\\",\\\"name\\\":\\\"张峰铭\\\",\\\"phone\\\":\\\"159****2499\\\"}\",\"cityCode\":\"310000\",\"groupId\":\"10917652988649191\",\"aiRobotUcId\":1000000031261520,\"msgId\":\"1536136\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1536136\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":5,\"aiRobotUserId\":\"31261520\",\"triggerSource\":10,\"contractCode\":\"TGCF2603234696\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"管家看到消息会对接的呢\",\"requestId\":\"1536136\",\"senderType\":5,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10917652988649191--4#1782697510000\",\"sessionInitiator\":4,\"traceId\":\"453460-10.22.115.80-1188-1782706799815-1375\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-f6htb",
+              "tid": "512292-10.226.81.212-150-1782706799937-5921",
+              "sid": "453460-10.226.82.200-1952816-1782706799967-628",
+              "timestamp": "2026-06-29T12:19:59.969+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.969Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@ai@/kibana-highlighted-field@@kibana-highlighted-field@助@/kibana-highlighted-field@@kibana-highlighted-field@手@/kibana-highlighted-field@@kibana-highlighted-field@自@/kibana-highlighted-field@@kibana-highlighted-field@动@/kibana-highlighted-field@@kibana-highlighted-field@回@/kibana-highlighted-field@@kibana-highlighted-field@复@/kibana-highlighted-field@@kibana-highlighted-field@规@/kibana-highlighted-field@@kibana-highlighted-field@则@/kibana-highlighted-field@@kibana-highlighted-field@引@/kibana-highlighted-field@@kibana-highlighted-field@擎@/kibana-highlighted-field@@kibana-highlighted-field@原@/kibana-highlighted-field@@kibana-highlighted-field@子@/kibana-highlighted-field@@kibana-highlighted-field@条@/kibana-highlighted-field@@kibana-highlighted-field@件@/kibana-highlighted-field@@kibana-highlighted-field@参@/kibana-highlighted-field@@kibana-highlighted-field@数@/kibana-highlighted-field@:conditionCode:getAnswerMode,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31175466\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107114978415\",\"contactInfo\":\"{\\\"address\\\":\\\"浦东大道290弄3号406室\\\",\\\"name\\\":\\\"张峰铭\\\",\\\"phone\\\":\\\"159****2499\\\"}\",\"cityCode\":\"310000\",\"groupId\":\"10917652988649191\",\"aiRobotUcId\":1000000031261520,\"msgId\":\"1536136\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1536136\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":5,\"aiRobotUserId\":\"31261520\",\"triggerSource\":10,\"contractCode\":\"TGCF2603234696\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"管家看到消息会对接的呢\",\"requestId\":\"1536136\",\"senderType\":5,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10917652988649191--4#1782697510000\",\"sessionInitiator\":4,\"traceId\":\"453460-10.22.115.80-1188-1782706799815-1375\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782706799969
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "5H2bEZ8BdpG7oQCUF6tF",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "2",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.113.74",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:sessionInLurkStatus,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31175466\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107114978415\",\"contactInfo\":\"{\\\"address\\\":\\\"浦东大道290弄3号406室\\\",\\\"name\\\":\\\"张峰铭\\\",\\\"phone\\\":\\\"159****2499\\\"}\",\"cityCode\":\"310000\",\"groupId\":\"10917652988649191\",\"aiRobotUcId\":1000000031261520,\"msgId\":\"1536136\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1536136\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":5,\"aiRobotUserId\":\"31261520\",\"triggerSource\":10,\"contractCode\":\"TGCF2603234696\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"管家看到消息会对接的呢\",\"requestId\":\"1536136\",\"senderType\":5,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10917652988649191--4#1782697510000\",\"sessionInitiator\":4,\"traceId\":\"453460-10.22.115.80-1188-1782706799815-1375\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9nh6s",
+              "tid": "512292-10.226.81.212-150-1782706799937-5921",
+              "sid": "453460-10.22.113.74-1669-1782706799954-1732",
+              "timestamp": "2026-06-29T12:19:59.955+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.955Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@ai@/kibana-highlighted-field@@kibana-highlighted-field@助@/kibana-highlighted-field@@kibana-highlighted-field@手@/kibana-highlighted-field@@kibana-highlighted-field@自@/kibana-highlighted-field@@kibana-highlighted-field@动@/kibana-highlighted-field@@kibana-highlighted-field@回@/kibana-highlighted-field@@kibana-highlighted-field@复@/kibana-highlighted-field@@kibana-highlighted-field@规@/kibana-highlighted-field@@kibana-highlighted-field@则@/kibana-highlighted-field@@kibana-highlighted-field@引@/kibana-highlighted-field@@kibana-highlighted-field@擎@/kibana-highlighted-field@@kibana-highlighted-field@原@/kibana-highlighted-field@@kibana-highlighted-field@子@/kibana-highlighted-field@@kibana-highlighted-field@条@/kibana-highlighted-field@@kibana-highlighted-field@件@/kibana-highlighted-field@@kibana-highlighted-field@参@/kibana-highlighted-field@@kibana-highlighted-field@数@/kibana-highlighted-field@:conditionCode:sessionInLurkStatus,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31175466\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107114978415\",\"contactInfo\":\"{\\\"address\\\":\\\"浦东大道290弄3号406室\\\",\\\"name\\\":\\\"张峰铭\\\",\\\"phone\\\":\\\"159****2499\\\"}\",\"cityCode\":\"310000\",\"groupId\":\"10917652988649191\",\"aiRobotUcId\":1000000031261520,\"msgId\":\"1536136\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1536136\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":5,\"aiRobotUserId\":\"31261520\",\"triggerSource\":10,\"contractCode\":\"TGCF2603234696\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"管家看到消息会对接的呢\",\"requestId\":\"1536136\",\"senderType\":5,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10917652988649191--4#1782697510000\",\"sessionInitiator\":4,\"traceId\":\"453460-10.22.115.80-1188-1782706799815-1375\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782706799955
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "Q0CbEZ8B9P_t1W1uEyQs",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:sessionIntervalTime,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31175466\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107114978415\",\"contactInfo\":\"{\\\"address\\\":\\\"浦东大道290弄3号406室\\\",\\\"name\\\":\\\"张峰铭\\\",\\\"phone\\\":\\\"159****2499\\\"}\",\"cityCode\":\"310000\",\"groupId\":\"10917652988649191\",\"aiRobotUcId\":1000000031261520,\"msgId\":\"1536136\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1536136\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":5,\"aiRobotUserId\":\"31261520\",\"triggerSource\":10,\"contractCode\":\"TGCF2603234696\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"管家看到消息会对接的呢\",\"requestId\":\"1536136\",\"senderType\":5,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10917652988649191--4#1782697510000\",\"sessionInitiator\":4,\"traceId\":\"453460-10.22.115.80-1188-1782706799815-1375\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-rpdnz",
+              "tid": "512292-10.226.81.212-150-1782706799937-5921",
+              "sid": "453460-10.22.115.80-1255-1782706799943-404",
+              "timestamp": "2026-06-29T12:19:59.945+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.945Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@ai@/kibana-highlighted-field@@kibana-highlighted-field@助@/kibana-highlighted-field@@kibana-highlighted-field@手@/kibana-highlighted-field@@kibana-highlighted-field@自@/kibana-highlighted-field@@kibana-highlighted-field@动@/kibana-highlighted-field@@kibana-highlighted-field@回@/kibana-highlighted-field@@kibana-highlighted-field@复@/kibana-highlighted-field@@kibana-highlighted-field@规@/kibana-highlighted-field@@kibana-highlighted-field@则@/kibana-highlighted-field@@kibana-highlighted-field@引@/kibana-highlighted-field@@kibana-highlighted-field@擎@/kibana-highlighted-field@@kibana-highlighted-field@原@/kibana-highlighted-field@@kibana-highlighted-field@子@/kibana-highlighted-field@@kibana-highlighted-field@条@/kibana-highlighted-field@@kibana-highlighted-field@件@/kibana-highlighted-field@@kibana-highlighted-field@参@/kibana-highlighted-field@@kibana-highlighted-field@数@/kibana-highlighted-field@:conditionCode:sessionIntervalTime,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31175466\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107114978415\",\"contactInfo\":\"{\\\"address\\\":\\\"浦东大道290弄3号406室\\\",\\\"name\\\":\\\"张峰铭\\\",\\\"phone\\\":\\\"159****2499\\\"}\",\"cityCode\":\"310000\",\"groupId\":\"10917652988649191\",\"aiRobotUcId\":1000000031261520,\"msgId\":\"1536136\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1536136\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":5,\"aiRobotUserId\":\"31261520\",\"triggerSource\":10,\"contractCode\":\"TGCF2603234696\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"管家看到消息会对接的呢\",\"requestId\":\"1536136\",\"senderType\":5,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10917652988649191--4#1782697510000\",\"sessionInitiator\":4,\"traceId\":\"453460-10.22.115.80-1188-1782706799815-1375\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782706799945
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "g32bEZ8BdpG7oQCUF6tF",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.119.112",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:isAiExists,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31175466\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107114978415\",\"contactInfo\":\"{\\\"address\\\":\\\"浦东大道290弄3号406室\\\",\\\"name\\\":\\\"张峰铭\\\",\\\"phone\\\":\\\"159****2499\\\"}\",\"cityCode\":\"310000\",\"groupId\":\"10917652988649191\",\"aiRobotUcId\":1000000031261520,\"msgId\":\"1536136\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1536136\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":5,\"aiRobotUserId\":\"31261520\",\"triggerSource\":10,\"contractCode\":\"TGCF2603234696\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"管家看到消息会对接的呢\",\"requestId\":\"1536136\",\"senderType\":5,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10917652988649191--4#1782697510000\",\"sessionInitiator\":4,\"traceId\":\"453460-10.22.115.80-1188-1782706799815-1375\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-l9wgm",
+              "tid": "512292-10.226.81.212-150-1782706799937-5921",
+              "sid": "453460-10.22.119.112-1620962-1782706799943-3690",
+              "timestamp": "2026-06-29T12:19:59.944+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.944Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@ai@/kibana-highlighted-field@@kibana-highlighted-field@助@/kibana-highlighted-field@@kibana-highlighted-field@手@/kibana-highlighted-field@@kibana-highlighted-field@自@/kibana-highlighted-field@@kibana-highlighted-field@动@/kibana-highlighted-field@@kibana-highlighted-field@回@/kibana-highlighted-field@@kibana-highlighted-field@复@/kibana-highlighted-field@@kibana-highlighted-field@规@/kibana-highlighted-field@@kibana-highlighted-field@则@/kibana-highlighted-field@@kibana-highlighted-field@引@/kibana-highlighted-field@@kibana-highlighted-field@擎@/kibana-highlighted-field@@kibana-highlighted-field@原@/kibana-highlighted-field@@kibana-highlighted-field@子@/kibana-highlighted-field@@kibana-highlighted-field@条@/kibana-highlighted-field@@kibana-highlighted-field@件@/kibana-highlighted-field@@kibana-highlighted-field@参@/kibana-highlighted-field@@kibana-highlighted-field@数@/kibana-highlighted-field@:conditionCode:isAiExists,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31175466\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"107114978415\",\"contactInfo\":\"{\\\"address\\\":\\\"浦东大道290弄3号406室\\\",\\\"name\\\":\\\"张峰铭\\\",\\\"phone\\\":\\\"159****2499\\\"}\",\"cityCode\":\"310000\",\"groupId\":\"10917652988649191\",\"aiRobotUcId\":1000000031261520,\"msgId\":\"1536136\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1536136\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":5,\"aiRobotUserId\":\"31261520\",\"triggerSource\":10,\"contractCode\":\"TGCF2603234696\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"管家看到消息会对接的呢\",\"requestId\":\"1536136\",\"senderType\":5,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10917652988649191--4#1782697510000\",\"sessionInitiator\":4,\"traceId\":\"453460-10.22.115.80-1188-1782706799815-1375\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782706799944
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "in2bEZ8BdpG7oQCUEBPU",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "5",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.239",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:getOwnerMessageType,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31622470\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"101135131690\",\"contactInfo\":\"{\\\"address\\\":\\\"海淀区玲珑路9号院西区7号楼10层1单元915\\\",\\\"name\\\":\\\"郜翔\\\",\\\"phone\\\":\\\"186****5997\\\"}\",\"cityCode\":\"110000\",\"groupId\":\"10732405133470175\",\"aiRobotUcId\":1000000031376796,\"msgId\":\"1544429\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1544429\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":6,\"aiRobotUserId\":\"31376796\",\"triggerSource\":10,\"contractCode\":\"TGCF2606015738\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"https://image1.ljcdn.com/rent-front-image/82650f74883fd9725e2a3a61cea834f2.png\",\"requestId\":\"1544429\",\"senderType\":6,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10732405133470175--1#1782706554000\",\"sessionInitiator\":5,\"traceId\":\"453460-10.226.89.170-1213-1782706799747-4349\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7vbf6",
+              "tid": "512292-10.226.81.212-150-1782706799822-5919",
+              "sid": "453460-10.22.115.239-1787-1782706799906-4720",
+              "timestamp": "2026-06-29T12:19:59.907+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.907Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@ai@/kibana-highlighted-field@@kibana-highlighted-field@助@/kibana-highlighted-field@@kibana-highlighted-field@手@/kibana-highlighted-field@@kibana-highlighted-field@自@/kibana-highlighted-field@@kibana-highlighted-field@动@/kibana-highlighted-field@@kibana-highlighted-field@回@/kibana-highlighted-field@@kibana-highlighted-field@复@/kibana-highlighted-field@@kibana-highlighted-field@规@/kibana-highlighted-field@@kibana-highlighted-field@则@/kibana-highlighted-field@@kibana-highlighted-field@引@/kibana-highlighted-field@@kibana-highlighted-field@擎@/kibana-highlighted-field@@kibana-highlighted-field@原@/kibana-highlighted-field@@kibana-highlighted-field@子@/kibana-highlighted-field@@kibana-highlighted-field@条@/kibana-highlighted-field@@kibana-highlighted-field@件@/kibana-highlighted-field@@kibana-highlighted-field@参@/kibana-highlighted-field@@kibana-highlighted-field@数@/kibana-highlighted-field@:conditionCode:getOwnerMessageType,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31622470\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"101135131690\",\"contactInfo\":\"{\\\"address\\\":\\\"海淀区玲珑路9号院西区7号楼10层1单元915\\\",\\\"name\\\":\\\"郜翔\\\",\\\"phone\\\":\\\"186****5997\\\"}\",\"cityCode\":\"110000\",\"groupId\":\"10732405133470175\",\"aiRobotUcId\":1000000031376796,\"msgId\":\"1544429\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1544429\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":6,\"aiRobotUserId\":\"31376796\",\"triggerSource\":10,\"contractCode\":\"TGCF2606015738\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"https://image1.ljcdn.com/rent-front-image/82650f74883fd9725e2a3a61cea834f2.png\",\"requestId\":\"1544429\",\"senderType\":6,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10732405133470175--1#1782706554000\",\"sessionInitiator\":5,\"traceId\":\"453460-10.226.89.170-1213-1782706799747-4349\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782706799907
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "rD-bEZ8B9P_t1W1uEcF5",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "4",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:judgeSendRepairMiniProgram,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31622470\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"101135131690\",\"contactInfo\":\"{\\\"address\\\":\\\"海淀区玲珑路9号院西区7号楼10层1单元915\\\",\\\"name\\\":\\\"郜翔\\\",\\\"phone\\\":\\\"186****5997\\\"}\",\"cityCode\":\"110000\",\"groupId\":\"10732405133470175\",\"aiRobotUcId\":1000000031376796,\"msgId\":\"1544429\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1544429\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":6,\"aiRobotUserId\":\"31376796\",\"triggerSource\":10,\"contractCode\":\"TGCF2606015738\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"https://image1.ljcdn.com/rent-front-image/82650f74883fd9725e2a3a61cea834f2.png\",\"requestId\":\"1544429\",\"senderType\":6,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10732405133470175--1#1782706554000\",\"sessionInitiator\":5,\"traceId\":\"453460-10.226.89.170-1213-1782706799747-4349\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-rpdnz",
+              "tid": "512292-10.226.81.212-150-1782706799822-5919",
+              "sid": "453460-10.22.115.80-1760-1782706799892-186",
+              "timestamp": "2026-06-29T12:19:59.894+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.894Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@ai@/kibana-highlighted-field@@kibana-highlighted-field@助@/kibana-highlighted-field@@kibana-highlighted-field@手@/kibana-highlighted-field@@kibana-highlighted-field@自@/kibana-highlighted-field@@kibana-highlighted-field@动@/kibana-highlighted-field@@kibana-highlighted-field@回@/kibana-highlighted-field@@kibana-highlighted-field@复@/kibana-highlighted-field@@kibana-highlighted-field@规@/kibana-highlighted-field@@kibana-highlighted-field@则@/kibana-highlighted-field@@kibana-highlighted-field@引@/kibana-highlighted-field@@kibana-highlighted-field@擎@/kibana-highlighted-field@@kibana-highlighted-field@原@/kibana-highlighted-field@@kibana-highlighted-field@子@/kibana-highlighted-field@@kibana-highlighted-field@条@/kibana-highlighted-field@@kibana-highlighted-field@件@/kibana-highlighted-field@@kibana-highlighted-field@参@/kibana-highlighted-field@@kibana-highlighted-field@数@/kibana-highlighted-field@:conditionCode:judgeSendRepairMiniProgram,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31622470\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"101135131690\",\"contactInfo\":\"{\\\"address\\\":\\\"海淀区玲珑路9号院西区7号楼10层1单元915\\\",\\\"name\\\":\\\"郜翔\\\",\\\"phone\\\":\\\"186****5997\\\"}\",\"cityCode\":\"110000\",\"groupId\":\"10732405133470175\",\"aiRobotUcId\":1000000031376796,\"msgId\":\"1544429\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1544429\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":6,\"aiRobotUserId\":\"31376796\",\"triggerSource\":10,\"contractCode\":\"TGCF2606015738\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"https://image1.ljcdn.com/rent-front-image/82650f74883fd9725e2a3a61cea834f2.png\",\"requestId\":\"1544429\",\"senderType\":6,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10732405133470175--1#1782706554000\",\"sessionInitiator\":5,\"traceId\":\"453460-10.226.89.170-1213-1782706799747-4349\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782706799894
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "AO-bEZ8Bwva2ZhliD-s_",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "4",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.239",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:renewCardPushed,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31622470\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"101135131690\",\"contactInfo\":\"{\\\"address\\\":\\\"海淀区玲珑路9号院西区7号楼10层1单元915\\\",\\\"name\\\":\\\"郜翔\\\",\\\"phone\\\":\\\"186****5997\\\"}\",\"cityCode\":\"110000\",\"groupId\":\"10732405133470175\",\"aiRobotUcId\":1000000031376796,\"msgId\":\"1544429\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1544429\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":6,\"aiRobotUserId\":\"31376796\",\"triggerSource\":10,\"contractCode\":\"TGCF2606015738\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"https://image1.ljcdn.com/rent-front-image/82650f74883fd9725e2a3a61cea834f2.png\",\"requestId\":\"1544429\",\"senderType\":6,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10732405133470175--1#1782706554000\",\"sessionInitiator\":5,\"traceId\":\"453460-10.226.89.170-1213-1782706799747-4349\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7vbf6",
+              "tid": "512292-10.226.81.212-150-1782706799822-5919",
+              "sid": "453460-10.22.115.239-1363-1782706799892-4866",
+              "timestamp": "2026-06-29T12:19:59.893+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.893Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@ai@/kibana-highlighted-field@@kibana-highlighted-field@助@/kibana-highlighted-field@@kibana-highlighted-field@手@/kibana-highlighted-field@@kibana-highlighted-field@自@/kibana-highlighted-field@@kibana-highlighted-field@动@/kibana-highlighted-field@@kibana-highlighted-field@回@/kibana-highlighted-field@@kibana-highlighted-field@复@/kibana-highlighted-field@@kibana-highlighted-field@规@/kibana-highlighted-field@@kibana-highlighted-field@则@/kibana-highlighted-field@@kibana-highlighted-field@引@/kibana-highlighted-field@@kibana-highlighted-field@擎@/kibana-highlighted-field@@kibana-highlighted-field@原@/kibana-highlighted-field@@kibana-highlighted-field@子@/kibana-highlighted-field@@kibana-highlighted-field@条@/kibana-highlighted-field@@kibana-highlighted-field@件@/kibana-highlighted-field@@kibana-highlighted-field@参@/kibana-highlighted-field@@kibana-highlighted-field@数@/kibana-highlighted-field@:conditionCode:renewCardPushed,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31622470\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"101135131690\",\"contactInfo\":\"{\\\"address\\\":\\\"海淀区玲珑路9号院西区7号楼10层1单元915\\\",\\\"name\\\":\\\"郜翔\\\",\\\"phone\\\":\\\"186****5997\\\"}\",\"cityCode\":\"110000\",\"groupId\":\"10732405133470175\",\"aiRobotUcId\":1000000031376796,\"msgId\":\"1544429\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1544429\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":6,\"aiRobotUserId\":\"31376796\",\"triggerSource\":10,\"contractCode\":\"TGCF2606015738\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"https://image1.ljcdn.com/rent-front-image/82650f74883fd9725e2a3a61cea834f2.png\",\"requestId\":\"1544429\",\"senderType\":6,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10732405133470175--1#1782706554000\",\"sessionInitiator\":5,\"traceId\":\"453460-10.226.89.170-1213-1782706799747-4349\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782706799893
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "JHybEZ8BdpG7oQCUDrYv",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "3",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.84.58",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:groupAiRobotStatus,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31622470\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"101135131690\",\"contactInfo\":\"{\\\"address\\\":\\\"海淀区玲珑路9号院西区7号楼10层1单元915\\\",\\\"name\\\":\\\"郜翔\\\",\\\"phone\\\":\\\"186****5997\\\"}\",\"cityCode\":\"110000\",\"groupId\":\"10732405133470175\",\"aiRobotUcId\":1000000031376796,\"msgId\":\"1544429\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1544429\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":6,\"aiRobotUserId\":\"31376796\",\"triggerSource\":10,\"contractCode\":\"TGCF2606015738\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"https://image1.ljcdn.com/rent-front-image/82650f74883fd9725e2a3a61cea834f2.png\",\"requestId\":\"1544429\",\"senderType\":6,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10732405133470175--1#1782706554000\",\"sessionInitiator\":5,\"traceId\":\"453460-10.226.89.170-1213-1782706799747-4349\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9cm8b",
+              "tid": "512292-10.226.81.212-150-1782706799822-5919",
+              "sid": "453460-10.226.84.58-1274-1782706799875-186",
+              "timestamp": "2026-06-29T12:19:59.875+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.875Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@ai@/kibana-highlighted-field@@kibana-highlighted-field@助@/kibana-highlighted-field@@kibana-highlighted-field@手@/kibana-highlighted-field@@kibana-highlighted-field@自@/kibana-highlighted-field@@kibana-highlighted-field@动@/kibana-highlighted-field@@kibana-highlighted-field@回@/kibana-highlighted-field@@kibana-highlighted-field@复@/kibana-highlighted-field@@kibana-highlighted-field@规@/kibana-highlighted-field@@kibana-highlighted-field@则@/kibana-highlighted-field@@kibana-highlighted-field@引@/kibana-highlighted-field@@kibana-highlighted-field@擎@/kibana-highlighted-field@@kibana-highlighted-field@原@/kibana-highlighted-field@@kibana-highlighted-field@子@/kibana-highlighted-field@@kibana-highlighted-field@条@/kibana-highlighted-field@@kibana-highlighted-field@件@/kibana-highlighted-field@@kibana-highlighted-field@参@/kibana-highlighted-field@@kibana-highlighted-field@数@/kibana-highlighted-field@:conditionCode:groupAiRobotStatus,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31622470\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"101135131690\",\"contactInfo\":\"{\\\"address\\\":\\\"海淀区玲珑路9号院西区7号楼10层1单元915\\\",\\\"name\\\":\\\"郜翔\\\",\\\"phone\\\":\\\"186****5997\\\"}\",\"cityCode\":\"110000\",\"groupId\":\"10732405133470175\",\"aiRobotUcId\":1000000031376796,\"msgId\":\"1544429\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1544429\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":6,\"aiRobotUserId\":\"31376796\",\"triggerSource\":10,\"contractCode\":\"TGCF2606015738\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"https://image1.ljcdn.com/rent-front-image/82650f74883fd9725e2a3a61cea834f2.png\",\"requestId\":\"1544429\",\"senderType\":6,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10732405133470175--1#1782706554000\",\"sessionInitiator\":5,\"traceId\":\"453460-10.226.89.170-1213-1782706799747-4349\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782706799875
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "Y36bEZ8BdpG7oQCUGhTP",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "3",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.110.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:getMessageSource,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31622470\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"101135131690\",\"contactInfo\":\"{\\\"address\\\":\\\"海淀区玲珑路9号院西区7号楼10层1单元915\\\",\\\"name\\\":\\\"郜翔\\\",\\\"phone\\\":\\\"186****5997\\\"}\",\"cityCode\":\"110000\",\"groupId\":\"10732405133470175\",\"aiRobotUcId\":1000000031376796,\"msgId\":\"1544429\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1544429\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":6,\"aiRobotUserId\":\"31376796\",\"triggerSource\":10,\"contractCode\":\"TGCF2606015738\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"https://image1.ljcdn.com/rent-front-image/82650f74883fd9725e2a3a61cea834f2.png\",\"requestId\":\"1544429\",\"senderType\":6,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10732405133470175--1#1782706554000\",\"sessionInitiator\":5,\"traceId\":\"453460-10.226.89.170-1213-1782706799747-4349\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7ss4r",
+              "tid": "512292-10.226.81.212-150-1782706799822-5919",
+              "sid": "453460-10.22.110.80-1906-1782706799874-7286",
+              "timestamp": "2026-06-29T12:19:59.875+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.875Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@ai@/kibana-highlighted-field@@kibana-highlighted-field@助@/kibana-highlighted-field@@kibana-highlighted-field@手@/kibana-highlighted-field@@kibana-highlighted-field@自@/kibana-highlighted-field@@kibana-highlighted-field@动@/kibana-highlighted-field@@kibana-highlighted-field@回@/kibana-highlighted-field@@kibana-highlighted-field@复@/kibana-highlighted-field@@kibana-highlighted-field@规@/kibana-highlighted-field@@kibana-highlighted-field@则@/kibana-highlighted-field@@kibana-highlighted-field@引@/kibana-highlighted-field@@kibana-highlighted-field@擎@/kibana-highlighted-field@@kibana-highlighted-field@原@/kibana-highlighted-field@@kibana-highlighted-field@子@/kibana-highlighted-field@@kibana-highlighted-field@条@/kibana-highlighted-field@@kibana-highlighted-field@件@/kibana-highlighted-field@@kibana-highlighted-field@参@/kibana-highlighted-field@@kibana-highlighted-field@数@/kibana-highlighted-field@:conditionCode:getMessageSource,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31622470\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"101135131690\",\"contactInfo\":\"{\\\"address\\\":\\\"海淀区玲珑路9号院西区7号楼10层1单元915\\\",\\\"name\\\":\\\"郜翔\\\",\\\"phone\\\":\\\"186****5997\\\"}\",\"cityCode\":\"110000\",\"groupId\":\"10732405133470175\",\"aiRobotUcId\":1000000031376796,\"msgId\":\"1544429\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1544429\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":6,\"aiRobotUserId\":\"31376796\",\"triggerSource\":10,\"contractCode\":\"TGCF2606015738\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"https://image1.ljcdn.com/rent-front-image/82650f74883fd9725e2a3a61cea834f2.png\",\"requestId\":\"1544429\",\"senderType\":6,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10732405133470175--1#1782706554000\",\"sessionInitiator\":5,\"traceId\":\"453460-10.226.89.170-1213-1782706799747-4349\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782706799875
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "Hn2bEZ8BdpG7oQCUEBbU",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "2",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:sessionInLurkStatus,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31622470\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"101135131690\",\"contactInfo\":\"{\\\"address\\\":\\\"海淀区玲珑路9号院西区7号楼10层1单元915\\\",\\\"name\\\":\\\"郜翔\\\",\\\"phone\\\":\\\"186****5997\\\"}\",\"cityCode\":\"110000\",\"groupId\":\"10732405133470175\",\"aiRobotUcId\":1000000031376796,\"msgId\":\"1544429\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1544429\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":6,\"aiRobotUserId\":\"31376796\",\"triggerSource\":10,\"contractCode\":\"TGCF2606015738\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"https://image1.ljcdn.com/rent-front-image/82650f74883fd9725e2a3a61cea834f2.png\",\"requestId\":\"1544429\",\"senderType\":6,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10732405133470175--1#1782706554000\",\"sessionInitiator\":5,\"traceId\":\"453460-10.226.89.170-1213-1782706799747-4349\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-rpdnz",
+              "tid": "512292-10.226.81.212-150-1782706799822-5919",
+              "sid": "453460-10.22.115.80-1257-1782706799855-440",
+              "timestamp": "2026-06-29T12:19:59.857+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.857Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@ai@/kibana-highlighted-field@@kibana-highlighted-field@助@/kibana-highlighted-field@@kibana-highlighted-field@手@/kibana-highlighted-field@@kibana-highlighted-field@自@/kibana-highlighted-field@@kibana-highlighted-field@动@/kibana-highlighted-field@@kibana-highlighted-field@回@/kibana-highlighted-field@@kibana-highlighted-field@复@/kibana-highlighted-field@@kibana-highlighted-field@规@/kibana-highlighted-field@@kibana-highlighted-field@则@/kibana-highlighted-field@@kibana-highlighted-field@引@/kibana-highlighted-field@@kibana-highlighted-field@擎@/kibana-highlighted-field@@kibana-highlighted-field@原@/kibana-highlighted-field@@kibana-highlighted-field@子@/kibana-highlighted-field@@kibana-highlighted-field@条@/kibana-highlighted-field@@kibana-highlighted-field@件@/kibana-highlighted-field@@kibana-highlighted-field@参@/kibana-highlighted-field@@kibana-highlighted-field@数@/kibana-highlighted-field@:conditionCode:sessionInLurkStatus,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31622470\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"101135131690\",\"contactInfo\":\"{\\\"address\\\":\\\"海淀区玲珑路9号院西区7号楼10层1单元915\\\",\\\"name\\\":\\\"郜翔\\\",\\\"phone\\\":\\\"186****5997\\\"}\",\"cityCode\":\"110000\",\"groupId\":\"10732405133470175\",\"aiRobotUcId\":1000000031376796,\"msgId\":\"1544429\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1544429\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":6,\"aiRobotUserId\":\"31376796\",\"triggerSource\":10,\"contractCode\":\"TGCF2606015738\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"https://image1.ljcdn.com/rent-front-image/82650f74883fd9725e2a3a61cea834f2.png\",\"requestId\":\"1544429\",\"senderType\":6,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10732405133470175--1#1782706554000\",\"sessionInitiator\":5,\"traceId\":\"453460-10.226.89.170-1213-1782706799747-4349\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782706799857
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "mkGbEZ8B9P_t1W1uGrK6",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "8",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.82.200",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:sessionIntervalTime,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31110596\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"103147433845\",\"contactInfo\":\"{\\\"address\\\":\\\"江逸源境府12幢36号1502\\\",\\\"name\\\":\\\"金小婷\\\",\\\"phone\\\":\\\"159****4181\\\"}\",\"cityCode\":\"330200\",\"groupId\":\"10752751134241010\",\"aiRobotUcId\":1000000031279253,\"msgId\":\"1503824\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1503824\",\"recalledDocs\":\"0\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706190000,\"senderType\":4,\"aiRobotUserId\":\"31279253\",\"triggerSource\":10,\"contractCode\":\"TGCF2601833035\",\"atList\":\"accyS1a2pGzfGxjnmk66GcW\"},\"firstTrigger\":1,\"intention\":\"租金支付流程咨询\",\"messageContent\":\"@贝壳租房服务管家-惠洁 房租微信支付卡片发我\",\"requestId\":\"1503824\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10752751134241010--4#1782706190000\",\"sessionInitiator\":4,\"traceId\":\"511686-10.22.54.162-394-1782706799529-3567\",\"triggerSource\":1}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-f6htb",
+              "tid": "512292-10.226.77.35-150-1782706799698-6085",
+              "sid": "453460-10.226.82.200-1952807-1782706799843-670",
+              "timestamp": "2026-06-29T12:19:59.844+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.844Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@ai@/kibana-highlighted-field@@kibana-highlighted-field@助@/kibana-highlighted-field@@kibana-highlighted-field@手@/kibana-highlighted-field@@kibana-highlighted-field@自@/kibana-highlighted-field@@kibana-highlighted-field@动@/kibana-highlighted-field@@kibana-highlighted-field@回@/kibana-highlighted-field@@kibana-highlighted-field@复@/kibana-highlighted-field@@kibana-highlighted-field@规@/kibana-highlighted-field@@kibana-highlighted-field@则@/kibana-highlighted-field@@kibana-highlighted-field@引@/kibana-highlighted-field@@kibana-highlighted-field@擎@/kibana-highlighted-field@@kibana-highlighted-field@原@/kibana-highlighted-field@@kibana-highlighted-field@子@/kibana-highlighted-field@@kibana-highlighted-field@条@/kibana-highlighted-field@@kibana-highlighted-field@件@/kibana-highlighted-field@@kibana-highlighted-field@参@/kibana-highlighted-field@@kibana-highlighted-field@数@/kibana-highlighted-field@:conditionCode:sessionIntervalTime,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31110596\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"103147433845\",\"contactInfo\":\"{\\\"address\\\":\\\"江逸源境府12幢36号1502\\\",\\\"name\\\":\\\"金小婷\\\",\\\"phone\\\":\\\"159****4181\\\"}\",\"cityCode\":\"330200\",\"groupId\":\"10752751134241010\",\"aiRobotUcId\":1000000031279253,\"msgId\":\"1503824\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1503824\",\"recalledDocs\":\"0\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706190000,\"senderType\":4,\"aiRobotUserId\":\"31279253\",\"triggerSource\":10,\"contractCode\":\"TGCF2601833035\",\"atList\":\"accyS1a2pGzfGxjnmk66GcW\"},\"firstTrigger\":1,\"intention\":\"租金支付流程咨询\",\"messageContent\":\"@贝壳租房服务管家-惠洁 房租微信支付卡片发我\",\"requestId\":\"1503824\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10752751134241010--4#1782706190000\",\"sessionInitiator\":4,\"traceId\":\"511686-10.22.54.162-394-1782706799529-3567\",\"triggerSource\":1}"
+              ]
+            },
+            "sort": [
+              1782706799844
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "tECbEZ8B9P_t1W1uEyQs",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "2",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:getAnswerMode,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31622470\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"101135131690\",\"contactInfo\":\"{\\\"address\\\":\\\"海淀区玲珑路9号院西区7号楼10层1单元915\\\",\\\"name\\\":\\\"郜翔\\\",\\\"phone\\\":\\\"186****5997\\\"}\",\"cityCode\":\"110000\",\"groupId\":\"10732405133470175\",\"aiRobotUcId\":1000000031376796,\"msgId\":\"1544429\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1544429\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":6,\"aiRobotUserId\":\"31376796\",\"triggerSource\":10,\"contractCode\":\"TGCF2606015738\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"https://image1.ljcdn.com/rent-front-image/82650f74883fd9725e2a3a61cea834f2.png\",\"requestId\":\"1544429\",\"senderType\":6,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10732405133470175--1#1782706554000\",\"sessionInitiator\":5,\"traceId\":\"453460-10.226.89.170-1213-1782706799747-4349\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-rpdnz",
+              "tid": "512292-10.226.81.212-150-1782706799822-5919",
+              "sid": "453460-10.22.115.80-1255-1782706799841-402",
+              "timestamp": "2026-06-29T12:19:59.842+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.842Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@ai@/kibana-highlighted-field@@kibana-highlighted-field@助@/kibana-highlighted-field@@kibana-highlighted-field@手@/kibana-highlighted-field@@kibana-highlighted-field@自@/kibana-highlighted-field@@kibana-highlighted-field@动@/kibana-highlighted-field@@kibana-highlighted-field@回@/kibana-highlighted-field@@kibana-highlighted-field@复@/kibana-highlighted-field@@kibana-highlighted-field@规@/kibana-highlighted-field@@kibana-highlighted-field@则@/kibana-highlighted-field@@kibana-highlighted-field@引@/kibana-highlighted-field@@kibana-highlighted-field@擎@/kibana-highlighted-field@@kibana-highlighted-field@原@/kibana-highlighted-field@@kibana-highlighted-field@子@/kibana-highlighted-field@@kibana-highlighted-field@条@/kibana-highlighted-field@@kibana-highlighted-field@件@/kibana-highlighted-field@@kibana-highlighted-field@参@/kibana-highlighted-field@@kibana-highlighted-field@数@/kibana-highlighted-field@:conditionCode:getAnswerMode,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31622470\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"101135131690\",\"contactInfo\":\"{\\\"address\\\":\\\"海淀区玲珑路9号院西区7号楼10层1单元915\\\",\\\"name\\\":\\\"郜翔\\\",\\\"phone\\\":\\\"186****5997\\\"}\",\"cityCode\":\"110000\",\"groupId\":\"10732405133470175\",\"aiRobotUcId\":1000000031376796,\"msgId\":\"1544429\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1544429\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":6,\"aiRobotUserId\":\"31376796\",\"triggerSource\":10,\"contractCode\":\"TGCF2606015738\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"https://image1.ljcdn.com/rent-front-image/82650f74883fd9725e2a3a61cea834f2.png\",\"requestId\":\"1544429\",\"senderType\":6,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10732405133470175--1#1782706554000\",\"sessionInitiator\":5,\"traceId\":\"453460-10.226.89.170-1213-1782706799747-4349\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782706799842
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "Zj6bEZ8B9P_t1W1uCSly",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.84.58",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:sessionIntervalTime,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31622470\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"101135131690\",\"contactInfo\":\"{\\\"address\\\":\\\"海淀区玲珑路9号院西区7号楼10层1单元915\\\",\\\"name\\\":\\\"郜翔\\\",\\\"phone\\\":\\\"186****5997\\\"}\",\"cityCode\":\"110000\",\"groupId\":\"10732405133470175\",\"aiRobotUcId\":1000000031376796,\"msgId\":\"1544429\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1544429\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":6,\"aiRobotUserId\":\"31376796\",\"triggerSource\":10,\"contractCode\":\"TGCF2606015738\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"https://image1.ljcdn.com/rent-front-image/82650f74883fd9725e2a3a61cea834f2.png\",\"requestId\":\"1544429\",\"senderType\":6,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10732405133470175--1#1782706554000\",\"sessionInitiator\":5,\"traceId\":\"453460-10.226.89.170-1213-1782706799747-4349\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9cm8b",
+              "tid": "512292-10.226.81.212-150-1782706799822-5919",
+              "sid": "453460-10.226.84.58-1924735-1782706799830-3436",
+              "timestamp": "2026-06-29T12:19:59.831+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.831Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@ai@/kibana-highlighted-field@@kibana-highlighted-field@助@/kibana-highlighted-field@@kibana-highlighted-field@手@/kibana-highlighted-field@@kibana-highlighted-field@自@/kibana-highlighted-field@@kibana-highlighted-field@动@/kibana-highlighted-field@@kibana-highlighted-field@回@/kibana-highlighted-field@@kibana-highlighted-field@复@/kibana-highlighted-field@@kibana-highlighted-field@规@/kibana-highlighted-field@@kibana-highlighted-field@则@/kibana-highlighted-field@@kibana-highlighted-field@引@/kibana-highlighted-field@@kibana-highlighted-field@擎@/kibana-highlighted-field@@kibana-highlighted-field@原@/kibana-highlighted-field@@kibana-highlighted-field@子@/kibana-highlighted-field@@kibana-highlighted-field@条@/kibana-highlighted-field@@kibana-highlighted-field@件@/kibana-highlighted-field@@kibana-highlighted-field@参@/kibana-highlighted-field@@kibana-highlighted-field@数@/kibana-highlighted-field@:conditionCode:sessionIntervalTime,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31622470\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"101135131690\",\"contactInfo\":\"{\\\"address\\\":\\\"海淀区玲珑路9号院西区7号楼10层1单元915\\\",\\\"name\\\":\\\"郜翔\\\",\\\"phone\\\":\\\"186****5997\\\"}\",\"cityCode\":\"110000\",\"groupId\":\"10732405133470175\",\"aiRobotUcId\":1000000031376796,\"msgId\":\"1544429\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1544429\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":6,\"aiRobotUserId\":\"31376796\",\"triggerSource\":10,\"contractCode\":\"TGCF2606015738\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"https://image1.ljcdn.com/rent-front-image/82650f74883fd9725e2a3a61cea834f2.png\",\"requestId\":\"1544429\",\"senderType\":6,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10732405133470175--1#1782706554000\",\"sessionInitiator\":5,\"traceId\":\"453460-10.226.89.170-1213-1782706799747-4349\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782706799831
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "JPCbEZ8Bwva2ZhliFUeW",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "1",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:isAiExists,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31622470\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"101135131690\",\"contactInfo\":\"{\\\"address\\\":\\\"海淀区玲珑路9号院西区7号楼10层1单元915\\\",\\\"name\\\":\\\"郜翔\\\",\\\"phone\\\":\\\"186****5997\\\"}\",\"cityCode\":\"110000\",\"groupId\":\"10732405133470175\",\"aiRobotUcId\":1000000031376796,\"msgId\":\"1544429\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1544429\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":6,\"aiRobotUserId\":\"31376796\",\"triggerSource\":10,\"contractCode\":\"TGCF2606015738\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"https://image1.ljcdn.com/rent-front-image/82650f74883fd9725e2a3a61cea834f2.png\",\"requestId\":\"1544429\",\"senderType\":6,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10732405133470175--1#1782706554000\",\"sessionInitiator\":5,\"traceId\":\"453460-10.226.89.170-1213-1782706799747-4349\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-rpdnz",
+              "tid": "512292-10.226.81.212-150-1782706799822-5919",
+              "sid": "453460-10.22.115.80-1261-1782706799829-450",
+              "timestamp": "2026-06-29T12:19:59.830+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.830Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@ai@/kibana-highlighted-field@@kibana-highlighted-field@助@/kibana-highlighted-field@@kibana-highlighted-field@手@/kibana-highlighted-field@@kibana-highlighted-field@自@/kibana-highlighted-field@@kibana-highlighted-field@动@/kibana-highlighted-field@@kibana-highlighted-field@回@/kibana-highlighted-field@@kibana-highlighted-field@复@/kibana-highlighted-field@@kibana-highlighted-field@规@/kibana-highlighted-field@@kibana-highlighted-field@则@/kibana-highlighted-field@@kibana-highlighted-field@引@/kibana-highlighted-field@@kibana-highlighted-field@擎@/kibana-highlighted-field@@kibana-highlighted-field@原@/kibana-highlighted-field@@kibana-highlighted-field@子@/kibana-highlighted-field@@kibana-highlighted-field@条@/kibana-highlighted-field@@kibana-highlighted-field@件@/kibana-highlighted-field@@kibana-highlighted-field@参@/kibana-highlighted-field@@kibana-highlighted-field@数@/kibana-highlighted-field@:conditionCode:isAiExists,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31622470\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"101135131690\",\"contactInfo\":\"{\\\"address\\\":\\\"海淀区玲珑路9号院西区7号楼10层1单元915\\\",\\\"name\\\":\\\"郜翔\\\",\\\"phone\\\":\\\"186****5997\\\"}\",\"cityCode\":\"110000\",\"groupId\":\"10732405133470175\",\"aiRobotUcId\":1000000031376796,\"msgId\":\"1544429\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1544429\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":6,\"aiRobotUserId\":\"31376796\",\"triggerSource\":10,\"contractCode\":\"TGCF2606015738\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"https://image1.ljcdn.com/rent-front-image/82650f74883fd9725e2a3a61cea834f2.png\",\"requestId\":\"1544429\",\"senderType\":6,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10732405133470175--1#1782706554000\",\"sessionInitiator\":5,\"traceId\":\"453460-10.226.89.170-1213-1782706799747-4349\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782706799830
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "GHybEZ8BdpG7oQCUDrkv",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "7",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.110.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:emotionalRadarResult,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31110596\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"103147433845\",\"contactInfo\":\"{\\\"address\\\":\\\"江逸源境府12幢36号1502\\\",\\\"name\\\":\\\"金小婷\\\",\\\"phone\\\":\\\"159****4181\\\"}\",\"cityCode\":\"330200\",\"groupId\":\"10752751134241010\",\"aiRobotUcId\":1000000031279253,\"msgId\":\"1503824\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1503824\",\"recalledDocs\":\"0\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706190000,\"senderType\":4,\"aiRobotUserId\":\"31279253\",\"triggerSource\":10,\"contractCode\":\"TGCF2601833035\",\"atList\":\"accyS1a2pGzfGxjnmk66GcW\"},\"firstTrigger\":1,\"intention\":\"租金支付流程咨询\",\"messageContent\":\"@贝壳租房服务管家-惠洁 房租微信支付卡片发我\",\"requestId\":\"1503824\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10752751134241010--4#1782706190000\",\"sessionInitiator\":4,\"traceId\":\"511686-10.22.54.162-394-1782706799529-3567\",\"triggerSource\":1}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7ss4r",
+              "tid": "512292-10.226.77.35-150-1782706799698-6085",
+              "sid": "453460-10.22.110.80-2141583-1782706799825-3572",
+              "timestamp": "2026-06-29T12:19:59.827+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.827Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@ai@/kibana-highlighted-field@@kibana-highlighted-field@助@/kibana-highlighted-field@@kibana-highlighted-field@手@/kibana-highlighted-field@@kibana-highlighted-field@自@/kibana-highlighted-field@@kibana-highlighted-field@动@/kibana-highlighted-field@@kibana-highlighted-field@回@/kibana-highlighted-field@@kibana-highlighted-field@复@/kibana-highlighted-field@@kibana-highlighted-field@规@/kibana-highlighted-field@@kibana-highlighted-field@则@/kibana-highlighted-field@@kibana-highlighted-field@引@/kibana-highlighted-field@@kibana-highlighted-field@擎@/kibana-highlighted-field@@kibana-highlighted-field@原@/kibana-highlighted-field@@kibana-highlighted-field@子@/kibana-highlighted-field@@kibana-highlighted-field@条@/kibana-highlighted-field@@kibana-highlighted-field@件@/kibana-highlighted-field@@kibana-highlighted-field@参@/kibana-highlighted-field@@kibana-highlighted-field@数@/kibana-highlighted-field@:conditionCode:emotionalRadarResult,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31110596\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"103147433845\",\"contactInfo\":\"{\\\"address\\\":\\\"江逸源境府12幢36号1502\\\",\\\"name\\\":\\\"金小婷\\\",\\\"phone\\\":\\\"159****4181\\\"}\",\"cityCode\":\"330200\",\"groupId\":\"10752751134241010\",\"aiRobotUcId\":1000000031279253,\"msgId\":\"1503824\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1503824\",\"recalledDocs\":\"0\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706190000,\"senderType\":4,\"aiRobotUserId\":\"31279253\",\"triggerSource\":10,\"contractCode\":\"TGCF2601833035\",\"atList\":\"accyS1a2pGzfGxjnmk66GcW\"},\"firstTrigger\":1,\"intention\":\"租金支付流程咨询\",\"messageContent\":\"@贝壳租房服务管家-惠洁 房租微信支付卡片发我\",\"requestId\":\"1503824\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10752751134241010--4#1782706190000\",\"sessionInitiator\":4,\"traceId\":\"511686-10.22.54.162-394-1782706799529-3567\",\"triggerSource\":1}"
+              ]
+            },
+            "sort": [
+              1782706799827
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "20GbEZ8B9P_t1W1uGrW6",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "6",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.89.170",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:groupAiRobotStatus,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31110596\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"103147433845\",\"contactInfo\":\"{\\\"address\\\":\\\"江逸源境府12幢36号1502\\\",\\\"name\\\":\\\"金小婷\\\",\\\"phone\\\":\\\"159****4181\\\"}\",\"cityCode\":\"330200\",\"groupId\":\"10752751134241010\",\"aiRobotUcId\":1000000031279253,\"msgId\":\"1503824\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1503824\",\"recalledDocs\":\"0\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706190000,\"senderType\":4,\"aiRobotUserId\":\"31279253\",\"triggerSource\":10,\"contractCode\":\"TGCF2601833035\",\"atList\":\"accyS1a2pGzfGxjnmk66GcW\"},\"firstTrigger\":1,\"intention\":\"租金支付流程咨询\",\"messageContent\":\"@贝壳租房服务管家-惠洁 房租微信支付卡片发我\",\"requestId\":\"1503824\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10752751134241010--4#1782706190000\",\"sessionInitiator\":4,\"traceId\":\"511686-10.22.54.162-394-1782706799529-3567\",\"triggerSource\":1}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-jm4x8",
+              "tid": "512292-10.226.77.35-150-1782706799698-6085",
+              "sid": "453460-10.226.89.170-782200-1782706799806-5172",
+              "timestamp": "2026-06-29T12:19:59.807+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.807Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@ai@/kibana-highlighted-field@@kibana-highlighted-field@助@/kibana-highlighted-field@@kibana-highlighted-field@手@/kibana-highlighted-field@@kibana-highlighted-field@自@/kibana-highlighted-field@@kibana-highlighted-field@动@/kibana-highlighted-field@@kibana-highlighted-field@回@/kibana-highlighted-field@@kibana-highlighted-field@复@/kibana-highlighted-field@@kibana-highlighted-field@规@/kibana-highlighted-field@@kibana-highlighted-field@则@/kibana-highlighted-field@@kibana-highlighted-field@引@/kibana-highlighted-field@@kibana-highlighted-field@擎@/kibana-highlighted-field@@kibana-highlighted-field@原@/kibana-highlighted-field@@kibana-highlighted-field@子@/kibana-highlighted-field@@kibana-highlighted-field@条@/kibana-highlighted-field@@kibana-highlighted-field@件@/kibana-highlighted-field@@kibana-highlighted-field@参@/kibana-highlighted-field@@kibana-highlighted-field@数@/kibana-highlighted-field@:conditionCode:groupAiRobotStatus,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31110596\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"103147433845\",\"contactInfo\":\"{\\\"address\\\":\\\"江逸源境府12幢36号1502\\\",\\\"name\\\":\\\"金小婷\\\",\\\"phone\\\":\\\"159****4181\\\"}\",\"cityCode\":\"330200\",\"groupId\":\"10752751134241010\",\"aiRobotUcId\":1000000031279253,\"msgId\":\"1503824\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1503824\",\"recalledDocs\":\"0\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706190000,\"senderType\":4,\"aiRobotUserId\":\"31279253\",\"triggerSource\":10,\"contractCode\":\"TGCF2601833035\",\"atList\":\"accyS1a2pGzfGxjnmk66GcW\"},\"firstTrigger\":1,\"intention\":\"租金支付流程咨询\",\"messageContent\":\"@贝壳租房服务管家-惠洁 房租微信支付卡片发我\",\"requestId\":\"1503824\",\"senderType\":4,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10752751134241010--4#1782706190000\",\"sessionInitiator\":4,\"traceId\":\"511686-10.22.54.162-394-1782706799529-3567\",\"triggerSource\":1}"
+              ]
+            },
+            "sort": [
+              1782706799807
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "Ku-bEZ8Bwva2ZhliD-k_",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "5",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.84.58",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:getOwnerMessageType,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31435368\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"108406785115\",\"contactInfo\":\"{\\\"address\\\":\\\"珠岛花园1号楼三单元801\\\",\\\"name\\\":\\\"苏慧平\\\",\\\"phone\\\":\\\"177****9131\\\"}\",\"cityCode\":\"440100\",\"groupId\":\"10759464251522744\",\"aiRobotUcId\":1000000031279305,\"msgId\":\"1574859\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1574859\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":6,\"aiRobotUserId\":\"31279305\",\"triggerSource\":10,\"contractCode\":\"TGCF2606582302\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"您好，我是AI小惠。如果您有具体问题需要咨询，可以先查看上文服务管家已提供的方案。如果问题仍未解决，您可以在群里输入【人工】，服务管家会尽快协助您。\",\"requestId\":\"1574859\",\"senderType\":6,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10759464251522744--2#1782706413000\",\"sessionInitiator\":5,\"traceId\":\"453460-10.226.89.170-1213-1782706799541-4347\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9cm8b",
+              "tid": "512292-10.226.101.32-149-1782706799724-5799",
+              "sid": "453460-10.226.84.58-1518672-1782706799803-2360",
+              "timestamp": "2026-06-29T12:19:59.804+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.804Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@ai@/kibana-highlighted-field@@kibana-highlighted-field@助@/kibana-highlighted-field@@kibana-highlighted-field@手@/kibana-highlighted-field@@kibana-highlighted-field@自@/kibana-highlighted-field@@kibana-highlighted-field@动@/kibana-highlighted-field@@kibana-highlighted-field@回@/kibana-highlighted-field@@kibana-highlighted-field@复@/kibana-highlighted-field@@kibana-highlighted-field@规@/kibana-highlighted-field@@kibana-highlighted-field@则@/kibana-highlighted-field@@kibana-highlighted-field@引@/kibana-highlighted-field@@kibana-highlighted-field@擎@/kibana-highlighted-field@@kibana-highlighted-field@原@/kibana-highlighted-field@@kibana-highlighted-field@子@/kibana-highlighted-field@@kibana-highlighted-field@条@/kibana-highlighted-field@@kibana-highlighted-field@件@/kibana-highlighted-field@@kibana-highlighted-field@参@/kibana-highlighted-field@@kibana-highlighted-field@数@/kibana-highlighted-field@:conditionCode:getOwnerMessageType,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31435368\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"108406785115\",\"contactInfo\":\"{\\\"address\\\":\\\"珠岛花园1号楼三单元801\\\",\\\"name\\\":\\\"苏慧平\\\",\\\"phone\\\":\\\"177****9131\\\"}\",\"cityCode\":\"440100\",\"groupId\":\"10759464251522744\",\"aiRobotUcId\":1000000031279305,\"msgId\":\"1574859\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1574859\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":6,\"aiRobotUserId\":\"31279305\",\"triggerSource\":10,\"contractCode\":\"TGCF2606582302\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"您好，我是AI小惠。如果您有具体问题需要咨询，可以先查看上文服务管家已提供的方案。如果问题仍未解决，您可以在群里输入【人工】，服务管家会尽快协助您。\",\"requestId\":\"1574859\",\"senderType\":6,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10759464251522744--2#1782706413000\",\"sessionInitiator\":5,\"traceId\":\"453460-10.226.89.170-1213-1782706799541-4347\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782706799804
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "WXybEZ8BdpG7oQCUDrkv",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "4",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.84.58",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "ai助手自动回复规则引擎原子条件参数:conditionCode:judgeSendRepairMiniProgram,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31435368\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"108406785115\",\"contactInfo\":\"{\\\"address\\\":\\\"珠岛花园1号楼三单元801\\\",\\\"name\\\":\\\"苏慧平\\\",\\\"phone\\\":\\\"177****9131\\\"}\",\"cityCode\":\"440100\",\"groupId\":\"10759464251522744\",\"aiRobotUcId\":1000000031279305,\"msgId\":\"1574859\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1574859\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":6,\"aiRobotUserId\":\"31279305\",\"triggerSource\":10,\"contractCode\":\"TGCF2606582302\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"您好，我是AI小惠。如果您有具体问题需要咨询，可以先查看上文服务管家已提供的方案。如果问题仍未解决，您可以在群里输入【人工】，服务管家会尽快协助您。\",\"requestId\":\"1574859\",\"senderType\":6,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10759464251522744--2#1782706413000\",\"sessionInitiator\":5,\"traceId\":\"453460-10.226.89.170-1213-1782706799541-4347\",\"triggerSource\":10}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9cm8b",
+              "tid": "512292-10.226.101.32-149-1782706799724-5799",
+              "sid": "453460-10.226.84.58-1924746-1782706799792-3434",
+              "timestamp": "2026-06-29T12:19:59.792+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T04:19:59.792Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "@kibana-highlighted-field@ai@/kibana-highlighted-field@@kibana-highlighted-field@助@/kibana-highlighted-field@@kibana-highlighted-field@手@/kibana-highlighted-field@@kibana-highlighted-field@自@/kibana-highlighted-field@@kibana-highlighted-field@动@/kibana-highlighted-field@@kibana-highlighted-field@回@/kibana-highlighted-field@@kibana-highlighted-field@复@/kibana-highlighted-field@@kibana-highlighted-field@规@/kibana-highlighted-field@@kibana-highlighted-field@则@/kibana-highlighted-field@@kibana-highlighted-field@引@/kibana-highlighted-field@@kibana-highlighted-field@擎@/kibana-highlighted-field@@kibana-highlighted-field@原@/kibana-highlighted-field@@kibana-highlighted-field@子@/kibana-highlighted-field@@kibana-highlighted-field@条@/kibana-highlighted-field@@kibana-highlighted-field@件@/kibana-highlighted-field@@kibana-highlighted-field@参@/kibana-highlighted-field@@kibana-highlighted-field@数@/kibana-highlighted-field@:conditionCode:judgeSendRepairMiniProgram,functionData:null,replyFact:{\"extParam\":{\"robotWeworkId\":\"31435368\",\"leaseHost\":\"http://app-center-huiju-private-domain-lease.ke.com\",\"houseId\":\"108406785115\",\"contactInfo\":\"{\\\"address\\\":\\\"珠岛花园1号楼三单元801\\\",\\\"name\\\":\\\"苏慧平\\\",\\\"phone\\\":\\\"177****9131\\\"}\",\"cityCode\":\"440100\",\"groupId\":\"10759464251522744\",\"aiRobotUcId\":1000000031279305,\"msgId\":\"1574859\",\"datacenterHost\":\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\",\"latestMsgId\":\"1574859\",\"ruleHost\":\"http://rule.cloudkeeper.huiju.ke.com\",\"msgTime\":1782706799000,\"senderType\":6,\"aiRobotUserId\":\"31279305\",\"triggerSource\":10,\"contractCode\":\"TGCF2606582302\",\"atList\":\"\"},\"firstTrigger\":0,\"messageContent\":\"您好，我是AI小惠。如果您有具体问题需要咨询，可以先查看上文服务管家已提供的方案。如果问题仍未解决，您可以在群里输入【人工】，服务管家会尽快协助您。\",\"requestId\":\"1574859\",\"senderType\":6,\"serviceId\":\"private-domain-lease\",\"sessionId\":\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10759464251522744--2#1782706413000\",\"sessionInitiator\":5,\"traceId\":\"453460-10.226.89.170-1213-1782706799541-4347\",\"triggerSource\":10}"
+              ]
+            },
+            "sort": [
+              1782706799792
+            ]
+          }
+        ]
+      },
+      "aggregations": {
+        "2": {
+          "buckets": [
+            {
+              "key_as_string": "2026-06-29T12:00:00.000+08:00",
+              "key": 1782705600000,
+              "doc_count": 5492
+            },
+            {
+              "key_as_string": "2026-06-29T12:00:30.000+08:00",
+              "key": 1782705630000,
+              "doc_count": 4488
+            },
+            {
+              "key_as_string": "2026-06-29T12:01:00.000+08:00",
+              "key": 1782705660000,
+              "doc_count": 4656
+            },
+            {
+              "key_as_string": "2026-06-29T12:01:30.000+08:00",
+              "key": 1782705690000,
+              "doc_count": 4748
+            },
+            {
+              "key_as_string": "2026-06-29T12:02:00.000+08:00",
+              "key": 1782705720000,
+              "doc_count": 4397
+            },
+            {
+              "key_as_string": "2026-06-29T12:02:30.000+08:00",
+              "key": 1782705750000,
+              "doc_count": 4793
+            },
+            {
+              "key_as_string": "2026-06-29T12:03:00.000+08:00",
+              "key": 1782705780000,
+              "doc_count": 4816
+            },
+            {
+              "key_as_string": "2026-06-29T12:03:30.000+08:00",
+              "key": 1782705810000,
+              "doc_count": 5602
+            },
+            {
+              "key_as_string": "2026-06-29T12:04:00.000+08:00",
+              "key": 1782705840000,
+              "doc_count": 3376
+            },
+            {
+              "key_as_string": "2026-06-29T12:04:30.000+08:00",
+              "key": 1782705870000,
+              "doc_count": 2791
+            },
+            {
+              "key_as_string": "2026-06-29T12:05:00.000+08:00",
+              "key": 1782705900000,
+              "doc_count": 12447
+            },
+            {
+              "key_as_string": "2026-06-29T12:05:30.000+08:00",
+              "key": 1782705930000,
+              "doc_count": 10450
+            },
+            {
+              "key_as_string": "2026-06-29T12:06:00.000+08:00",
+              "key": 1782705960000,
+              "doc_count": 5897
+            },
+            {
+              "key_as_string": "2026-06-29T12:06:30.000+08:00",
+              "key": 1782705990000,
+              "doc_count": 6326
+            },
+            {
+              "key_as_string": "2026-06-29T12:07:00.000+08:00",
+              "key": 1782706020000,
+              "doc_count": 7294
+            },
+            {
+              "key_as_string": "2026-06-29T12:07:30.000+08:00",
+              "key": 1782706050000,
+              "doc_count": 5369
+            },
+            {
+              "key_as_string": "2026-06-29T12:08:00.000+08:00",
+              "key": 1782706080000,
+              "doc_count": 4267
+            },
+            {
+              "key_as_string": "2026-06-29T12:08:30.000+08:00",
+              "key": 1782706110000,
+              "doc_count": 5004
+            },
+            {
+              "key_as_string": "2026-06-29T12:09:00.000+08:00",
+              "key": 1782706140000,
+              "doc_count": 2778
+            },
+            {
+              "key_as_string": "2026-06-29T12:09:30.000+08:00",
+              "key": 1782706170000,
+              "doc_count": 4775
+            },
+            {
+              "key_as_string": "2026-06-29T12:10:00.000+08:00",
+              "key": 1782706200000,
+              "doc_count": 3932
+            },
+            {
+              "key_as_string": "2026-06-29T12:10:30.000+08:00",
+              "key": 1782706230000,
+              "doc_count": 14360
+            },
+            {
+              "key_as_string": "2026-06-29T12:11:00.000+08:00",
+              "key": 1782706260000,
+              "doc_count": 6445
+            },
+            {
+              "key_as_string": "2026-06-29T12:11:30.000+08:00",
+              "key": 1782706290000,
+              "doc_count": 6690
+            },
+            {
+              "key_as_string": "2026-06-29T12:12:00.000+08:00",
+              "key": 1782706320000,
+              "doc_count": 6895
+            },
+            {
+              "key_as_string": "2026-06-29T12:12:30.000+08:00",
+              "key": 1782706350000,
+              "doc_count": 5160
+            },
+            {
+              "key_as_string": "2026-06-29T12:13:00.000+08:00",
+              "key": 1782706380000,
+              "doc_count": 6518
+            },
+            {
+              "key_as_string": "2026-06-29T12:13:30.000+08:00",
+              "key": 1782706410000,
+              "doc_count": 5027
+            },
+            {
+              "key_as_string": "2026-06-29T12:14:00.000+08:00",
+              "key": 1782706440000,
+              "doc_count": 7615
+            },
+            {
+              "key_as_string": "2026-06-29T12:14:30.000+08:00",
+              "key": 1782706470000,
+              "doc_count": 4529
+            },
+            {
+              "key_as_string": "2026-06-29T12:15:00.000+08:00",
+              "key": 1782706500000,
+              "doc_count": 7633
+            },
+            {
+              "key_as_string": "2026-06-29T12:15:30.000+08:00",
+              "key": 1782706530000,
+              "doc_count": 5504
+            },
+            {
+              "key_as_string": "2026-06-29T12:16:00.000+08:00",
+              "key": 1782706560000,
+              "doc_count": 3657
+            },
+            {
+              "key_as_string": "2026-06-29T12:16:30.000+08:00",
+              "key": 1782706590000,
+              "doc_count": 4498
+            },
+            {
+              "key_as_string": "2026-06-29T12:17:00.000+08:00",
+              "key": 1782706620000,
+              "doc_count": 6832
+            },
+            {
+              "key_as_string": "2026-06-29T12:17:30.000+08:00",
+              "key": 1782706650000,
+              "doc_count": 8494
+            },
+            {
+              "key_as_string": "2026-06-29T12:18:00.000+08:00",
+              "key": 1782706680000,
+              "doc_count": 7076
+            },
+            {
+              "key_as_string": "2026-06-29T12:18:30.000+08:00",
+              "key": 1782706710000,
+              "doc_count": 5653
+            },
+            {
+              "key_as_string": "2026-06-29T12:19:00.000+08:00",
+              "key": 1782706740000,
+              "doc_count": 6469
+            },
+            {
+              "key_as_string": "2026-06-29T12:19:30.000+08:00",
+              "key": 1782706770000,
+              "doc_count": 7064
+            }
+          ]
+        }
+      }
+    },
+    "total": 3,
+    "loaded": 3
+  }
+}

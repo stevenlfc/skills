@@ -1,0 +1,1989 @@
+{
+  "meta": {
+    "server": "fast106",
+    "index": "index-11408-13176_2026-06-29",
+    "query_time": "2026-06-29T19:00:06.283287",
+    "hash": "75c6a1b9bd8c"
+  },
+  "request": {
+    "params": {
+      "ignoreThrottled": true,
+      "preference": 1780483834299,
+      "index": "index-11408-13176_2026-06-29",
+      "body": {
+        "version": true,
+        "size": 50,
+        "sort": [
+          {
+            "timestamp": {
+              "order": "desc",
+              "unmapped_type": "boolean"
+            }
+          }
+        ],
+        "aggs": {
+          "2": {
+            "date_histogram": {
+              "field": "timestamp",
+              "fixed_interval": "30s",
+              "time_zone": "Asia/Shanghai",
+              "min_doc_count": 1
+            }
+          }
+        },
+        "stored_fields": [
+          "*"
+        ],
+        "script_fields": {},
+        "docvalue_fields": [
+          {
+            "field": "timestamp",
+            "format": "date_time"
+          }
+        ],
+        "_source": {
+          "excludes": []
+        },
+        "query": {
+          "bool": {
+            "must": [
+              {
+                "match_all": {}
+              }
+            ],
+            "filter": [
+              {
+                "bool": {
+                  "should": [
+                    {
+                      "match_phrase": {
+                        "data_info_msg": "/api/friend/getRobotInfo"
+                      }
+                    },
+                    {
+                      "match_phrase": {
+                        "data_info_msg": "/api/detail/by/contractId"
+                      }
+                    },
+                    {
+                      "match_phrase": {
+                        "data_info_msg": "/api/valet/contract/workCity"
+                      }
+                    }
+                  ],
+                  "minimum_should_match": 1
+                }
+              },
+              {
+                "range": {
+                  "timestamp": {
+                    "gte": "2026-06-29T02:55:00.000Z",
+                    "lte": "2026-06-29T03:15:00.000Z",
+                    "format": "strict_date_optional_time"
+                  }
+                }
+              }
+            ],
+            "should": [],
+            "must_not": []
+          }
+        },
+        "highlight": {
+          "pre_tags": [
+            "@kibana-highlighted-field@"
+          ],
+          "post_tags": [
+            "@/kibana-highlighted-field@"
+          ],
+          "fields": {
+            "*": {}
+          },
+          "fragment_size": 2147483647
+        }
+      },
+      "rest_total_hits_as_int": true,
+      "ignore_unavailable": true,
+      "ignore_throttled": true,
+      "timeout": "30000ms"
+    },
+    "serverStrategy": "es"
+  },
+  "response": {
+    "is_partial": false,
+    "is_running": false,
+    "rawResponse": {
+      "took": 331,
+      "timed_out": false,
+      "_shards": {
+        "total": 3,
+        "successful": 3,
+        "skipped": 0,
+        "failed": 0
+      },
+      "hits": {
+        "total": 4365,
+        "max_score": null,
+        "hits": [
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "hNBfEZ8BdpG7oQCUjcg3",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "11",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.84.58",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.46\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702899,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.226.84.58\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9cm8b",
+              "tid": "trusteeship.link.lianjia.com-10.226.82.245-21-1782702899886-P1lXRIsFgD",
+              "sid": "453460-10.226.84.58-1518724-1782702899960-9702",
+              "timestamp": "2026-06-29T11:14:59.963+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:59.963Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.46\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702899,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.226.84.58\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702899963
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "mSJfEZ8Bwva2ZhlikJhR",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "11",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.119.112",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"ML9S3EI3POH1KWO8S937\",\"fromIp\":\"10.19.2.49\",\"fromService\":\"api-easy-rent-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702899,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.119.112\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-l9wgm",
+              "tid": "trusteeship.link.lianjia.com-10.22.108.199-21-1782702899746-YGKQXvUpCD",
+              "sid": "453460-10.22.119.112-1620963-1782702899830-4142",
+              "timestamp": "2026-06-29T11:14:59.835+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:59.835Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"ML9S3EI3POH1KWO8S937\",\"fromIp\":\"10.19.2.49\",\"fromService\":\"api-easy-rent-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702899,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.119.112\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702899835
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "RSNfEZ8Bwva2ZhlimCgQ",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "21",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.89.170",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.2.24\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702899,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.226.89.170\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-jm4x8",
+              "tid": "trusteeship.link.lianjia.com-10.22.108.199-21-1782702899352-CUeoOxiGJt",
+              "sid": "453460-10.226.89.170-782203-1782702899586-2362",
+              "timestamp": "2026-06-29T11:14:59.589+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:59.589Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.2.24\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702899,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.226.89.170\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702899589
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "GNBfEZ8BdpG7oQCUjc5i",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "0",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.239",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"WEXEI5X0CCR77MT1CMPT\",\"fromIp\":\"10.19.2.38\",\"fromService\":\"beijia-rent-app\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702899,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/detail/by/contractId\",\"toIp\":\"10.22.115.239\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7vbf6",
+              "tid": "452917-10.22.56.113-1427399-1782702899585-15",
+              "sid": "453460-10.22.115.239-1685592-1782702899588-814",
+              "timestamp": "2026-06-29T11:14:59.589+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:59.589Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"WEXEI5X0CCR77MT1CMPT\",\"fromIp\":\"10.19.2.38\",\"fromService\":\"beijia-rent-app\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702899,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@detail@/kibana-highlighted-field@/@kibana-highlighted-field@by@/kibana-highlighted-field@/@kibana-highlighted-field@contractId@/kibana-highlighted-field@\",\"toIp\":\"10.22.115.239\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702899589
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "L_ZfEZ8B9P_t1W1ujN16",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "6",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.82.200",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"ML9S3EI3POH1KWO8S937\",\"fromIp\":\"10.19.2.38\",\"fromService\":\"api-easy-rent-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702898,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.226.82.200\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-f6htb",
+              "tid": "trusteeship.link.lianjia.com-10.22.108.199-21-1782702898697-ISnKcM9jYq",
+              "sid": "453460-10.226.82.200-1284-1782702898821-3368",
+              "timestamp": "2026-06-29T11:14:58.823+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:58.823Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"ML9S3EI3POH1KWO8S937\",\"fromIp\":\"10.19.2.38\",\"fromService\":\"api-easy-rent-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702898,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.226.82.200\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702898823
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "PCJfEZ8Bwva2ZhlikJEE",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "14",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.44\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702898,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.115.80\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-rpdnz",
+              "tid": "1403-10.203.53.19-680-1782702898239-7777",
+              "sid": "453460-10.22.115.80-1982863-1782702898287-2948",
+              "timestamp": "2026-06-29T11:14:58.292+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:58.292Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.44\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702898,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.115.80\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702898292
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "-PZfEZ8B9P_t1W1uhQtc",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "14",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.110.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.32\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702898,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.110.80\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7ss4r",
+              "tid": "1403-1473-697-1782702898094-5123",
+              "sid": "453460-10.22.110.80-2141597-1782702898154-774",
+              "timestamp": "2026-06-29T11:14:58.157+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:58.157Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.32\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702898,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.110.80\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702898157
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "siJfEZ8Bwva2ZhlihwRh",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "50",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.84.58",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.11\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702898,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.226.84.58\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9cm8b",
+              "tid": "trusteeship.link.lianjia.com-10.226.82.245-21-1782702897397-u8bwhyOV5E",
+              "sid": "453460-10.226.84.58-1518700-1782702898054-9968",
+              "timestamp": "2026-06-29T11:14:58.058+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:58.058Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.11\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702898,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.226.84.58\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702898058
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "2CJfEZ8Bwva2Zhlij4_t",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "0",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.119.112",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"WEXEI5X0CCR77MT1CMPT\",\"fromIp\":\"10.19.5.32\",\"fromService\":\"beijia-rent-app\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702897,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/detail/by/contractId\",\"toIp\":\"10.22.119.112\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-l9wgm",
+              "tid": "452917-10.226.69.72-1448125-1782702897887-6473",
+              "sid": "453460-10.22.119.112-1620852-1782702897891-4270",
+              "timestamp": "2026-06-29T11:14:57.894+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:57.894Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"WEXEI5X0CCR77MT1CMPT\",\"fromIp\":\"10.19.5.32\",\"fromService\":\"beijia-rent-app\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702897,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@detail@/kibana-highlighted-field@/@kibana-highlighted-field@by@/kibana-highlighted-field@/@kibana-highlighted-field@contractId@/kibana-highlighted-field@\",\"toIp\":\"10.22.119.112\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702897894
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "e9BfEZ8BdpG7oQCUhluX",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "22",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.89.170",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.45\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702897,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.226.89.170\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-jm4x8",
+              "tid": "trusteeship.link.lianjia.com-10.22.108.199-21-1782702897368-6ELMR6KXib",
+              "sid": "453460-10.226.89.170-410611-1782702897614-2966",
+              "timestamp": "2026-06-29T11:14:57.618+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:57.618Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.45\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702897,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.226.89.170\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702897618
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "-fZfEZ8B9P_t1W1ujN57",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "5",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.239",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"ML9S3EI3POH1KWO8S937\",\"fromIp\":\"10.19.2.35\",\"fromService\":\"api-easy-rent-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702897,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.115.239\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7vbf6",
+              "tid": "trusteeship.link.lianjia.com-10.22.98.180-20-1782702897412-K7FTjkgBTi",
+              "sid": "453460-10.22.115.239-1685786-1782702897484-812",
+              "timestamp": "2026-06-29T11:14:57.488+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:57.488Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"ML9S3EI3POH1KWO8S937\",\"fromIp\":\"10.19.2.35\",\"fromService\":\"api-easy-rent-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702897,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.115.239\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702897488
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "z_ZfEZ8B9P_t1W1uhQlc",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "0",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.82.200",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"WEXEI5X0CCR77MT1CMPT\",\"fromIp\":\"10.19.2.144\",\"fromService\":\"beijia-rent-app\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702896,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/detail/by/contractId\",\"toIp\":\"10.226.82.200\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-f6htb",
+              "tid": "452917-10.226.70.62-1465060-1782702896703-6593",
+              "sid": "453460-10.226.82.200-1921-1782702896704-3870",
+              "timestamp": "2026-06-29T11:14:56.706+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:56.706Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"WEXEI5X0CCR77MT1CMPT\",\"fromIp\":\"10.19.2.144\",\"fromService\":\"beijia-rent-app\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702896,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@detail@/kibana-highlighted-field@/@kibana-highlighted-field@by@/kibana-highlighted-field@/@kibana-highlighted-field@contractId@/kibana-highlighted-field@\",\"toIp\":\"10.226.82.200\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702896706
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "hM9fEZ8BdpG7oQCUgHYK",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "10",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.32\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702896,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.115.80\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-rpdnz",
+              "tid": "trusteeship.link.lianjia.com-10.22.108.199-21-1782702896328-8CXY48OyV0",
+              "sid": "453460-10.22.115.80-701566-1782702896396-6670",
+              "timestamp": "2026-06-29T11:14:56.402+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:56.402Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.32\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702896,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.115.80\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702896402
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "EyFfEZ8Bwva2Zhligp0j",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "15",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.113.74",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"ML9S3EI3POH1KWO8S937\",\"fromIp\":\"10.19.2.145\",\"fromService\":\"api-easy-rent-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702896,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.113.74\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9nh6s",
+              "tid": "trusteeship.link.lianjia.com-10.22.69.183-20-1782702896214-jbcmrmX6Qy",
+              "sid": "453460-10.22.113.74-17510-1782702896297-850",
+              "timestamp": "2026-06-29T11:14:56.302+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:56.302Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"ML9S3EI3POH1KWO8S937\",\"fromIp\":\"10.19.2.145\",\"fromService\":\"api-easy-rent-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702896,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.113.74\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702896302
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "a9BfEZ8BdpG7oQCUhSib",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "81",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.110.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.45\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702896,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.110.80\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7ss4r",
+              "tid": "api-lease.ke.com-8fe4d9a55932778e-22904-1782702895069-151",
+              "sid": "453460-10.22.110.80-2141768-1782702896195-754",
+              "timestamp": "2026-06-29T11:14:56.198+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:56.198Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.45\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702896,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.110.80\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702896198
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "ec9fEZ8BdpG7oQCUgIts",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "17",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.119.112",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.45\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702895,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.119.112\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-l9wgm",
+              "tid": "trusteeship.link.lianjia.com-10.226.82.245-21-1782702895703-Wb7Kdv983j",
+              "sid": "453460-10.22.119.112-1620897-1782702895863-4256",
+              "timestamp": "2026-06-29T11:14:55.867+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:55.867Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.45\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702895,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.119.112\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702895867
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "4CFfEZ8Bwva2ZhlihuRi",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "0",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.89.170",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"WEXEI5X0CCR77MT1CMPT\",\"fromIp\":\"10.19.5.45\",\"fromService\":\"beijia-rent-app\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702895,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/friend/getRobotInfo\",\"toIp\":\"10.226.89.170\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-jm4x8",
+              "tid": "452917-10.22.46.70-1404671-1782702895763-525",
+              "sid": "453460-10.226.89.170-782265-1782702895764-2366",
+              "timestamp": "2026-06-29T11:14:55.766+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:55.766Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"WEXEI5X0CCR77MT1CMPT\",\"fromIp\":\"10.19.5.45\",\"fromService\":\"beijia-rent-app\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702895,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@friend@/kibana-highlighted-field@/@kibana-highlighted-field@getRobotInfo@/kibana-highlighted-field@\",\"toIp\":\"10.226.89.170\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702895766
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "Z_NfEZ8B9P_t1W1ue5ER",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "11",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.239",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"ML9S3EI3POH1KWO8S937\",\"fromIp\":\"10.19.2.145\",\"fromService\":\"api-easy-rent-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702895,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.115.239\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7vbf6",
+              "tid": "trusteeship.link.lianjia.com-10.226.82.245-21-1782702895522-ry9aROgg6N",
+              "sid": "453460-10.22.115.239-1685667-1782702895600-832",
+              "timestamp": "2026-06-29T11:14:55.605+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:55.605Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"ML9S3EI3POH1KWO8S937\",\"fromIp\":\"10.19.2.145\",\"fromService\":\"api-easy-rent-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702895,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.115.239\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702895605
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "OvZfEZ8B9P_t1W1uhQlc",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "18",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.82.200",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.2.43\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702894,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.226.82.200\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-f6htb",
+              "tid": "trusteeship.link.lianjia.com-10.22.98.180-20-1782702894528-DBtiiKmrgy",
+              "sid": "453460-10.226.82.200-1281-1782702894683-3130",
+              "timestamp": "2026-06-29T11:14:54.687+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:54.687Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.2.43\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702894,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.226.82.200\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702894687
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "2vNfEZ8B9P_t1W1ue5ER",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "12",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"ML9S3EI3POH1KWO8S937\",\"fromIp\":\"10.19.2.28\",\"fromService\":\"api-easy-rent-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702894,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.115.80\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-rpdnz",
+              "tid": "trusteeship.link.lianjia.com-10.22.108.199-21-1782702894317-vvSm9ADE0g",
+              "sid": "453460-10.22.115.80-1982891-1782702894387-2922",
+              "timestamp": "2026-06-29T11:14:54.393+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:54.393Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"ML9S3EI3POH1KWO8S937\",\"fromIp\":\"10.19.2.28\",\"fromService\":\"api-easy-rent-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702894,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.115.80\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702894393
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "dvFfEZ8B9P_t1W1ucnc8",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "6",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.110.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"ML9S3EI3POH1KWO8S937\",\"fromIp\":\"10.19.2.34\",\"fromService\":\"api-easy-rent-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702894,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.110.80\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7ss4r",
+              "tid": "trusteeship.link.lianjia.com-10.226.82.245-21-1782702894216-BAcU3kW5Dw",
+              "sid": "453460-10.22.110.80-2141713-1782702894253-758",
+              "timestamp": "2026-06-29T11:14:54.258+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:54.258Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"ML9S3EI3POH1KWO8S937\",\"fromIp\":\"10.19.2.34\",\"fromService\":\"api-easy-rent-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702894,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.110.80\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702894258
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "Hc9fEZ8BdpG7oQCUgIxs",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "68",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.113.74",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.45\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702894,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.113.74\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9nh6s",
+              "tid": "api-lease.ke.com-2b947b3994d395e6-18359-1782702893018-77",
+              "sid": "453460-10.22.113.74-2089876-1782702894218-1044",
+              "timestamp": "2026-06-29T11:14:54.222+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:54.222Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.45\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702894,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.113.74\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702894222
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "ayBfEZ8Bwva2Zhlid-ub",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "29",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.84.58",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.46\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702894,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.226.84.58\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9cm8b",
+              "tid": "1403-1472-6467-1782702893807-7235",
+              "sid": "453460-10.226.84.58-1924656-1782702894130-630",
+              "timestamp": "2026-06-29T11:14:54.134+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:54.134Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.46\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702894,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.226.84.58\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702894134
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "-c9fEZ8BdpG7oQCUgIlr",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "11",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.119.112",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.49\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702893,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.119.112\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-l9wgm",
+              "tid": "1403-1472-6467-1782702893807-7235",
+              "sid": "453460-10.22.119.112-1620955-1782702893836-4124",
+              "timestamp": "2026-06-29T11:14:53.841+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:53.841Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.49\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702893,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.119.112\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702893841
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "LM5fEZ8BdpG7oQCUdl-F",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "0",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.89.170",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"WEXEI5X0CCR77MT1CMPT\",\"fromIp\":\"10.19.2.35\",\"fromService\":\"beijia-rent-app\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702893,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/friend/getRobotInfo\",\"toIp\":\"10.226.89.170\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-jm4x8",
+              "tid": "452917-10.22.60.111-1430676-1782702893593-6509",
+              "sid": "453460-10.226.89.170-410619-1782702893595-2844",
+              "timestamp": "2026-06-29T11:14:53.597+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:53.597Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"WEXEI5X0CCR77MT1CMPT\",\"fromIp\":\"10.19.2.35\",\"fromService\":\"beijia-rent-app\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702893,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@friend@/kibana-highlighted-field@/@kibana-highlighted-field@getRobotInfo@/kibana-highlighted-field@\",\"toIp\":\"10.226.89.170\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702893597
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "ds5fEZ8BdpG7oQCUet9j",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "13",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.239",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.2.28\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702893,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.115.239\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7vbf6",
+              "tid": "trusteeship.link.lianjia.com-10.226.82.245-21-1782702893454-mgiqQdmunp",
+              "sid": "453460-10.22.115.239-284187-1782702893516-8980",
+              "timestamp": "2026-06-29T11:14:53.518+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:53.518Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.2.28\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702893,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.115.239\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702893518
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "MM5fEZ8BdpG7oQCUdmKF",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "15",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.82.200",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"ML9S3EI3POH1KWO8S937\",\"fromIp\":\"10.19.5.9\",\"fromService\":\"api-easy-rent-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702892,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.226.82.200\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-f6htb",
+              "tid": "trusteeship.link.lianjia.com-10.226.82.245-21-1782702892695-KykFQC5SwX",
+              "sid": "453460-10.226.82.200-1006326-1782702892780-6348",
+              "timestamp": "2026-06-29T11:14:52.785+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:52.785Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"ML9S3EI3POH1KWO8S937\",\"fromIp\":\"10.19.5.9\",\"fromService\":\"api-easy-rent-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702892,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.226.82.200\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702892785
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "Ox9fEZ8Bwva2ZhliaOvH",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "20",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.2.17\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702892,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.115.80\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-rpdnz",
+              "tid": "trusteeship.link.lianjia.com-10.22.98.180-20-1782702892217-XfjHX5ceFs",
+              "sid": "453460-10.22.115.80-1982903-1782702892455-2972",
+              "timestamp": "2026-06-29T11:14:52.461+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:52.461Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.2.17\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702892,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.115.80\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702892461
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "oyBfEZ8Bwva2ZhlicYI_",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "17",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.110.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"ML9S3EI3POH1KWO8S937\",\"fromIp\":\"10.19.2.22\",\"fromService\":\"api-easy-rent-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702892,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.110.80\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7ss4r",
+              "tid": "trusteeship.link.lianjia.com-10.22.69.183-20-1782702892126-heVBHHLmkW",
+              "sid": "453460-10.22.110.80-2141603-1782702892228-770",
+              "timestamp": "2026-06-29T11:14:52.233+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:52.233Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"ML9S3EI3POH1KWO8S937\",\"fromIp\":\"10.19.2.22\",\"fromService\":\"api-easy-rent-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702892,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.110.80\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702892233
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "H81fEZ8BdpG7oQCUbnsb",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "11",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.113.74",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.2.5\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702892,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.113.74\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9nh6s",
+              "tid": "trusteeship.link.lianjia.com-10.226.82.245-21-1782702892132-8RmG0oMbyq",
+              "sid": "453460-10.22.113.74-2089785-1782702892198-1070",
+              "timestamp": "2026-06-29T11:14:52.203+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:52.203Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.2.5\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702892,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.113.74\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702892203
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "Lu9fEZ8B9P_t1W1uaE3o",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "0",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.119.112",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"WEXEI5X0CCR77MT1CMPT\",\"fromIp\":\"10.19.5.45\",\"fromService\":\"beijia-rent-app\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702891,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/friend/getRobotInfo\",\"toIp\":\"10.22.119.112\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-l9wgm",
+              "tid": "452917-10.226.77.236-1917-1782702891967-541",
+              "sid": "453460-10.22.119.112-1620965-1782702891970-4138",
+              "timestamp": "2026-06-29T11:14:51.975+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:51.975Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"WEXEI5X0CCR77MT1CMPT\",\"fromIp\":\"10.19.5.45\",\"fromService\":\"beijia-rent-app\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702891,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@friend@/kibana-highlighted-field@/@kibana-highlighted-field@getRobotInfo@/kibana-highlighted-field@\",\"toIp\":\"10.22.119.112\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702891975
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "j85fEZ8BdpG7oQCUdmiT",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "0",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.84.58",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"WEXEI5X0CCR77MT1CMPT\",\"fromIp\":\"10.19.2.35\",\"fromService\":\"beijia-rent-app\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702891,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/detail/by/contractId\",\"toIp\":\"10.226.84.58\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9cm8b",
+              "tid": "452917-10.226.93.15-1460404-1782702891885-493",
+              "sid": "453460-10.226.84.58-1924655-1782702891886-628",
+              "timestamp": "2026-06-29T11:14:51.889+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:51.889Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"WEXEI5X0CCR77MT1CMPT\",\"fromIp\":\"10.19.2.35\",\"fromService\":\"beijia-rent-app\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702891,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@detail@/kibana-highlighted-field@/@kibana-highlighted-field@by@/kibana-highlighted-field@/@kibana-highlighted-field@contractId@/kibana-highlighted-field@\",\"toIp\":\"10.226.84.58\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702891889
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "ofFfEZ8B9P_t1W1ucng8",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "12",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.89.170",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.2.38\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702891,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.226.89.170\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-jm4x8",
+              "tid": "trusteeship.link.lianjia.com-10.22.108.199-21-1782702891642-PT06XFJ5Mk",
+              "sid": "453460-10.226.89.170-782262-1782702891725-2336",
+              "timestamp": "2026-06-29T11:14:51.728+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:51.728Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.2.38\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702891,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.226.89.170\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702891728
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "xMxfEZ8BdpG7oQCUZpTy",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "9",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.239",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.45\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702891,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.115.239\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7vbf6",
+              "tid": "trusteeship.link.lianjia.com-10.22.98.180-20-1782702891609-uoi3ywftTr",
+              "sid": "453460-10.22.115.239-1685564-1782702891683-828",
+              "timestamp": "2026-06-29T11:14:51.687+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:51.687Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.45\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702891,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.115.239\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702891687
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "JvBfEZ8B9P_t1W1ub8yk",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "13",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.82.200",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.12\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702890,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.226.82.200\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-f6htb",
+              "tid": "1403-10.203.53.30-683-1782702890621-8681",
+              "sid": "453460-10.226.82.200-833136-1782702890666-2730",
+              "timestamp": "2026-06-29T11:14:50.670+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:50.670Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.12\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702890,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.226.82.200\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702890670
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "8s1fEZ8BdpG7oQCUbnUZ",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "17",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.113.74",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.11\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702890,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.113.74\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9nh6s",
+              "tid": "api-lease.ke.com-9d68bd8259888007-7730-1782702889751-432",
+              "sid": "453460-10.22.113.74-2089873-1782702890322-1052",
+              "timestamp": "2026-06-29T11:14:50.327+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:50.327Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.11\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702890,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.113.74\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702890327
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "3s1fEZ8BdpG7oQCUcu7Q",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "20",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.110.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.2.23\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702890,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.110.80\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7ss4r",
+              "tid": "trusteeship.link.lianjia.com-10.226.82.245-21-1782702890149-1eQS0mxBSM",
+              "sid": "453460-10.22.110.80-1343-1782702890303-5058",
+              "timestamp": "2026-06-29T11:14:50.305+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:50.305Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.2.23\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702890,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.110.80\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702890305
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "pMxfEZ8BdpG7oQCUZ5gD",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "0",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.84.58",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"WEXEI5X0CCR77MT1CMPT\",\"fromIp\":\"10.19.2.34\",\"fromService\":\"beijia-rent-app\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702889,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/friend/getRobotInfo\",\"toIp\":\"10.226.84.58\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9cm8b",
+              "tid": "452917-10.226.88.96-2413-1782702889970-1083",
+              "sid": "453460-10.226.84.58-1924785-1782702889971-628",
+              "timestamp": "2026-06-29T11:14:49.976+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:49.976Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"WEXEI5X0CCR77MT1CMPT\",\"fromIp\":\"10.19.2.34\",\"fromService\":\"beijia-rent-app\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702889,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@friend@/kibana-highlighted-field@/@kibana-highlighted-field@getRobotInfo@/kibana-highlighted-field@\",\"toIp\":\"10.226.84.58\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702889976
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "ac1fEZ8BdpG7oQCUaQaY",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "13",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.119.112",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"ML9S3EI3POH1KWO8S937\",\"fromIp\":\"10.19.5.26\",\"fromService\":\"api-easy-rent-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702889,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.119.112\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-l9wgm",
+              "tid": "trusteeship.link.lianjia.com-10.22.69.183-20-1782702889778-58VxQYsmeD",
+              "sid": "453460-10.22.119.112-1620924-1782702889869-4174",
+              "timestamp": "2026-06-29T11:14:49.874+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:49.874Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"ML9S3EI3POH1KWO8S937\",\"fromIp\":\"10.19.5.26\",\"fromService\":\"api-easy-rent-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702889,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.119.112\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702889874
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "3PFfEZ8B9P_t1W1ucntK",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "12",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.89.170",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.9\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702889,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.226.89.170\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-jm4x8",
+              "tid": "trusteeship.link.lianjia.com-10.22.98.180-20-1782702889553-8Cpfn1PyPI",
+              "sid": "453460-10.226.89.170-782230-1782702889640-2338",
+              "timestamp": "2026-06-29T11:14:49.644+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:49.644Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.9\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702889,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.226.89.170\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702889644
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "4cxfEZ8BdpG7oQCUZ5gD",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "0",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.239",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"WEXEI5X0CCR77MT1CMPT\",\"fromIp\":\"10.19.2.32\",\"fromService\":\"beijia-rent-app\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702889,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/detail/by/contractId\",\"toIp\":\"10.22.115.239\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7vbf6",
+              "tid": "452917-10.22.61.47-1419985-1782702889511-555",
+              "sid": "453460-10.22.115.239-1685615-1782702889517-844",
+              "timestamp": "2026-06-29T11:14:49.522+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:49.522Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"WEXEI5X0CCR77MT1CMPT\",\"fromIp\":\"10.19.2.32\",\"fromService\":\"beijia-rent-app\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702889,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@detail@/kibana-highlighted-field@/@kibana-highlighted-field@by@/kibana-highlighted-field@/@kibana-highlighted-field@contractId@/kibana-highlighted-field@\",\"toIp\":\"10.22.115.239\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702889522
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "AB9fEZ8Bwva2ZhliY46d",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "13",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.82.200",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.2.22\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702888,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.226.82.200\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-f6htb",
+              "tid": "1403-10.203.53.30-680-1782702888653-8991",
+              "sid": "453460-10.226.82.200-1006324-1782702888707-6130",
+              "timestamp": "2026-06-29T11:14:48.711+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:48.711Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.2.22\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702888,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.226.82.200\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702888711
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "sc1fEZ8BdpG7oQCUaQWY",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "15",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.119.112",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.11\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702888,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.119.112\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-l9wgm",
+              "tid": "api-lease.ke.com-8512d35fcfb38edc-8307-1782702889229-233",
+              "sid": "453460-10.22.119.112-1620852-1782702888632-4250",
+              "timestamp": "2026-06-29T11:14:48.637+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:48.637Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.11\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702888,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.119.112\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702888637
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "bcxfEZ8BdpG7oQCUYQ7g",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "21",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.113.74",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.17\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702888,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.113.74\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9nh6s",
+              "tid": "trusteeship.link.lianjia.com-10.22.108.199-21-1782702888429-XvRpT151Pg",
+              "sid": "453460-10.22.113.74-2089705-1782702888565-1044",
+              "timestamp": "2026-06-29T11:14:48.568+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:48.568Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.17\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702888,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.113.74\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702888568
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "icxfEZ8BdpG7oQCUZ8iY",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "14",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.27\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702888,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.115.80\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-rpdnz",
+              "tid": "1403-1472-89020-1782702888516-1663",
+              "sid": "453460-10.22.115.80-1982884-1782702888552-2974",
+              "timestamp": "2026-06-29T11:14:48.558+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:48.558Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.27\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702888,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.115.80\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702888558
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "5B9fEZ8Bwva2ZhliYm3W",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "0",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.110.80",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"WEXEI5X0CCR77MT1CMPT\",\"fromIp\":\"10.19.5.19\",\"fromService\":\"beijia-rent-app\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702888,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/detail/by/contractId\",\"toIp\":\"10.22.110.80\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7ss4r",
+              "tid": "452917-10.22.58.193-2002-1782702888312-1241",
+              "sid": "453460-10.22.110.80-1345-1782702888314-6716",
+              "timestamp": "2026-06-29T11:14:48.319+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:48.319Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"WEXEI5X0CCR77MT1CMPT\",\"fromIp\":\"10.19.5.19\",\"fromService\":\"beijia-rent-app\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702888,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@detail@/kibana-highlighted-field@/@kibana-highlighted-field@by@/kibana-highlighted-field@/@kibana-highlighted-field@contractId@/kibana-highlighted-field@\",\"toIp\":\"10.22.110.80\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702888319
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "C-5fEZ8B9P_t1W1uYxPY",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "12",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.84.58",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.19\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702888,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.226.84.58\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-9cm8b",
+              "tid": "trusteeship.link.lianjia.com-10.226.82.245-21-1782702887969-G8H7Rstmn1",
+              "sid": "453460-10.226.84.58-1518729-1782702888038-9650",
+              "timestamp": "2026-06-29T11:14:48.039+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:48.039Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.5.19\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702888,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.226.84.58\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702888039
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "o8xfEZ8BdpG7oQCUZpLx",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "17",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.89.170",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"ML9S3EI3POH1KWO8S937\",\"fromIp\":\"10.19.5.46\",\"fromService\":\"api-easy-rent-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702887,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.226.89.170\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-jm4x8",
+              "tid": "trusteeship.link.lianjia.com-10.22.108.199-21-1782702887582-3Pr2jvh6ZS",
+              "sid": "453460-10.226.89.170-782195-1782702887677-2346",
+              "timestamp": "2026-06-29T11:14:47.681+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:47.681Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"ML9S3EI3POH1KWO8S937\",\"fromIp\":\"10.19.5.46\",\"fromService\":\"api-easy-rent-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702887,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.226.89.170\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702887681
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "cx9fEZ8Bwva2ZhliZ88O",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "13",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.22.115.239",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.2.35\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702887,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.22.115.239\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-7vbf6",
+              "tid": "trusteeship.link.lianjia.com-10.22.98.180-20-1782702887427-hKTfmCFHWL",
+              "sid": "453460-10.22.115.239-1685542-1782702887523-816",
+              "timestamp": "2026-06-29T11:14:47.528+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:47.528Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.2.35\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702887,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.22.115.239\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702887528
+            ]
+          },
+          {
+            "_index": "index-11408-13176_2026-06-29",
+            "_type": "_doc",
+            "_id": "A-1fEZ8B9P_t1W1uYtv8",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data_segmentid": "N/A",
+              "spanId": "11",
+              "data_ext_headers": "{}",
+              "data_local_ip": "10.226.82.200",
+              "loglevel": "INFO",
+              "data_bltag": "undefined",
+              "data_info_msg": "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.2.118\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702886,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/api/valet/contract/workCity\",\"toIp\":\"10.226.82.200\",\"toService\":\"huiju-private-domain-lease\"}",
+              "machineName": "envType_prod__huiju-private-domain-lease-3361289013-555d9c65c6-f6htb",
+              "tid": "trusteeship.link.lianjia.com-10.22.98.180-20-1782702886609-Z5TjW2WEUB",
+              "sid": "453460-10.226.82.200-1284-1782702886687-3326",
+              "timestamp": "2026-06-29T11:14:46.692+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-29T03:14:46.692Z"
+              ]
+            },
+            "highlight": {
+              "data_info_msg": [
+                "{\"fromAk\":\"HFUD9Q2RVH4GKD1P451H\",\"fromIp\":\"10.19.2.118\",\"fromService\":\"api-trusteeship-contract\",\"interfaceType\":\"http\",\"status\":\"OK\",\"timestamp\":1782702886,\"toAppDomain\":\"http://app-center-huiju-private-domain-lease.ke.com/@kibana-highlighted-field@api@/kibana-highlighted-field@/@kibana-highlighted-field@valet@/kibana-highlighted-field@/@kibana-highlighted-field@contract@/kibana-highlighted-field@/@kibana-highlighted-field@workCity@/kibana-highlighted-field@\",\"toIp\":\"10.226.82.200\",\"toService\":\"huiju-private-domain-lease\"}"
+              ]
+            },
+            "sort": [
+              1782702886692
+            ]
+          }
+        ]
+      },
+      "aggregations": {
+        "2": {
+          "buckets": [
+            {
+              "key_as_string": "2026-06-29T10:55:00.000+08:00",
+              "key": 1782701700000,
+              "doc_count": 114
+            },
+            {
+              "key_as_string": "2026-06-29T10:55:30.000+08:00",
+              "key": 1782701730000,
+              "doc_count": 112
+            },
+            {
+              "key_as_string": "2026-06-29T10:56:00.000+08:00",
+              "key": 1782701760000,
+              "doc_count": 106
+            },
+            {
+              "key_as_string": "2026-06-29T10:56:30.000+08:00",
+              "key": 1782701790000,
+              "doc_count": 108
+            },
+            {
+              "key_as_string": "2026-06-29T10:57:00.000+08:00",
+              "key": 1782701820000,
+              "doc_count": 103
+            },
+            {
+              "key_as_string": "2026-06-29T10:57:30.000+08:00",
+              "key": 1782701850000,
+              "doc_count": 100
+            },
+            {
+              "key_as_string": "2026-06-29T10:58:00.000+08:00",
+              "key": 1782701880000,
+              "doc_count": 102
+            },
+            {
+              "key_as_string": "2026-06-29T10:58:30.000+08:00",
+              "key": 1782701910000,
+              "doc_count": 109
+            },
+            {
+              "key_as_string": "2026-06-29T10:59:00.000+08:00",
+              "key": 1782701940000,
+              "doc_count": 105
+            },
+            {
+              "key_as_string": "2026-06-29T10:59:30.000+08:00",
+              "key": 1782701970000,
+              "doc_count": 107
+            },
+            {
+              "key_as_string": "2026-06-29T11:00:00.000+08:00",
+              "key": 1782702000000,
+              "doc_count": 105
+            },
+            {
+              "key_as_string": "2026-06-29T11:00:30.000+08:00",
+              "key": 1782702030000,
+              "doc_count": 106
+            },
+            {
+              "key_as_string": "2026-06-29T11:01:00.000+08:00",
+              "key": 1782702060000,
+              "doc_count": 96
+            },
+            {
+              "key_as_string": "2026-06-29T11:01:30.000+08:00",
+              "key": 1782702090000,
+              "doc_count": 98
+            },
+            {
+              "key_as_string": "2026-06-29T11:02:00.000+08:00",
+              "key": 1782702120000,
+              "doc_count": 97
+            },
+            {
+              "key_as_string": "2026-06-29T11:02:30.000+08:00",
+              "key": 1782702150000,
+              "doc_count": 101
+            },
+            {
+              "key_as_string": "2026-06-29T11:03:00.000+08:00",
+              "key": 1782702180000,
+              "doc_count": 108
+            },
+            {
+              "key_as_string": "2026-06-29T11:03:30.000+08:00",
+              "key": 1782702210000,
+              "doc_count": 110
+            },
+            {
+              "key_as_string": "2026-06-29T11:04:00.000+08:00",
+              "key": 1782702240000,
+              "doc_count": 114
+            },
+            {
+              "key_as_string": "2026-06-29T11:04:30.000+08:00",
+              "key": 1782702270000,
+              "doc_count": 112
+            },
+            {
+              "key_as_string": "2026-06-29T11:05:00.000+08:00",
+              "key": 1782702300000,
+              "doc_count": 113
+            },
+            {
+              "key_as_string": "2026-06-29T11:05:30.000+08:00",
+              "key": 1782702330000,
+              "doc_count": 106
+            },
+            {
+              "key_as_string": "2026-06-29T11:06:00.000+08:00",
+              "key": 1782702360000,
+              "doc_count": 105
+            },
+            {
+              "key_as_string": "2026-06-29T11:06:30.000+08:00",
+              "key": 1782702390000,
+              "doc_count": 112
+            },
+            {
+              "key_as_string": "2026-06-29T11:07:00.000+08:00",
+              "key": 1782702420000,
+              "doc_count": 115
+            },
+            {
+              "key_as_string": "2026-06-29T11:07:30.000+08:00",
+              "key": 1782702450000,
+              "doc_count": 111
+            },
+            {
+              "key_as_string": "2026-06-29T11:08:00.000+08:00",
+              "key": 1782702480000,
+              "doc_count": 111
+            },
+            {
+              "key_as_string": "2026-06-29T11:08:30.000+08:00",
+              "key": 1782702510000,
+              "doc_count": 116
+            },
+            {
+              "key_as_string": "2026-06-29T11:09:00.000+08:00",
+              "key": 1782702540000,
+              "doc_count": 116
+            },
+            {
+              "key_as_string": "2026-06-29T11:09:30.000+08:00",
+              "key": 1782702570000,
+              "doc_count": 114
+            },
+            {
+              "key_as_string": "2026-06-29T11:10:00.000+08:00",
+              "key": 1782702600000,
+              "doc_count": 120
+            },
+            {
+              "key_as_string": "2026-06-29T11:10:30.000+08:00",
+              "key": 1782702630000,
+              "doc_count": 110
+            },
+            {
+              "key_as_string": "2026-06-29T11:11:00.000+08:00",
+              "key": 1782702660000,
+              "doc_count": 116
+            },
+            {
+              "key_as_string": "2026-06-29T11:11:30.000+08:00",
+              "key": 1782702690000,
+              "doc_count": 118
+            },
+            {
+              "key_as_string": "2026-06-29T11:12:00.000+08:00",
+              "key": 1782702720000,
+              "doc_count": 112
+            },
+            {
+              "key_as_string": "2026-06-29T11:12:30.000+08:00",
+              "key": 1782702750000,
+              "doc_count": 110
+            },
+            {
+              "key_as_string": "2026-06-29T11:13:00.000+08:00",
+              "key": 1782702780000,
+              "doc_count": 109
+            },
+            {
+              "key_as_string": "2026-06-29T11:13:30.000+08:00",
+              "key": 1782702810000,
+              "doc_count": 111
+            },
+            {
+              "key_as_string": "2026-06-29T11:14:00.000+08:00",
+              "key": 1782702840000,
+              "doc_count": 114
+            },
+            {
+              "key_as_string": "2026-06-29T11:14:30.000+08:00",
+              "key": 1782702870000,
+              "doc_count": 113
+            }
+          ]
+        }
+      }
+    },
+    "total": 3,
+    "loaded": 3
+  }
+}

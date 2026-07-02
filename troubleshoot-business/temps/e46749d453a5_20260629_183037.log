@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "server": "fast106",
+    "index": "index-11408-13176_2026-06-29",
+    "query_time": "2026-06-29T18:30:37.650780",
+    "hash": "e46749d453a5"
+  },
+  "request": {
+    "params": {
+      "ignoreThrottled": true,
+      "preference": 1780483834299,
+      "index": "index-11408-13176_2026-06-29",
+      "body": {
+        "version": true,
+        "size": 10,
+        "sort": [
+          {
+            "timestamp": {
+              "order": "desc",
+              "unmapped_type": "boolean"
+            }
+          }
+        ],
+        "aggs": {
+          "2": {
+            "date_histogram": {
+              "field": "timestamp",
+              "fixed_interval": "30s",
+              "time_zone": "Asia/Shanghai",
+              "min_doc_count": 1
+            }
+          }
+        },
+        "stored_fields": [
+          "*"
+        ],
+        "script_fields": {},
+        "docvalue_fields": [
+          {
+            "field": "timestamp",
+            "format": "date_time"
+          }
+        ],
+        "_source": {
+          "excludes": []
+        },
+        "query": {
+          "bool": {
+            "must": [
+              {
+                "match_all": {}
+              }
+            ],
+            "filter": [
+              {
+                "match_phrase": {
+                  "machineName": "envType_prod__huiju-private-domain-lease"
+                }
+              },
+              {
+                "range": {
+                  "timestamp": {
+                    "gte": "2026-06-29T07:58:00.000Z",
+                    "lte": "2026-06-29T08:02:00.000Z",
+                    "format": "strict_date_optional_time"
+                  }
+                }
+              }
+            ],
+            "should": [],
+            "must_not": []
+          }
+        },
+        "highlight": {
+          "pre_tags": [
+            "@kibana-highlighted-field@"
+          ],
+          "post_tags": [
+            "@/kibana-highlighted-field@"
+          ],
+          "fields": {
+            "*": {}
+          },
+          "fragment_size": 2147483647
+        }
+      },
+      "rest_total_hits_as_int": true,
+      "ignore_unavailable": true,
+      "ignore_throttled": true,
+      "timeout": "30000ms"
+    },
+    "serverStrategy": "es"
+  },
+  "response": {
+    "id": "FlZaREpleXliU21XWU9vUGFkTy1ydncfR2RXdmRHTWJTQVNfSTBPMGI4T25Ddzo4Njk0Mjc3MQ==",
+    "is_partial": true,
+    "is_running": true,
+    "rawResponse": {
+      "took": 1001,
+      "timed_out": false,
+      "num_reduce_phases": 0,
+      "_shards": {
+        "total": 3,
+        "successful": 0,
+        "skipped": 0,
+        "failed": 0
+      },
+      "hits": {
+        "total": 0,
+        "max_score": null,
+        "hits": []
+      }
+    },
+    "total": 3,
+    "loaded": 0
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "huiju-cloudkeeper-core-prd": {
+    "fastUrlPre": "fast107",
+    "index": "index-12961-13160*"
+  },
+  "huiju-house-cloudkeeper-prd": {
+    "fastUrlPre": "fast103",
+    "index": "index-13762-14164*"
+  },
+  "huiju-cloudkeeper-rule-prd": {
+    "fastUrlPre": "fast105",
+    "index": "index-13863-14267*"
+  },
+  "huiju-aigc-platform-prd": {
+    "fastUrlPre": "fast102",
+    "index": "index-13094-13282*"
+  },
+  "huiju-cloudkeeper-core-test": {
+    "fastUrlPre": "fast107",
+    "index": "index-13782-14186*"
+  }
+}

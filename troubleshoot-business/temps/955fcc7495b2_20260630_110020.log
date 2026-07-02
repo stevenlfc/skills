@@ -1,0 +1,243 @@
+{
+  "meta": {
+    "server": "fast105",
+    "index": "index-13863-14267*",
+    "query_time": "2026-06-30T11:00:20.171250",
+    "hash": "955fcc7495b2"
+  },
+  "request": {
+    "params": {
+      "ignoreThrottled": true,
+      "preference": 1780483834299,
+      "index": "index-13863-14267*",
+      "body": {
+        "version": true,
+        "size": 5,
+        "sort": [
+          {
+            "timestamp": {
+              "order": "desc",
+              "unmapped_type": "boolean"
+            }
+          }
+        ],
+        "aggs": {
+          "2": {
+            "date_histogram": {
+              "field": "timestamp",
+              "fixed_interval": "30s",
+              "time_zone": "Asia/Shanghai",
+              "min_doc_count": 1
+            }
+          }
+        },
+        "stored_fields": [
+          "*"
+        ],
+        "script_fields": {},
+        "docvalue_fields": [
+          {
+            "field": "timestamp",
+            "format": "date_time"
+          }
+        ],
+        "_source": {
+          "excludes": []
+        },
+        "query": {
+          "bool": {
+            "must": [
+              {
+                "match_all": {}
+              }
+            ],
+            "filter": [
+              {
+                "range": {
+                  "timestamp": {
+                    "gte": "2026-06-30T02:44:00.000Z",
+                    "lte": "2026-06-30T02:44:30.000Z",
+                    "format": "strict_date_optional_time"
+                  }
+                }
+              }
+            ],
+            "should": [],
+            "must_not": []
+          }
+        },
+        "highlight": {
+          "pre_tags": [
+            "@kibana-highlighted-field@"
+          ],
+          "post_tags": [
+            "@/kibana-highlighted-field@"
+          ],
+          "fields": {
+            "*": {}
+          },
+          "fragment_size": 2147483647
+        }
+      },
+      "rest_total_hits_as_int": true,
+      "ignore_unavailable": true,
+      "ignore_throttled": true,
+      "timeout": "30000ms"
+    },
+    "serverStrategy": "es"
+  },
+  "response": {
+    "is_partial": false,
+    "is_running": false,
+    "rawResponse": {
+      "took": 120,
+      "timed_out": false,
+      "num_reduce_phases": 2,
+      "_shards": {
+        "total": 11,
+        "successful": 11,
+        "skipped": 5,
+        "failed": 0
+      },
+      "hits": {
+        "total": 350238,
+        "max_score": null,
+        "hits": [
+          {
+            "_index": "index-13863-14267_2026-06-30",
+            "_type": "_doc",
+            "_id": "HglqFp8BlK1__DY3RUXw",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data": "{\"log_level\":\"log_info\",\"local_ip\":\"10.226.101.19\",\"segmentid\":\"N/A\",\"info_msg\":\"调用远程方法结束【func:sessionInLurkStatus：false】\",\"line\":73,\"bltag\":\"undefined\",\"ext_headers\":{}}",
+              "loglevel": "INFO",
+              "host": "envType_prod__env-huiju-cloudkeeper-rule-prod-t45-ccb894d67-thfg8",
+              "TID": "512292-10.226.101.19-167-1782787469890-8385",
+              "SID": "512292-10.226.101.19-10202-1782787469892-3916",
+              "timestamp": "2026-06-30T10:44:30.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-30T02:44:30.000Z"
+              ]
+            },
+            "sort": [
+              1782787470000
+            ]
+          },
+          {
+            "_index": "index-13863-14267_2026-06-30",
+            "_type": "_doc",
+            "_id": "kQVqFp8BlK1__DY3OMaW",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data": "{\"log_level\":\"log_info\",\"local_ip\":\"10.226.96.208\",\"segmentid\":\"N/A\",\"info_msg\":\"调用远程方法结束【func:sessionInLurkStatus：false】\",\"line\":73,\"bltag\":\"undefined\",\"ext_headers\":{}}",
+              "loglevel": "INFO",
+              "host": "envType_prod__env-huiju-cloudkeeper-rule-prod-t45-ccb894d67-x6mcf",
+              "TID": "512292-10.226.96.208-149-1782787469939-7723",
+              "SID": "512292-10.226.96.208-8385-1782787469941-5594",
+              "timestamp": "2026-06-30T10:44:30.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-30T02:44:30.000Z"
+              ]
+            },
+            "sort": [
+              1782787470000
+            ]
+          },
+          {
+            "_index": "index-13863-14267_2026-06-30",
+            "_type": "_doc",
+            "_id": "TghqFp8BlK1__DY3QmXB",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data": "{\"log_level\":\"log_info\",\"local_ip\":\"10.22.41.43\",\"segmentid\":\"N/A\",\"info_msg\":\"调用远程方法结束【func:isAtPerson：false】\",\"line\":73,\"bltag\":\"undefined\",\"ext_headers\":{}}",
+              "loglevel": "INFO",
+              "host": "envType_prod__env-huiju-cloudkeeper-rule-prod-t45-ccb894d67-j6vzd",
+              "TID": "512292-10.22.41.43-149-1782787469921-8933",
+              "SID": "512292-10.22.41.43-10426-1782787469922-4422",
+              "timestamp": "2026-06-30T10:44:30.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-30T02:44:30.000Z"
+              ]
+            },
+            "sort": [
+              1782787470000
+            ]
+          },
+          {
+            "_index": "index-13863-14267_2026-06-30",
+            "_type": "_doc",
+            "_id": "qApqFp8BlK1__DY3SpYi",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data": "{\"log_level\":\"log_info\",\"local_ip\":\"10.22.106.147\",\"segmentid\":\"N/A\",\"info_msg\":\"leaseExecuteRuleConsumer 规则引擎收到消息：{\\\"aiInvolve\\\":\\\"0\\\",\\\"answer\\\":\\\" \\\",\\\"answerGenerated\\\":false,\\\"businessScene\\\":2,\\\"caseType\\\":\\\"意图引导\\\",\\\"cityCode\\\":\\\"310000\\\",\\\"className\\\":\\\"com.ke.huiju.cloudkeeper.support.vo.fact.ServiceKeeperFact\\\",\\\"contractCode\\\":\\\"TGCF2606183680\\\",\\\"extParam\\\":{\\\"leaseHost\\\":\\\"http://app-center-huiju-private-domain-lease.ke.com\\\",\\\"houseId\\\":\\\"107114521540\\\",\\\"bizType\\\":\\\"test\\\",\\\"contactInfo\\\":\\\"{\\\\\\\"address\\\\\\\":\\\\\\\"百花街345弄丁香园14号102室\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"李佳桐\\\\\\\",\\\\\\\"phone\\\\\\\":\\\\\\\"156****0558\\\\\\\"}\\\",\\\"cityCode\\\":\\\"310000\\\",\\\"groupId\\\":\\\"10718210515758923\\\",\\\"msgId\\\":\\\"2628149\\\",\\\"nowDateStr\\\":\\\"2026-06-30 10:43:55\\\",\\\"latestMsgId\\\":\\\"2628149\\\",\\\"cityName\\\":\\\"上海\\\",\\\"imgConvertResult\\\":0,\\\"inContractCode\\\":\\\"TG2511235038\\\",\\\"aiRobotUserId\\\":\\\"31653801\\\",\\\"triggerSource\\\":10,\\\"fixOrderInfo\\\":{\\\"房屋地址\\\":\\\"\\\",\\\"故障物品\\\":\\\"\\\",\\\"故障区域\\\":\\\"\\\",\\\"故障现象\\\":\\\"\\\",\\\"服务项目\\\":\\\"\\\",\\\"故障图片\\\":\\\"\\\",\\\"联系人电话\\\":\\\"\\\",\\\"联系人姓名\\\":\\\"\\\"},\\\"robotWeworkId\\\":\\\"31151555\\\",\\\"aiRobotUcId\\\":1000000031653801,\\\"isHasHistory\\\":1,\\\"sessionId\\\":\\\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10718210515758923--7#1782785740000\\\",\\\"datacenterHost\\\":\\\"http://app-center-huiju-cloudkeeper-datacenter.ke.com\\\",\\\"userName\\\":\\\"上海贝壳租房服务管家惠桉\\\",\\\"userId\\\":1000000022170187,\\\"aiType\\\":2,\\\"ruleHost\\\":\\\"http://rule.cloudkeeper.huiju.ke.com\\\",\\\"msgTime\\\":\\\"2026-06-30 10:15:40\\\",\\\"senderType\\\":4,\\\"inContractId\\\":6317381,\\\"previousIntention\\\":\\\"意图引导\\\",\\\"resblockId\\\":\\\"5011000014593\\\",\\\"contractCode\\\":\\\"TGCF2606183680\\\",\\\"atList\\\":\\\"accC4vR79YfGrdey2OZo2Du\\\"},\\\"firstTrigger\\\":0,\\\"fixOrderInfo\\\":{\\\"房屋地址\\\":\\\"\\\",\\\"故障物品\\\":\\\"\\\",\\\"故障区域\\\":\\\"\\\",\\\"故障现象\\\":\\\"\\\",\\\"服务项目\\\":\\\"\\\",\\\"故障图片\\\":\\\"\\\",\\\"联系人电话\\\":\\\"\\\",\\\"联系人姓名\\\":\\\"\\\"},\\\"groupId\\\":\\\"10718210515758923\\\",\\\"intention\\\":\\\"意图引导\\\",\\\"isConfident\\\":\\\"1\\\",\\\"isInfoComplete\\\":\\\"0\\\",\\\"messageContent\\\":\\\"@张舒驰 这个证明有吗\\\",\\\"picture\\\":\\\"\\\",\\\"question\\\":\\\"意图引导\\\",\\\"requestId\\\":\\\"2628149\\\",\\\"require\\\":\\\"意图引导\\\",\\\"senderType\\\":4,\\\"serviceId\\\":\\\"private-domain-lease\\\",\\\"sessionId\\\":\\\"new_session_id:SERVICE_KEEPER--GROUP_CHAT--10718210515758923--7#1782785740000\\\",\\\"sessionInitiator\\\":4,\\\"traceId\\\":\\\"511686-10.22.73.44-1140-1782787469980-6063\\\",\\\"triggerSource\\\":1}\",\"line\":49,\"bltag\":\"undefined\",\"ext_headers\":{}}",
+              "loglevel": "INFO",
+              "host": "envType_prod__env-huiju-cloudkeeper-rule-prod-t45-ccb894d67-ccj44",
+              "TID": "512292-10.22.106.147-148-1782787470000-7815",
+              "SID": "512292-10.22.106.147-148-1782787470000-7814",
+              "timestamp": "2026-06-30T10:44:30.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-30T02:44:30.000Z"
+              ]
+            },
+            "sort": [
+              1782787470000
+            ]
+          },
+          {
+            "_index": "index-13863-14267_2026-06-30",
+            "_type": "_doc",
+            "_id": "whRqFp8BMaAJ7FoRNrng",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "data": "{\"log_level\":\"log_info\",\"local_ip\":\"10.226.96.208\",\"segmentid\":\"N/A\",\"info_msg\":\"调用远程方法开始：func:sessionInLurkStatus;null;761;RuleFactContext(className=com.ke.huiju.cloudkeeper.support.vo.fact.ServiceKeeperFact, serviceId=private-domain-lease, businessIds=null, matchingPlan=GENERAL, requestId=2628149, traceId=511686-10.22.122.142-384-1782787469923-6335, payload={question=意图引导, extParam={robotWeworkId=31151555, leaseHost=http://app-center-huiju-private-domain-lease.ke.com, houseId=107114521540, contactInfo={\\\"address\\\":\\\"百花街345弄丁香园14号102室\\\",\\\"name\\\":\\\"李佳桐\\\",\\\"phone\\\":\\\"156****0558\\\"}, cityCode=310000, groupId=10718210515758923, aiRobotUcId=1000000031653801, msgId=2628149, datacenterHost=http://app-center-huiju-cloudkeeper-datacenter.ke.com, latestMsgId=2628149, recalledDocs=0, ruleHost=http://rule.cloudkeeper.huiju.ke.com, msgTime=1782785740000, senderType=4, aiRobotUserId=31653801, triggerSource=10, contractCode=TGCF2606183680, atList=accC4vR79YfGrdey2OZo2Du, fixOrderInfo={房屋地址=, 故障物品=, 故障区域=, 故障现象=, 服务项目=, 故障图片=, 联系人电话=, 联系人姓名=}}, cityCode=310000, groupId=10718210515758923, answerGenerated=false, isConfident=0, sessionId=new_session_id:SERVICE_KEEPER--GROUP_CHAT--10718210515758923--7#1782785740000, aiInvolve=0, picture=, intention=意图引导, businessScene=2, firstTrigger=0, senderType=4, triggerSource=1, contractCode=TGCF2606183680, sessionInitiator=4, isInfoComplete=0, fixOrderInfo={房屋地址=, 故障物品=, 故障区域=, 故障现象=, 服务项目=, 故障图片=, 联系人电话=, 联系人姓名=}, messageContent=@张舒驰 这个证明有吗}, result=RuleFactContext.RuleResult(passSceneGroupIds=[48, 53, 55], errorSceneGroupIds=[], passRuleIds=[], errorRuleIds=[], match=null, matchRuleId=null))\",\"line\":42,\"bltag\":\"undefined\",\"ext_headers\":{}}",
+              "loglevel": "INFO",
+              "host": "envType_prod__env-huiju-cloudkeeper-rule-prod-t45-ccb894d67-x6mcf",
+              "TID": "512292-10.226.96.208-149-1782787469939-7723",
+              "SID": "512292-10.226.96.208-8385-1782787469941-5594",
+              "timestamp": "2026-06-30T10:44:30.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-30T02:44:30.000Z"
+              ]
+            },
+            "sort": [
+              1782787470000
+            ]
+          }
+        ]
+      },
+      "aggregations": {
+        "2": {
+          "buckets": [
+            {
+              "key_as_string": "2026-06-30T10:44:00.000+08:00",
+              "key": 1782787440000,
+              "doc_count": 350218
+            },
+            {
+              "key_as_string": "2026-06-30T10:44:30.000+08:00",
+              "key": 1782787470000,
+              "doc_count": 20
+            }
+          ]
+        }
+      }
+    },
+    "total": 11,
+    "loaded": 11
+  }
+}

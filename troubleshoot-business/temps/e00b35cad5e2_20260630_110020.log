@@ -1,0 +1,250 @@
+{
+  "meta": {
+    "server": "fast103",
+    "index": "index-13762-14164*",
+    "query_time": "2026-06-30T11:00:20.195679",
+    "hash": "e00b35cad5e2"
+  },
+  "request": {
+    "params": {
+      "ignoreThrottled": true,
+      "preference": 1780483834299,
+      "index": "index-13762-14164*",
+      "body": {
+        "version": true,
+        "size": 5,
+        "sort": [
+          {
+            "timestamp": {
+              "order": "desc",
+              "unmapped_type": "boolean"
+            }
+          }
+        ],
+        "aggs": {
+          "2": {
+            "date_histogram": {
+              "field": "timestamp",
+              "fixed_interval": "30s",
+              "time_zone": "Asia/Shanghai",
+              "min_doc_count": 1
+            }
+          }
+        },
+        "stored_fields": [
+          "*"
+        ],
+        "script_fields": {},
+        "docvalue_fields": [
+          {
+            "field": "timestamp",
+            "format": "date_time"
+          }
+        ],
+        "_source": {
+          "excludes": []
+        },
+        "query": {
+          "bool": {
+            "must": [
+              {
+                "match_all": {}
+              }
+            ],
+            "filter": [
+              {
+                "range": {
+                  "timestamp": {
+                    "gte": "2026-06-30T02:44:00.000Z",
+                    "lte": "2026-06-30T02:44:30.000Z",
+                    "format": "strict_date_optional_time"
+                  }
+                }
+              }
+            ],
+            "should": [],
+            "must_not": []
+          }
+        },
+        "highlight": {
+          "pre_tags": [
+            "@kibana-highlighted-field@"
+          ],
+          "post_tags": [
+            "@/kibana-highlighted-field@"
+          ],
+          "fields": {
+            "*": {}
+          },
+          "fragment_size": 2147483647
+        }
+      },
+      "rest_total_hits_as_int": true,
+      "ignore_unavailable": true,
+      "ignore_throttled": true,
+      "timeout": "30000ms"
+    },
+    "serverStrategy": "es"
+  },
+  "response": {
+    "is_partial": false,
+    "is_running": false,
+    "rawResponse": {
+      "took": 324,
+      "timed_out": false,
+      "num_reduce_phases": 2,
+      "_shards": {
+        "total": 134,
+        "successful": 134,
+        "skipped": 126,
+        "failed": 0
+      },
+      "hits": {
+        "total": 177355,
+        "max_score": null,
+        "hits": [
+          {
+            "_index": "index-13762-14164_2026-06-30",
+            "_type": "_doc",
+            "_id": "j51qFp8B7iJUf54cGD72",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "traceId": "[TID:m-p.lease.ke.com-10.226.75.94-20-1782787469943-zQ2IfJ3bF6]",
+              "trace_Id": "m-p.lease.ke.com-10.226.75.94-20-1782787469943-zQ2IfJ3bF6",
+              "data": "envType_prod__env-huiju-house-cloudkeeper-prod-yvz-9754b5d89-5nd6n  2026/06/30-10:44:30:000 [TID:m-p.lease.ke.com-10.226.75.94-20-1782787469943-zQ2IfJ3bF6] [SID:512258-10.22.121.187-787689-1782787469959-1786][SpanID:0] [hjTraceId:5efadf973ad81cb139a60b36bf1b129b]  [http-nio-8080-exec-100] INFO  com.ke.house.puzu.service.rpc.consumer.HdicBiz- {\"log_level\":\"log_info\",\"local_ip\":\"10.22.121.187\",\"segmentid\":\"N/A\",\"info_msg\":\"HdicBiz - getResBlocksByIdInner 获取楼盘信息，缓存前，请求参数:{\\\"gbCode\\\":440100,\\\"start\\\":0,\\\"trustLevel\\\":0,\\\"disableCache\\\":1,\\\"id\\\":21000000070049}\",\"line\":581,\"bltag\":\"undefined\",\"ext_headers\":{}}",
+              "logLevel": "INFO",
+              "host": "envType_prod__env-huiju-house-cloudkeeper-prod-yvz-9754b5d89-5nd6n",
+              "logClass": " com.ke.house.puzu.service.rpc.consumer.HdicBiz- {\"log_level\":\"log_info\",\"local_ip\":\"10.22.121.187\",\"segmentid\":\"N/A\",\"info_msg\":\"HdicBiz ",
+              "hjTraceId": "5efadf973ad81cb139a60b36bf1b129b",
+              "timestamp": "2026-06-30T10:44:30.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-30T02:44:30.000Z"
+              ]
+            },
+            "sort": [
+              1782787470000
+            ]
+          },
+          {
+            "_index": "index-13762-14164_2026-06-30",
+            "_type": "_doc",
+            "_id": "01FqFp8BQrTZyiDVHvDw",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "traceId": "[TID:lease-pz.link.lianjia.com-10.22.58.4-199-1782787469908-NPUPb6ErhD]",
+              "trace_Id": "lease-pz.link.lianjia.com-10.22.58.4-199-1782787469908-NPUPb6ErhD",
+              "data": "envType_prod__env-huiju-house-cloudkeeper-prod-yvz-9754b5d89-5zczs  2026/06/30-10:44:30:000 [TID:lease-pz.link.lianjia.com-10.22.58.4-199-1782787469908-NPUPb6ErhD] [SID:512258-10.226.85.205-881-1782787469999-3078][SpanID:2] []  [DubboServerHandler-10.226.85.205:8084-thread-146] INFO  com.ke.house.puzu.service.rpc.provider.CloudKeeperAddWechatFacadeImpl- {\"log_level\":\"log_info\",\"local_ip\":\"10.226.85.205\",\"segmentid\":\"N/A\",\"info_msg\":\"businessCard-请求参数：{\\\"agentUcId\\\":1000001000543058,\\\"houseDelCode\\\":101136593407}\",\"line\":1739,\"bltag\":\"undefined\",\"ext_headers\":{}}",
+              "logLevel": "INFO",
+              "host": "envType_prod__env-huiju-house-cloudkeeper-prod-yvz-9754b5d89-5zczs",
+              "logClass": " com.ke.house.puzu.service.rpc.provider.CloudKeeperAddWechatFacadeImpl",
+              "timestamp": "2026-06-30T10:44:30.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-30T02:44:30.000Z"
+              ]
+            },
+            "sort": [
+              1782787470000
+            ]
+          },
+          {
+            "_index": "index-13762-14164_2026-06-30",
+            "_type": "_doc",
+            "_id": "mqBqFp8B7iJUf54cLPRn",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "traceId": "[TID:api-lease.ke.com-BD0C9F4156AD423DB500186231102F78-1-1782787469582-1394]",
+              "trace_Id": "api-lease.ke.com-BD0C9F4156AD423DB500186231102F78-1-1782787469582-1394",
+              "data": "envType_prod__env-huiju-house-cloudkeeper-prod-yvz-9754b5d89-5nd6n  2026/06/30-10:44:30:000 [TID:api-lease.ke.com-BD0C9F4156AD423DB500186231102F78-1-1782787469582-1394] [SID:512258-10.22.121.187-894-1782787469966-358][SpanID:5] []  [DubboServerHandler-10.22.121.187:8084-thread-105] INFO  com.ke.house.puzu.service.logic.clue.CloudClueHouseRoleLogic- {\"log_level\":\"log_info\",\"local_ip\":\"10.22.121.187\",\"segmentid\":\"N/A\",\"info_msg\":\"云管家业绩归还-录入人不是虚拟账号，ucid：null\",\"line\":624,\"bltag\":\"undefined\",\"ext_headers\":{}}",
+              "logLevel": "INFO",
+              "host": "envType_prod__env-huiju-house-cloudkeeper-prod-yvz-9754b5d89-5nd6n",
+              "logClass": " com.ke.house.puzu.service.logic.clue.CloudClueHouseRoleLogic",
+              "timestamp": "2026-06-30T10:44:30.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-30T02:44:30.000Z"
+              ]
+            },
+            "sort": [
+              1782787470000
+            ]
+          },
+          {
+            "_index": "index-13762-14164_2026-06-30",
+            "_type": "_doc",
+            "_id": "Np5qFp8B7iJUf54cIN08",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "traceId": "[TID:512258-10.226.69.142-1126-1782787470000-1751]",
+              "trace_Id": "512258-10.226.69.142-1126-1782787470000-1751",
+              "data": "envType_prod__env-huiju-house-cloudkeeper-prod-yvz-9754b5d89-8xfgg  2026/06/30-10:44:30:000 [TID:512258-10.226.69.142-1126-1782787470000-1751] [SID:512258-10.226.69.142-1126-1782787470000-1750][SpanID:-1] []  [org.springframework.kafka.KafkaListenerEndpointContainer#25-0-C-1] INFO  com.ke.house.puzu.service.message.consumer.FinanceBillEventConsumer- {\"log_level\":\"log_info\",\"local_ip\":\"10.226.69.142\",\"segmentid\":\"N/A\",\"info_msg\":\"FinanceBillEventConsumer监听到合同账单变更消息，data:{\\\"billCategory\\\":2,\\\"billId\\\":12329078,\\\"billStatus\\\":4,\\\"billType\\\":8,\\\"contractCode\\\":\\\"TG2505023171\\\",\\\"contractId\\\":4043827,\\\"timeStamp\\\":1782787469983}\",\"line\":46,\"bltag\":\"undefined\",\"ext_headers\":{}}",
+              "logLevel": "INFO",
+              "host": "envType_prod__env-huiju-house-cloudkeeper-prod-yvz-9754b5d89-8xfgg",
+              "logClass": " com.ke.house.puzu.service.message.consumer.FinanceBillEventConsumer",
+              "timestamp": "2026-06-30T10:44:30.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-30T02:44:30.000Z"
+              ]
+            },
+            "sort": [
+              1782787470000
+            ]
+          },
+          {
+            "_index": "index-13762-14164_2026-06-30",
+            "_type": "_doc",
+            "_id": "_1NqFp8BQrTZyiDVLXKf",
+            "_version": 1,
+            "_score": null,
+            "_source": {
+              "traceId": "[TID:512258-10.226.72.37-841612-1782787469957-8277]",
+              "trace_Id": "512258-10.226.72.37-841612-1782787469957-8277",
+              "data": "envType_prod__env-huiju-house-cloudkeeper-prod-yvz-9754b5d89-84dj6  2026/06/30-10:44:30:000 [TID:512258-10.226.72.37-841612-1782787469957-8277] [SID:512258-10.226.72.37-841612-1782787469957-8276][SpanID:-1] [hjTraceId:03135424ec179ae464a8cad2953f924a]  [http-nio-8080-exec-179] INFO  com.ke.house.puzu.service.logic.clue.CloudClueHouseDetailLogic- {\"log_level\":\"log_info\",\"local_ip\":\"10.226.72.37\",\"segmentid\":\"N/A\",\"info_msg\":\"通过线索查询信息返回值,线索id:37495617,返回信息:Response(code=0, msg=成功, data=ClueDetailSearchResp(clueId=37495617, cityCode=110000, clueType=null, clueTypeName=null, clueStatus=DISTRIBUTE, createTime=Sun Jun 28 10:31:54 CST 2026, houseOwnerPhone=13883789126, ownerName=邓腾江, ticketSource=null, source=null, clueSource=null, ticketSourceLevel1=null, ticketSourceLevel1Name=null, ticketSourceLevel2=null, ticketSourceLevel2Name=null, clueHouseSearchResp=null, updateTime=Sun Jun 28 10:32:10 CST 2026, clueChannel=3, invalidClueResp=null, signClueResp=SignClueResp(contractCode=400006846286, contractStartTime=Fri Aug 11 00:00:00 CST 2023, contractEndTime=Mon Aug 10 00:00:00 CST 2026, signTime=Sun Jul 02 21:59:53 CST 2023, signPrice=15000.00, signDelCode=101119763485, brokerUcid=null, brokerUserCode=null, brokerName=null, ownerFollow=null, tenantFollow=null), customerClueResp=null, ziRoomClueResp=null, lastVoiceFollow=null, parentClueId=0, convertDelType=2, expireTimeLevelEnum=B))\",\"line\":101,\"bltag\":\"undefined\",\"ext_headers\":{}}",
+              "logLevel": "INFO",
+              "host": "envType_prod__env-huiju-house-cloudkeeper-prod-yvz-9754b5d89-84dj6",
+              "logClass": " com.ke.house.puzu.service.logic.clue.CloudClueHouseDetailLogic",
+              "hjTraceId": "03135424ec179ae464a8cad2953f924a",
+              "timestamp": "2026-06-30T10:44:30.000+08:00"
+            },
+            "fields": {
+              "timestamp": [
+                "2026-06-30T02:44:30.000Z"
+              ]
+            },
+            "sort": [
+              1782787470000
+            ]
+          }
+        ]
+      },
+      "aggregations": {
+        "2": {
+          "buckets": [
+            {
+              "key_as_string": "2026-06-30T10:44:00.000+08:00",
+              "key": 1782787440000,
+              "doc_count": 177349
+            },
+            {
+              "key_as_string": "2026-06-30T10:44:30.000+08:00",
+              "key": 1782787470000,
+              "doc_count": 6
+            }
+          ]
+        }
+      }
+    },
+    "total": 134,
+    "loaded": 134
+  }
+}
