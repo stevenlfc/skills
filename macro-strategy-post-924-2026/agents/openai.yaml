@@ -1,0 +1,4 @@
+interface:
+  display_name: "Macro Strategy Post-924"
+  short_description: "Post-924 and 2026 macro strategy corpus."
+  default_prompt: "Use $macro-strategy-post-924-2026 to analyze this macro strategy question with the post-924 and 2026 transcript corpus."
