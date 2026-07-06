@@ -1,0 +1,4 @@
+interface:
+  display_name: "Macro Strategy Partner"
+  short_description: "Macro investing thinking partner."
+  default_prompt: "Use $macro-strategy-thinking-partner to analyze this macro strategy question with my long-term and medium-term investing framework."

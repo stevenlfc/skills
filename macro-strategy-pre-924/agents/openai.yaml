@@ -1,0 +1,4 @@
+interface:
+  display_name: "Macro Strategy Pre-924"
+  short_description: "Macro strategy thinking partner for the pre-924 corpus."
+  default_prompt: "Use $macro-strategy-pre-924 to analyze this macro strategy question with the pre-924 transcript corpus."
