@@ -1,0 +1,4 @@
+interface:
+  display_name: "Wiki to Feishu"
+  short_description: "使用质量关卡将 Wiki 页面转换为飞书文档。"
+  default_prompt: "将此 Wiki 页面转换为飞书文档，并保留标题、表格、代码块及图片。"

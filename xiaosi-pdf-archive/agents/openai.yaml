@@ -1,0 +1,4 @@
+interface:
+  display_name: "Xiaosi PDF Archive"
+  short_description: "Archive Xiaosi PDFs and push GitHub"
+  default_prompt: "Use $xiaosi-pdf-archive to move newly downloaded Xiaosi PDFs into the right folders and push them to GitHub."
